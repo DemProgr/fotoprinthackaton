@@ -1,0 +1,48 @@
+{
+  "_comment": "Плановые значения и нормативы (синтетический бюджет компании). Источник «План/бюджет» для KPI.",
+  "currency": "RUB",
+  "updated_at": "2026-10-01T09:00:00+03:00",
+  "monthly": {
+    "revenue": 3200000,
+    "expenses": 550000,
+    "orders": 28,
+    "new_clients": 6
+  },
+  "targets": {
+    "margin_pct": 80,
+    "avg_check": 170000,
+    "conversion_pct": 40,
+    "repeat_pct": 15,
+    "active_clients_month": 20,
+    "sla_pct": 85,
+    "sla_norm_days": 7,
+    "output_pct": 95,
+    "on_time_pct": 90,
+    "on_time_norm_days": 7,
+    "defect_pct": 3,
+    "lead_time_days": 7,
+    "capacity_load_pct": 70,
+    "staffing_pct": 95,
+    "sick_max": 2
+  },
+  "capacity": {
+    "units_per_machine_day": 155,
+    "work_days_per_week": 6
+  },
+  "maintenance": [
+    { "machine_id": 4, "from": "2026-11-16", "to": "2026-11-29", "reason": "Плановый ремонт печатной головки" },
+    { "machine_id": 9, "from": "2026-11-16", "to": "2026-11-22", "reason": "Замена ламинатора" },
+    { "machine_id": 12, "from": "2026-11-23", "to": "2026-12-06", "reason": "Капитальное обслуживание" }
+  ],
+  "headcount_plan": {
+    "1": 15,
+    "2": 9,
+    "3": 10,
+    "4": 8,
+    "5": 5,
+    "6": 7,
+    "7": 13,
+    "8": 7,
+    "9": 4
+  }
+}
