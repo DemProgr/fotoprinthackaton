@@ -84,7 +84,7 @@ function create(value, user) {
   };
   d.number = `РЕШ-${String(d.id).padStart(4, "0")}`;
   store.state.decisions.push(d);
-  store.save(true);
+  store.markDirty();
   return d;
 }
 
@@ -100,7 +100,7 @@ function update(d, value, user) {
   if (Object.keys(changes).length) {
     d.updated_at = isoNow();
     d.history.push({ at: d.updated_at, by: user.login, by_name: user.name, action: changes.status ? `статус → ${changes.status.to}` : "изменено", changes });
-    store.save(true);
+    store.markDirty();
   }
   return { decision: d, changes };
 }

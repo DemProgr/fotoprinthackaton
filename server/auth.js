@@ -11,7 +11,6 @@
  */
 const crypto = require("crypto");
 const store = require("./store");
-const { isoNow } = require("./util");
 
 const ALL_DOMAINS = ["finance", "sales", "production", "hr"];
 const SESSION_TTL_MS = 12 * 3600 * 1000;
@@ -86,28 +85,46 @@ function verify(login, password) {
   return ok ? u : null;
 }
 
+/*
+ * Сессии без состояния: токен = base64url(JSON{login, exp}) + "." + HMAC-SHA256.
+ * Работает и на нескольких экземплярах бессерверных функций; выход — отзыв токена в хранилище.
+ */
+const b64 = (s) => Buffer.from(s).toString("base64url");
+const sign = (payload) => crypto.createHmac("sha256", store.sessionSecret()).update(payload).digest("base64url");
+
 function createSession(u) {
-  const token = crypto.randomBytes(24).toString("hex");
-  store.state.sessions[token] = { login: u.login, created_at: isoNow(), expires: Date.now() + SESSION_TTL_MS };
-  store.save(true);
-  return token;
+  const payload = b64(JSON.stringify({ l: u.login, exp: Date.now() + SESSION_TTL_MS, n: crypto.randomBytes(6).toString("hex") }));
+  return payload + "." + sign(payload);
+}
+
+function parseToken(token) {
+  if (typeof token !== "string" || !token.includes(".")) return null;
+  const [payload, sig] = token.split(".");
+  const expected = sign(payload);
+  if (!sig || sig.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
+  try {
+    const data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+    if (!data.exp || data.exp < Date.now()) return null;
+    return { ...data, sig };
+  } catch {
+    return null;
+  }
 }
 
 function destroySession(token) {
-  delete store.state.sessions[token];
-  store.save(true);
+  const t = parseToken(token);
+  if (!t) return;
+  const now = Date.now();
+  const revoked = store.state.revoked || (store.state.revoked = {});
+  for (const [k, exp] of Object.entries(revoked)) if (exp < now) delete revoked[k];
+  revoked[t.sig] = t.exp;
+  store.markDirty();
 }
 
 function userByToken(token) {
-  if (!token) return null;
-  const s = store.state.sessions[token];
-  if (!s) return null;
-  if (s.expires < Date.now()) {
-    delete store.state.sessions[token];
-    store.save();
-    return null;
-  }
-  return USERS.find((u) => u.login === s.login) || null;
+  const t = parseToken(token);
+  if (!t || (store.state.revoked && store.state.revoked[t.sig])) return null;
+  return USERS.find((u) => u.login === t.l) || null;
 }
 
 const can = (u, perm) => !!u && PERMISSIONS[u.role].includes(perm);

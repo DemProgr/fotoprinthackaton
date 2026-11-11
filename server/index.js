@@ -66,8 +66,7 @@ function readBody(req) {
 
 /** Журнал действий (ОТ-04): пользователь, время, действие, объект, результат. */
 function audit(req, user, action, object, result = "успех", details) {
-  store.state.audit.push({
-    id: store.nextId("audit"),
+  store.addAudit({
     at: isoNow(),
     user: user?.login || "аноним",
     user_name: user?.name || null,
@@ -76,10 +75,8 @@ function audit(req, user, action, object, result = "успех", details) {
     object: object || null,
     result,
     details: details || null,
-    ip: req.socket.remoteAddress,
+    ip: String(req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "").split(",")[0].trim(),
   });
-  store.trimAudit();
-  store.save();
 }
 
 function token(req) {
@@ -305,7 +302,7 @@ route("GET", "/api/quality", async (req) => {
   requirePerm(req, u, "quality.view", "Кабинет аналитика");
   const db = data.get();
   audit(req, u, "просмотр", "Качество данных");
-  return { ...db.quality, loaded_at: db.loaded_at, sources: data.SOURCES.length + 1 };
+  return { ...db.quality, loaded_at: db.loaded_at, sources: data.SOURCES.length + 1, storage: store.backend };
 });
 
 route("POST", "/api/admin/reload", async (req) => {
@@ -325,7 +322,7 @@ route("GET", "/api/audit", async (req, url) => {
   const u = requireUser(req);
   requirePerm(req, u, "audit.view", "Журнал действий");
   const q = url.searchParams;
-  let list = store.state.audit.slice().reverse();
+  let list = await store.listAudit();
   if (q.get("user")) list = list.filter((a) => a.user === q.get("user"));
   if (q.get("action")) list = list.filter((a) => a.action.includes(q.get("action")));
   if (q.get("result") === "fail") list = list.filter((a) => a.result !== "успех");
@@ -356,26 +353,43 @@ function serveStatic(req, res, url) {
 
 /* --------------------------------- Сервер --------------------------------- */
 
-function createServer() {
-  return http.createServer(async (req, res) => {
-    const url = new URL(req.url, "http://localhost");
-    if (!url.pathname.startsWith("/api/")) return serveStatic(req, res, url);
-    const r = routes.find((x) => x.method === req.method && x.re.test(url.pathname));
-    if (!r) return send(res, 404, { error: "Метод API не найден" });
+/** Обработчик запроса: общий для локального сервера и бессерверной функции Vercel. */
+async function handle(req, res) {
+  const url = new URL(req.url, "http://localhost");
+  // Vercel: запросы /api/* перенаправляются в api/index.js с исходным путём в __path
+  if (url.searchParams.has("__path")) {
+    url.pathname = "/api/" + url.searchParams.get("__path");
+    url.searchParams.delete("__path");
+  }
+  if (!url.pathname.startsWith("/api/")) return serveStatic(req, res, url);
+  const r = routes.find((x) => x.method === req.method && x.re.test(url.pathname));
+  if (!r) return send(res, 404, { error: "Метод API не найден" });
+  try {
+    await store.refresh();
+    const params = url.pathname.match(r.re).groups || {};
+    const out = await r.handler(req, url, params);
+    await store.commit();
+    send(res, 200, out);
+  } catch (err) {
     try {
-      const params = url.pathname.match(r.re).groups || {};
-      const out = await r.handler(req, url, params);
-      send(res, 200, out);
-    } catch (err) {
-      if (err instanceof ApiError) return send(res, err.status, { error: err.message, details: err.details || null });
-      console.error(err);
-      send(res, 500, { error: "Внутренняя ошибка сервера. Попробуйте повторить действие; если ошибка повторится — обратитесь к администратору." });
+      await store.commit(); // журнал отказов/ошибок валидации тоже сохраняем
+    } catch (e) {
+      console.error(e);
     }
-  });
+    if (err instanceof ApiError) return send(res, err.status, { error: err.message, details: err.details || null });
+    console.error(err);
+    const storageDown = /Хранилище|хранилища/.test(err.message || "");
+    send(res, storageDown ? 503 : 500, {
+      error: storageDown ? "Хранилище данных временно недоступно. Повторите попытку через минуту." : "Внутренняя ошибка сервера. Попробуйте повторить действие; если ошибка повторится — обратитесь к администратору.",
+    });
+  }
+}
+
+function createServer() {
+  return http.createServer(handle);
 }
 
 function start(port = PORT) {
-  store.load();
   try {
     data.load();
   } catch (err) {
@@ -386,7 +400,7 @@ function start(port = PORT) {
   return new Promise((resolve) => {
     server.listen(port, HOST, () => {
       const addr = server.address();
-      console.log(`Пульс компании запущен: http://localhost:${addr.port}`);
+      console.log(`Пульс компании запущен: http://localhost:${addr.port} (хранилище: ${store.backend})`);
       resolve(server);
     });
   });
@@ -394,4 +408,4 @@ function start(port = PORT) {
 
 if (require.main === module) start();
 
-module.exports = { start, createServer };
+module.exports = { start, createServer, handle };
