@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c0f40">
+  <title>KPI Lab — Аналитика продаж</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-full">KPI Lab</span>
+        <span class="brand-mini" aria-hidden="true">K</span>
+      </div>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#" class="nav-item" title="Обзор">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg>
+          </span>
+          <span class="nav-text">Обзор</span>
+          <span class="badge badge-violet">7</span>
+        </a>
+        <a href="#" class="nav-item" title="Заказы">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1.1 11.2a1 1 0 0 1-1 1.1H5.9a1 1 0 0 1-1-1.1L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          </span>
+          <span class="nav-text">Заказы</span>
+        </a>
+        <a href="#" class="nav-item active" aria-current="page" title="Аналитика">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="m7 15 4-4.5 3 2.5 5-7"/><path d="M15.5 6H19v3.5"/></svg>
+          </span>
+          <span class="nav-text">Аналитика</span>
+          <span class="badge badge-pink">31</span>
+        </a>
+        <a href="#" class="nav-item" title="Товары">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8.5v7a2 2 0 0 1-1 1.73l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 3 15.5v-7a2 2 0 0 1 1-1.73l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 21 8.5Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </span>
+          <span class="nav-text">Товары</span>
+        </a>
+        <a href="#" class="nav-item" title="Финансы">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="14" rx="2.5"/><path d="M3 10h18"/><path d="M7 14.5h4"/></svg>
+          </span>
+          <span class="nav-text">Финансы</span>
+        </a>
+      </nav>
+
+      <div class="nav-divider" role="presentation"></div>
+
+      <nav class="nav" aria-label="Дополнительно">
+        <a href="#" class="nav-item" title="Настройки">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.02a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.02a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.02a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+          </span>
+          <span class="nav-text">Настройки</span>
+        </a>
+        <a href="#" class="nav-item" title="Поддержка">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2a3 3 0 0 1 5.8 1c0 2-3 2.4-3 4"/><path d="M12 17h.01"/></svg>
+          </span>
+          <span class="nav-text">Поддержка</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Переключить тему">
+          <span class="switch" aria-hidden="true"></span>
+          <span class="theme-label" id="themeLabel">Светлая тема</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+
+        <div class="greeting">
+          <h1>Привет, Иван!</h1>
+          <span class="greeting-badge"><strong>+15%</strong> заказов за день</span>
+        </div>
+
+        <div class="topbar-right">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            <input type="search" id="searchInput" placeholder="Найти" aria-label="Поиск по товарам">
+          </label>
+          <div class="profile">
+            <div class="avatar" aria-hidden="true">ИБ</div>
+            <div class="profile-text">
+              <span class="profile-name">Иван Боров</span>
+              <span class="profile-role">PRO-селлер</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="kpi-grid" aria-label="Ключевые показатели">
+        <article class="kpi-card">
+          <div class="kpi-head">
+            <h2 class="card-title">Выручка</h2>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-label">14 дней</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="dropdown-menu" role="listbox">
+                <button class="dropdown-item" type="button" role="option">7 дней</button>
+                <button class="dropdown-item" type="button" role="option">14 дней</button>
+                <button class="dropdown-item" type="button" role="option">30 дней</button>
+                <button class="dropdown-item" type="button" role="option">90 дней</button>
+              </div>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <div class="kpi-main">
+              <div class="kpi-value">1 845 600 ₽</div>
+              <div class="kpi-delta delta-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                +12.4%
+              </div>
+            </div>
+            <div class="sparkline" id="sparkRevenue" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-head">
+            <h2 class="card-title">Прибыль</h2>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-label">14 дней</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="dropdown-menu" role="listbox">
+                <button class="dropdown-item" type="button" role="option">7 дней</button>
+                <button class="dropdown-item" type="button" role="option">14 дней</button>
+                <button class="dropdown-item" type="button" role="option">30 дней</button>
+                <button class="dropdown-item" type="button" role="option">90 дней</button>
+              </div>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <div class="kpi-main">
+              <div class="kpi-value">287 250 ₽</div>
+              <div class="kpi-delta delta-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                +8.2%
+              </div>
+            </div>
+            <div class="sparkline" id="sparkProfit" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-head">
+            <h2 class="card-title">Заказы</h2>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-label">7 дней</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="dropdown-menu" role="listbox">
+                <button class="dropdown-item" type="button" role="option">7 дней</button>
+                <button class="dropdown-item" type="button" role="option">14 дней</button>
+                <button class="dropdown-item" type="button" role="option">30 дней</button>
+                <button class="dropdown-item" type="button" role="option">90 дней</button>
+              </div>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <div class="kpi-main">
+              <div class="kpi-value">53 заказа</div>
+              <div class="kpi-delta delta-pink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                +15%
+              </div>
+            </div>
+            <div class="sparkline" id="sparkOrders" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-head">
+            <h2 class="card-title">Конверсия</h2>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-label">30 дней</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="dropdown-menu" role="listbox">
+                <button class="dropdown-item" type="button" role="option">7 дней</button>
+                <button class="dropdown-item" type="button" role="option">14 дней</button>
+                <button class="dropdown-item" type="button" role="option">30 дней</button>
+                <button class="dropdown-item" type="button" role="option">90 дней</button>
+              </div>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <div class="kpi-main">
+              <div class="kpi-value">4.3%</div>
+              <div class="kpi-delta delta-red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10"/><path d="M17 9v8H9"/></svg>
+                -1.3%
+              </div>
+            </div>
+            <div class="sparkline" id="sparkConversion" aria-hidden="true"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="charts-grid" aria-label="Графики">
+        <article class="card chart-card">
+          <div class="card-head">
+            <h2 class="card-title">Продажи и выкупы</h2>
+            <div class="card-tools">
+              <div class="legend">
+                <span class="legend-item"><span class="dot" style="--c:#f43f5e"></span>Выкупы</span>
+                <span class="legend-item"><span class="dot" style="--c:#8b5cf6"></span>Продажи</span>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="dropdown-label">30 дней</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="dropdown-menu" role="listbox">
+                  <button class="dropdown-item" type="button" role="option">7 дней</button>
+                  <button class="dropdown-item" type="button" role="option">14 дней</button>
+                  <button class="dropdown-item" type="button" role="option">30 дней</button>
+                  <button class="dropdown-item" type="button" role="option">90 дней</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-wrap" id="salesChart">
+            <div class="chart-tooltip" role="status" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <article class="card chart-card">
+          <div class="card-head">
+            <h2 class="card-title">Возвраты</h2>
+            <div class="card-tools">
+              <div class="legend">
+                <span class="legend-item"><span class="dot" style="--c:#ef476f"></span>Отмена</span>
+                <span class="legend-item"><span class="dot" style="--c:#6f5be7"></span>Брак</span>
+                <span class="legend-item"><span class="dot" style="--c:#b9a1ff"></span>Возврат</span>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="dropdown-label">14 дней</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="dropdown-menu" role="listbox">
+                  <button class="dropdown-item" type="button" role="option">7 дней</button>
+                  <button class="dropdown-item" type="button" role="option">14 дней</button>
+                  <button class="dropdown-item" type="button" role="option">30 дней</button>
+                  <button class="dropdown-item" type="button" role="option">90 дней</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-wrap" id="returnsChart">
+            <div class="chart-tooltip" role="status" aria-live="polite"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="bottom-grid" aria-label="Товары и площадки">
+        <article class="card table-card">
+          <div class="card-head">
+            <h2 class="card-title">Топ-5 товаров по выручке</h2>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-label">7 дней</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="dropdown-menu" role="listbox">
+                <button class="dropdown-item" type="button" role="option">7 дней</button>
+                <button class="dropdown-item" type="button" role="option">14 дней</button>
+                <button class="dropdown-item" type="button" role="option">30 дней</button>
+                <button class="dropdown-item" type="button" role="option">90 дней</button>
+              </div>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table id="productsTable" aria-label="Топ-5 товаров по выручке">
+              <thead>
+                <tr>
+                  <th scope="col">Наименование товара</th>
+                  <th scope="col">Артикул</th>
+                  <th scope="col">Кол-во</th>
+                  <th scope="col">Цена за 1 шт.</th>
+                  <th scope="col">Сумма выкупа</th>
+                  <th scope="col">Маржа</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="name">Наушники TWS «AuraBuds 3» с шумоподавлением</td>
+                  <td>AUD-AB3-NC-WH</td>
+                  <td>43 шт.</td>
+                  <td>5 499 ₽</td>
+                  <td class="amount">236 457 ₽</td>
+                  <td class="margin">32%</td>
+                </tr>
+                <tr>
+                  <td class="name">Фитнес-браслет «HealthBand Pro»</td>
+                  <td>WEAR-HBP-ECG</td>
+                  <td>17 шт.</td>
+                  <td>4 850 ₽</td>
+                  <td class="amount">211 904 ₽</td>
+                  <td class="margin">21%</td>
+                </tr>
+                <tr>
+                  <td class="name">Экшн-камера «ActionCam 4K»</td>
+                  <td>AC4K-WTR</td>
+                  <td>12 шт.</td>
+                  <td>9 850 ₽</td>
+                  <td class="amount">154 408 ₽</td>
+                  <td class="margin">13%</td>
+                </tr>
+                <tr>
+                  <td class="name">Игровая мышь «Viper X7» с RGB</td>
+                  <td>MS-VX7-RGB</td>
+                  <td>51 шт.</td>
+                  <td>990 ₽</td>
+                  <td class="amount">45 450 ₽</td>
+                  <td class="margin">9%</td>
+                </tr>
+                <tr>
+                  <td class="name">Колонка «SoundCube» с Алисой</td>
+                  <td>HOME-SCM-ALI</td>
+                  <td>3 шт.</td>
+                  <td>11 890 ₽</td>
+                  <td class="amount">33 970 ₽</td>
+                  <td class="margin">7%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card donut-card">
+          <h2 class="card-title">Распределение выручки по&nbsp;площадкам</h2>
+          <div class="donut-wrap">
+            <div class="donut-chart" id="donutChart" role="img" aria-label="Распределение выручки: Wildberries 58,8%, Ozon 31,1%, сайт 10,1%"></div>
+            <span class="donut-label donut-label--site"><span>Сайт</span><b>10,1%</b></span>
+            <span class="donut-label donut-label--wb"><span>Wildberries</span><b>58,8%</b></span>
+            <span class="donut-label donut-label--ozon"><span>Ozon</span><b>31,1%</b></span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

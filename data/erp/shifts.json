@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "shift_date": "2026-06-21",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 51
+  },
+  {
+    "id": 2,
+    "shift_date": "2025-12-02",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 1
+  },
+  {
+    "id": 3,
+    "shift_date": "2025-04-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 48
+  },
+  {
+    "id": 4,
+    "shift_date": "2025-05-16",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 29
+  },
+  {
+    "id": 5,
+    "shift_date": "2025-02-07",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 65
+  },
+  {
+    "id": 6,
+    "shift_date": "2026-02-01",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 37
+  },
+  {
+    "id": 7,
+    "shift_date": "2026-06-19",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 35
+  },
+  {
+    "id": 8,
+    "shift_date": "2025-01-05",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 34
+  },
+  {
+    "id": 9,
+    "shift_date": "2025-02-15",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 40
+  },
+  {
+    "id": 10,
+    "shift_date": "2026-09-01",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 54
+  },
+  {
+    "id": 11,
+    "shift_date": "2025-12-08",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 31
+  },
+  {
+    "id": 12,
+    "shift_date": "2025-02-17",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 1
+  },
+  {
+    "id": 13,
+    "shift_date": "2026-06-18",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 54
+  },
+  {
+    "id": 14,
+    "shift_date": "2025-11-16",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 5
+  },
+  {
+    "id": 15,
+    "shift_date": "2026-08-15",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 2
+  },
+  {
+    "id": 16,
+    "shift_date": "2026-10-17",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 4
+  },
+  {
+    "id": 17,
+    "shift_date": "2025-11-25",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 20
+  },
+  {
+    "id": 18,
+    "shift_date": "2025-07-17",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 48
+  },
+  {
+    "id": 19,
+    "shift_date": "2025-10-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 67
+  },
+  {
+    "id": 20,
+    "shift_date": "2025-11-23",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 41
+  },
+  {
+    "id": 21,
+    "shift_date": "2025-05-01",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 43
+  },
+  {
+    "id": 22,
+    "shift_date": "2025-06-02",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 22
+  },
+  {
+    "id": 23,
+    "shift_date": "2025-10-08",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 56
+  },
+  {
+    "id": 24,
+    "shift_date": "2025-01-16",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 31
+  },
+  {
+    "id": 25,
+    "shift_date": "2026-07-28",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 72
+  },
+  {
+    "id": 26,
+    "shift_date": "2025-04-15",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 51
+  },
+  {
+    "id": 27,
+    "shift_date": "2026-07-10",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 25
+  },
+  {
+    "id": 28,
+    "shift_date": "2026-07-17",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 51
+  },
+  {
+    "id": 29,
+    "shift_date": "2025-10-05",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 7
+  },
+  {
+    "id": 30,
+    "shift_date": "2025-10-18",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 55
+  },
+  {
+    "id": 31,
+    "shift_date": "2025-09-08",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 17
+  },
+  {
+    "id": 32,
+    "shift_date": "2025-03-14",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 50
+  },
+  {
+    "id": 33,
+    "shift_date": "2026-09-20",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 23
+  },
+  {
+    "id": 34,
+    "shift_date": "2026-07-08",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 52
+  },
+  {
+    "id": 35,
+    "shift_date": "2025-02-21",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 41
+  },
+  {
+    "id": 36,
+    "shift_date": "2025-01-30",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 67
+  },
+  {
+    "id": 37,
+    "shift_date": "2025-02-21",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 21
+  },
+  {
+    "id": 38,
+    "shift_date": "2026-01-28",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 56
+  },
+  {
+    "id": 39,
+    "shift_date": "2025-03-30",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 30
+  },
+  {
+    "id": 40,
+    "shift_date": "2026-02-06",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 13
+  },
+  {
+    "id": 41,
+    "shift_date": "2026-09-03",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 17
+  },
+  {
+    "id": 42,
+    "shift_date": "2026-10-07",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 65
+  },
+  {
+    "id": 43,
+    "shift_date": "2026-04-02",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 16
+  },
+  {
+    "id": 44,
+    "shift_date": "2025-12-31",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 51
+  },
+  {
+    "id": 45,
+    "shift_date": "2025-12-07",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 34
+  },
+  {
+    "id": 46,
+    "shift_date": "2026-07-01",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 71
+  },
+  {
+    "id": 47,
+    "shift_date": "2026-04-22",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 21
+  },
+  {
+    "id": 48,
+    "shift_date": "2025-05-15",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 42
+  },
+  {
+    "id": 49,
+    "shift_date": "2026-04-25",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 27
+  },
+  {
+    "id": 50,
+    "shift_date": "2026-04-12",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 12
+  },
+  {
+    "id": 51,
+    "shift_date": "2026-10-22",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 12
+  },
+  {
+    "id": 52,
+    "shift_date": "2026-04-22",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 4
+  },
+  {
+    "id": 53,
+    "shift_date": "2025-08-26",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 56
+  },
+  {
+    "id": 54,
+    "shift_date": "2025-05-28",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 2
+  },
+  {
+    "id": 55,
+    "shift_date": "2025-09-22",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 20
+  },
+  {
+    "id": 56,
+    "shift_date": "2026-02-06",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 4
+  },
+  {
+    "id": 57,
+    "shift_date": "2025-12-05",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 70
+  },
+  {
+    "id": 58,
+    "shift_date": "2026-04-10",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 11
+  },
+  {
+    "id": 59,
+    "shift_date": "2025-01-31",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 49
+  },
+  {
+    "id": 60,
+    "shift_date": "2026-05-02",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 4
+  },
+  {
+    "id": 61,
+    "shift_date": "2025-12-26",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 17
+  },
+  {
+    "id": 62,
+    "shift_date": "2026-04-18",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 59
+  },
+  {
+    "id": 63,
+    "shift_date": "2025-10-17",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 46
+  },
+  {
+    "id": 64,
+    "shift_date": "2026-09-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 24
+  },
+  {
+    "id": 65,
+    "shift_date": "2025-05-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 31
+  },
+  {
+    "id": 66,
+    "shift_date": "2025-04-16",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 29
+  },
+  {
+    "id": 67,
+    "shift_date": "2025-04-20",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 39
+  },
+  {
+    "id": 68,
+    "shift_date": "2026-07-24",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 25
+  },
+  {
+    "id": 69,
+    "shift_date": "2025-03-14",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 69
+  },
+  {
+    "id": 70,
+    "shift_date": "2026-06-30",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 32
+  },
+  {
+    "id": 71,
+    "shift_date": "2026-02-15",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 49
+  },
+  {
+    "id": 72,
+    "shift_date": "2026-02-28",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 34
+  },
+  {
+    "id": 73,
+    "shift_date": "2026-09-28",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 7
+  },
+  {
+    "id": 74,
+    "shift_date": "2026-07-16",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 36
+  },
+  {
+    "id": 75,
+    "shift_date": "2026-05-09",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 11
+  },
+  {
+    "id": 76,
+    "shift_date": "2025-03-09",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 19
+  },
+  {
+    "id": 77,
+    "shift_date": "2025-08-02",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 3
+  },
+  {
+    "id": 78,
+    "shift_date": "2026-08-29",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 14
+  },
+  {
+    "id": 79,
+    "shift_date": "2026-03-22",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 15
+  },
+  {
+    "id": 80,
+    "shift_date": "2025-12-17",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 59
+  },
+  {
+    "id": 81,
+    "shift_date": "2025-08-30",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 16
+  },
+  {
+    "id": 82,
+    "shift_date": "2025-03-21",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 14
+  },
+  {
+    "id": 83,
+    "shift_date": "2026-08-11",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 19
+  },
+  {
+    "id": 84,
+    "shift_date": "2025-04-28",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 37
+  },
+  {
+    "id": 85,
+    "shift_date": "2026-09-03",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 34
+  },
+  {
+    "id": 86,
+    "shift_date": "2025-11-30",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 24
+  },
+  {
+    "id": 87,
+    "shift_date": "2025-04-10",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 12
+  },
+  {
+    "id": 88,
+    "shift_date": "2025-06-30",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 10
+  },
+  {
+    "id": 89,
+    "shift_date": "2026-02-20",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 64
+  },
+  {
+    "id": 90,
+    "shift_date": "2026-09-05",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 47
+  },
+  {
+    "id": 91,
+    "shift_date": "2026-09-03",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 27
+  },
+  {
+    "id": 92,
+    "shift_date": "2025-12-02",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 51
+  },
+  {
+    "id": 93,
+    "shift_date": "2026-10-23",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 13
+  },
+  {
+    "id": 94,
+    "shift_date": "2025-03-04",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 63
+  },
+  {
+    "id": 95,
+    "shift_date": "2025-08-11",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 3
+  },
+  {
+    "id": 96,
+    "shift_date": "2026-08-18",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 53
+  },
+  {
+    "id": 97,
+    "shift_date": "2025-01-01",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 10
+  },
+  {
+    "id": 98,
+    "shift_date": "2025-06-02",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 63
+  },
+  {
+    "id": 99,
+    "shift_date": "2026-06-29",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 10
+  },
+  {
+    "id": 100,
+    "shift_date": "2026-02-04",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 27
+  },
+  {
+    "id": 101,
+    "shift_date": "2026-08-15",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 54
+  },
+  {
+    "id": 102,
+    "shift_date": "2025-07-20",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 49
+  },
+  {
+    "id": 103,
+    "shift_date": "2025-11-21",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 41
+  },
+  {
+    "id": 104,
+    "shift_date": "2026-08-07",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 58
+  },
+  {
+    "id": 105,
+    "shift_date": "2025-11-08",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 21
+  },
+  {
+    "id": 106,
+    "shift_date": "2025-12-19",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 24
+  },
+  {
+    "id": 107,
+    "shift_date": "2026-08-20",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 39
+  },
+  {
+    "id": 108,
+    "shift_date": "2026-09-19",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 2
+  },
+  {
+    "id": 109,
+    "shift_date": "2026-02-18",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 23
+  },
+  {
+    "id": 110,
+    "shift_date": "2025-10-29",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 5
+  },
+  {
+    "id": 111,
+    "shift_date": "2026-01-14",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 16
+  },
+  {
+    "id": 112,
+    "shift_date": "2025-02-24",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 44
+  },
+  {
+    "id": 113,
+    "shift_date": "2026-07-28",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 45
+  },
+  {
+    "id": 114,
+    "shift_date": "2025-04-23",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 62
+  },
+  {
+    "id": 115,
+    "shift_date": "2025-02-01",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 70
+  },
+  {
+    "id": 116,
+    "shift_date": "2026-03-19",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 1
+  },
+  {
+    "id": 117,
+    "shift_date": "2026-08-28",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 21
+  },
+  {
+    "id": 118,
+    "shift_date": "2026-10-03",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 67
+  },
+  {
+    "id": 119,
+    "shift_date": "2026-01-27",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 33
+  },
+  {
+    "id": 120,
+    "shift_date": "2026-01-26",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 16
+  },
+  {
+    "id": 121,
+    "shift_date": "2026-07-13",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 25
+  },
+  {
+    "id": 122,
+    "shift_date": "2025-06-27",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 4
+  },
+  {
+    "id": 123,
+    "shift_date": "2025-05-23",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 69
+  },
+  {
+    "id": 124,
+    "shift_date": "2026-07-23",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 3
+  },
+  {
+    "id": 125,
+    "shift_date": "2026-01-04",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 67
+  },
+  {
+    "id": 126,
+    "shift_date": "2025-06-07",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 66
+  },
+  {
+    "id": 127,
+    "shift_date": "2025-05-09",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 20
+  },
+  {
+    "id": 128,
+    "shift_date": "2025-01-12",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 28
+  },
+  {
+    "id": 129,
+    "shift_date": "2026-10-26",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 47
+  },
+  {
+    "id": 130,
+    "shift_date": "2025-05-28",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 15
+  },
+  {
+    "id": 131,
+    "shift_date": "2026-05-14",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 28
+  },
+  {
+    "id": 132,
+    "shift_date": "2026-03-24",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 4
+  },
+  {
+    "id": 133,
+    "shift_date": "2025-03-28",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 42
+  },
+  {
+    "id": 134,
+    "shift_date": "2026-10-20",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 18
+  },
+  {
+    "id": 135,
+    "shift_date": "2026-04-12",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 29
+  },
+  {
+    "id": 136,
+    "shift_date": "2026-09-11",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 11
+  },
+  {
+    "id": 137,
+    "shift_date": "2026-10-01",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 17
+  },
+  {
+    "id": 138,
+    "shift_date": "2026-04-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 35
+  },
+  {
+    "id": 139,
+    "shift_date": "2026-03-11",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 36
+  },
+  {
+    "id": 140,
+    "shift_date": "2026-04-06",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 62
+  },
+  {
+    "id": 141,
+    "shift_date": "2025-12-30",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 26
+  },
+  {
+    "id": 142,
+    "shift_date": "2025-07-10",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 12
+  },
+  {
+    "id": 143,
+    "shift_date": "2026-09-12",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 45
+  },
+  {
+    "id": 144,
+    "shift_date": "2026-08-15",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 71
+  },
+  {
+    "id": 145,
+    "shift_date": "2025-08-31",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 38
+  },
+  {
+    "id": 146,
+    "shift_date": "2026-05-29",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 60
+  },
+  {
+    "id": 147,
+    "shift_date": "2026-02-25",
+    "shift_number": 3,
+    "start_time": "00:00",
+    "end_time": "08:00",
+    "operator_id": 64
+  },
+  {
+    "id": 148,
+    "shift_date": "2026-08-14",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 56
+  },
+  {
+    "id": 149,
+    "shift_date": "2025-02-04",
+    "shift_number": 1,
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "operator_id": 66
+  },
+  {
+    "id": 150,
+    "shift_date": "2026-08-05",
+    "shift_number": 2,
+    "start_time": "16:00",
+    "end_time": "00:00",
+    "operator_id": 52
+  }
+]

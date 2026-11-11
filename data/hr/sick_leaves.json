@@ -1,0 +1,274 @@
+[
+  {
+    "id": 1,
+    "employee_id": 7,
+    "start_date": "2026-09-06",
+    "end_date": "2026-09-16",
+    "days": 11,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 2,
+    "employee_id": 33,
+    "start_date": "2026-03-12",
+    "end_date": "2026-03-17",
+    "days": 6,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 3,
+    "employee_id": 4,
+    "start_date": "2026-07-10",
+    "end_date": "2026-07-14",
+    "days": 5,
+    "reason": "Травма"
+  },
+  {
+    "id": 4,
+    "employee_id": 38,
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-07",
+    "days": 7,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 5,
+    "employee_id": 58,
+    "start_date": "2025-11-29",
+    "end_date": "2025-12-03",
+    "days": 5,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 6,
+    "employee_id": 15,
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-12",
+    "days": 12,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 7,
+    "employee_id": 69,
+    "start_date": "2026-02-10",
+    "end_date": "2026-02-13",
+    "days": 4,
+    "reason": "Травма"
+  },
+  {
+    "id": 8,
+    "employee_id": 11,
+    "start_date": "2026-07-02",
+    "end_date": "2026-07-03",
+    "days": 2,
+    "reason": "Травма"
+  },
+  {
+    "id": 9,
+    "employee_id": 19,
+    "start_date": "2026-10-11",
+    "end_date": "2026-10-18",
+    "days": 8,
+    "reason": "Реабилитация"
+  },
+  {
+    "id": 10,
+    "employee_id": 36,
+    "start_date": "2025-12-20",
+    "end_date": "2025-12-27",
+    "days": 8,
+    "reason": "Болезнь ребёнка"
+  },
+  {
+    "id": 11,
+    "employee_id": 32,
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-30",
+    "days": 10,
+    "reason": "Реабилитация"
+  },
+  {
+    "id": 12,
+    "employee_id": 6,
+    "start_date": "2025-03-20",
+    "end_date": "2025-03-25",
+    "days": 6,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 13,
+    "employee_id": 5,
+    "start_date": "2025-05-31",
+    "end_date": "2025-06-09",
+    "days": 10,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 14,
+    "employee_id": 49,
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-20",
+    "days": 12,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 15,
+    "employee_id": 44,
+    "start_date": "2026-10-15",
+    "end_date": "2026-10-26",
+    "days": 12,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 16,
+    "employee_id": 55,
+    "start_date": "2026-02-15",
+    "end_date": "2026-02-15",
+    "days": 1,
+    "reason": "Травма"
+  },
+  {
+    "id": 17,
+    "employee_id": 33,
+    "start_date": "2026-10-31",
+    "end_date": "2026-11-11",
+    "days": 12,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 18,
+    "employee_id": 56,
+    "start_date": "2025-04-30",
+    "end_date": "2025-05-12",
+    "days": 13,
+    "reason": "Травма"
+  },
+  {
+    "id": 19,
+    "employee_id": 34,
+    "start_date": "2025-11-07",
+    "end_date": "2025-11-16",
+    "days": 10,
+    "reason": "Болезнь ребёнка"
+  },
+  {
+    "id": 20,
+    "employee_id": 70,
+    "start_date": "2025-09-07",
+    "end_date": "2025-09-18",
+    "days": 12,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 21,
+    "employee_id": 48,
+    "start_date": "2026-08-11",
+    "end_date": "2026-08-18",
+    "days": 8,
+    "reason": "Травма"
+  },
+  {
+    "id": 22,
+    "employee_id": 56,
+    "start_date": "2025-10-09",
+    "end_date": "2025-10-20",
+    "days": 12,
+    "reason": "Травма"
+  },
+  {
+    "id": 23,
+    "employee_id": 36,
+    "start_date": "2026-05-29",
+    "end_date": "2026-06-08",
+    "days": 11,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 24,
+    "employee_id": 52,
+    "start_date": "2025-07-05",
+    "end_date": "2025-07-15",
+    "days": 11,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 25,
+    "employee_id": 35,
+    "start_date": "2025-01-06",
+    "end_date": "2025-01-12",
+    "days": 7,
+    "reason": "Травма"
+  },
+  {
+    "id": 26,
+    "employee_id": 3,
+    "start_date": "2026-03-01",
+    "end_date": "2026-03-11",
+    "days": 11,
+    "reason": "Травма"
+  },
+  {
+    "id": 27,
+    "employee_id": 36,
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-08",
+    "days": 8,
+    "reason": "Болезнь ребёнка"
+  },
+  {
+    "id": 28,
+    "employee_id": 41,
+    "start_date": "2025-04-10",
+    "end_date": "2025-04-13",
+    "days": 4,
+    "reason": "Травма"
+  },
+  {
+    "id": 29,
+    "employee_id": 3,
+    "start_date": "2025-11-29",
+    "end_date": "2025-12-02",
+    "days": 4,
+    "reason": "ОРВИ"
+  },
+  {
+    "id": 30,
+    "employee_id": 37,
+    "start_date": "2026-09-16",
+    "end_date": "2026-09-29",
+    "days": 14,
+    "reason": "Реабилитация"
+  },
+  {
+    "id": 31,
+    "employee_id": 54,
+    "start_date": "2026-10-13",
+    "end_date": "2026-10-22",
+    "days": 10,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 32,
+    "employee_id": 70,
+    "start_date": "2026-02-03",
+    "end_date": "2026-02-10",
+    "days": 8,
+    "reason": "Болезнь ребёнка"
+  },
+  {
+    "id": 33,
+    "employee_id": 2,
+    "start_date": "2025-12-18",
+    "end_date": "2025-12-23",
+    "days": 6,
+    "reason": "Плановая операция"
+  },
+  {
+    "id": 34,
+    "employee_id": 45,
+    "start_date": "2026-04-01",
+    "end_date": "2026-04-03",
+    "days": 3,
+    "reason": "Реабилитация"
+  }
+]

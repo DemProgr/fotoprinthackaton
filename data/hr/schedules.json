@@ -1,0 +1,3649 @@
+[
+  {
+    "id": 1,
+    "employee_id": 25,
+    "schedule_date": "2025-09-14",
+    "shift_type": "день",
+    "hours_worked": 2.37
+  },
+  {
+    "id": 2,
+    "employee_id": 36,
+    "schedule_date": "2026-02-07",
+    "shift_type": "день",
+    "hours_worked": 7.0
+  },
+  {
+    "id": 3,
+    "employee_id": 40,
+    "schedule_date": "2025-06-19",
+    "shift_type": "день",
+    "hours_worked": 11.45
+  },
+  {
+    "id": 4,
+    "employee_id": 63,
+    "schedule_date": "2026-03-20",
+    "shift_type": "ночь",
+    "hours_worked": 5.08
+  },
+  {
+    "id": 5,
+    "employee_id": 35,
+    "schedule_date": "2025-11-23",
+    "shift_type": "выходной",
+    "hours_worked": 1.29
+  },
+  {
+    "id": 6,
+    "employee_id": 50,
+    "schedule_date": "2026-03-16",
+    "shift_type": "день",
+    "hours_worked": 6.81
+  },
+  {
+    "id": 7,
+    "employee_id": 48,
+    "schedule_date": "2026-10-10",
+    "shift_type": "день",
+    "hours_worked": 5.39
+  },
+  {
+    "id": 8,
+    "employee_id": 5,
+    "schedule_date": "2026-06-08",
+    "shift_type": "ночь",
+    "hours_worked": 7.04
+  },
+  {
+    "id": 9,
+    "employee_id": 38,
+    "schedule_date": "2026-09-11",
+    "shift_type": "выходной",
+    "hours_worked": 11.4
+  },
+  {
+    "id": 10,
+    "employee_id": 68,
+    "schedule_date": "2025-12-27",
+    "shift_type": "ночь",
+    "hours_worked": 0.36
+  },
+  {
+    "id": 11,
+    "employee_id": 24,
+    "schedule_date": "2025-11-27",
+    "shift_type": "ночь",
+    "hours_worked": 9.49
+  },
+  {
+    "id": 12,
+    "employee_id": 46,
+    "schedule_date": "2025-09-09",
+    "shift_type": "день",
+    "hours_worked": 2.58
+  },
+  {
+    "id": 13,
+    "employee_id": 48,
+    "schedule_date": "2026-01-16",
+    "shift_type": "день",
+    "hours_worked": 9.35
+  },
+  {
+    "id": 14,
+    "employee_id": 16,
+    "schedule_date": "2025-01-10",
+    "shift_type": "ночь",
+    "hours_worked": 8.26
+  },
+  {
+    "id": 15,
+    "employee_id": 43,
+    "schedule_date": "2025-08-07",
+    "shift_type": "ночь",
+    "hours_worked": 6.81
+  },
+  {
+    "id": 16,
+    "employee_id": 42,
+    "schedule_date": "2025-08-27",
+    "shift_type": "выходной",
+    "hours_worked": 0.79
+  },
+  {
+    "id": 17,
+    "employee_id": 37,
+    "schedule_date": "2026-09-09",
+    "shift_type": "день",
+    "hours_worked": 6.33
+  },
+  {
+    "id": 18,
+    "employee_id": 14,
+    "schedule_date": "2026-07-29",
+    "shift_type": "ночь",
+    "hours_worked": 8.6
+  },
+  {
+    "id": 19,
+    "employee_id": 10,
+    "schedule_date": "2026-08-11",
+    "shift_type": "выходной",
+    "hours_worked": 5.06
+  },
+  {
+    "id": 20,
+    "employee_id": 56,
+    "schedule_date": "2025-11-22",
+    "shift_type": "ночь",
+    "hours_worked": 2.38
+  },
+  {
+    "id": 21,
+    "employee_id": 7,
+    "schedule_date": "2026-05-21",
+    "shift_type": "ночь",
+    "hours_worked": 0.56
+  },
+  {
+    "id": 22,
+    "employee_id": 36,
+    "schedule_date": "2026-03-08",
+    "shift_type": "день",
+    "hours_worked": 1.49
+  },
+  {
+    "id": 23,
+    "employee_id": 22,
+    "schedule_date": "2026-09-08",
+    "shift_type": "ночь",
+    "hours_worked": 7.09
+  },
+  {
+    "id": 24,
+    "employee_id": 31,
+    "schedule_date": "2026-08-14",
+    "shift_type": "день",
+    "hours_worked": 3.42
+  },
+  {
+    "id": 25,
+    "employee_id": 1,
+    "schedule_date": "2026-04-18",
+    "shift_type": "ночь",
+    "hours_worked": 1.57
+  },
+  {
+    "id": 26,
+    "employee_id": 52,
+    "schedule_date": "2025-02-07",
+    "shift_type": "выходной",
+    "hours_worked": 11.02
+  },
+  {
+    "id": 27,
+    "employee_id": 6,
+    "schedule_date": "2025-12-12",
+    "shift_type": "выходной",
+    "hours_worked": 0.2
+  },
+  {
+    "id": 28,
+    "employee_id": 61,
+    "schedule_date": "2025-04-08",
+    "shift_type": "ночь",
+    "hours_worked": 8.68
+  },
+  {
+    "id": 29,
+    "employee_id": 36,
+    "schedule_date": "2025-11-21",
+    "shift_type": "ночь",
+    "hours_worked": 4.8
+  },
+  {
+    "id": 30,
+    "employee_id": 72,
+    "schedule_date": "2025-11-17",
+    "shift_type": "ночь",
+    "hours_worked": 7.35
+  },
+  {
+    "id": 31,
+    "employee_id": 51,
+    "schedule_date": "2025-11-02",
+    "shift_type": "выходной",
+    "hours_worked": 11.81
+  },
+  {
+    "id": 32,
+    "employee_id": 64,
+    "schedule_date": "2026-10-19",
+    "shift_type": "день",
+    "hours_worked": 10.12
+  },
+  {
+    "id": 33,
+    "employee_id": 14,
+    "schedule_date": "2025-01-30",
+    "shift_type": "день",
+    "hours_worked": 0.57
+  },
+  {
+    "id": 34,
+    "employee_id": 2,
+    "schedule_date": "2025-05-23",
+    "shift_type": "день",
+    "hours_worked": 11.92
+  },
+  {
+    "id": 35,
+    "employee_id": 56,
+    "schedule_date": "2025-08-20",
+    "shift_type": "день",
+    "hours_worked": 1.06
+  },
+  {
+    "id": 36,
+    "employee_id": 48,
+    "schedule_date": "2026-07-05",
+    "shift_type": "день",
+    "hours_worked": 11.21
+  },
+  {
+    "id": 37,
+    "employee_id": 7,
+    "schedule_date": "2025-09-23",
+    "shift_type": "день",
+    "hours_worked": 1.33
+  },
+  {
+    "id": 38,
+    "employee_id": 39,
+    "schedule_date": "2025-03-18",
+    "shift_type": "ночь",
+    "hours_worked": 3.95
+  },
+  {
+    "id": 39,
+    "employee_id": 49,
+    "schedule_date": "2025-10-04",
+    "shift_type": "выходной",
+    "hours_worked": 2.04
+  },
+  {
+    "id": 40,
+    "employee_id": 18,
+    "schedule_date": "2026-08-21",
+    "shift_type": "ночь",
+    "hours_worked": 1.44
+  },
+  {
+    "id": 41,
+    "employee_id": 41,
+    "schedule_date": "2025-06-01",
+    "shift_type": "выходной",
+    "hours_worked": 10.65
+  },
+  {
+    "id": 42,
+    "employee_id": 53,
+    "schedule_date": "2026-10-15",
+    "shift_type": "ночь",
+    "hours_worked": 8.02
+  },
+  {
+    "id": 43,
+    "employee_id": 67,
+    "schedule_date": "2026-06-25",
+    "shift_type": "день",
+    "hours_worked": 6.93
+  },
+  {
+    "id": 44,
+    "employee_id": 63,
+    "schedule_date": "2025-10-15",
+    "shift_type": "ночь",
+    "hours_worked": 9.27
+  },
+  {
+    "id": 45,
+    "employee_id": 62,
+    "schedule_date": "2025-08-20",
+    "shift_type": "день",
+    "hours_worked": 3.17
+  },
+  {
+    "id": 46,
+    "employee_id": 38,
+    "schedule_date": "2025-03-26",
+    "shift_type": "ночь",
+    "hours_worked": 6.7
+  },
+  {
+    "id": 47,
+    "employee_id": 32,
+    "schedule_date": "2026-10-25",
+    "shift_type": "выходной",
+    "hours_worked": 10.27
+  },
+  {
+    "id": 48,
+    "employee_id": 10,
+    "schedule_date": "2025-03-18",
+    "shift_type": "ночь",
+    "hours_worked": 0.72
+  },
+  {
+    "id": 49,
+    "employee_id": 2,
+    "schedule_date": "2025-08-10",
+    "shift_type": "ночь",
+    "hours_worked": 9.82
+  },
+  {
+    "id": 50,
+    "employee_id": 25,
+    "schedule_date": "2026-05-15",
+    "shift_type": "день",
+    "hours_worked": 4.09
+  },
+  {
+    "id": 51,
+    "employee_id": 68,
+    "schedule_date": "2026-06-11",
+    "shift_type": "ночь",
+    "hours_worked": 9.13
+  },
+  {
+    "id": 52,
+    "employee_id": 40,
+    "schedule_date": "2026-04-10",
+    "shift_type": "выходной",
+    "hours_worked": 1.85
+  },
+  {
+    "id": 53,
+    "employee_id": 65,
+    "schedule_date": "2025-04-19",
+    "shift_type": "день",
+    "hours_worked": 2.63
+  },
+  {
+    "id": 54,
+    "employee_id": 47,
+    "schedule_date": "2026-01-30",
+    "shift_type": "ночь",
+    "hours_worked": 10.41
+  },
+  {
+    "id": 55,
+    "employee_id": 66,
+    "schedule_date": "2025-07-27",
+    "shift_type": "ночь",
+    "hours_worked": 2.26
+  },
+  {
+    "id": 56,
+    "employee_id": 36,
+    "schedule_date": "2026-03-10",
+    "shift_type": "день",
+    "hours_worked": 8.24
+  },
+  {
+    "id": 57,
+    "employee_id": 14,
+    "schedule_date": "2025-05-31",
+    "shift_type": "ночь",
+    "hours_worked": 10.51
+  },
+  {
+    "id": 58,
+    "employee_id": 15,
+    "schedule_date": "2025-09-04",
+    "shift_type": "день",
+    "hours_worked": 10.73
+  },
+  {
+    "id": 59,
+    "employee_id": 24,
+    "schedule_date": "2025-10-01",
+    "shift_type": "день",
+    "hours_worked": 5.71
+  },
+  {
+    "id": 60,
+    "employee_id": 68,
+    "schedule_date": "2026-04-09",
+    "shift_type": "ночь",
+    "hours_worked": 3.19
+  },
+  {
+    "id": 61,
+    "employee_id": 71,
+    "schedule_date": "2025-03-28",
+    "shift_type": "ночь",
+    "hours_worked": 5.18
+  },
+  {
+    "id": 62,
+    "employee_id": 20,
+    "schedule_date": "2026-02-11",
+    "shift_type": "выходной",
+    "hours_worked": 5.17
+  },
+  {
+    "id": 63,
+    "employee_id": 43,
+    "schedule_date": "2025-02-24",
+    "shift_type": "ночь",
+    "hours_worked": 3.27
+  },
+  {
+    "id": 64,
+    "employee_id": 13,
+    "schedule_date": "2025-02-20",
+    "shift_type": "выходной",
+    "hours_worked": 4.59
+  },
+  {
+    "id": 65,
+    "employee_id": 55,
+    "schedule_date": "2025-07-18",
+    "shift_type": "ночь",
+    "hours_worked": 2.27
+  },
+  {
+    "id": 66,
+    "employee_id": 23,
+    "schedule_date": "2026-09-01",
+    "shift_type": "ночь",
+    "hours_worked": 6.35
+  },
+  {
+    "id": 67,
+    "employee_id": 64,
+    "schedule_date": "2026-06-16",
+    "shift_type": "ночь",
+    "hours_worked": 1.31
+  },
+  {
+    "id": 68,
+    "employee_id": 7,
+    "schedule_date": "2026-10-24",
+    "shift_type": "день",
+    "hours_worked": 11.51
+  },
+  {
+    "id": 69,
+    "employee_id": 29,
+    "schedule_date": "2025-04-28",
+    "shift_type": "день",
+    "hours_worked": 10.74
+  },
+  {
+    "id": 70,
+    "employee_id": 35,
+    "schedule_date": "2025-09-02",
+    "shift_type": "день",
+    "hours_worked": 6.39
+  },
+  {
+    "id": 71,
+    "employee_id": 36,
+    "schedule_date": "2025-08-20",
+    "shift_type": "выходной",
+    "hours_worked": 8.39
+  },
+  {
+    "id": 72,
+    "employee_id": 52,
+    "schedule_date": "2026-02-06",
+    "shift_type": "ночь",
+    "hours_worked": 1.22
+  },
+  {
+    "id": 73,
+    "employee_id": 35,
+    "schedule_date": "2026-05-23",
+    "shift_type": "день",
+    "hours_worked": 2.05
+  },
+  {
+    "id": 74,
+    "employee_id": 27,
+    "schedule_date": "2025-12-22",
+    "shift_type": "выходной",
+    "hours_worked": 3.46
+  },
+  {
+    "id": 75,
+    "employee_id": 37,
+    "schedule_date": "2025-01-04",
+    "shift_type": "день",
+    "hours_worked": 2.22
+  },
+  {
+    "id": 76,
+    "employee_id": 62,
+    "schedule_date": "2025-11-09",
+    "shift_type": "выходной",
+    "hours_worked": 2.86
+  },
+  {
+    "id": 77,
+    "employee_id": 41,
+    "schedule_date": "2025-03-13",
+    "shift_type": "день",
+    "hours_worked": 2.25
+  },
+  {
+    "id": 78,
+    "employee_id": 59,
+    "schedule_date": "2025-05-26",
+    "shift_type": "день",
+    "hours_worked": 7.99
+  },
+  {
+    "id": 79,
+    "employee_id": 55,
+    "schedule_date": "2025-12-09",
+    "shift_type": "день",
+    "hours_worked": 2.13
+  },
+  {
+    "id": 80,
+    "employee_id": 34,
+    "schedule_date": "2025-03-20",
+    "shift_type": "день",
+    "hours_worked": 8.15
+  },
+  {
+    "id": 81,
+    "employee_id": 2,
+    "schedule_date": "2026-09-01",
+    "shift_type": "ночь",
+    "hours_worked": 11.63
+  },
+  {
+    "id": 82,
+    "employee_id": 1,
+    "schedule_date": "2026-05-16",
+    "shift_type": "день",
+    "hours_worked": 5.67
+  },
+  {
+    "id": 83,
+    "employee_id": 6,
+    "schedule_date": "2025-01-18",
+    "shift_type": "выходной",
+    "hours_worked": 8.16
+  },
+  {
+    "id": 84,
+    "employee_id": 38,
+    "schedule_date": "2025-08-22",
+    "shift_type": "выходной",
+    "hours_worked": 6.04
+  },
+  {
+    "id": 85,
+    "employee_id": 19,
+    "schedule_date": "2025-04-07",
+    "shift_type": "день",
+    "hours_worked": 3.66
+  },
+  {
+    "id": 86,
+    "employee_id": 43,
+    "schedule_date": "2026-04-09",
+    "shift_type": "ночь",
+    "hours_worked": 8.82
+  },
+  {
+    "id": 87,
+    "employee_id": 70,
+    "schedule_date": "2025-09-21",
+    "shift_type": "выходной",
+    "hours_worked": 5.84
+  },
+  {
+    "id": 88,
+    "employee_id": 47,
+    "schedule_date": "2026-04-15",
+    "shift_type": "день",
+    "hours_worked": 9.93
+  },
+  {
+    "id": 89,
+    "employee_id": 39,
+    "schedule_date": "2025-12-08",
+    "shift_type": "выходной",
+    "hours_worked": 9.29
+  },
+  {
+    "id": 90,
+    "employee_id": 62,
+    "schedule_date": "2025-04-26",
+    "shift_type": "ночь",
+    "hours_worked": 8.23
+  },
+  {
+    "id": 91,
+    "employee_id": 3,
+    "schedule_date": "2025-06-01",
+    "shift_type": "ночь",
+    "hours_worked": 10.28
+  },
+  {
+    "id": 92,
+    "employee_id": 19,
+    "schedule_date": "2026-01-01",
+    "shift_type": "ночь",
+    "hours_worked": 0.37
+  },
+  {
+    "id": 93,
+    "employee_id": 56,
+    "schedule_date": "2026-01-04",
+    "shift_type": "день",
+    "hours_worked": 8.93
+  },
+  {
+    "id": 94,
+    "employee_id": 25,
+    "schedule_date": "2026-01-22",
+    "shift_type": "выходной",
+    "hours_worked": 1.3
+  },
+  {
+    "id": 95,
+    "employee_id": 36,
+    "schedule_date": "2026-10-04",
+    "shift_type": "выходной",
+    "hours_worked": 6.54
+  },
+  {
+    "id": 96,
+    "employee_id": 58,
+    "schedule_date": "2026-06-24",
+    "shift_type": "день",
+    "hours_worked": 3.18
+  },
+  {
+    "id": 97,
+    "employee_id": 45,
+    "schedule_date": "2025-12-06",
+    "shift_type": "ночь",
+    "hours_worked": 7.07
+  },
+  {
+    "id": 98,
+    "employee_id": 36,
+    "schedule_date": "2025-11-13",
+    "shift_type": "день",
+    "hours_worked": 0.49
+  },
+  {
+    "id": 99,
+    "employee_id": 67,
+    "schedule_date": "2025-12-18",
+    "shift_type": "выходной",
+    "hours_worked": 1.48
+  },
+  {
+    "id": 100,
+    "employee_id": 59,
+    "schedule_date": "2026-08-04",
+    "shift_type": "ночь",
+    "hours_worked": 3.46
+  },
+  {
+    "id": 101,
+    "employee_id": 2,
+    "schedule_date": "2026-05-26",
+    "shift_type": "выходной",
+    "hours_worked": 1.77
+  },
+  {
+    "id": 102,
+    "employee_id": 20,
+    "schedule_date": "2026-06-20",
+    "shift_type": "ночь",
+    "hours_worked": 7.49
+  },
+  {
+    "id": 103,
+    "employee_id": 21,
+    "schedule_date": "2025-11-07",
+    "shift_type": "ночь",
+    "hours_worked": 3.46
+  },
+  {
+    "id": 104,
+    "employee_id": 38,
+    "schedule_date": "2025-01-16",
+    "shift_type": "ночь",
+    "hours_worked": 0.49
+  },
+  {
+    "id": 105,
+    "employee_id": 37,
+    "schedule_date": "2026-08-31",
+    "shift_type": "день",
+    "hours_worked": 0.64
+  },
+  {
+    "id": 106,
+    "employee_id": 40,
+    "schedule_date": "2025-01-06",
+    "shift_type": "ночь",
+    "hours_worked": 4.23
+  },
+  {
+    "id": 107,
+    "employee_id": 1,
+    "schedule_date": "2025-02-21",
+    "shift_type": "ночь",
+    "hours_worked": 1.65
+  },
+  {
+    "id": 108,
+    "employee_id": 37,
+    "schedule_date": "2026-05-30",
+    "shift_type": "выходной",
+    "hours_worked": 11.5
+  },
+  {
+    "id": 109,
+    "employee_id": 72,
+    "schedule_date": "2025-06-08",
+    "shift_type": "день",
+    "hours_worked": 8.56
+  },
+  {
+    "id": 110,
+    "employee_id": 19,
+    "schedule_date": "2025-07-21",
+    "shift_type": "ночь",
+    "hours_worked": 7.02
+  },
+  {
+    "id": 111,
+    "employee_id": 11,
+    "schedule_date": "2025-10-25",
+    "shift_type": "день",
+    "hours_worked": 0.39
+  },
+  {
+    "id": 112,
+    "employee_id": 46,
+    "schedule_date": "2025-09-12",
+    "shift_type": "выходной",
+    "hours_worked": 7.64
+  },
+  {
+    "id": 113,
+    "employee_id": 55,
+    "schedule_date": "2026-02-13",
+    "shift_type": "день",
+    "hours_worked": 10.72
+  },
+  {
+    "id": 114,
+    "employee_id": 39,
+    "schedule_date": "2026-09-04",
+    "shift_type": "ночь",
+    "hours_worked": 2.08
+  },
+  {
+    "id": 115,
+    "employee_id": 56,
+    "schedule_date": "2025-11-27",
+    "shift_type": "выходной",
+    "hours_worked": 1.67
+  },
+  {
+    "id": 116,
+    "employee_id": 26,
+    "schedule_date": "2025-09-14",
+    "shift_type": "день",
+    "hours_worked": 5.0
+  },
+  {
+    "id": 117,
+    "employee_id": 26,
+    "schedule_date": "2025-11-05",
+    "shift_type": "ночь",
+    "hours_worked": 1.03
+  },
+  {
+    "id": 118,
+    "employee_id": 60,
+    "schedule_date": "2026-07-13",
+    "shift_type": "день",
+    "hours_worked": 4.51
+  },
+  {
+    "id": 119,
+    "employee_id": 56,
+    "schedule_date": "2025-04-09",
+    "shift_type": "день",
+    "hours_worked": 6.32
+  },
+  {
+    "id": 120,
+    "employee_id": 41,
+    "schedule_date": "2026-05-31",
+    "shift_type": "выходной",
+    "hours_worked": 8.55
+  },
+  {
+    "id": 121,
+    "employee_id": 60,
+    "schedule_date": "2025-12-29",
+    "shift_type": "ночь",
+    "hours_worked": 5.6
+  },
+  {
+    "id": 122,
+    "employee_id": 53,
+    "schedule_date": "2026-04-18",
+    "shift_type": "день",
+    "hours_worked": 10.95
+  },
+  {
+    "id": 123,
+    "employee_id": 4,
+    "schedule_date": "2026-03-08",
+    "shift_type": "день",
+    "hours_worked": 9.07
+  },
+  {
+    "id": 124,
+    "employee_id": 39,
+    "schedule_date": "2025-09-06",
+    "shift_type": "выходной",
+    "hours_worked": 6.15
+  },
+  {
+    "id": 125,
+    "employee_id": 17,
+    "schedule_date": "2026-09-28",
+    "shift_type": "выходной",
+    "hours_worked": 10.8
+  },
+  {
+    "id": 126,
+    "employee_id": 38,
+    "schedule_date": "2025-02-24",
+    "shift_type": "ночь",
+    "hours_worked": 1.51
+  },
+  {
+    "id": 127,
+    "employee_id": 1,
+    "schedule_date": "2026-04-19",
+    "shift_type": "выходной",
+    "hours_worked": 5.52
+  },
+  {
+    "id": 128,
+    "employee_id": 7,
+    "schedule_date": "2025-03-28",
+    "shift_type": "день",
+    "hours_worked": 3.24
+  },
+  {
+    "id": 129,
+    "employee_id": 14,
+    "schedule_date": "2025-12-08",
+    "shift_type": "выходной",
+    "hours_worked": 1.17
+  },
+  {
+    "id": 130,
+    "employee_id": 38,
+    "schedule_date": "2026-08-03",
+    "shift_type": "ночь",
+    "hours_worked": 8.29
+  },
+  {
+    "id": 131,
+    "employee_id": 8,
+    "schedule_date": "2025-05-05",
+    "shift_type": "выходной",
+    "hours_worked": 7.02
+  },
+  {
+    "id": 132,
+    "employee_id": 66,
+    "schedule_date": "2025-02-24",
+    "shift_type": "выходной",
+    "hours_worked": 2.46
+  },
+  {
+    "id": 133,
+    "employee_id": 19,
+    "schedule_date": "2026-07-30",
+    "shift_type": "выходной",
+    "hours_worked": 11.61
+  },
+  {
+    "id": 134,
+    "employee_id": 18,
+    "schedule_date": "2025-08-17",
+    "shift_type": "выходной",
+    "hours_worked": 7.68
+  },
+  {
+    "id": 135,
+    "employee_id": 20,
+    "schedule_date": "2025-11-05",
+    "shift_type": "выходной",
+    "hours_worked": 3.73
+  },
+  {
+    "id": 136,
+    "employee_id": 1,
+    "schedule_date": "2026-05-12",
+    "shift_type": "выходной",
+    "hours_worked": 8.25
+  },
+  {
+    "id": 137,
+    "employee_id": 15,
+    "schedule_date": "2025-03-10",
+    "shift_type": "день",
+    "hours_worked": 1.84
+  },
+  {
+    "id": 138,
+    "employee_id": 16,
+    "schedule_date": "2026-06-17",
+    "shift_type": "день",
+    "hours_worked": 2.97
+  },
+  {
+    "id": 139,
+    "employee_id": 14,
+    "schedule_date": "2026-05-01",
+    "shift_type": "день",
+    "hours_worked": 9.99
+  },
+  {
+    "id": 140,
+    "employee_id": 57,
+    "schedule_date": "2026-02-05",
+    "shift_type": "день",
+    "hours_worked": 11.11
+  },
+  {
+    "id": 141,
+    "employee_id": 39,
+    "schedule_date": "2026-02-19",
+    "shift_type": "ночь",
+    "hours_worked": 11.79
+  },
+  {
+    "id": 142,
+    "employee_id": 31,
+    "schedule_date": "2026-07-14",
+    "shift_type": "ночь",
+    "hours_worked": 9.86
+  },
+  {
+    "id": 143,
+    "employee_id": 57,
+    "schedule_date": "2026-09-24",
+    "shift_type": "день",
+    "hours_worked": 5.19
+  },
+  {
+    "id": 144,
+    "employee_id": 3,
+    "schedule_date": "2025-07-09",
+    "shift_type": "день",
+    "hours_worked": 9.82
+  },
+  {
+    "id": 145,
+    "employee_id": 31,
+    "schedule_date": "2025-06-24",
+    "shift_type": "выходной",
+    "hours_worked": 8.9
+  },
+  {
+    "id": 146,
+    "employee_id": 70,
+    "schedule_date": "2025-07-25",
+    "shift_type": "ночь",
+    "hours_worked": 5.77
+  },
+  {
+    "id": 147,
+    "employee_id": 38,
+    "schedule_date": "2025-04-13",
+    "shift_type": "выходной",
+    "hours_worked": 5.92
+  },
+  {
+    "id": 148,
+    "employee_id": 36,
+    "schedule_date": "2026-02-05",
+    "shift_type": "ночь",
+    "hours_worked": 8.37
+  },
+  {
+    "id": 149,
+    "employee_id": 14,
+    "schedule_date": "2026-04-21",
+    "shift_type": "ночь",
+    "hours_worked": 9.76
+  },
+  {
+    "id": 150,
+    "employee_id": 19,
+    "schedule_date": "2025-01-29",
+    "shift_type": "ночь",
+    "hours_worked": 5.48
+  },
+  {
+    "id": 151,
+    "employee_id": 50,
+    "schedule_date": "2025-01-12",
+    "shift_type": "выходной",
+    "hours_worked": 3.63
+  },
+  {
+    "id": 152,
+    "employee_id": 57,
+    "schedule_date": "2025-02-13",
+    "shift_type": "ночь",
+    "hours_worked": 11.55
+  },
+  {
+    "id": 153,
+    "employee_id": 60,
+    "schedule_date": "2026-04-15",
+    "shift_type": "ночь",
+    "hours_worked": 0.11
+  },
+  {
+    "id": 154,
+    "employee_id": 21,
+    "schedule_date": "2026-01-02",
+    "shift_type": "выходной",
+    "hours_worked": 10.27
+  },
+  {
+    "id": 155,
+    "employee_id": 65,
+    "schedule_date": "2025-08-04",
+    "shift_type": "ночь",
+    "hours_worked": 10.83
+  },
+  {
+    "id": 156,
+    "employee_id": 68,
+    "schedule_date": "2026-02-04",
+    "shift_type": "выходной",
+    "hours_worked": 0.75
+  },
+  {
+    "id": 157,
+    "employee_id": 20,
+    "schedule_date": "2025-12-27",
+    "shift_type": "выходной",
+    "hours_worked": 8.63
+  },
+  {
+    "id": 158,
+    "employee_id": 44,
+    "schedule_date": "2026-04-16",
+    "shift_type": "выходной",
+    "hours_worked": 10.3
+  },
+  {
+    "id": 159,
+    "employee_id": 18,
+    "schedule_date": "2025-10-13",
+    "shift_type": "выходной",
+    "hours_worked": 3.64
+  },
+  {
+    "id": 160,
+    "employee_id": 51,
+    "schedule_date": "2025-03-11",
+    "shift_type": "выходной",
+    "hours_worked": 5.8
+  },
+  {
+    "id": 161,
+    "employee_id": 61,
+    "schedule_date": "2026-09-13",
+    "shift_type": "выходной",
+    "hours_worked": 2.16
+  },
+  {
+    "id": 162,
+    "employee_id": 65,
+    "schedule_date": "2026-06-23",
+    "shift_type": "ночь",
+    "hours_worked": 1.55
+  },
+  {
+    "id": 163,
+    "employee_id": 42,
+    "schedule_date": "2026-08-26",
+    "shift_type": "выходной",
+    "hours_worked": 4.18
+  },
+  {
+    "id": 164,
+    "employee_id": 52,
+    "schedule_date": "2025-03-11",
+    "shift_type": "день",
+    "hours_worked": 0.35
+  },
+  {
+    "id": 165,
+    "employee_id": 21,
+    "schedule_date": "2025-08-26",
+    "shift_type": "день",
+    "hours_worked": 7.98
+  },
+  {
+    "id": 166,
+    "employee_id": 64,
+    "schedule_date": "2026-05-03",
+    "shift_type": "ночь",
+    "hours_worked": 9.12
+  },
+  {
+    "id": 167,
+    "employee_id": 31,
+    "schedule_date": "2025-04-18",
+    "shift_type": "день",
+    "hours_worked": 8.74
+  },
+  {
+    "id": 168,
+    "employee_id": 50,
+    "schedule_date": "2026-03-07",
+    "shift_type": "день",
+    "hours_worked": 0.74
+  },
+  {
+    "id": 169,
+    "employee_id": 33,
+    "schedule_date": "2025-04-28",
+    "shift_type": "день",
+    "hours_worked": 10.16
+  },
+  {
+    "id": 170,
+    "employee_id": 10,
+    "schedule_date": "2026-03-29",
+    "shift_type": "ночь",
+    "hours_worked": 7.28
+  },
+  {
+    "id": 171,
+    "employee_id": 4,
+    "schedule_date": "2025-06-28",
+    "shift_type": "ночь",
+    "hours_worked": 1.29
+  },
+  {
+    "id": 172,
+    "employee_id": 58,
+    "schedule_date": "2026-01-22",
+    "shift_type": "день",
+    "hours_worked": 11.87
+  },
+  {
+    "id": 173,
+    "employee_id": 72,
+    "schedule_date": "2025-07-24",
+    "shift_type": "день",
+    "hours_worked": 3.03
+  },
+  {
+    "id": 174,
+    "employee_id": 57,
+    "schedule_date": "2025-10-20",
+    "shift_type": "день",
+    "hours_worked": 2.41
+  },
+  {
+    "id": 175,
+    "employee_id": 21,
+    "schedule_date": "2026-03-21",
+    "shift_type": "выходной",
+    "hours_worked": 9.7
+  },
+  {
+    "id": 176,
+    "employee_id": 25,
+    "schedule_date": "2025-03-30",
+    "shift_type": "выходной",
+    "hours_worked": 0.29
+  },
+  {
+    "id": 177,
+    "employee_id": 13,
+    "schedule_date": "2025-07-28",
+    "shift_type": "день",
+    "hours_worked": 9.72
+  },
+  {
+    "id": 178,
+    "employee_id": 1,
+    "schedule_date": "2026-01-04",
+    "shift_type": "ночь",
+    "hours_worked": 6.82
+  },
+  {
+    "id": 179,
+    "employee_id": 10,
+    "schedule_date": "2025-12-15",
+    "shift_type": "день",
+    "hours_worked": 8.19
+  },
+  {
+    "id": 180,
+    "employee_id": 68,
+    "schedule_date": "2026-05-24",
+    "shift_type": "день",
+    "hours_worked": 9.99
+  },
+  {
+    "id": 181,
+    "employee_id": 61,
+    "schedule_date": "2026-05-28",
+    "shift_type": "ночь",
+    "hours_worked": 4.28
+  },
+  {
+    "id": 182,
+    "employee_id": 72,
+    "schedule_date": "2025-05-22",
+    "shift_type": "день",
+    "hours_worked": 5.27
+  },
+  {
+    "id": 183,
+    "employee_id": 49,
+    "schedule_date": "2025-03-14",
+    "shift_type": "выходной",
+    "hours_worked": 0.94
+  },
+  {
+    "id": 184,
+    "employee_id": 67,
+    "schedule_date": "2025-11-02",
+    "shift_type": "день",
+    "hours_worked": 1.42
+  },
+  {
+    "id": 185,
+    "employee_id": 30,
+    "schedule_date": "2025-02-22",
+    "shift_type": "выходной",
+    "hours_worked": 6.49
+  },
+  {
+    "id": 186,
+    "employee_id": 3,
+    "schedule_date": "2025-08-18",
+    "shift_type": "ночь",
+    "hours_worked": 11.07
+  },
+  {
+    "id": 187,
+    "employee_id": 33,
+    "schedule_date": "2026-02-04",
+    "shift_type": "выходной",
+    "hours_worked": 4.29
+  },
+  {
+    "id": 188,
+    "employee_id": 21,
+    "schedule_date": "2025-10-22",
+    "shift_type": "день",
+    "hours_worked": 6.41
+  },
+  {
+    "id": 189,
+    "employee_id": 31,
+    "schedule_date": "2026-06-15",
+    "shift_type": "выходной",
+    "hours_worked": 6.0
+  },
+  {
+    "id": 190,
+    "employee_id": 52,
+    "schedule_date": "2026-09-26",
+    "shift_type": "день",
+    "hours_worked": 6.55
+  },
+  {
+    "id": 191,
+    "employee_id": 15,
+    "schedule_date": "2026-08-20",
+    "shift_type": "ночь",
+    "hours_worked": 11.24
+  },
+  {
+    "id": 192,
+    "employee_id": 34,
+    "schedule_date": "2026-10-31",
+    "shift_type": "день",
+    "hours_worked": 0.39
+  },
+  {
+    "id": 193,
+    "employee_id": 54,
+    "schedule_date": "2025-09-25",
+    "shift_type": "день",
+    "hours_worked": 4.01
+  },
+  {
+    "id": 194,
+    "employee_id": 8,
+    "schedule_date": "2025-05-23",
+    "shift_type": "день",
+    "hours_worked": 6.57
+  },
+  {
+    "id": 195,
+    "employee_id": 43,
+    "schedule_date": "2025-03-05",
+    "shift_type": "день",
+    "hours_worked": 5.92
+  },
+  {
+    "id": 196,
+    "employee_id": 5,
+    "schedule_date": "2025-12-21",
+    "shift_type": "день",
+    "hours_worked": 11.4
+  },
+  {
+    "id": 197,
+    "employee_id": 11,
+    "schedule_date": "2026-07-19",
+    "shift_type": "ночь",
+    "hours_worked": 11.36
+  },
+  {
+    "id": 198,
+    "employee_id": 35,
+    "schedule_date": "2025-02-12",
+    "shift_type": "день",
+    "hours_worked": 0.43
+  },
+  {
+    "id": 199,
+    "employee_id": 65,
+    "schedule_date": "2025-08-19",
+    "shift_type": "выходной",
+    "hours_worked": 4.2
+  },
+  {
+    "id": 200,
+    "employee_id": 62,
+    "schedule_date": "2025-11-07",
+    "shift_type": "день",
+    "hours_worked": 0.26
+  },
+  {
+    "id": 201,
+    "employee_id": 8,
+    "schedule_date": "2025-01-27",
+    "shift_type": "день",
+    "hours_worked": 6.41
+  },
+  {
+    "id": 202,
+    "employee_id": 49,
+    "schedule_date": "2025-01-19",
+    "shift_type": "выходной",
+    "hours_worked": 5.79
+  },
+  {
+    "id": 203,
+    "employee_id": 50,
+    "schedule_date": "2026-01-22",
+    "shift_type": "выходной",
+    "hours_worked": 1.5
+  },
+  {
+    "id": 204,
+    "employee_id": 55,
+    "schedule_date": "2026-07-17",
+    "shift_type": "день",
+    "hours_worked": 1.39
+  },
+  {
+    "id": 205,
+    "employee_id": 16,
+    "schedule_date": "2026-09-23",
+    "shift_type": "ночь",
+    "hours_worked": 4.22
+  },
+  {
+    "id": 206,
+    "employee_id": 44,
+    "schedule_date": "2026-03-24",
+    "shift_type": "день",
+    "hours_worked": 2.86
+  },
+  {
+    "id": 207,
+    "employee_id": 12,
+    "schedule_date": "2026-08-26",
+    "shift_type": "день",
+    "hours_worked": 2.73
+  },
+  {
+    "id": 208,
+    "employee_id": 69,
+    "schedule_date": "2026-08-05",
+    "shift_type": "день",
+    "hours_worked": 11.89
+  },
+  {
+    "id": 209,
+    "employee_id": 2,
+    "schedule_date": "2025-09-13",
+    "shift_type": "день",
+    "hours_worked": 0.92
+  },
+  {
+    "id": 210,
+    "employee_id": 17,
+    "schedule_date": "2026-03-26",
+    "shift_type": "день",
+    "hours_worked": 3.39
+  },
+  {
+    "id": 211,
+    "employee_id": 41,
+    "schedule_date": "2025-12-25",
+    "shift_type": "выходной",
+    "hours_worked": 7.86
+  },
+  {
+    "id": 212,
+    "employee_id": 32,
+    "schedule_date": "2025-10-27",
+    "shift_type": "день",
+    "hours_worked": 7.27
+  },
+  {
+    "id": 213,
+    "employee_id": 62,
+    "schedule_date": "2025-05-06",
+    "shift_type": "выходной",
+    "hours_worked": 0.92
+  },
+  {
+    "id": 214,
+    "employee_id": 33,
+    "schedule_date": "2026-07-11",
+    "shift_type": "день",
+    "hours_worked": 5.94
+  },
+  {
+    "id": 215,
+    "employee_id": 46,
+    "schedule_date": "2025-08-14",
+    "shift_type": "ночь",
+    "hours_worked": 8.56
+  },
+  {
+    "id": 216,
+    "employee_id": 47,
+    "schedule_date": "2026-07-19",
+    "shift_type": "ночь",
+    "hours_worked": 10.43
+  },
+  {
+    "id": 217,
+    "employee_id": 32,
+    "schedule_date": "2026-06-24",
+    "shift_type": "ночь",
+    "hours_worked": 3.83
+  },
+  {
+    "id": 218,
+    "employee_id": 70,
+    "schedule_date": "2026-05-31",
+    "shift_type": "день",
+    "hours_worked": 0.65
+  },
+  {
+    "id": 219,
+    "employee_id": 53,
+    "schedule_date": "2026-09-29",
+    "shift_type": "ночь",
+    "hours_worked": 3.36
+  },
+  {
+    "id": 220,
+    "employee_id": 27,
+    "schedule_date": "2025-05-21",
+    "shift_type": "выходной",
+    "hours_worked": 2.77
+  },
+  {
+    "id": 221,
+    "employee_id": 71,
+    "schedule_date": "2025-08-04",
+    "shift_type": "день",
+    "hours_worked": 4.47
+  },
+  {
+    "id": 222,
+    "employee_id": 19,
+    "schedule_date": "2025-02-06",
+    "shift_type": "день",
+    "hours_worked": 8.38
+  },
+  {
+    "id": 223,
+    "employee_id": 59,
+    "schedule_date": "2025-04-27",
+    "shift_type": "день",
+    "hours_worked": 5.99
+  },
+  {
+    "id": 224,
+    "employee_id": 5,
+    "schedule_date": "2025-10-04",
+    "shift_type": "ночь",
+    "hours_worked": 7.06
+  },
+  {
+    "id": 225,
+    "employee_id": 39,
+    "schedule_date": "2025-03-28",
+    "shift_type": "день",
+    "hours_worked": 3.35
+  },
+  {
+    "id": 226,
+    "employee_id": 50,
+    "schedule_date": "2026-05-23",
+    "shift_type": "день",
+    "hours_worked": 10.35
+  },
+  {
+    "id": 227,
+    "employee_id": 50,
+    "schedule_date": "2026-03-31",
+    "shift_type": "день",
+    "hours_worked": 2.69
+  },
+  {
+    "id": 228,
+    "employee_id": 49,
+    "schedule_date": "2025-07-08",
+    "shift_type": "выходной",
+    "hours_worked": 5.17
+  },
+  {
+    "id": 229,
+    "employee_id": 7,
+    "schedule_date": "2025-11-09",
+    "shift_type": "день",
+    "hours_worked": 6.5
+  },
+  {
+    "id": 230,
+    "employee_id": 45,
+    "schedule_date": "2025-01-27",
+    "shift_type": "выходной",
+    "hours_worked": 9.05
+  },
+  {
+    "id": 231,
+    "employee_id": 44,
+    "schedule_date": "2025-09-26",
+    "shift_type": "выходной",
+    "hours_worked": 2.6
+  },
+  {
+    "id": 232,
+    "employee_id": 4,
+    "schedule_date": "2025-12-16",
+    "shift_type": "выходной",
+    "hours_worked": 9.95
+  },
+  {
+    "id": 233,
+    "employee_id": 56,
+    "schedule_date": "2026-03-14",
+    "shift_type": "выходной",
+    "hours_worked": 11.14
+  },
+  {
+    "id": 234,
+    "employee_id": 8,
+    "schedule_date": "2025-04-22",
+    "shift_type": "выходной",
+    "hours_worked": 4.66
+  },
+  {
+    "id": 235,
+    "employee_id": 37,
+    "schedule_date": "2026-07-02",
+    "shift_type": "ночь",
+    "hours_worked": 5.09
+  },
+  {
+    "id": 236,
+    "employee_id": 67,
+    "schedule_date": "2025-09-24",
+    "shift_type": "день",
+    "hours_worked": 11.52
+  },
+  {
+    "id": 237,
+    "employee_id": 60,
+    "schedule_date": "2025-09-01",
+    "shift_type": "день",
+    "hours_worked": 10.89
+  },
+  {
+    "id": 238,
+    "employee_id": 36,
+    "schedule_date": "2025-10-08",
+    "shift_type": "день",
+    "hours_worked": 11.99
+  },
+  {
+    "id": 239,
+    "employee_id": 70,
+    "schedule_date": "2025-10-30",
+    "shift_type": "ночь",
+    "hours_worked": 6.85
+  },
+  {
+    "id": 240,
+    "employee_id": 5,
+    "schedule_date": "2026-09-23",
+    "shift_type": "ночь",
+    "hours_worked": 4.34
+  },
+  {
+    "id": 241,
+    "employee_id": 33,
+    "schedule_date": "2026-10-31",
+    "shift_type": "выходной",
+    "hours_worked": 0.15
+  },
+  {
+    "id": 242,
+    "employee_id": 40,
+    "schedule_date": "2026-08-06",
+    "shift_type": "выходной",
+    "hours_worked": 3.85
+  },
+  {
+    "id": 243,
+    "employee_id": 34,
+    "schedule_date": "2025-07-03",
+    "shift_type": "ночь",
+    "hours_worked": 5.55
+  },
+  {
+    "id": 244,
+    "employee_id": 57,
+    "schedule_date": "2025-01-10",
+    "shift_type": "ночь",
+    "hours_worked": 0.44
+  },
+  {
+    "id": 245,
+    "employee_id": 46,
+    "schedule_date": "2026-05-07",
+    "shift_type": "выходной",
+    "hours_worked": 10.13
+  },
+  {
+    "id": 246,
+    "employee_id": 28,
+    "schedule_date": "2026-02-23",
+    "shift_type": "день",
+    "hours_worked": 6.95
+  },
+  {
+    "id": 247,
+    "employee_id": 11,
+    "schedule_date": "2025-10-11",
+    "shift_type": "выходной",
+    "hours_worked": 6.62
+  },
+  {
+    "id": 248,
+    "employee_id": 9,
+    "schedule_date": "2026-03-28",
+    "shift_type": "день",
+    "hours_worked": 3.1
+  },
+  {
+    "id": 249,
+    "employee_id": 36,
+    "schedule_date": "2025-09-23",
+    "shift_type": "ночь",
+    "hours_worked": 1.53
+  },
+  {
+    "id": 250,
+    "employee_id": 23,
+    "schedule_date": "2025-05-31",
+    "shift_type": "выходной",
+    "hours_worked": 7.87
+  },
+  {
+    "id": 251,
+    "employee_id": 30,
+    "schedule_date": "2025-04-28",
+    "shift_type": "выходной",
+    "hours_worked": 0.46
+  },
+  {
+    "id": 252,
+    "employee_id": 65,
+    "schedule_date": "2026-03-27",
+    "shift_type": "выходной",
+    "hours_worked": 3.81
+  },
+  {
+    "id": 253,
+    "employee_id": 71,
+    "schedule_date": "2025-08-22",
+    "shift_type": "день",
+    "hours_worked": 11.42
+  },
+  {
+    "id": 254,
+    "employee_id": 34,
+    "schedule_date": "2025-09-21",
+    "shift_type": "день",
+    "hours_worked": 8.14
+  },
+  {
+    "id": 255,
+    "employee_id": 46,
+    "schedule_date": "2026-07-08",
+    "shift_type": "выходной",
+    "hours_worked": 0.54
+  },
+  {
+    "id": 256,
+    "employee_id": 31,
+    "schedule_date": "2025-12-25",
+    "shift_type": "день",
+    "hours_worked": 0.93
+  },
+  {
+    "id": 257,
+    "employee_id": 57,
+    "schedule_date": "2025-04-26",
+    "shift_type": "выходной",
+    "hours_worked": 0.93
+  },
+  {
+    "id": 258,
+    "employee_id": 27,
+    "schedule_date": "2025-11-30",
+    "shift_type": "выходной",
+    "hours_worked": 4.46
+  },
+  {
+    "id": 259,
+    "employee_id": 54,
+    "schedule_date": "2025-03-15",
+    "shift_type": "выходной",
+    "hours_worked": 5.12
+  },
+  {
+    "id": 260,
+    "employee_id": 37,
+    "schedule_date": "2025-05-27",
+    "shift_type": "день",
+    "hours_worked": 3.92
+  },
+  {
+    "id": 261,
+    "employee_id": 47,
+    "schedule_date": "2025-12-10",
+    "shift_type": "ночь",
+    "hours_worked": 10.77
+  },
+  {
+    "id": 262,
+    "employee_id": 48,
+    "schedule_date": "2026-04-27",
+    "shift_type": "ночь",
+    "hours_worked": 7.46
+  },
+  {
+    "id": 263,
+    "employee_id": 21,
+    "schedule_date": "2026-01-13",
+    "shift_type": "день",
+    "hours_worked": 3.49
+  },
+  {
+    "id": 264,
+    "employee_id": 20,
+    "schedule_date": "2026-08-29",
+    "shift_type": "день",
+    "hours_worked": 1.27
+  },
+  {
+    "id": 265,
+    "employee_id": 28,
+    "schedule_date": "2025-11-17",
+    "shift_type": "выходной",
+    "hours_worked": 8.59
+  },
+  {
+    "id": 266,
+    "employee_id": 66,
+    "schedule_date": "2026-08-19",
+    "shift_type": "выходной",
+    "hours_worked": 4.13
+  },
+  {
+    "id": 267,
+    "employee_id": 28,
+    "schedule_date": "2026-01-23",
+    "shift_type": "выходной",
+    "hours_worked": 0.39
+  },
+  {
+    "id": 268,
+    "employee_id": 20,
+    "schedule_date": "2026-01-26",
+    "shift_type": "выходной",
+    "hours_worked": 0.94
+  },
+  {
+    "id": 269,
+    "employee_id": 10,
+    "schedule_date": "2025-08-18",
+    "shift_type": "выходной",
+    "hours_worked": 6.04
+  },
+  {
+    "id": 270,
+    "employee_id": 71,
+    "schedule_date": "2026-03-05",
+    "shift_type": "выходной",
+    "hours_worked": 8.8
+  },
+  {
+    "id": 271,
+    "employee_id": 68,
+    "schedule_date": "2025-02-22",
+    "shift_type": "выходной",
+    "hours_worked": 5.67
+  },
+  {
+    "id": 272,
+    "employee_id": 68,
+    "schedule_date": "2026-06-17",
+    "shift_type": "ночь",
+    "hours_worked": 3.8
+  },
+  {
+    "id": 273,
+    "employee_id": 25,
+    "schedule_date": "2026-08-13",
+    "shift_type": "ночь",
+    "hours_worked": 10.93
+  },
+  {
+    "id": 274,
+    "employee_id": 43,
+    "schedule_date": "2025-09-06",
+    "shift_type": "ночь",
+    "hours_worked": 2.77
+  },
+  {
+    "id": 275,
+    "employee_id": 41,
+    "schedule_date": "2025-04-29",
+    "shift_type": "выходной",
+    "hours_worked": 2.89
+  },
+  {
+    "id": 276,
+    "employee_id": 53,
+    "schedule_date": "2026-01-06",
+    "shift_type": "день",
+    "hours_worked": 4.22
+  },
+  {
+    "id": 277,
+    "employee_id": 65,
+    "schedule_date": "2025-03-20",
+    "shift_type": "ночь",
+    "hours_worked": 7.84
+  },
+  {
+    "id": 278,
+    "employee_id": 30,
+    "schedule_date": "2026-04-05",
+    "shift_type": "ночь",
+    "hours_worked": 2.76
+  },
+  {
+    "id": 279,
+    "employee_id": 17,
+    "schedule_date": "2026-07-05",
+    "shift_type": "день",
+    "hours_worked": 9.32
+  },
+  {
+    "id": 280,
+    "employee_id": 53,
+    "schedule_date": "2026-08-22",
+    "shift_type": "выходной",
+    "hours_worked": 1.66
+  },
+  {
+    "id": 281,
+    "employee_id": 34,
+    "schedule_date": "2025-10-21",
+    "shift_type": "ночь",
+    "hours_worked": 3.77
+  },
+  {
+    "id": 282,
+    "employee_id": 11,
+    "schedule_date": "2026-02-23",
+    "shift_type": "ночь",
+    "hours_worked": 6.06
+  },
+  {
+    "id": 283,
+    "employee_id": 19,
+    "schedule_date": "2026-08-13",
+    "shift_type": "ночь",
+    "hours_worked": 7.59
+  },
+  {
+    "id": 284,
+    "employee_id": 26,
+    "schedule_date": "2025-07-04",
+    "shift_type": "ночь",
+    "hours_worked": 0.19
+  },
+  {
+    "id": 285,
+    "employee_id": 16,
+    "schedule_date": "2026-03-05",
+    "shift_type": "ночь",
+    "hours_worked": 9.19
+  },
+  {
+    "id": 286,
+    "employee_id": 61,
+    "schedule_date": "2025-04-14",
+    "shift_type": "день",
+    "hours_worked": 10.43
+  },
+  {
+    "id": 287,
+    "employee_id": 56,
+    "schedule_date": "2025-01-25",
+    "shift_type": "выходной",
+    "hours_worked": 2.0
+  },
+  {
+    "id": 288,
+    "employee_id": 10,
+    "schedule_date": "2025-05-16",
+    "shift_type": "выходной",
+    "hours_worked": 10.4
+  },
+  {
+    "id": 289,
+    "employee_id": 50,
+    "schedule_date": "2026-03-09",
+    "shift_type": "ночь",
+    "hours_worked": 1.53
+  },
+  {
+    "id": 290,
+    "employee_id": 72,
+    "schedule_date": "2025-09-05",
+    "shift_type": "выходной",
+    "hours_worked": 3.52
+  },
+  {
+    "id": 291,
+    "employee_id": 44,
+    "schedule_date": "2025-12-11",
+    "shift_type": "выходной",
+    "hours_worked": 7.31
+  },
+  {
+    "id": 292,
+    "employee_id": 14,
+    "schedule_date": "2025-02-16",
+    "shift_type": "день",
+    "hours_worked": 8.86
+  },
+  {
+    "id": 293,
+    "employee_id": 46,
+    "schedule_date": "2026-04-05",
+    "shift_type": "ночь",
+    "hours_worked": 7.57
+  },
+  {
+    "id": 294,
+    "employee_id": 56,
+    "schedule_date": "2025-10-24",
+    "shift_type": "ночь",
+    "hours_worked": 8.4
+  },
+  {
+    "id": 295,
+    "employee_id": 24,
+    "schedule_date": "2026-08-27",
+    "shift_type": "выходной",
+    "hours_worked": 1.01
+  },
+  {
+    "id": 296,
+    "employee_id": 1,
+    "schedule_date": "2026-08-31",
+    "shift_type": "выходной",
+    "hours_worked": 4.44
+  },
+  {
+    "id": 297,
+    "employee_id": 59,
+    "schedule_date": "2026-01-24",
+    "shift_type": "ночь",
+    "hours_worked": 5.26
+  },
+  {
+    "id": 298,
+    "employee_id": 66,
+    "schedule_date": "2026-08-26",
+    "shift_type": "ночь",
+    "hours_worked": 11.34
+  },
+  {
+    "id": 299,
+    "employee_id": 13,
+    "schedule_date": "2025-08-26",
+    "shift_type": "ночь",
+    "hours_worked": 5.92
+  },
+  {
+    "id": 300,
+    "employee_id": 7,
+    "schedule_date": "2026-08-01",
+    "shift_type": "выходной",
+    "hours_worked": 10.77
+  },
+  {
+    "id": 301,
+    "employee_id": 66,
+    "schedule_date": "2026-03-13",
+    "shift_type": "ночь",
+    "hours_worked": 3.87
+  },
+  {
+    "id": 302,
+    "employee_id": 41,
+    "schedule_date": "2025-07-02",
+    "shift_type": "день",
+    "hours_worked": 0.5
+  },
+  {
+    "id": 303,
+    "employee_id": 27,
+    "schedule_date": "2026-03-17",
+    "shift_type": "выходной",
+    "hours_worked": 3.34
+  },
+  {
+    "id": 304,
+    "employee_id": 41,
+    "schedule_date": "2025-04-12",
+    "shift_type": "ночь",
+    "hours_worked": 3.42
+  },
+  {
+    "id": 305,
+    "employee_id": 16,
+    "schedule_date": "2025-10-22",
+    "shift_type": "ночь",
+    "hours_worked": 5.84
+  },
+  {
+    "id": 306,
+    "employee_id": 29,
+    "schedule_date": "2025-06-23",
+    "shift_type": "ночь",
+    "hours_worked": 11.27
+  },
+  {
+    "id": 307,
+    "employee_id": 34,
+    "schedule_date": "2026-09-13",
+    "shift_type": "день",
+    "hours_worked": 11.09
+  },
+  {
+    "id": 308,
+    "employee_id": 36,
+    "schedule_date": "2025-05-25",
+    "shift_type": "день",
+    "hours_worked": 2.48
+  },
+  {
+    "id": 309,
+    "employee_id": 66,
+    "schedule_date": "2025-06-22",
+    "shift_type": "день",
+    "hours_worked": 7.18
+  },
+  {
+    "id": 310,
+    "employee_id": 6,
+    "schedule_date": "2026-07-07",
+    "shift_type": "выходной",
+    "hours_worked": 9.59
+  },
+  {
+    "id": 311,
+    "employee_id": 1,
+    "schedule_date": "2026-05-16",
+    "shift_type": "день",
+    "hours_worked": 4.43
+  },
+  {
+    "id": 312,
+    "employee_id": 37,
+    "schedule_date": "2026-08-08",
+    "shift_type": "ночь",
+    "hours_worked": 8.79
+  },
+  {
+    "id": 313,
+    "employee_id": 67,
+    "schedule_date": "2025-05-10",
+    "shift_type": "ночь",
+    "hours_worked": 3.54
+  },
+  {
+    "id": 314,
+    "employee_id": 15,
+    "schedule_date": "2025-05-03",
+    "shift_type": "ночь",
+    "hours_worked": 10.67
+  },
+  {
+    "id": 315,
+    "employee_id": 64,
+    "schedule_date": "2025-09-27",
+    "shift_type": "день",
+    "hours_worked": 10.37
+  },
+  {
+    "id": 316,
+    "employee_id": 36,
+    "schedule_date": "2025-04-30",
+    "shift_type": "ночь",
+    "hours_worked": 9.64
+  },
+  {
+    "id": 317,
+    "employee_id": 29,
+    "schedule_date": "2025-03-18",
+    "shift_type": "ночь",
+    "hours_worked": 1.88
+  },
+  {
+    "id": 318,
+    "employee_id": 43,
+    "schedule_date": "2025-10-10",
+    "shift_type": "ночь",
+    "hours_worked": 7.57
+  },
+  {
+    "id": 319,
+    "employee_id": 66,
+    "schedule_date": "2025-03-17",
+    "shift_type": "выходной",
+    "hours_worked": 8.26
+  },
+  {
+    "id": 320,
+    "employee_id": 5,
+    "schedule_date": "2026-03-20",
+    "shift_type": "день",
+    "hours_worked": 11.19
+  },
+  {
+    "id": 321,
+    "employee_id": 67,
+    "schedule_date": "2025-11-22",
+    "shift_type": "день",
+    "hours_worked": 10.1
+  },
+  {
+    "id": 322,
+    "employee_id": 5,
+    "schedule_date": "2026-10-12",
+    "shift_type": "выходной",
+    "hours_worked": 0.1
+  },
+  {
+    "id": 323,
+    "employee_id": 18,
+    "schedule_date": "2026-08-24",
+    "shift_type": "ночь",
+    "hours_worked": 10.47
+  },
+  {
+    "id": 324,
+    "employee_id": 29,
+    "schedule_date": "2025-07-20",
+    "shift_type": "ночь",
+    "hours_worked": 5.64
+  },
+  {
+    "id": 325,
+    "employee_id": 63,
+    "schedule_date": "2025-07-11",
+    "shift_type": "выходной",
+    "hours_worked": 5.96
+  },
+  {
+    "id": 326,
+    "employee_id": 17,
+    "schedule_date": "2025-07-23",
+    "shift_type": "выходной",
+    "hours_worked": 10.51
+  },
+  {
+    "id": 327,
+    "employee_id": 67,
+    "schedule_date": "2025-08-08",
+    "shift_type": "день",
+    "hours_worked": 5.21
+  },
+  {
+    "id": 328,
+    "employee_id": 63,
+    "schedule_date": "2026-07-26",
+    "shift_type": "выходной",
+    "hours_worked": 2.5
+  },
+  {
+    "id": 329,
+    "employee_id": 23,
+    "schedule_date": "2025-02-09",
+    "shift_type": "ночь",
+    "hours_worked": 8.26
+  },
+  {
+    "id": 330,
+    "employee_id": 49,
+    "schedule_date": "2026-10-09",
+    "shift_type": "выходной",
+    "hours_worked": 2.82
+  },
+  {
+    "id": 331,
+    "employee_id": 45,
+    "schedule_date": "2026-05-11",
+    "shift_type": "выходной",
+    "hours_worked": 7.88
+  },
+  {
+    "id": 332,
+    "employee_id": 24,
+    "schedule_date": "2025-11-04",
+    "shift_type": "день",
+    "hours_worked": 10.5
+  },
+  {
+    "id": 333,
+    "employee_id": 63,
+    "schedule_date": "2026-05-17",
+    "shift_type": "выходной",
+    "hours_worked": 4.71
+  },
+  {
+    "id": 334,
+    "employee_id": 46,
+    "schedule_date": "2026-07-11",
+    "shift_type": "ночь",
+    "hours_worked": 3.55
+  },
+  {
+    "id": 335,
+    "employee_id": 29,
+    "schedule_date": "2025-04-26",
+    "shift_type": "ночь",
+    "hours_worked": 5.04
+  },
+  {
+    "id": 336,
+    "employee_id": 58,
+    "schedule_date": "2025-11-30",
+    "shift_type": "день",
+    "hours_worked": 7.95
+  },
+  {
+    "id": 337,
+    "employee_id": 15,
+    "schedule_date": "2025-06-30",
+    "shift_type": "ночь",
+    "hours_worked": 11.48
+  },
+  {
+    "id": 338,
+    "employee_id": 15,
+    "schedule_date": "2025-12-22",
+    "shift_type": "выходной",
+    "hours_worked": 4.78
+  },
+  {
+    "id": 339,
+    "employee_id": 17,
+    "schedule_date": "2026-05-11",
+    "shift_type": "ночь",
+    "hours_worked": 7.21
+  },
+  {
+    "id": 340,
+    "employee_id": 31,
+    "schedule_date": "2025-01-30",
+    "shift_type": "ночь",
+    "hours_worked": 3.22
+  },
+  {
+    "id": 341,
+    "employee_id": 28,
+    "schedule_date": "2026-02-23",
+    "shift_type": "день",
+    "hours_worked": 6.75
+  },
+  {
+    "id": 342,
+    "employee_id": 42,
+    "schedule_date": "2025-09-25",
+    "shift_type": "выходной",
+    "hours_worked": 3.81
+  },
+  {
+    "id": 343,
+    "employee_id": 51,
+    "schedule_date": "2026-03-29",
+    "shift_type": "ночь",
+    "hours_worked": 4.78
+  },
+  {
+    "id": 344,
+    "employee_id": 7,
+    "schedule_date": "2025-10-02",
+    "shift_type": "ночь",
+    "hours_worked": 8.74
+  },
+  {
+    "id": 345,
+    "employee_id": 44,
+    "schedule_date": "2026-10-14",
+    "shift_type": "день",
+    "hours_worked": 3.7
+  },
+  {
+    "id": 346,
+    "employee_id": 53,
+    "schedule_date": "2025-08-15",
+    "shift_type": "выходной",
+    "hours_worked": 10.51
+  },
+  {
+    "id": 347,
+    "employee_id": 69,
+    "schedule_date": "2025-07-31",
+    "shift_type": "выходной",
+    "hours_worked": 1.32
+  },
+  {
+    "id": 348,
+    "employee_id": 43,
+    "schedule_date": "2025-05-13",
+    "shift_type": "выходной",
+    "hours_worked": 6.48
+  },
+  {
+    "id": 349,
+    "employee_id": 3,
+    "schedule_date": "2026-01-24",
+    "shift_type": "день",
+    "hours_worked": 9.37
+  },
+  {
+    "id": 350,
+    "employee_id": 43,
+    "schedule_date": "2025-12-28",
+    "shift_type": "выходной",
+    "hours_worked": 0.76
+  },
+  {
+    "id": 351,
+    "employee_id": 7,
+    "schedule_date": "2026-06-16",
+    "shift_type": "день",
+    "hours_worked": 4.35
+  },
+  {
+    "id": 352,
+    "employee_id": 26,
+    "schedule_date": "2025-06-10",
+    "shift_type": "выходной",
+    "hours_worked": 4.75
+  },
+  {
+    "id": 353,
+    "employee_id": 30,
+    "schedule_date": "2025-10-25",
+    "shift_type": "день",
+    "hours_worked": 10.93
+  },
+  {
+    "id": 354,
+    "employee_id": 43,
+    "schedule_date": "2026-02-28",
+    "shift_type": "день",
+    "hours_worked": 6.64
+  },
+  {
+    "id": 355,
+    "employee_id": 32,
+    "schedule_date": "2025-01-14",
+    "shift_type": "день",
+    "hours_worked": 10.15
+  },
+  {
+    "id": 356,
+    "employee_id": 68,
+    "schedule_date": "2025-04-15",
+    "shift_type": "выходной",
+    "hours_worked": 4.78
+  },
+  {
+    "id": 357,
+    "employee_id": 63,
+    "schedule_date": "2025-02-13",
+    "shift_type": "день",
+    "hours_worked": 3.4
+  },
+  {
+    "id": 358,
+    "employee_id": 4,
+    "schedule_date": "2025-08-24",
+    "shift_type": "выходной",
+    "hours_worked": 9.27
+  },
+  {
+    "id": 359,
+    "employee_id": 32,
+    "schedule_date": "2025-02-04",
+    "shift_type": "ночь",
+    "hours_worked": 9.0
+  },
+  {
+    "id": 360,
+    "employee_id": 49,
+    "schedule_date": "2026-02-15",
+    "shift_type": "день",
+    "hours_worked": 9.82
+  },
+  {
+    "id": 361,
+    "employee_id": 35,
+    "schedule_date": "2025-03-28",
+    "shift_type": "день",
+    "hours_worked": 0.89
+  },
+  {
+    "id": 362,
+    "employee_id": 54,
+    "schedule_date": "2025-01-21",
+    "shift_type": "день",
+    "hours_worked": 8.91
+  },
+  {
+    "id": 363,
+    "employee_id": 70,
+    "schedule_date": "2026-09-12",
+    "shift_type": "день",
+    "hours_worked": 1.15
+  },
+  {
+    "id": 364,
+    "employee_id": 51,
+    "schedule_date": "2025-07-18",
+    "shift_type": "выходной",
+    "hours_worked": 10.31
+  },
+  {
+    "id": 365,
+    "employee_id": 42,
+    "schedule_date": "2026-03-12",
+    "shift_type": "выходной",
+    "hours_worked": 8.92
+  },
+  {
+    "id": 366,
+    "employee_id": 39,
+    "schedule_date": "2025-10-08",
+    "shift_type": "ночь",
+    "hours_worked": 2.43
+  },
+  {
+    "id": 367,
+    "employee_id": 34,
+    "schedule_date": "2026-08-14",
+    "shift_type": "ночь",
+    "hours_worked": 4.52
+  },
+  {
+    "id": 368,
+    "employee_id": 55,
+    "schedule_date": "2025-04-06",
+    "shift_type": "день",
+    "hours_worked": 11.6
+  },
+  {
+    "id": 369,
+    "employee_id": 72,
+    "schedule_date": "2025-10-13",
+    "shift_type": "ночь",
+    "hours_worked": 3.41
+  },
+  {
+    "id": 370,
+    "employee_id": 69,
+    "schedule_date": "2026-06-03",
+    "shift_type": "день",
+    "hours_worked": 4.59
+  },
+  {
+    "id": 371,
+    "employee_id": 64,
+    "schedule_date": "2026-02-08",
+    "shift_type": "ночь",
+    "hours_worked": 9.15
+  },
+  {
+    "id": 372,
+    "employee_id": 14,
+    "schedule_date": "2026-04-09",
+    "shift_type": "день",
+    "hours_worked": 6.93
+  },
+  {
+    "id": 373,
+    "employee_id": 4,
+    "schedule_date": "2026-02-11",
+    "shift_type": "день",
+    "hours_worked": 5.37
+  },
+  {
+    "id": 374,
+    "employee_id": 62,
+    "schedule_date": "2026-07-31",
+    "shift_type": "день",
+    "hours_worked": 7.71
+  },
+  {
+    "id": 375,
+    "employee_id": 43,
+    "schedule_date": "2025-05-28",
+    "shift_type": "выходной",
+    "hours_worked": 11.71
+  },
+  {
+    "id": 376,
+    "employee_id": 13,
+    "schedule_date": "2026-07-29",
+    "shift_type": "день",
+    "hours_worked": 2.49
+  },
+  {
+    "id": 377,
+    "employee_id": 63,
+    "schedule_date": "2026-08-31",
+    "shift_type": "день",
+    "hours_worked": 1.01
+  },
+  {
+    "id": 378,
+    "employee_id": 52,
+    "schedule_date": "2026-09-24",
+    "shift_type": "ночь",
+    "hours_worked": 6.28
+  },
+  {
+    "id": 379,
+    "employee_id": 30,
+    "schedule_date": "2025-03-02",
+    "shift_type": "ночь",
+    "hours_worked": 3.02
+  },
+  {
+    "id": 380,
+    "employee_id": 40,
+    "schedule_date": "2025-12-12",
+    "shift_type": "день",
+    "hours_worked": 0.44
+  },
+  {
+    "id": 381,
+    "employee_id": 53,
+    "schedule_date": "2025-01-06",
+    "shift_type": "ночь",
+    "hours_worked": 8.28
+  },
+  {
+    "id": 382,
+    "employee_id": 72,
+    "schedule_date": "2026-05-16",
+    "shift_type": "выходной",
+    "hours_worked": 6.0
+  },
+  {
+    "id": 383,
+    "employee_id": 31,
+    "schedule_date": "2025-11-26",
+    "shift_type": "ночь",
+    "hours_worked": 8.51
+  },
+  {
+    "id": 384,
+    "employee_id": 66,
+    "schedule_date": "2026-07-23",
+    "shift_type": "выходной",
+    "hours_worked": 11.91
+  },
+  {
+    "id": 385,
+    "employee_id": 11,
+    "schedule_date": "2025-04-18",
+    "shift_type": "ночь",
+    "hours_worked": 8.39
+  },
+  {
+    "id": 386,
+    "employee_id": 49,
+    "schedule_date": "2025-05-11",
+    "shift_type": "день",
+    "hours_worked": 1.95
+  },
+  {
+    "id": 387,
+    "employee_id": 16,
+    "schedule_date": "2025-06-20",
+    "shift_type": "день",
+    "hours_worked": 5.25
+  },
+  {
+    "id": 388,
+    "employee_id": 15,
+    "schedule_date": "2025-02-09",
+    "shift_type": "ночь",
+    "hours_worked": 5.94
+  },
+  {
+    "id": 389,
+    "employee_id": 68,
+    "schedule_date": "2026-05-14",
+    "shift_type": "день",
+    "hours_worked": 8.99
+  },
+  {
+    "id": 390,
+    "employee_id": 71,
+    "schedule_date": "2026-03-05",
+    "shift_type": "ночь",
+    "hours_worked": 0.11
+  },
+  {
+    "id": 391,
+    "employee_id": 16,
+    "schedule_date": "2026-03-22",
+    "shift_type": "ночь",
+    "hours_worked": 8.64
+  },
+  {
+    "id": 392,
+    "employee_id": 35,
+    "schedule_date": "2026-06-20",
+    "shift_type": "ночь",
+    "hours_worked": 7.38
+  },
+  {
+    "id": 393,
+    "employee_id": 48,
+    "schedule_date": "2026-08-01",
+    "shift_type": "выходной",
+    "hours_worked": 1.99
+  },
+  {
+    "id": 394,
+    "employee_id": 38,
+    "schedule_date": "2026-06-20",
+    "shift_type": "выходной",
+    "hours_worked": 2.45
+  },
+  {
+    "id": 395,
+    "employee_id": 48,
+    "schedule_date": "2026-06-16",
+    "shift_type": "выходной",
+    "hours_worked": 3.01
+  },
+  {
+    "id": 396,
+    "employee_id": 60,
+    "schedule_date": "2025-08-04",
+    "shift_type": "ночь",
+    "hours_worked": 11.12
+  },
+  {
+    "id": 397,
+    "employee_id": 18,
+    "schedule_date": "2025-06-18",
+    "shift_type": "выходной",
+    "hours_worked": 8.58
+  },
+  {
+    "id": 398,
+    "employee_id": 61,
+    "schedule_date": "2025-01-11",
+    "shift_type": "ночь",
+    "hours_worked": 5.0
+  },
+  {
+    "id": 399,
+    "employee_id": 20,
+    "schedule_date": "2026-04-27",
+    "shift_type": "день",
+    "hours_worked": 11.92
+  },
+  {
+    "id": 400,
+    "employee_id": 1,
+    "schedule_date": "2025-11-16",
+    "shift_type": "выходной",
+    "hours_worked": 2.25
+  },
+  {
+    "id": 401,
+    "employee_id": 13,
+    "schedule_date": "2026-07-05",
+    "shift_type": "ночь",
+    "hours_worked": 3.97
+  },
+  {
+    "id": 402,
+    "employee_id": 8,
+    "schedule_date": "2026-10-02",
+    "shift_type": "ночь",
+    "hours_worked": 7.13
+  },
+  {
+    "id": 403,
+    "employee_id": 9,
+    "schedule_date": "2025-12-25",
+    "shift_type": "выходной",
+    "hours_worked": 6.71
+  },
+  {
+    "id": 404,
+    "employee_id": 29,
+    "schedule_date": "2025-12-20",
+    "shift_type": "выходной",
+    "hours_worked": 0.17
+  },
+  {
+    "id": 405,
+    "employee_id": 25,
+    "schedule_date": "2025-10-09",
+    "shift_type": "ночь",
+    "hours_worked": 9.85
+  },
+  {
+    "id": 406,
+    "employee_id": 55,
+    "schedule_date": "2026-08-22",
+    "shift_type": "выходной",
+    "hours_worked": 3.67
+  },
+  {
+    "id": 407,
+    "employee_id": 52,
+    "schedule_date": "2025-09-18",
+    "shift_type": "выходной",
+    "hours_worked": 6.49
+  },
+  {
+    "id": 408,
+    "employee_id": 26,
+    "schedule_date": "2025-03-21",
+    "shift_type": "выходной",
+    "hours_worked": 1.83
+  },
+  {
+    "id": 409,
+    "employee_id": 28,
+    "schedule_date": "2025-10-14",
+    "shift_type": "день",
+    "hours_worked": 3.16
+  },
+  {
+    "id": 410,
+    "employee_id": 14,
+    "schedule_date": "2025-05-10",
+    "shift_type": "выходной",
+    "hours_worked": 7.05
+  },
+  {
+    "id": 411,
+    "employee_id": 50,
+    "schedule_date": "2025-12-05",
+    "shift_type": "выходной",
+    "hours_worked": 9.26
+  },
+  {
+    "id": 412,
+    "employee_id": 36,
+    "schedule_date": "2026-09-23",
+    "shift_type": "выходной",
+    "hours_worked": 10.91
+  },
+  {
+    "id": 413,
+    "employee_id": 27,
+    "schedule_date": "2025-06-22",
+    "shift_type": "день",
+    "hours_worked": 9.4
+  },
+  {
+    "id": 414,
+    "employee_id": 28,
+    "schedule_date": "2025-04-04",
+    "shift_type": "выходной",
+    "hours_worked": 1.76
+  },
+  {
+    "id": 415,
+    "employee_id": 22,
+    "schedule_date": "2026-05-02",
+    "shift_type": "день",
+    "hours_worked": 3.88
+  },
+  {
+    "id": 416,
+    "employee_id": 7,
+    "schedule_date": "2025-05-21",
+    "shift_type": "выходной",
+    "hours_worked": 9.69
+  },
+  {
+    "id": 417,
+    "employee_id": 55,
+    "schedule_date": "2026-04-29",
+    "shift_type": "ночь",
+    "hours_worked": 3.63
+  },
+  {
+    "id": 418,
+    "employee_id": 16,
+    "schedule_date": "2025-09-04",
+    "shift_type": "выходной",
+    "hours_worked": 4.72
+  },
+  {
+    "id": 419,
+    "employee_id": 50,
+    "schedule_date": "2026-05-01",
+    "shift_type": "ночь",
+    "hours_worked": 3.74
+  },
+  {
+    "id": 420,
+    "employee_id": 67,
+    "schedule_date": "2025-11-21",
+    "shift_type": "выходной",
+    "hours_worked": 0.94
+  },
+  {
+    "id": 421,
+    "employee_id": 28,
+    "schedule_date": "2025-06-20",
+    "shift_type": "выходной",
+    "hours_worked": 10.0
+  },
+  {
+    "id": 422,
+    "employee_id": 19,
+    "schedule_date": "2026-03-24",
+    "shift_type": "выходной",
+    "hours_worked": 5.3
+  },
+  {
+    "id": 423,
+    "employee_id": 33,
+    "schedule_date": "2025-05-04",
+    "shift_type": "выходной",
+    "hours_worked": 10.8
+  },
+  {
+    "id": 424,
+    "employee_id": 45,
+    "schedule_date": "2025-07-02",
+    "shift_type": "день",
+    "hours_worked": 10.39
+  },
+  {
+    "id": 425,
+    "employee_id": 60,
+    "schedule_date": "2025-12-21",
+    "shift_type": "выходной",
+    "hours_worked": 5.09
+  },
+  {
+    "id": 426,
+    "employee_id": 72,
+    "schedule_date": "2025-07-15",
+    "shift_type": "ночь",
+    "hours_worked": 4.49
+  },
+  {
+    "id": 427,
+    "employee_id": 2,
+    "schedule_date": "2025-07-20",
+    "shift_type": "ночь",
+    "hours_worked": 4.33
+  },
+  {
+    "id": 428,
+    "employee_id": 25,
+    "schedule_date": "2025-01-06",
+    "shift_type": "выходной",
+    "hours_worked": 3.72
+  },
+  {
+    "id": 429,
+    "employee_id": 13,
+    "schedule_date": "2026-01-13",
+    "shift_type": "ночь",
+    "hours_worked": 6.03
+  },
+  {
+    "id": 430,
+    "employee_id": 2,
+    "schedule_date": "2026-09-14",
+    "shift_type": "ночь",
+    "hours_worked": 0.4
+  },
+  {
+    "id": 431,
+    "employee_id": 36,
+    "schedule_date": "2026-10-20",
+    "shift_type": "ночь",
+    "hours_worked": 4.78
+  },
+  {
+    "id": 432,
+    "employee_id": 33,
+    "schedule_date": "2025-10-08",
+    "shift_type": "выходной",
+    "hours_worked": 0.69
+  },
+  {
+    "id": 433,
+    "employee_id": 4,
+    "schedule_date": "2026-04-28",
+    "shift_type": "выходной",
+    "hours_worked": 7.59
+  },
+  {
+    "id": 434,
+    "employee_id": 63,
+    "schedule_date": "2025-06-27",
+    "shift_type": "ночь",
+    "hours_worked": 9.0
+  },
+  {
+    "id": 435,
+    "employee_id": 70,
+    "schedule_date": "2025-04-17",
+    "shift_type": "день",
+    "hours_worked": 4.43
+  },
+  {
+    "id": 436,
+    "employee_id": 20,
+    "schedule_date": "2025-07-01",
+    "shift_type": "день",
+    "hours_worked": 0.99
+  },
+  {
+    "id": 437,
+    "employee_id": 16,
+    "schedule_date": "2025-02-27",
+    "shift_type": "ночь",
+    "hours_worked": 7.65
+  },
+  {
+    "id": 438,
+    "employee_id": 8,
+    "schedule_date": "2025-11-18",
+    "shift_type": "день",
+    "hours_worked": 10.29
+  },
+  {
+    "id": 439,
+    "employee_id": 36,
+    "schedule_date": "2025-07-18",
+    "shift_type": "выходной",
+    "hours_worked": 7.37
+  },
+  {
+    "id": 440,
+    "employee_id": 3,
+    "schedule_date": "2025-12-07",
+    "shift_type": "выходной",
+    "hours_worked": 10.18
+  },
+  {
+    "id": 441,
+    "employee_id": 41,
+    "schedule_date": "2025-06-23",
+    "shift_type": "выходной",
+    "hours_worked": 8.67
+  },
+  {
+    "id": 442,
+    "employee_id": 47,
+    "schedule_date": "2026-06-13",
+    "shift_type": "день",
+    "hours_worked": 11.29
+  },
+  {
+    "id": 443,
+    "employee_id": 52,
+    "schedule_date": "2026-03-03",
+    "shift_type": "выходной",
+    "hours_worked": 8.04
+  },
+  {
+    "id": 444,
+    "employee_id": 9,
+    "schedule_date": "2025-07-17",
+    "shift_type": "выходной",
+    "hours_worked": 1.77
+  },
+  {
+    "id": 445,
+    "employee_id": 35,
+    "schedule_date": "2025-03-27",
+    "shift_type": "день",
+    "hours_worked": 5.32
+  },
+  {
+    "id": 446,
+    "employee_id": 36,
+    "schedule_date": "2026-09-16",
+    "shift_type": "день",
+    "hours_worked": 8.26
+  },
+  {
+    "id": 447,
+    "employee_id": 53,
+    "schedule_date": "2025-06-27",
+    "shift_type": "выходной",
+    "hours_worked": 8.96
+  },
+  {
+    "id": 448,
+    "employee_id": 1,
+    "schedule_date": "2025-11-15",
+    "shift_type": "ночь",
+    "hours_worked": 6.73
+  },
+  {
+    "id": 449,
+    "employee_id": 16,
+    "schedule_date": "2025-12-16",
+    "shift_type": "ночь",
+    "hours_worked": 6.82
+  },
+  {
+    "id": 450,
+    "employee_id": 12,
+    "schedule_date": "2026-08-03",
+    "shift_type": "ночь",
+    "hours_worked": 1.06
+  },
+  {
+    "id": 451,
+    "employee_id": 12,
+    "schedule_date": "2025-07-06",
+    "shift_type": "выходной",
+    "hours_worked": 1.04
+  },
+  {
+    "id": 452,
+    "employee_id": 41,
+    "schedule_date": "2026-08-29",
+    "shift_type": "выходной",
+    "hours_worked": 11.59
+  },
+  {
+    "id": 453,
+    "employee_id": 22,
+    "schedule_date": "2025-01-11",
+    "shift_type": "день",
+    "hours_worked": 7.66
+  },
+  {
+    "id": 454,
+    "employee_id": 59,
+    "schedule_date": "2025-03-25",
+    "shift_type": "выходной",
+    "hours_worked": 11.32
+  },
+  {
+    "id": 455,
+    "employee_id": 40,
+    "schedule_date": "2026-10-20",
+    "shift_type": "день",
+    "hours_worked": 8.97
+  },
+  {
+    "id": 456,
+    "employee_id": 17,
+    "schedule_date": "2025-11-14",
+    "shift_type": "день",
+    "hours_worked": 4.55
+  },
+  {
+    "id": 457,
+    "employee_id": 37,
+    "schedule_date": "2025-07-02",
+    "shift_type": "ночь",
+    "hours_worked": 1.69
+  },
+  {
+    "id": 458,
+    "employee_id": 41,
+    "schedule_date": "2026-02-28",
+    "shift_type": "день",
+    "hours_worked": 10.02
+  },
+  {
+    "id": 459,
+    "employee_id": 35,
+    "schedule_date": "2025-07-24",
+    "shift_type": "день",
+    "hours_worked": 11.75
+  },
+  {
+    "id": 460,
+    "employee_id": 34,
+    "schedule_date": "2026-03-27",
+    "shift_type": "ночь",
+    "hours_worked": 1.11
+  },
+  {
+    "id": 461,
+    "employee_id": 46,
+    "schedule_date": "2026-08-16",
+    "shift_type": "ночь",
+    "hours_worked": 4.19
+  },
+  {
+    "id": 462,
+    "employee_id": 67,
+    "schedule_date": "2026-04-06",
+    "shift_type": "выходной",
+    "hours_worked": 8.24
+  },
+  {
+    "id": 463,
+    "employee_id": 22,
+    "schedule_date": "2025-02-07",
+    "shift_type": "выходной",
+    "hours_worked": 4.63
+  },
+  {
+    "id": 464,
+    "employee_id": 69,
+    "schedule_date": "2026-08-06",
+    "shift_type": "день",
+    "hours_worked": 11.93
+  },
+  {
+    "id": 465,
+    "employee_id": 56,
+    "schedule_date": "2025-12-22",
+    "shift_type": "выходной",
+    "hours_worked": 9.73
+  },
+  {
+    "id": 466,
+    "employee_id": 37,
+    "schedule_date": "2025-08-01",
+    "shift_type": "ночь",
+    "hours_worked": 8.4
+  },
+  {
+    "id": 467,
+    "employee_id": 65,
+    "schedule_date": "2026-07-19",
+    "shift_type": "выходной",
+    "hours_worked": 9.53
+  },
+  {
+    "id": 468,
+    "employee_id": 12,
+    "schedule_date": "2026-06-10",
+    "shift_type": "день",
+    "hours_worked": 3.1
+  },
+  {
+    "id": 469,
+    "employee_id": 60,
+    "schedule_date": "2025-09-25",
+    "shift_type": "день",
+    "hours_worked": 11.06
+  },
+  {
+    "id": 470,
+    "employee_id": 67,
+    "schedule_date": "2026-10-09",
+    "shift_type": "день",
+    "hours_worked": 5.7
+  },
+  {
+    "id": 471,
+    "employee_id": 60,
+    "schedule_date": "2026-08-24",
+    "shift_type": "ночь",
+    "hours_worked": 4.47
+  },
+  {
+    "id": 472,
+    "employee_id": 49,
+    "schedule_date": "2026-08-26",
+    "shift_type": "день",
+    "hours_worked": 3.87
+  },
+  {
+    "id": 473,
+    "employee_id": 14,
+    "schedule_date": "2026-10-07",
+    "shift_type": "ночь",
+    "hours_worked": 10.43
+  },
+  {
+    "id": 474,
+    "employee_id": 2,
+    "schedule_date": "2025-06-12",
+    "shift_type": "ночь",
+    "hours_worked": 5.71
+  },
+  {
+    "id": 475,
+    "employee_id": 44,
+    "schedule_date": "2026-10-26",
+    "shift_type": "день",
+    "hours_worked": 2.25
+  },
+  {
+    "id": 476,
+    "employee_id": 46,
+    "schedule_date": "2025-11-10",
+    "shift_type": "день",
+    "hours_worked": 5.6
+  },
+  {
+    "id": 477,
+    "employee_id": 24,
+    "schedule_date": "2025-01-23",
+    "shift_type": "ночь",
+    "hours_worked": 9.71
+  },
+  {
+    "id": 478,
+    "employee_id": 59,
+    "schedule_date": "2026-08-31",
+    "shift_type": "выходной",
+    "hours_worked": 8.33
+  },
+  {
+    "id": 479,
+    "employee_id": 52,
+    "schedule_date": "2026-04-30",
+    "shift_type": "день",
+    "hours_worked": 3.03
+  },
+  {
+    "id": 480,
+    "employee_id": 48,
+    "schedule_date": "2026-09-08",
+    "shift_type": "ночь",
+    "hours_worked": 5.79
+  },
+  {
+    "id": 481,
+    "employee_id": 52,
+    "schedule_date": "2025-11-04",
+    "shift_type": "день",
+    "hours_worked": 11.65
+  },
+  {
+    "id": 482,
+    "employee_id": 30,
+    "schedule_date": "2026-06-04",
+    "shift_type": "день",
+    "hours_worked": 5.05
+  },
+  {
+    "id": 483,
+    "employee_id": 35,
+    "schedule_date": "2026-08-15",
+    "shift_type": "ночь",
+    "hours_worked": 7.12
+  },
+  {
+    "id": 484,
+    "employee_id": 21,
+    "schedule_date": "2026-06-09",
+    "shift_type": "день",
+    "hours_worked": 11.07
+  },
+  {
+    "id": 485,
+    "employee_id": 68,
+    "schedule_date": "2025-07-23",
+    "shift_type": "выходной",
+    "hours_worked": 9.02
+  },
+  {
+    "id": 486,
+    "employee_id": 17,
+    "schedule_date": "2025-12-08",
+    "shift_type": "день",
+    "hours_worked": 11.64
+  },
+  {
+    "id": 487,
+    "employee_id": 40,
+    "schedule_date": "2025-05-25",
+    "shift_type": "ночь",
+    "hours_worked": 5.5
+  },
+  {
+    "id": 488,
+    "employee_id": 22,
+    "schedule_date": "2026-04-17",
+    "shift_type": "день",
+    "hours_worked": 7.9
+  },
+  {
+    "id": 489,
+    "employee_id": 26,
+    "schedule_date": "2025-06-26",
+    "shift_type": "ночь",
+    "hours_worked": 3.69
+  },
+  {
+    "id": 490,
+    "employee_id": 24,
+    "schedule_date": "2025-08-30",
+    "shift_type": "день",
+    "hours_worked": 5.24
+  },
+  {
+    "id": 491,
+    "employee_id": 32,
+    "schedule_date": "2025-06-07",
+    "shift_type": "выходной",
+    "hours_worked": 6.66
+  },
+  {
+    "id": 492,
+    "employee_id": 48,
+    "schedule_date": "2025-01-06",
+    "shift_type": "ночь",
+    "hours_worked": 1.91
+  },
+  {
+    "id": 493,
+    "employee_id": 13,
+    "schedule_date": "2026-04-28",
+    "shift_type": "выходной",
+    "hours_worked": 8.24
+  },
+  {
+    "id": 494,
+    "employee_id": 28,
+    "schedule_date": "2026-04-29",
+    "shift_type": "выходной",
+    "hours_worked": 4.52
+  },
+  {
+    "id": 495,
+    "employee_id": 60,
+    "schedule_date": "2025-09-06",
+    "shift_type": "день",
+    "hours_worked": 4.65
+  },
+  {
+    "id": 496,
+    "employee_id": 41,
+    "schedule_date": "2025-05-17",
+    "shift_type": "ночь",
+    "hours_worked": 9.28
+  },
+  {
+    "id": 497,
+    "employee_id": 37,
+    "schedule_date": "2026-03-11",
+    "shift_type": "выходной",
+    "hours_worked": 4.73
+  },
+  {
+    "id": 498,
+    "employee_id": 10,
+    "schedule_date": "2025-12-22",
+    "shift_type": "ночь",
+    "hours_worked": 8.04
+  },
+  {
+    "id": 499,
+    "employee_id": 4,
+    "schedule_date": "2025-08-16",
+    "shift_type": "выходной",
+    "hours_worked": 2.14
+  },
+  {
+    "id": 500,
+    "employee_id": 31,
+    "schedule_date": "2026-01-13",
+    "shift_type": "ночь",
+    "hours_worked": 4.08
+  },
+  {
+    "id": 501,
+    "employee_id": 1,
+    "schedule_date": "2026-09-18",
+    "shift_type": "выходной",
+    "hours_worked": 9.02
+  },
+  {
+    "id": 502,
+    "employee_id": 10,
+    "schedule_date": "2026-10-24",
+    "shift_type": "день",
+    "hours_worked": 1.66
+  },
+  {
+    "id": 503,
+    "employee_id": 25,
+    "schedule_date": "2025-02-15",
+    "shift_type": "день",
+    "hours_worked": 3.62
+  },
+  {
+    "id": 504,
+    "employee_id": 12,
+    "schedule_date": "2025-12-14",
+    "shift_type": "ночь",
+    "hours_worked": 7.85
+  },
+  {
+    "id": 505,
+    "employee_id": 55,
+    "schedule_date": "2025-06-04",
+    "shift_type": "ночь",
+    "hours_worked": 3.73
+  },
+  {
+    "id": 506,
+    "employee_id": 62,
+    "schedule_date": "2025-02-05",
+    "shift_type": "ночь",
+    "hours_worked": 11.5
+  },
+  {
+    "id": 507,
+    "employee_id": 54,
+    "schedule_date": "2025-07-03",
+    "shift_type": "день",
+    "hours_worked": 4.78
+  },
+  {
+    "id": 508,
+    "employee_id": 67,
+    "schedule_date": "2025-04-19",
+    "shift_type": "ночь",
+    "hours_worked": 9.67
+  },
+  {
+    "id": 509,
+    "employee_id": 45,
+    "schedule_date": "2025-04-14",
+    "shift_type": "выходной",
+    "hours_worked": 10.35
+  },
+  {
+    "id": 510,
+    "employee_id": 2,
+    "schedule_date": "2025-06-14",
+    "shift_type": "ночь",
+    "hours_worked": 1.54
+  },
+  {
+    "id": 511,
+    "employee_id": 65,
+    "schedule_date": "2026-01-29",
+    "shift_type": "выходной",
+    "hours_worked": 5.46
+  },
+  {
+    "id": 512,
+    "employee_id": 63,
+    "schedule_date": "2026-02-16",
+    "shift_type": "ночь",
+    "hours_worked": 9.26
+  },
+  {
+    "id": 513,
+    "employee_id": 39,
+    "schedule_date": "2026-03-12",
+    "shift_type": "ночь",
+    "hours_worked": 8.9
+  },
+  {
+    "id": 514,
+    "employee_id": 15,
+    "schedule_date": "2026-09-11",
+    "shift_type": "ночь",
+    "hours_worked": 6.02
+  },
+  {
+    "id": 515,
+    "employee_id": 61,
+    "schedule_date": "2025-12-10",
+    "shift_type": "выходной",
+    "hours_worked": 11.66
+  },
+  {
+    "id": 516,
+    "employee_id": 15,
+    "schedule_date": "2025-07-03",
+    "shift_type": "ночь",
+    "hours_worked": 6.38
+  },
+  {
+    "id": 517,
+    "employee_id": 50,
+    "schedule_date": "2025-03-23",
+    "shift_type": "день",
+    "hours_worked": 0.08
+  },
+  {
+    "id": 518,
+    "employee_id": 34,
+    "schedule_date": "2025-07-22",
+    "shift_type": "выходной",
+    "hours_worked": 9.75
+  },
+  {
+    "id": 519,
+    "employee_id": 59,
+    "schedule_date": "2026-03-22",
+    "shift_type": "день",
+    "hours_worked": 5.58
+  },
+  {
+    "id": 520,
+    "employee_id": 6,
+    "schedule_date": "2025-05-05",
+    "shift_type": "ночь",
+    "hours_worked": 5.52
+  },
+  {
+    "id": 521,
+    "employee_id": 55,
+    "schedule_date": "2026-02-15",
+    "shift_type": "день",
+    "hours_worked": 8.0
+  }
+]

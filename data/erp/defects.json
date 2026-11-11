@@ -1,0 +1,884 @@
+[
+  {
+    "id": 1,
+    "production_order_id": 267,
+    "order_id": 353,
+    "type": "перекос изображения",
+    "qty": 113,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-03-08T22:13:23"
+  },
+  {
+    "id": 2,
+    "production_order_id": 326,
+    "order_id": 235,
+    "type": "дефект ламинации",
+    "qty": 1,
+    "reason": "брак материала",
+    "detected_at": "2025-05-22T11:12:10"
+  },
+  {
+    "id": 3,
+    "production_order_id": 395,
+    "order_id": 46,
+    "type": "дефект печати",
+    "qty": 24,
+    "reason": "износ оборудования",
+    "detected_at": "2026-01-21T00:00:00"
+  },
+  {
+    "id": 4,
+    "production_order_id": 374,
+    "order_id": 517,
+    "type": "помятость бумаги",
+    "qty": 2,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-06-19T00:00:00"
+  },
+  {
+    "id": 5,
+    "production_order_id": 44,
+    "order_id": 28,
+    "type": "перекос изображения",
+    "qty": 5,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-05-02T23:46:35"
+  },
+  {
+    "id": 6,
+    "production_order_id": 414,
+    "order_id": 441,
+    "type": "дефект ламинации",
+    "qty": 2,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-06-19T02:04:56"
+  },
+  {
+    "id": 7,
+    "production_order_id": 375,
+    "order_id": 538,
+    "type": "помятость бумаги",
+    "qty": 123,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-09-14T03:00:14"
+  },
+  {
+    "id": 8,
+    "production_order_id": 351,
+    "order_id": 576,
+    "type": "перекос изображения",
+    "qty": 137,
+    "reason": "износ оборудования",
+    "detected_at": "2025-06-19T05:31:31"
+  },
+  {
+    "id": 9,
+    "production_order_id": 8,
+    "order_id": 287,
+    "type": "пятна",
+    "qty": 25,
+    "reason": "износ оборудования",
+    "detected_at": "2025-08-14T15:28:22"
+  },
+  {
+    "id": 10,
+    "production_order_id": 360,
+    "order_id": 110,
+    "type": "пятна",
+    "qty": 23,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-07-22T11:37:19"
+  },
+  {
+    "id": 11,
+    "production_order_id": 339,
+    "order_id": 8,
+    "type": "дефект ламинации",
+    "qty": 68,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-09-06T12:20:13"
+  },
+  {
+    "id": 12,
+    "production_order_id": 311,
+    "order_id": 358,
+    "type": "брак резки",
+    "qty": 44,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-11-08T08:11:40"
+  },
+  {
+    "id": 13,
+    "production_order_id": 90,
+    "order_id": 309,
+    "type": "цветовое отклонение",
+    "qty": 12,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-06-23T05:37:17"
+  },
+  {
+    "id": 14,
+    "production_order_id": 181,
+    "order_id": 514,
+    "type": "цветовое отклонение",
+    "qty": 55,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-10-10T07:12:34"
+  },
+  {
+    "id": 15,
+    "production_order_id": 88,
+    "order_id": 409,
+    "type": "дефект печати",
+    "qty": 29,
+    "reason": "брак материала",
+    "detected_at": "2026-10-06T18:11:14"
+  },
+  {
+    "id": 16,
+    "production_order_id": 426,
+    "order_id": 321,
+    "type": "пятна",
+    "qty": 25,
+    "reason": "износ оборудования",
+    "detected_at": "2025-11-23T18:14:37"
+  },
+  {
+    "id": 17,
+    "production_order_id": 154,
+    "order_id": 522,
+    "type": "брак резки",
+    "qty": 38,
+    "reason": "брак материала",
+    "detected_at": "2025-06-24T14:03:35"
+  },
+  {
+    "id": 18,
+    "production_order_id": 2,
+    "order_id": 116,
+    "type": "перекос изображения",
+    "qty": 73,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-10-06T15:20:26"
+  },
+  {
+    "id": 19,
+    "production_order_id": 157,
+    "order_id": 30,
+    "type": "перекос изображения",
+    "qty": 132,
+    "reason": "износ оборудования",
+    "detected_at": "2025-04-21T19:26:15"
+  },
+  {
+    "id": 20,
+    "production_order_id": 317,
+    "order_id": 466,
+    "type": "дефект ламинации",
+    "qty": 63,
+    "reason": "износ оборудования",
+    "detected_at": "2026-04-17T03:48:32"
+  },
+  {
+    "id": 21,
+    "production_order_id": 4,
+    "order_id": 494,
+    "type": "пятна",
+    "qty": 15,
+    "reason": "брак материала",
+    "detected_at": "2025-10-19T21:43:30"
+  },
+  {
+    "id": 22,
+    "production_order_id": 182,
+    "order_id": 573,
+    "type": "цветовое отклонение",
+    "qty": 2,
+    "reason": "брак материала",
+    "detected_at": "2025-10-25T00:00:00"
+  },
+  {
+    "id": 23,
+    "production_order_id": 206,
+    "order_id": 171,
+    "type": "дефект печати",
+    "qty": 1,
+    "reason": "износ оборудования",
+    "detected_at": "2025-12-11T14:44:25"
+  },
+  {
+    "id": 24,
+    "production_order_id": 252,
+    "order_id": 169,
+    "type": "помятость бумаги",
+    "qty": 11,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-08-15T00:00:00"
+  },
+  {
+    "id": 25,
+    "production_order_id": 211,
+    "order_id": 226,
+    "type": "цветовое отклонение",
+    "qty": 4,
+    "reason": "износ оборудования",
+    "detected_at": "2025-08-31T21:19:50"
+  },
+  {
+    "id": 26,
+    "production_order_id": 394,
+    "order_id": 228,
+    "type": "перекос изображения",
+    "qty": 65,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-05-30T17:08:15"
+  },
+  {
+    "id": 27,
+    "production_order_id": 203,
+    "order_id": 32,
+    "type": "дефект печати",
+    "qty": 10,
+    "reason": "брак материала",
+    "detected_at": "2025-11-01T14:22:54"
+  },
+  {
+    "id": 28,
+    "production_order_id": 94,
+    "order_id": 400,
+    "type": "пятна",
+    "qty": 104,
+    "reason": "брак материала",
+    "detected_at": "2026-02-04T07:39:34"
+  },
+  {
+    "id": 29,
+    "production_order_id": 225,
+    "order_id": 459,
+    "type": "перекос изображения",
+    "qty": 54,
+    "reason": "настройка оборудования",
+    "detected_at": "2025-11-30T05:53:31"
+  },
+  {
+    "id": 30,
+    "production_order_id": 72,
+    "order_id": 149,
+    "type": "дефект печати",
+    "qty": 56,
+    "reason": "износ оборудования",
+    "detected_at": "2025-11-09T08:38:07"
+  },
+  {
+    "id": 31,
+    "production_order_id": 364,
+    "order_id": 270,
+    "type": "помятость бумаги",
+    "qty": 8,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-08-24T10:22:22"
+  },
+  {
+    "id": 32,
+    "production_order_id": 21,
+    "order_id": 352,
+    "type": "помятость бумаги",
+    "qty": 13,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-06-28T00:00:00"
+  },
+  {
+    "id": 33,
+    "production_order_id": 17,
+    "order_id": 553,
+    "type": "помятость бумаги",
+    "qty": 171,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-04-14T19:36:17"
+  },
+  {
+    "id": 34,
+    "production_order_id": 341,
+    "order_id": 26,
+    "type": "дефект печати",
+    "qty": 8,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-05-09T17:48:23"
+  },
+  {
+    "id": 35,
+    "production_order_id": 282,
+    "order_id": 175,
+    "type": "брак резки",
+    "qty": 103,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-01-07T00:00:00"
+  },
+  {
+    "id": 36,
+    "production_order_id": 385,
+    "order_id": 157,
+    "type": "дефект ламинации",
+    "qty": 7,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-01-30T08:37:48"
+  },
+  {
+    "id": 37,
+    "production_order_id": 68,
+    "order_id": 541,
+    "type": "цветовое отклонение",
+    "qty": 28,
+    "reason": "износ оборудования",
+    "detected_at": "2025-06-26T18:22:05"
+  },
+  {
+    "id": 38,
+    "production_order_id": 80,
+    "order_id": 216,
+    "type": "дефект печати",
+    "qty": 65,
+    "reason": "износ оборудования",
+    "detected_at": "2025-03-30T15:45:30"
+  },
+  {
+    "id": 39,
+    "production_order_id": 351,
+    "order_id": 576,
+    "type": "помятость бумаги",
+    "qty": 14,
+    "reason": "брак материала",
+    "detected_at": "2025-06-19T07:17:14"
+  },
+  {
+    "id": 40,
+    "production_order_id": 306,
+    "order_id": 304,
+    "type": "перекос изображения",
+    "qty": 3,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-03-31T19:51:58"
+  },
+  {
+    "id": 41,
+    "production_order_id": 149,
+    "order_id": 372,
+    "type": "дефект печати",
+    "qty": 63,
+    "reason": "износ оборудования",
+    "detected_at": "2026-06-18T14:48:50"
+  },
+  {
+    "id": 42,
+    "production_order_id": 220,
+    "order_id": 539,
+    "type": "помятость бумаги",
+    "qty": 10,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-01-20T03:12:48"
+  },
+  {
+    "id": 43,
+    "production_order_id": 128,
+    "order_id": 583,
+    "type": "дефект печати",
+    "qty": 99,
+    "reason": "износ оборудования",
+    "detected_at": "2026-05-22T04:45:31"
+  },
+  {
+    "id": 44,
+    "production_order_id": 359,
+    "order_id": 165,
+    "type": "помятость бумаги",
+    "qty": 110,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-10-24T18:01:52"
+  },
+  {
+    "id": 45,
+    "production_order_id": 362,
+    "order_id": 487,
+    "type": "дефект ламинации",
+    "qty": 14,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-01-13T09:59:45"
+  },
+  {
+    "id": 46,
+    "production_order_id": 93,
+    "order_id": 389,
+    "type": "помятость бумаги",
+    "qty": 152,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-02-03T16:42:11"
+  },
+  {
+    "id": 47,
+    "production_order_id": 62,
+    "order_id": 379,
+    "type": "помятость бумаги",
+    "qty": 26,
+    "reason": "износ оборудования",
+    "detected_at": "2025-06-24T07:46:04"
+  },
+  {
+    "id": 48,
+    "production_order_id": 99,
+    "order_id": 13,
+    "type": "помятость бумаги",
+    "qty": 110,
+    "reason": "износ оборудования",
+    "detected_at": "2025-03-06T11:33:32"
+  },
+  {
+    "id": 49,
+    "production_order_id": 103,
+    "order_id": 324,
+    "type": "цветовое отклонение",
+    "qty": 14,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-08-10T14:49:45"
+  },
+  {
+    "id": 50,
+    "production_order_id": 269,
+    "order_id": 456,
+    "type": "дефект печати",
+    "qty": 8,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-01-28T00:57:34"
+  },
+  {
+    "id": 51,
+    "production_order_id": 219,
+    "order_id": 408,
+    "type": "брак резки",
+    "qty": 2,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-08-11T14:11:49"
+  },
+  {
+    "id": 52,
+    "production_order_id": 330,
+    "order_id": 386,
+    "type": "цветовое отклонение",
+    "qty": 78,
+    "reason": "износ оборудования",
+    "detected_at": "2025-08-10T00:00:00"
+  },
+  {
+    "id": 53,
+    "production_order_id": 187,
+    "order_id": 328,
+    "type": "дефект печати",
+    "qty": 23,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-03-05T23:56:05"
+  },
+  {
+    "id": 54,
+    "production_order_id": 164,
+    "order_id": 327,
+    "type": "цветовое отклонение",
+    "qty": 47,
+    "reason": "износ оборудования",
+    "detected_at": "2026-04-02T00:04:40"
+  },
+  {
+    "id": 55,
+    "production_order_id": 27,
+    "order_id": 597,
+    "type": "перекос изображения",
+    "qty": 83,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-06-01T11:06:16"
+  },
+  {
+    "id": 56,
+    "production_order_id": 242,
+    "order_id": 77,
+    "type": "дефект печати",
+    "qty": 10,
+    "reason": "износ оборудования",
+    "detected_at": "2026-09-30T14:45:19"
+  },
+  {
+    "id": 57,
+    "production_order_id": 95,
+    "order_id": 486,
+    "type": "дефект печати",
+    "qty": 126,
+    "reason": "брак материала",
+    "detected_at": "2026-05-07T01:22:00"
+  },
+  {
+    "id": 58,
+    "production_order_id": 156,
+    "order_id": 48,
+    "type": "цветовое отклонение",
+    "qty": 25,
+    "reason": "износ оборудования",
+    "detected_at": "2025-12-03T00:00:00"
+  },
+  {
+    "id": 59,
+    "production_order_id": 170,
+    "order_id": 310,
+    "type": "дефект печати",
+    "qty": 24,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-02-27T19:15:19"
+  },
+  {
+    "id": 60,
+    "production_order_id": 310,
+    "order_id": 33,
+    "type": "дефект печати",
+    "qty": 31,
+    "reason": "брак материала",
+    "detected_at": "2026-07-03T06:35:17"
+  },
+  {
+    "id": 61,
+    "production_order_id": 300,
+    "order_id": 225,
+    "type": "брак резки",
+    "qty": 12,
+    "reason": "износ оборудования",
+    "detected_at": "2026-06-11T14:00:23"
+  },
+  {
+    "id": 62,
+    "production_order_id": 323,
+    "order_id": 61,
+    "type": "перекос изображения",
+    "qty": 155,
+    "reason": "износ оборудования",
+    "detected_at": "2026-01-13T01:29:39"
+  },
+  {
+    "id": 63,
+    "production_order_id": 301,
+    "order_id": 329,
+    "type": "перекос изображения",
+    "qty": 27,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-01-04T00:00:00"
+  },
+  {
+    "id": 64,
+    "production_order_id": 361,
+    "order_id": 570,
+    "type": "брак резки",
+    "qty": 26,
+    "reason": "износ оборудования",
+    "detected_at": "2025-03-07T15:12:09"
+  },
+  {
+    "id": 65,
+    "production_order_id": 317,
+    "order_id": 466,
+    "type": "дефект печати",
+    "qty": 39,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-04-16T05:25:05"
+  },
+  {
+    "id": 66,
+    "production_order_id": 274,
+    "order_id": 156,
+    "type": "перекос изображения",
+    "qty": 10,
+    "reason": "износ оборудования",
+    "detected_at": "2025-02-15T00:00:00"
+  },
+  {
+    "id": 67,
+    "production_order_id": 99,
+    "order_id": 13,
+    "type": "брак резки",
+    "qty": 65,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-03-03T05:10:11"
+  },
+  {
+    "id": 68,
+    "production_order_id": 188,
+    "order_id": 233,
+    "type": "брак резки",
+    "qty": 16,
+    "reason": "настройка оборудования",
+    "detected_at": "2025-03-30T19:43:17"
+  },
+  {
+    "id": 69,
+    "production_order_id": 248,
+    "order_id": 200,
+    "type": "брак резки",
+    "qty": 34,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-09-16T06:22:17"
+  },
+  {
+    "id": 70,
+    "production_order_id": 86,
+    "order_id": 542,
+    "type": "пятна",
+    "qty": 71,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-10-23T18:11:03"
+  },
+  {
+    "id": 71,
+    "production_order_id": 24,
+    "order_id": 481,
+    "type": "пятна",
+    "qty": 8,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-07-27T14:28:20"
+  },
+  {
+    "id": 72,
+    "production_order_id": 254,
+    "order_id": 295,
+    "type": "перекос изображения",
+    "qty": 9,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-09-15T22:44:42"
+  },
+  {
+    "id": 73,
+    "production_order_id": 39,
+    "order_id": 63,
+    "type": "помятость бумаги",
+    "qty": 29,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-02-09T15:53:30"
+  },
+  {
+    "id": 74,
+    "production_order_id": 288,
+    "order_id": 608,
+    "type": "дефект ламинации",
+    "qty": 13,
+    "reason": "настройка оборудования",
+    "detected_at": "2025-05-15T20:12:58"
+  },
+  {
+    "id": 75,
+    "production_order_id": 140,
+    "order_id": 7,
+    "type": "помятость бумаги",
+    "qty": 24,
+    "reason": "износ оборудования",
+    "detected_at": "2025-05-30T00:00:00"
+  },
+  {
+    "id": 76,
+    "production_order_id": 293,
+    "order_id": 154,
+    "type": "помятость бумаги",
+    "qty": 3,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-05-15T12:39:24"
+  },
+  {
+    "id": 77,
+    "production_order_id": 258,
+    "order_id": 402,
+    "type": "перекос изображения",
+    "qty": 185,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-07-31T03:23:27"
+  },
+  {
+    "id": 78,
+    "production_order_id": 156,
+    "order_id": 48,
+    "type": "дефект ламинации",
+    "qty": 57,
+    "reason": "брак материала",
+    "detected_at": "2025-12-03T00:00:00"
+  },
+  {
+    "id": 79,
+    "production_order_id": 283,
+    "order_id": 42,
+    "type": "цветовое отклонение",
+    "qty": 44,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-10-25T13:17:08"
+  },
+  {
+    "id": 80,
+    "production_order_id": 274,
+    "order_id": 156,
+    "type": "помятость бумаги",
+    "qty": 19,
+    "reason": "износ оборудования",
+    "detected_at": "2025-02-15T00:00:00"
+  },
+  {
+    "id": 81,
+    "production_order_id": 143,
+    "order_id": 618,
+    "type": "помятость бумаги",
+    "qty": 70,
+    "reason": "износ оборудования",
+    "detected_at": "2025-04-15T19:06:58"
+  },
+  {
+    "id": 82,
+    "production_order_id": 128,
+    "order_id": 583,
+    "type": "дефект ламинации",
+    "qty": 27,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-05-20T09:50:28"
+  },
+  {
+    "id": 83,
+    "production_order_id": 1,
+    "order_id": 378,
+    "type": "перекос изображения",
+    "qty": 45,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-06-27T13:26:20"
+  },
+  {
+    "id": 84,
+    "production_order_id": 167,
+    "order_id": 62,
+    "type": "цветовое отклонение",
+    "qty": 181,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-03-28T14:27:12"
+  },
+  {
+    "id": 85,
+    "production_order_id": 370,
+    "order_id": 322,
+    "type": "помятость бумаги",
+    "qty": 27,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2025-03-02T21:28:25"
+  },
+  {
+    "id": 86,
+    "production_order_id": 167,
+    "order_id": 62,
+    "type": "цветовое отклонение",
+    "qty": 161,
+    "reason": "износ оборудования",
+    "detected_at": "2025-03-29T03:46:15"
+  },
+  {
+    "id": 87,
+    "production_order_id": 113,
+    "order_id": 51,
+    "type": "перекос изображения",
+    "qty": 36,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-10-24T02:33:42"
+  },
+  {
+    "id": 88,
+    "production_order_id": 9,
+    "order_id": 477,
+    "type": "пятна",
+    "qty": 85,
+    "reason": "загрязнение головы печати",
+    "detected_at": "2026-09-18T07:00:13"
+  },
+  {
+    "id": 89,
+    "production_order_id": 370,
+    "order_id": 322,
+    "type": "перекос изображения",
+    "qty": 45,
+    "reason": "настройка оборудования",
+    "detected_at": "2025-03-03T23:36:36"
+  },
+  {
+    "id": 90,
+    "production_order_id": 132,
+    "order_id": 93,
+    "type": "дефект ламинации",
+    "qty": 142,
+    "reason": "ошибка оператора",
+    "detected_at": "2025-06-13T11:28:51"
+  },
+  {
+    "id": 91,
+    "production_order_id": 227,
+    "order_id": 330,
+    "type": "помятость бумаги",
+    "qty": 21,
+    "reason": "брак материала",
+    "detected_at": "2026-07-31T11:23:44"
+  },
+  {
+    "id": 92,
+    "production_order_id": 298,
+    "order_id": 250,
+    "type": "перекос изображения",
+    "qty": 102,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-01-17T09:55:23"
+  },
+  {
+    "id": 93,
+    "production_order_id": 119,
+    "order_id": 396,
+    "type": "перекос изображения",
+    "qty": 186,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-06-24T05:41:13"
+  },
+  {
+    "id": 94,
+    "production_order_id": 76,
+    "order_id": 393,
+    "type": "брак резки",
+    "qty": 6,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-07-05T00:00:00"
+  },
+  {
+    "id": 95,
+    "production_order_id": 236,
+    "order_id": 293,
+    "type": "помятость бумаги",
+    "qty": 6,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-09-10T21:55:29"
+  },
+  {
+    "id": 96,
+    "production_order_id": 999999,
+    "order_id": null,
+    "type": "дефект печати",
+    "qty": 120,
+    "reason": "износ оборудования",
+    "detected_at": "2025-11-26"
+  },
+  {
+    "id": 97,
+    "production_order_id": 363,
+    "order_id": 535,
+    "type": "брак резки",
+    "qty": 3762,
+    "reason": "ошибка оператора",
+    "detected_at": "2026-08-31"
+  },
+  {
+    "id": 98,
+    "production_order_id": 220,
+    "order_id": 539,
+    "type": "цветовое отклонение",
+    "qty": 29,
+    "reason": "настройка оборудования",
+    "detected_at": "2026-01-24T00:00:00"
+  }
+]
