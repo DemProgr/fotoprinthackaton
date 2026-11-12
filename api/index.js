@@ -1,6 +1,6 @@
 "use strict";
-// Netlify Functions entry point (AWS Lambda event format).
-// Adapts the Lambda (event, context) into Node-style req/res for the shared handle() in server/index.js.
+// Универсальный обработчик API: работает и на Vercel (@vercel/node, (req, res)),
+// и на Netlify Functions (AWS Lambda, (event, context)).
 const { handle } = require("../server/index.js");
 const { PassThrough } = require("stream");
 
@@ -9,10 +9,13 @@ function bodyBuffer(event) {
   return event.isBase64Encoded ? Buffer.from(event.body, "base64") : Buffer.from(event.body, "utf8");
 }
 
-module.exports.handler = async function (event, context) {
+function isNetlifyEvent(arg) {
+  return Boolean(arg && arg.httpMethod && arg.path !== undefined);
+}
+
+async function runNetlify(event, context) {
   const rawQuery = event.rawQueryString || event.rawQuery || "";
   let apiPath = event.path || "/";
-  // Support direct invocations of /.netlify/functions/index?__path=...
   if (apiPath.startsWith("/.netlify/functions/")) {
     const qp = new URLSearchParams(rawQuery);
     const p = qp.get("__path");
@@ -69,4 +72,13 @@ module.exports.handler = async function (event, context) {
     headers: { ...cors, ...headers, "Content-Type": headers["Content-Type"] || "application/json; charset=utf-8" },
     body,
   };
-};
+}
+
+async function handler(a, b) {
+  if (isNetlifyEvent(a)) return runNetlify(a, b);
+  // Vercel: (req, res) — handle() уже умеет работать с нативными объектами http.
+  return handle(a, b);
+}
+
+module.exports = handler;
+module.exports.handler = handler;
