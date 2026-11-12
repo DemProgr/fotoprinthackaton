@@ -78,7 +78,7 @@ const KPIS = [
     id: "revenue",
     domain: "finance",
     title: "Оборот (выручка)",
-    unit: "RUB",
+    unit: "BYN",
     better: "up",
     additive: true,
     formula: "Σ revenue.amount за период; при фильтре продукта — только платежи по заказам этого продукта (revenue.order_id → orders.product_type)",
@@ -96,7 +96,7 @@ const KPIS = [
       ["date", "Дата", (r) => r.date],
       ["order", "Заказ", (r, ctx) => orderLabel(ctx, r.order_id), (r) => r.order_id],
       ["source", "Канал", (r) => r.source],
-      ["amount", "Сумма, ₽", (r) => round(r.amount, 2)],
+      ["amount", "Сумма, BYN", (r) => round(r.amount, 2)],
     ],
   },
   {
@@ -120,14 +120,14 @@ const KPIS = [
     columns: [
       ["date", "Дата", (r) => r.date],
       ["kind", "Тип", (r) => (r._k === "rev" ? "Поступление" : "Расход: " + r.category)],
-      ["amount", "Сумма, ₽", (r) => round(r._k === "rev" ? r.amount : -r.amount, 2)],
+      ["amount", "Сумма, BYN", (r) => round(r._k === "rev" ? r.amount : -r.amount, 2)],
     ],
   },
   {
     id: "expenses",
     domain: "finance",
     title: "Расходы: план/факт",
-    unit: "RUB",
+    unit: "BYN",
     better: "down",
     additive: true,
     formula: "Σ expenses.amount за период; план — месячный бюджет расходов × число месяцев периода",
@@ -143,7 +143,7 @@ const KPIS = [
       ["date", "Дата", (r) => r.date],
       ["category", "Статья", (r) => r.category],
       ["description", "Описание", (r) => r.description],
-      ["amount", "Сумма, ₽", (r) => round(r.amount, 2)],
+      ["amount", "Сумма, BYN", (r) => round(r.amount, 2)],
     ],
   },
 
@@ -172,7 +172,7 @@ const KPIS = [
     id: "avg_check",
     domain: "sales",
     title: "Средний чек",
-    unit: "RUB",
+    unit: "BYN",
     better: "up",
     formula: "Σ orders.amount / количество заказов (без отменённых) за период",
     sources: ["CRM · orders"],
@@ -430,7 +430,7 @@ function orderColumns() {
     ["product", "Продукт", (o) => o.product_type],
     ["status", "Статус", (o) => o.status],
     ["segment", "Сегмент", (o, ctx) => segment(ctx, o.client_id)],
-    ["amount", "Сумма, ₽", (o) => round(o.amount, 2)],
+    ["amount", "Сумма, BYN", (o) => round(o.amount, 2)],
   ];
 }
 function clientColumns() {
@@ -549,7 +549,7 @@ function evaluate(db, kpi, filters) {
     domain_label: DOMAIN_LABEL[kpi.domain],
     title: kpi.title,
     unit: kpi.unit,
-    currency: kpi.unit === "RUB" ? "RUB" : null,
+    currency: kpi.unit === "BYN" ? "BYN" : null,
     better: kpi.better,
     additive: !!kpi.additive,
     value: round(value, 2),
@@ -638,7 +638,7 @@ function records(db, kpi, filters, dimId, key, limit = 300) {
 function fmt(v, unit) {
   if (v === null || v === undefined) return "—";
   const n = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 1 }).format(v);
-  return unit === "RUB" ? `${n} ₽` : unit === "%" ? `${n}%` : `${n} ${unit}`;
+  return unit === "BYN" ? `${n} BYN` : unit === "%" ? `${n}%` : `${n} ${unit}`;
 }
 
 const byId = (id) => KPIS.find((k) => k.id === id);

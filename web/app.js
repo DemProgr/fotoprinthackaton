@@ -36,7 +36,8 @@
     token: store.get("pulse-token"),
     user: null,
     meta: null,
-    filters: store.get("pulse-filters", { period: "90d", from: "", to: "", product: "", domain: "" }),
+    // Фильтр подразделений убран из интерфейса: каждый экран сам показывает своё подразделение.
+    filters: { period: "90d", from: "", to: "", product: "", ...store.get("pulse-filters", {}), domain: "" },
     online: true,
     openDecisions: 0,
   };
@@ -44,11 +45,11 @@
   /* ------------------------------ Форматирование ------------------------------ */
   function fmt(v, unit) {
     if (v === null || v === undefined || Number.isNaN(v)) return "—";
-    if (unit === "RUB") return nf0.format(v) + " ₽";
+    if (unit === "BYN") return nf0.format(v) + " BYN";
     if (unit === "%") return nf.format(v) + "%";
     return nf.format(v) + (unit ? " " + unit : "");
   }
-  const fmtShort = (v, unit) => (unit === "RUB" ? Charts.compact(v) + " ₽" : fmt(v, unit));
+  const fmtShort = (v, unit) => (unit === "BYN" ? Charts.compact(v) + " BYN" : fmt(v, unit));
   const STATUS_LABEL = { green: "в норме", yellow: "внимание", red: "критично", gray: "нет данных" };
   const fmtDT = (s) => {
     if (!s) return "—";
@@ -265,6 +266,7 @@
       )
       .join("");
     app.innerHTML = `
+      <a class="skip-link" href="#main" id="skipLink">Перейти к содержимому</a>
       <div class="app-shell">
         <aside class="sidebar">
           <div class="brand">Пульс компании<small>ООО «Фотопринт» · MVP</small></div>
@@ -275,10 +277,17 @@
               <button type="button" id="themeBtn" aria-label="Переключить тему">${document.documentElement.dataset.theme === "dark" ? "☀ Светлая" : "☾ Тёмная"}</button>
               <button type="button" id="logoutBtn">Выйти</button>
             </div>
+            <button type="button" class="kbd-help-btn" id="kbdBtn" aria-keyshortcuts="Shift+?">⌨ Горячие клавиши <kbd>?</kbd></button>
           </div>
         </aside>
         <main class="main" id="main" tabindex="-1"></main>
       </div>`;
+    $("#skipLink").addEventListener("click", (e) => {
+      e.preventDefault();
+      $("#main").focus();
+    });
+    $("#kbdBtn").addEventListener("click", showShortcuts);
+    $$(".nav a").forEach((a, i) => i < 9 && a.setAttribute("aria-keyshortcuts", `Alt+${i + 1}`));
     $("#themeBtn").addEventListener("click", (e) => {
       const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
       applyTheme(t);
@@ -300,7 +309,6 @@
 
   function filterBar() {
     const f = S.filters;
-    const doms = S.user.domains.length > 1;
     return `
       <form class="filters" id="filters" aria-label="Фильтры">
         <div class="f"><label for="fPeriod">Период</label>
@@ -316,13 +324,6 @@
             .join("")}</select></div>
         <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom1"><label for="fFrom">С</label><input type="date" id="fFrom" value="${esc(f.from)}"></div>
         <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom2"><label for="fTo">По</label><input type="date" id="fTo" value="${esc(f.to)}"></div>
-        ${
-          doms
-            ? `<div class="f"><label for="fDomain">Подразделение</label><select id="fDomain"><option value="">Все доступные</option>${S.user.domains
-                .map((d) => `<option value="${d}" ${f.domain === d ? "selected" : ""}>${esc(S.meta.domains[d])}</option>`)
-                .join("")}</select></div>`
-            : ""
-        }
         <div class="f"><label for="fProduct">Продукт</label><select id="fProduct"><option value="">Все продукты</option>${S.meta.product_types
           .map((p) => `<option value="${esc(p)}" ${f.product === p ? "selected" : ""}>${esc(p)}</option>`)
           .join("")}</select></div>
@@ -337,7 +338,7 @@
       const period = $("#fPeriod").value;
       $("#fCustom1").classList.toggle("hidden", period !== "custom");
       $("#fCustom2").classList.toggle("hidden", period !== "custom");
-      const next = { period, from: $("#fFrom").value, to: $("#fTo").value, product: $("#fProduct").value, domain: $("#fDomain") ? $("#fDomain").value : "" };
+      const next = { period, from: $("#fFrom").value, to: $("#fTo").value, product: $("#fProduct").value, domain: "" };
       if (period === "custom") {
         if (!next.from || !next.to) {
           if (!next.from) next.from = S.meta.today.slice(0, 8) + "01";
@@ -390,7 +391,58 @@
     RENDER[id](main);
     document.title = `${page.title} — Пульс компании`;
   }
-  window.addEventListener("hashchange", route);
+  window.addEventListener("hashchange", () => {
+    route();
+    // После перехода фокус — в начало содержимого, чтобы Tab шёл по новой странице, а не по меню.
+    $("#main")?.focus({ preventScroll: true });
+  });
+
+  /* --------------------------- Навигация с клавиатуры --------------------------- */
+  const SHORTCUTS = [
+    ["Alt + 1…9", "Перейти в раздел меню по порядку"],
+    ["/", "Фокус на первый фильтр или поиск страницы"],
+    ["N", "Новое управленческое решение (если доступно роли)"],
+    ["Tab / Shift + Tab", "Переход между элементами"],
+    ["Enter / Пробел", "Открыть KPI, строку таблицы, нажать кнопку"],
+    ["← / →", "Переключение вкладок детализации"],
+    ["Esc", "Закрыть окно, панель или подсказку"],
+    ["?", "Эта справка"],
+  ];
+  function showShortcuts() {
+    if ($(".kbd-help")) return;
+    const ov = overlay("modal", "Горячие клавиши");
+    ov.body.innerHTML = `<table class="kbd-help"><tbody>${SHORTCUTS.map(([k, d]) => `<tr><td>${k
+      .split(" / ")
+      .map((x) => x.split(" + ").map((y) => `<kbd>${esc(y)}</kbd>`).join(" + "))
+      .join(" / ")}</td><td>${esc(d)}</td></tr>`).join("")}</tbody></table>
+      <p class="hint">Клавиши-буквы не срабатывают, пока курсор находится в поле ввода.</p>`;
+  }
+  const isTyping = (el) => el && (el.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName));
+  document.addEventListener("keydown", (e) => {
+    if (!S.user || e.ctrlKey || e.metaKey) return;
+    if (e.altKey && /^Digit[1-9]$/.test(e.code)) {
+      const link = $$(".nav a")[Number(e.code.slice(5)) - 1];
+      if (link) {
+        e.preventDefault();
+        location.hash = link.getAttribute("href");
+      }
+      return;
+    }
+    if (e.altKey || isTyping(e.target)) return;
+    if (e.key === "?") {
+      e.preventDefault();
+      showShortcuts();
+    } else if (e.key === "/" && !overlays.length) {
+      const f = $("#main .filters select, #main .filters input");
+      if (f) {
+        e.preventDefault();
+        f.focus();
+      }
+    } else if ((e.key === "n" || e.key === "т" || e.key === "N" || e.key === "Т") && !overlays.length && can("decision.create")) {
+      e.preventDefault();
+      openDecisionForm({ domain: S.user.domains[0] });
+    }
+  });
 
   /* ------------------------------ Пульс компании ----------------------------- */
   async function renderPulse(main) {
@@ -449,10 +501,8 @@
       <div class="kpi-domain">${esc(k.domain_label)}</div>
       <div class="kpi-value">${fmt(k.value, k.unit)}</div>
       <div class="kpi-meta"><span>План: <b>${fmtShort(k.plan, k.unit)}</b></span><span>${dev === null ? "" : `<span style="color:${good ? "var(--green)" : "var(--red)"}">${dev > 0 ? "+" : ""}${nf.format(dev)}%</span>`}</span></div>
-      <div class="kpi-meta"><span>Прогноз: <b>${fmtShort(k.forecast, k.unit)}</b></span><span class="hint">${k.series.length > 0 ? (k.series[0].label.length === 7 ? "по месяцам" : "по неделям") : ""}</span></div>
-      <div class="kpi-spark"></div>`;
-    const color = k.status === "red" ? Charts.COLORS.pink : k.status === "yellow" ? Charts.COLORS.yellow : Charts.COLORS.purple;
-    requestAnimationFrame(() => Charts.sparkline($(".kpi-spark", el), k.series.map((s) => s.value), { color, plan: k.additive ? null : k.series[0]?.plan ?? null }));
+      <div class="kpi-meta"><span>Прогноз: <b>${fmtShort(k.forecast, k.unit)}</b></span></div>`;
+    // График динамики не показывается в карточке при первом просмотре — он открывается в детализации.
     $(".info-btn", el).addEventListener("click", (e) => {
       e.stopPropagation();
       showInfo(k, e.currentTarget);
@@ -511,10 +561,14 @@
       box.innerHTML = r.decisions.length
         ? `<div class="table-wrap"><table><tbody>${r.decisions
             .slice(0, 6)
-            .map((d) => `<tr class="clickable" data-id="${d.id}"><td><b>${esc(d.number)}</b><br><span class="hint">${esc(d.owner)}</span></td><td>${esc(d.title)}</td><td><span class="pill ${statusColor(d.status)}">${esc(d.status)}</span>${d.overdue ? '<br><span class="pill red">просрочено</span>' : ""}</td></tr>`)
+            .map((d) => `<tr class="clickable" tabindex="0" data-id="${d.id}"><td><b>${esc(d.number)}</b><br><span class="hint">${esc(d.owner)}</span></td><td>${esc(d.title)}</td><td><span class="pill ${statusColor(d.status)}">${esc(d.status)}</span>${d.overdue ? '<br><span class="pill red">просрочено</span>' : ""}</td></tr>`)
             .join("")}</tbody></table></div>`
         : '<div class="empty">Решений пока нет. Откройте красный KPI и нажмите «Создать решение».</div>';
-      $$("tr[data-id]", box).forEach((tr) => tr.addEventListener("click", () => openDecisionCard(r.decisions.find((d) => d.id === Number(tr.dataset.id)))));
+      $$("tr[data-id]", box).forEach((tr) => {
+        const open = () => openDecisionCard(r.decisions.find((d) => d.id === Number(tr.dataset.id)));
+        tr.addEventListener("click", open);
+        tr.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open()));
+      });
     } catch (err) {
       if (box) box.innerHTML = `<div class="banner error">${esc(err.message)}</div>`;
     }
@@ -586,7 +640,7 @@
     );
     const series = [{ name: "Факт", values: k.series.map((s) => s.value), color: Charts.COLORS.purple, type: k.additive ? "bar" : "area" }];
     if (k.series.some((s) => s.plan !== null)) series.push({ name: "План", values: k.series.map((s) => s.plan), color: Charts.COLORS.gray, type: "dash" });
-    Charts.chart($("#drillChart"), { labels: k.series.map((s) => s.label), series, height: 200, format: (v) => (k.unit === "RUB" ? Charts.compact(v) : nf.format(v)) });
+    Charts.chart($("#drillChart"), { labels: k.series.map((s) => s.label), series, height: 200, format: (v) => (k.unit === "BYN" ? Charts.compact(v) : nf.format(v)) });
 
     const box = $("#drillBody", body);
     try {
@@ -602,12 +656,25 @@
               (r) => `<button type="button" class="bar-row" data-key="${esc(r.key)}"><span class="lbl" title="${esc(r.key)}">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill ${r.status === "gray" ? "" : r.status}" style="width:${Math.max(2, (Math.abs(r.value || 0) / max) * 100)}%"></span></span><span class="val">${fmt(r.value, k.unit)}${r.share_pct !== null ? ` · ${nf.format(r.share_pct)}%` : ""} <span class="hint">(${r.count})</span></span></button>`
             )
             .join("") || '<div class="empty">Нет данных за выбранный период</div>'}</div></div>`;
-        $$(".tabs button", box).forEach((b) =>
+        const tabs = $$(".tabs button", box);
+        tabs.forEach((b, i) => {
+          b.tabIndex = b.classList.contains("active") ? 0 : -1;
           b.addEventListener("click", () => {
             drillState.dim = b.dataset.dim;
+            drillState.focusTab = true;
             renderDrill(body);
-          })
-        );
+          });
+          b.addEventListener("keydown", (e) => {
+            const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+            if (!step) return;
+            e.preventDefault();
+            tabs[(i + step + tabs.length) % tabs.length].click();
+          });
+        });
+        if (drillState.focusTab) {
+          drillState.focusTab = false;
+          $(".tabs button.active", box)?.focus();
+        }
         $$(".bar-row", box).forEach((b) =>
           b.addEventListener("click", () => {
             drillState.key = b.dataset.key;
@@ -685,7 +752,7 @@
         <h3 class="section-title">CRM · заказ и клиент</h3>
         <dl class="kv">
           <dt>Дата заказа</dt><dd>${fmtD(o.order_date)}</dd><dt>Статус</dt><dd>${esc(o.status)}</dd>
-          <dt>Продукт / тираж</dt><dd>${esc(o.product_type)} · ${nf0.format(o.print_run)} шт.</dd><dt>Сумма</dt><dd>${fmt(o.amount, "RUB")}</dd>
+          <dt>Продукт / тираж</dt><dd>${esc(o.product_type)} · ${nf0.format(o.print_run)} шт.</dd><dt>Сумма</dt><dd>${fmt(o.amount, "BYN")}</dd>
           <dt>Приоритет</dt><dd>${esc(o.priority)}</dd>
           <dt>Клиент</dt><dd>${c.client ? `ID ${c.client.id} · ${esc(c.client.segment)} · ${esc(c.client.city)} · клиент с ${fmtD(c.client.created_at)}` : '<span class="pill red">клиент не найден в CRM</span>'}</dd>
         </dl>
@@ -706,7 +773,7 @@
         <h3 class="section-title">CRM · обращения клиента по заказу (${c.requests.length})</h3>
         ${c.requests.length ? `<ul class="history">${c.requests.map((r) => `<li><b>${esc(r.type)}</b> · ${esc(r.status)} — ${esc(r.description)} <span class="at">· ${fmtD(r.created_at)}</span></li>`).join("")}</ul>` : '<div class="hint">Обращений нет</div>'}
         <h3 class="section-title">Финансы · поступления (${c.payments.length})</h3>
-        ${c.payments.length ? `<ul class="history">${c.payments.map((p) => `<li>${fmtD(p.date)} — ${p.hidden ? "🔒 сумма скрыта для вашей роли" : `${fmt(p.amount, "RUB")} · ${esc(p.source)}`}</li>`).join("")}</ul>` : '<div class="hint">Поступлений нет</div>'}`;
+        ${c.payments.length ? `<ul class="history">${c.payments.map((p) => `<li>${fmtD(p.date)} — ${p.hidden ? "🔒 сумма скрыта для вашей роли" : `${fmt(p.amount, "BYN")} · ${esc(p.source)}`}</li>`).join("")}</ul>` : '<div class="hint">Поступлений нет</div>'}`;
     } catch (err) {
       ov.body.innerHTML = `<div class="banner error" role="alert">${esc(err.message)}</div>`;
     }
@@ -984,15 +1051,15 @@
         </div>
         <div class="grid grid-2" style="margin-top:16px">
           <div class="card"><h2>Сегменты клиентов</h2><div class="table-wrap"><table><thead><tr><th>Сегмент</th><th class="num">Клиенты</th><th class="num">Заказы</th><th class="num">Сумма</th><th class="num">Ср. чек</th></tr></thead><tbody>${s.by_segment
-            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.clients}</td><td class="num">${x.orders}</td><td class="num">${fmt(x.amount, "RUB")}</td><td class="num">${fmt(x.avg_check, "RUB")}</td></tr>`)
+            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.clients}</td><td class="num">${x.orders}</td><td class="num">${fmt(x.amount, "BYN")}</td><td class="num">${fmt(x.avg_check, "BYN")}</td></tr>`)
             .join("")}</tbody></table></div></div>
           <div class="card"><h2>Продукты</h2><div class="table-wrap"><table><thead><tr><th>Продукт</th><th class="num">Заказы</th><th class="num">Тираж</th><th class="num">Сумма</th></tr></thead><tbody>${s.by_product
-            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.orders}</td><td class="num">${nf0.format(x.qty)}</td><td class="num">${fmt(x.amount, "RUB")}</td></tr>`)
+            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.orders}</td><td class="num">${nf0.format(x.qty)}</td><td class="num">${fmt(x.amount, "BYN")}</td></tr>`)
             .join("")}</tbody></table></div></div>
         </div>`;
       ["orders", "avg_check", "conversion", "repeat", "new_clients", "sla"].map(pick).filter(Boolean).forEach((x) => $("#sk").appendChild(kpiCard(x)));
       const cols = [Charts.COLORS.purple, Charts.COLORS.pink, Charts.COLORS.blue, Charts.COLORS.gray];
-      Charts.donut($("#chDonut"), s.by_channel.map((c, i) => ({ label: c.key, value: c.value, color: cols[i % 4] })), { format: (v) => Charts.compact(v) + " ₽" });
+      Charts.donut($("#chDonut"), s.by_channel.map((c, i) => ({ label: c.key, value: c.value, color: cols[i % 4] })), { format: (v) => Charts.compact(v) + " BYN" });
       if (!totalCh) $("#chDonut").innerHTML = '<div class="empty">Нет поступлений</div>';
     } catch (err) {
       $("#pg").innerHTML = "";
@@ -1054,12 +1121,12 @@
         <div class="kpi-grid" id="fk"></div>
         <div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2><div id="bdrChart"></div>
           <div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th><th class="num">Расходы план</th><th class="num">Расходы факт</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr
-            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "RUB")}</td><td class="num">${fmt(r.revenue_fact, "RUB")}</td><td class="num">${fmt(r.expenses_plan, "RUB")}</td><td class="num">${fmt(r.expenses_fact, "RUB")}</td><td class="num">${fmt(r.profit_plan, "RUB")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "RUB")}</span></td></tr>`)
+            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`)
             .join("")}</tbody></table></div></div>
         <div class="grid grid-2" style="margin-top:16px">
-          <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "RUB")}</span></h2>
-            <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "RUB")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "RUB")}</span></div>`).join("")}</div>
-            <h3 class="section-title">Выплаты · ${fmt(outSum, "RUB")}</h3><div class="bars">${s.bdds.outflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "RUB")}</span></div>`).join("")}</div></div>
+          <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></h2>
+            <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "BYN")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div>
+            <h3 class="section-title">Выплаты · ${fmt(outSum, "BYN")}</h3><div class="bars">${s.bdds.outflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div></div>
           <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${
             hasDomain("hr")
               ? `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff
@@ -1146,7 +1213,7 @@
           }</div>
         <div class="card" style="margin-top:16px"><h2>Сверка финансовых итогов <span class="hint">месячная отчётность (profit.json) vs первичные платежи и расходы</span></h2>
           <div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка (отчёт)</th><th class="num">Выручка (платежи)</th><th class="num">Δ выручки</th><th class="num">Расходы (отчёт)</th><th class="num">Расходы (учёт)</th><th class="num">Δ расходов</th><th>Результат</th></tr></thead><tbody>${q.reconciliation
-            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.report_revenue, "RUB")}</td><td class="num">${fmt(r.payments_revenue, "RUB")}</td><td class="num">${fmt(r.diff_revenue, "RUB")}</td><td class="num">${fmt(r.report_expenses, "RUB")}</td><td class="num">${fmt(r.ledger_expenses, "RUB")}</td><td class="num">${fmt(r.diff_expenses, "RUB")}</td><td><span class="pill ${r.ok ? "green" : "red"}">${r.ok ? "сходится" : "расхождение"}</span></td></tr>`)
+            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.report_revenue, "BYN")}</td><td class="num">${fmt(r.payments_revenue, "BYN")}</td><td class="num">${fmt(r.diff_revenue, "BYN")}</td><td class="num">${fmt(r.report_expenses, "BYN")}</td><td class="num">${fmt(r.ledger_expenses, "BYN")}</td><td class="num">${fmt(r.diff_expenses, "BYN")}</td><td><span class="pill ${r.ok ? "green" : "red"}">${r.ok ? "сходится" : "расхождение"}</span></td></tr>`)
             .join("")}</tbody></table></div></div>`;
       $("#reload")?.addEventListener("click", async (e) => {
         e.currentTarget.disabled = true;
@@ -1208,7 +1275,6 @@
       $("#retry").addEventListener("click", boot);
       return;
     }
-    if (S.filters.domain && !S.user.domains.includes(S.filters.domain)) S.filters.domain = "";
     renderShell();
     if (!location.hash) location.hash = "#/pulse";
     route();

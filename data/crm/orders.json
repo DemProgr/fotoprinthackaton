@@ -5,7 +5,7 @@
     "client_id": 70,
     "order_date": "2025-08-19",
     "status": "закрыт",
-    "amount": 289841.01,
+    "amount": 10351.46,
     "product_type": "календарь",
     "print_run": 2186,
     "priority": "низкий"
@@ -16,7 +16,7 @@
     "client_id": 8,
     "order_date": "2025-06-19",
     "status": "отменён",
-    "amount": 262888.33,
+    "amount": 9388.87,
     "product_type": "плакат",
     "print_run": 4884,
     "priority": "высокий"
@@ -27,7 +27,7 @@
     "client_id": 118,
     "order_date": "2025-10-23",
     "status": "готов к отгрузке",
-    "amount": 241971.26,
+    "amount": 8641.83,
     "product_type": "брошюра",
     "print_run": 3849,
     "priority": "высокий"
@@ -38,7 +38,7 @@
     "client_id": 52,
     "order_date": "2025-10-06",
     "status": "отгружен",
-    "amount": 154902.33,
+    "amount": 5532.23,
     "product_type": "наклейка",
     "print_run": 4055,
     "priority": "высокий"
@@ -49,7 +49,7 @@
     "client_id": 6,
     "order_date": "2026-03-19",
     "status": "закрыт",
-    "amount": 89877.66,
+    "amount": 3209.92,
     "product_type": "баннер",
     "print_run": 4955,
     "priority": "низкий"
@@ -60,7 +60,7 @@
     "client_id": 30,
     "order_date": "2026-08-13",
     "status": "отгружен",
-    "amount": 202957.7,
+    "amount": 7248.49,
     "product_type": "фотоальбом",
     "print_run": 2217,
     "priority": "низкий"
@@ -71,7 +71,7 @@
     "client_id": 61,
     "order_date": "2026-06-16",
     "status": "закрыт",
-    "amount": 65976.73,
+    "amount": 2356.31,
     "product_type": "каталог",
     "print_run": 2288,
     "priority": "высокий"
@@ -82,7 +82,7 @@
     "client_id": 56,
     "order_date": "2026-10-13",
     "status": "отменён",
-    "amount": 166093.61,
+    "amount": 5931.91,
     "product_type": "каталог",
     "print_run": 757,
     "priority": "средний"
@@ -93,7 +93,7 @@
     "client_id": 43,
     "order_date": "2025-11-25",
     "status": "закрыт",
-    "amount": 117441.87,
+    "amount": 4194.35,
     "product_type": "брошюра",
     "print_run": 1327,
     "priority": "высокий"
@@ -104,7 +104,7 @@
     "client_id": 64,
     "order_date": "2025-10-23",
     "status": "закрыт",
-    "amount": 15733.9,
+    "amount": 561.92,
     "product_type": "визитка",
     "print_run": 4516,
     "priority": "низкий"
@@ -115,7 +115,7 @@
     "client_id": 41,
     "order_date": "2025-09-16",
     "status": "печать",
-    "amount": 303123.97,
+    "amount": 10825.86,
     "product_type": "брошюра",
     "print_run": 3321,
     "priority": "низкий"
@@ -126,7 +126,7 @@
     "client_id": 85,
     "order_date": "2026-07-10",
     "status": "готов к отгрузке",
-    "amount": 68091.14,
+    "amount": 2431.83,
     "product_type": "визитка",
     "print_run": 454,
     "priority": "средний"
@@ -137,7 +137,7 @@
     "client_id": 80,
     "order_date": "2026-05-26",
     "status": "закрыт",
-    "amount": 73634.71,
+    "amount": 2629.81,
     "product_type": "каталог",
     "print_run": 432,
     "priority": "высокий"
@@ -148,7 +148,7 @@
     "client_id": 17,
     "order_date": "2025-10-22",
     "status": "готов к отгрузке",
-    "amount": 13017.7,
+    "amount": 464.92,
     "product_type": "каталог",
     "print_run": 1004,
     "priority": "высокий"
@@ -159,7 +159,7 @@
     "client_id": 78,
     "order_date": "2025-09-03",
     "status": "закрыт",
-    "amount": 194141.14,
+    "amount": 6933.61,
     "product_type": "календарь",
     "print_run": 2555,
     "priority": "высокий"
@@ -170,7 +170,7 @@
     "client_id": 53,
     "order_date": "2025-04-06",
     "status": "в работе",
-    "amount": 331630.08,
+    "amount": 11843.93,
     "product_type": "брошюра",
     "print_run": 3790,
     "priority": "высокий"
@@ -181,7 +181,7 @@
     "client_id": 107,
     "order_date": "2025-06-07",
     "status": "готов к отгрузке",
-    "amount": 247777.84,
+    "amount": 8849.21,
     "product_type": "плакат",
     "print_run": 4178,
     "priority": "средний"
@@ -192,7 +192,7 @@
     "client_id": 107,
     "order_date": "2026-05-10",
     "status": "готов к отгрузке",
-    "amount": 194288.98,
+    "amount": 6938.89,
     "product_type": "открытка",
     "print_run": 3751,
     "priority": "средний"
@@ -203,7 +203,7 @@
     "client_id": 25,
     "order_date": "2026-09-06",
     "status": "отгружен",
-    "amount": 98857.85,
+    "amount": 3530.64,
     "product_type": "календарь",
     "print_run": 581,
     "priority": "средний"
@@ -214,7 +214,7 @@
     "client_id": 44,
     "order_date": "2026-06-04",
     "status": "печать",
-    "amount": 254939.69,
+    "amount": 9104.99,
     "product_type": "фотоальбом",
     "print_run": 2327,
     "priority": "высокий"
@@ -225,7 +225,7 @@
     "client_id": 75,
     "order_date": "2026-05-17",
     "status": "отменён",
-    "amount": 189887.46,
+    "amount": 6781.7,
     "product_type": "календарь",
     "print_run": 3668,
     "priority": "средний"
@@ -236,7 +236,7 @@
     "client_id": 43,
     "order_date": "2026-07-20",
     "status": "отменён",
-    "amount": 161004.58,
+    "amount": 5750.16,
     "product_type": "наклейка",
     "print_run": 3100,
     "priority": "средний"
@@ -247,7 +247,7 @@
     "client_id": 112,
     "order_date": "2025-07-13",
     "status": "закрыт",
-    "amount": 135890.88,
+    "amount": 4853.25,
     "product_type": "открытка",
     "print_run": 4694,
     "priority": "средний"
@@ -258,7 +258,7 @@
     "client_id": 6,
     "order_date": "2025-11-22",
     "status": "закрыт",
-    "amount": 136969.33,
+    "amount": 4891.76,
     "product_type": "каталог",
     "print_run": 3133,
     "priority": "высокий"
@@ -269,7 +269,7 @@
     "client_id": 102,
     "order_date": "2026-10-30",
     "status": "в работе",
-    "amount": 46807.46,
+    "amount": 1671.7,
     "product_type": "каталог",
     "print_run": 313,
     "priority": "высокий"
@@ -280,7 +280,7 @@
     "client_id": 43,
     "order_date": "2025-04-13",
     "status": "отменён",
-    "amount": 185505.03,
+    "amount": 6625.18,
     "product_type": "каталог",
     "print_run": 826,
     "priority": "средний"
@@ -291,7 +291,7 @@
     "client_id": 2,
     "order_date": "2025-05-28",
     "status": "готов к отгрузке",
-    "amount": 165913.24,
+    "amount": 5925.47,
     "product_type": "календарь",
     "print_run": 622,
     "priority": "средний"
@@ -302,7 +302,7 @@
     "client_id": 44,
     "order_date": "2026-10-01",
     "status": "закрыт",
-    "amount": 298562.56,
+    "amount": 10662.95,
     "product_type": "визитка",
     "print_run": 667,
     "priority": "высокий"
@@ -313,7 +313,7 @@
     "client_id": 110,
     "order_date": "2026-07-01",
     "status": "готов к отгрузке",
-    "amount": 305716.91,
+    "amount": 10918.46,
     "product_type": "баннер",
     "print_run": 4007,
     "priority": "низкий"
@@ -324,7 +324,7 @@
     "client_id": 80,
     "order_date": "2025-03-12",
     "status": "в работе",
-    "amount": 262127.93,
+    "amount": 9361.71,
     "product_type": "плакат",
     "print_run": 1873,
     "priority": "средний"
@@ -335,7 +335,7 @@
     "client_id": 13,
     "order_date": "2026-10-11",
     "status": "закрыт",
-    "amount": 60728.58,
+    "amount": 2168.88,
     "product_type": "брошюра",
     "print_run": 3644,
     "priority": "средний"
@@ -346,7 +346,7 @@
     "client_id": 116,
     "order_date": "2025-01-30",
     "status": "новый",
-    "amount": 104798.62,
+    "amount": 3742.81,
     "product_type": "баннер",
     "print_run": 469,
     "priority": "средний"
@@ -357,7 +357,7 @@
     "client_id": 56,
     "order_date": "2025-05-30",
     "status": "в работе",
-    "amount": 199377.04,
+    "amount": 7120.61,
     "product_type": "наклейка",
     "print_run": 3385,
     "priority": "низкий"
@@ -368,7 +368,7 @@
     "client_id": 22,
     "order_date": "2025-06-29",
     "status": "новый",
-    "amount": 218039.5,
+    "amount": 7787.13,
     "product_type": "фотоотпечаток",
     "print_run": 3143,
     "priority": "низкий"
@@ -379,7 +379,7 @@
     "client_id": 64,
     "order_date": "2026-08-21",
     "status": "в работе",
-    "amount": 224352.91,
+    "amount": 8012.6,
     "product_type": "открытка",
     "print_run": 3787,
     "priority": "средний"
@@ -390,7 +390,7 @@
     "client_id": 33,
     "order_date": "2025-01-10",
     "status": "отменён",
-    "amount": 238130.98,
+    "amount": 8504.68,
     "product_type": "каталог",
     "print_run": 2366,
     "priority": "низкий"
@@ -401,7 +401,7 @@
     "client_id": 10,
     "order_date": "2026-03-29",
     "status": "печать",
-    "amount": 224711.73,
+    "amount": 8025.42,
     "product_type": "фотоотпечаток",
     "print_run": 2460,
     "priority": "средний"
@@ -412,7 +412,7 @@
     "client_id": 89,
     "order_date": "2025-09-14",
     "status": "готов к отгрузке",
-    "amount": 349782.63,
+    "amount": 12492.24,
     "product_type": "плакат",
     "print_run": 1641,
     "priority": "средний"
@@ -423,7 +423,7 @@
     "client_id": 14,
     "order_date": "2025-08-31",
     "status": "готов к отгрузке",
-    "amount": 202459.74,
+    "amount": 7230.71,
     "product_type": "фотоотпечаток",
     "print_run": 2950,
     "priority": "высокий"
@@ -434,7 +434,7 @@
     "client_id": 38,
     "order_date": "2025-01-23",
     "status": "отменён",
-    "amount": 5809.99,
+    "amount": 207.5,
     "product_type": "визитка",
     "print_run": 2258,
     "priority": "высокий"
@@ -445,7 +445,7 @@
     "client_id": 100,
     "order_date": "2025-02-20",
     "status": "отгружен",
-    "amount": 272182.12,
+    "amount": 9720.79,
     "product_type": "каталог",
     "print_run": 2354,
     "priority": "низкий"
@@ -456,7 +456,7 @@
     "client_id": 78,
     "order_date": "2025-12-27",
     "status": "в работе",
-    "amount": 238184.27,
+    "amount": 8506.58,
     "product_type": "открытка",
     "print_run": 2063,
     "priority": "высокий"
@@ -467,7 +467,7 @@
     "client_id": 99,
     "order_date": "2025-05-21",
     "status": "закрыт",
-    "amount": 110199.71,
+    "amount": 3935.7,
     "product_type": "брошюра",
     "print_run": 332,
     "priority": "средний"
@@ -478,7 +478,7 @@
     "client_id": 5,
     "order_date": "2026-08-17",
     "status": "печать",
-    "amount": 318640.85,
+    "amount": 11380.03,
     "product_type": "календарь",
     "print_run": 748,
     "priority": "средний"
@@ -489,7 +489,7 @@
     "client_id": 96,
     "order_date": "2026-03-02",
     "status": "в работе",
-    "amount": 275919.95,
+    "amount": 9854.28,
     "product_type": "открытка",
     "print_run": 1092,
     "priority": "средний"
@@ -500,7 +500,7 @@
     "client_id": 68,
     "order_date": "2026-05-29",
     "status": "печать",
-    "amount": 320174.99,
+    "amount": 11434.82,
     "product_type": "календарь",
     "print_run": 2115,
     "priority": "средний"
@@ -511,7 +511,7 @@
     "client_id": 104,
     "order_date": "2025-10-30",
     "status": "закрыт",
-    "amount": 165510.99,
+    "amount": 5911.11,
     "product_type": "баннер",
     "print_run": 953,
     "priority": "низкий"
@@ -522,7 +522,7 @@
     "client_id": 19,
     "order_date": "2025-08-20",
     "status": "отменён",
-    "amount": 129923.94,
+    "amount": 4640.14,
     "product_type": "визитка",
     "print_run": 4575,
     "priority": "средний"
@@ -533,7 +533,7 @@
     "client_id": 2,
     "order_date": "2025-09-28",
     "status": "отгружен",
-    "amount": 130899.22,
+    "amount": 4674.97,
     "product_type": "брошюра",
     "print_run": 3735,
     "priority": "высокий"
@@ -544,7 +544,7 @@
     "client_id": 87,
     "order_date": "2025-09-26",
     "status": "отгружен",
-    "amount": 40596.1,
+    "amount": 1449.86,
     "product_type": "визитка",
     "print_run": 3053,
     "priority": "низкий"
@@ -555,7 +555,7 @@
     "client_id": 61,
     "order_date": "2025-01-26",
     "status": "отгружен",
-    "amount": 320593.8,
+    "amount": 11449.78,
     "product_type": "наклейка",
     "print_run": 2697,
     "priority": "низкий"
@@ -566,7 +566,7 @@
     "client_id": 83,
     "order_date": "2025-03-06",
     "status": "закрыт",
-    "amount": 228286.09,
+    "amount": 8153.07,
     "product_type": "каталог",
     "print_run": 2485,
     "priority": "низкий"
@@ -577,7 +577,7 @@
     "client_id": 18,
     "order_date": "2025-02-16",
     "status": "новый",
-    "amount": 43293.81,
+    "amount": 1546.21,
     "product_type": "плакат",
     "print_run": 4045,
     "priority": "низкий"
@@ -588,7 +588,7 @@
     "client_id": 114,
     "order_date": "2026-07-05",
     "status": "в работе",
-    "amount": 131741.0,
+    "amount": 4705.04,
     "product_type": "визитка",
     "print_run": 3726,
     "priority": "высокий"
@@ -599,7 +599,7 @@
     "client_id": 90,
     "order_date": "2026-07-08",
     "status": "готов к отгрузке",
-    "amount": 310238.58,
+    "amount": 11079.95,
     "product_type": "фотоотпечаток",
     "print_run": 1275,
     "priority": "высокий"
@@ -610,7 +610,7 @@
     "client_id": 13,
     "order_date": "2026-05-17",
     "status": "отгружен",
-    "amount": 14352.55,
+    "amount": 512.59,
     "product_type": "визитка",
     "print_run": 2301,
     "priority": "средний"
@@ -621,7 +621,7 @@
     "client_id": 28,
     "order_date": "2026-03-31",
     "status": "готов к отгрузке",
-    "amount": 37476.05,
+    "amount": 1338.43,
     "product_type": "открытка",
     "print_run": 2981,
     "priority": "высокий"
@@ -632,7 +632,7 @@
     "client_id": 48,
     "order_date": "2026-07-12",
     "status": "закрыт",
-    "amount": 141154.46,
+    "amount": 5041.23,
     "product_type": "баннер",
     "print_run": 506,
     "priority": "низкий"
@@ -643,7 +643,7 @@
     "client_id": 16,
     "order_date": "2026-04-11",
     "status": "новый",
-    "amount": 339969.38,
+    "amount": 12141.76,
     "product_type": "открытка",
     "print_run": 4901,
     "priority": "низкий"
@@ -654,7 +654,7 @@
     "client_id": 101,
     "order_date": "2025-12-08",
     "status": "в работе",
-    "amount": 74206.33,
+    "amount": 2650.23,
     "product_type": "календарь",
     "print_run": 4635,
     "priority": "высокий"
@@ -665,7 +665,7 @@
     "client_id": 27,
     "order_date": "2026-08-24",
     "status": "в работе",
-    "amount": 271705.9,
+    "amount": 9703.78,
     "product_type": "открытка",
     "print_run": 2701,
     "priority": "высокий"
@@ -676,7 +676,7 @@
     "client_id": 1,
     "order_date": "2025-10-11",
     "status": "отменён",
-    "amount": 190454.76,
+    "amount": 6801.96,
     "product_type": "календарь",
     "print_run": 1074,
     "priority": "низкий"
@@ -687,7 +687,7 @@
     "client_id": 15,
     "order_date": "2025-01-27",
     "status": "в работе",
-    "amount": 277124.68,
+    "amount": 9897.31,
     "product_type": "фотоальбом",
     "print_run": 2944,
     "priority": "низкий"
@@ -698,7 +698,7 @@
     "client_id": 76,
     "order_date": "2025-11-28",
     "status": "новый",
-    "amount": 21182.46,
+    "amount": 756.52,
     "product_type": "календарь",
     "print_run": 2183,
     "priority": "высокий"
@@ -709,7 +709,7 @@
     "client_id": 54,
     "order_date": "2026-06-23",
     "status": "новый",
-    "amount": 158551.5,
+    "amount": 5662.55,
     "product_type": "брошюра",
     "print_run": 3911,
     "priority": "средний"
@@ -720,7 +720,7 @@
     "client_id": 66,
     "order_date": "2026-08-31",
     "status": "новый",
-    "amount": 79877.77,
+    "amount": 2852.78,
     "product_type": "каталог",
     "print_run": 4137,
     "priority": "высокий"
@@ -731,7 +731,7 @@
     "client_id": 6,
     "order_date": "2026-06-18",
     "status": "печать",
-    "amount": 24106.42,
+    "amount": 860.94,
     "product_type": "каталог",
     "print_run": 265,
     "priority": "средний"
@@ -742,7 +742,7 @@
     "client_id": 109,
     "order_date": "2026-02-16",
     "status": "готов к отгрузке",
-    "amount": 250203.26,
+    "amount": 8935.83,
     "product_type": "брошюра",
     "print_run": 4026,
     "priority": "средний"
@@ -753,7 +753,7 @@
     "client_id": 10,
     "order_date": "2025-03-24",
     "status": "печать",
-    "amount": 25791.73,
+    "amount": 921.13,
     "product_type": "фотоотпечаток",
     "print_run": 1225,
     "priority": "средний"
@@ -764,7 +764,7 @@
     "client_id": 80,
     "order_date": "2026-10-11",
     "status": "отгружен",
-    "amount": 135173.83,
+    "amount": 4827.64,
     "product_type": "наклейка",
     "print_run": 2673,
     "priority": "высокий"
@@ -775,7 +775,7 @@
     "client_id": 68,
     "order_date": "2025-10-29",
     "status": "готов к отгрузке",
-    "amount": 152279.17,
+    "amount": 5438.54,
     "product_type": "наклейка",
     "print_run": 4969,
     "priority": "высокий"
@@ -786,7 +786,7 @@
     "client_id": 15,
     "order_date": "2026-10-29",
     "status": "отменён",
-    "amount": 152234.27,
+    "amount": 5436.94,
     "product_type": "наклейка",
     "print_run": 1771,
     "priority": "низкий"
@@ -797,7 +797,7 @@
     "client_id": 53,
     "order_date": "2025-12-14",
     "status": "отменён",
-    "amount": 147348.41,
+    "amount": 5262.44,
     "product_type": "каталог",
     "print_run": 3276,
     "priority": "низкий"
@@ -808,7 +808,7 @@
     "client_id": 41,
     "order_date": "2026-03-14",
     "status": "печать",
-    "amount": 333896.6,
+    "amount": 11924.88,
     "product_type": "плакат",
     "print_run": 3076,
     "priority": "высокий"
@@ -819,7 +819,7 @@
     "client_id": 119,
     "order_date": "2026-05-01",
     "status": "новый",
-    "amount": 35350.85,
+    "amount": 1262.53,
     "product_type": "брошюра",
     "print_run": 709,
     "priority": "низкий"
@@ -830,7 +830,7 @@
     "client_id": 96,
     "order_date": "2026-01-17",
     "status": "отменён",
-    "amount": 23813.4,
+    "amount": 850.48,
     "product_type": "календарь",
     "print_run": 4567,
     "priority": "высокий"
@@ -841,7 +841,7 @@
     "client_id": 72,
     "order_date": "2025-12-04",
     "status": "закрыт",
-    "amount": 125698.53,
+    "amount": 4489.23,
     "product_type": "брошюра",
     "print_run": 3375,
     "priority": "высокий"
@@ -852,7 +852,7 @@
     "client_id": 97,
     "order_date": "2026-03-10",
     "status": "отменён",
-    "amount": 211342.3,
+    "amount": 7547.94,
     "product_type": "фотоальбом",
     "print_run": 2366,
     "priority": "средний"
@@ -863,7 +863,7 @@
     "client_id": 14,
     "order_date": "2026-08-15",
     "status": "отгружен",
-    "amount": 230887.5,
+    "amount": 8245.98,
     "product_type": "открытка",
     "print_run": 1277,
     "priority": "низкий"
@@ -874,7 +874,7 @@
     "client_id": 109,
     "order_date": "2025-04-21",
     "status": "печать",
-    "amount": 42865.2,
+    "amount": 1530.9,
     "product_type": "наклейка",
     "print_run": 3021,
     "priority": "средний"
@@ -885,7 +885,7 @@
     "client_id": 74,
     "order_date": "2025-08-20",
     "status": "отменён",
-    "amount": 341167.67,
+    "amount": 12184.56,
     "product_type": "визитка",
     "print_run": 4605,
     "priority": "высокий"
@@ -896,7 +896,7 @@
     "client_id": 79,
     "order_date": "2026-10-21",
     "status": "отгружен",
-    "amount": 325392.25,
+    "amount": 11621.15,
     "product_type": "фотоальбом",
     "print_run": 4998,
     "priority": "высокий"
@@ -907,7 +907,7 @@
     "client_id": 35,
     "order_date": "2025-01-30",
     "status": "в работе",
-    "amount": 322773.52,
+    "amount": 11527.63,
     "product_type": "плакат",
     "print_run": 2541,
     "priority": "средний"
@@ -918,7 +918,7 @@
     "client_id": 1,
     "order_date": "2025-07-05",
     "status": "отменён",
-    "amount": 231098.59,
+    "amount": 8253.52,
     "product_type": "календарь",
     "print_run": 4649,
     "priority": "низкий"
@@ -929,7 +929,7 @@
     "client_id": 19,
     "order_date": "2026-10-11",
     "status": "новый",
-    "amount": 77651.11,
+    "amount": 2773.25,
     "product_type": "брошюра",
     "print_run": 4355,
     "priority": "средний"
@@ -940,7 +940,7 @@
     "client_id": 59,
     "order_date": "2025-12-16",
     "status": "в работе",
-    "amount": 253393.8,
+    "amount": 9049.78,
     "product_type": "баннер",
     "print_run": 2562,
     "priority": "высокий"
@@ -951,7 +951,7 @@
     "client_id": 77,
     "order_date": "2025-03-28",
     "status": "новый",
-    "amount": 264789.25,
+    "amount": 9456.76,
     "product_type": "календарь",
     "print_run": 1299,
     "priority": "низкий"
@@ -962,7 +962,7 @@
     "client_id": 87,
     "order_date": "2025-03-25",
     "status": "печать",
-    "amount": 171524.61,
+    "amount": 6125.88,
     "product_type": "каталог",
     "print_run": 3483,
     "priority": "средний"
@@ -973,7 +973,7 @@
     "client_id": 54,
     "order_date": "2025-10-07",
     "status": "в работе",
-    "amount": 122774.98,
+    "amount": 4384.82,
     "product_type": "наклейка",
     "print_run": 942,
     "priority": "низкий"
@@ -984,7 +984,7 @@
     "client_id": 37,
     "order_date": "2026-08-31",
     "status": "готов к отгрузке",
-    "amount": 18759.82,
+    "amount": 669.99,
     "product_type": "наклейка",
     "print_run": 2536,
     "priority": "средний"
@@ -995,7 +995,7 @@
     "client_id": 77,
     "order_date": "2025-02-26",
     "status": "новый",
-    "amount": 331027.46,
+    "amount": 11822.41,
     "product_type": "открытка",
     "print_run": 2479,
     "priority": "низкий"
@@ -1006,7 +1006,7 @@
     "client_id": 98,
     "order_date": "2025-09-19",
     "status": "печать",
-    "amount": 5682.28,
+    "amount": 202.94,
     "product_type": "баннер",
     "print_run": 992,
     "priority": "высокий"
@@ -1017,7 +1017,7 @@
     "client_id": 56,
     "order_date": "2025-06-29",
     "status": "в работе",
-    "amount": 247173.93,
+    "amount": 8827.64,
     "product_type": "визитка",
     "print_run": 4372,
     "priority": "высокий"
@@ -1028,7 +1028,7 @@
     "client_id": 72,
     "order_date": "2025-12-29",
     "status": "новый",
-    "amount": 154368.2,
+    "amount": 5513.15,
     "product_type": "визитка",
     "print_run": 356,
     "priority": "средний"
@@ -1039,7 +1039,7 @@
     "client_id": 118,
     "order_date": "2025-03-21",
     "status": "отменён",
-    "amount": 151961.65,
+    "amount": 5427.2,
     "product_type": "баннер",
     "print_run": 4726,
     "priority": "средний"
@@ -1050,7 +1050,7 @@
     "client_id": 91,
     "order_date": "2026-10-18",
     "status": "готов к отгрузке",
-    "amount": 143546.21,
+    "amount": 5126.65,
     "product_type": "плакат",
     "print_run": 953,
     "priority": "средний"
@@ -1061,7 +1061,7 @@
     "client_id": 22,
     "order_date": "2026-09-25",
     "status": "готов к отгрузке",
-    "amount": 154538.99,
+    "amount": 5519.25,
     "product_type": "баннер",
     "print_run": 731,
     "priority": "низкий"
@@ -1072,7 +1072,7 @@
     "client_id": 32,
     "order_date": "2026-03-23",
     "status": "отгружен",
-    "amount": 30290.54,
+    "amount": 1081.81,
     "product_type": "визитка",
     "print_run": 4302,
     "priority": "средний"
@@ -1083,7 +1083,7 @@
     "client_id": 96,
     "order_date": "2025-12-14",
     "status": "в работе",
-    "amount": 29503.64,
+    "amount": 1053.7,
     "product_type": "баннер",
     "print_run": 1387,
     "priority": "высокий"
@@ -1094,7 +1094,7 @@
     "client_id": 15,
     "order_date": "2026-06-28",
     "status": "отгружен",
-    "amount": 124831.61,
+    "amount": 4458.27,
     "product_type": "открытка",
     "print_run": 2872,
     "priority": "высокий"
@@ -1105,7 +1105,7 @@
     "client_id": 105,
     "order_date": "2025-06-01",
     "status": "в работе",
-    "amount": 91820.97,
+    "amount": 3279.32,
     "product_type": "брошюра",
     "print_run": 1209,
     "priority": "низкий"
@@ -1116,7 +1116,7 @@
     "client_id": 78,
     "order_date": "2025-06-06",
     "status": "отменён",
-    "amount": 333098.37,
+    "amount": 11896.37,
     "product_type": "брошюра",
     "print_run": 1461,
     "priority": "высокий"
@@ -1127,7 +1127,7 @@
     "client_id": 64,
     "order_date": "2026-04-21",
     "status": "отменён",
-    "amount": 158770.12,
+    "amount": 5670.36,
     "product_type": "фотоотпечаток",
     "print_run": 4757,
     "priority": "высокий"
@@ -1138,7 +1138,7 @@
     "client_id": 83,
     "order_date": "2026-10-13",
     "status": "отгружен",
-    "amount": 55382.22,
+    "amount": 1977.94,
     "product_type": "баннер",
     "print_run": 2599,
     "priority": "низкий"
@@ -1149,7 +1149,7 @@
     "client_id": 61,
     "order_date": "2026-03-29",
     "status": "закрыт",
-    "amount": 208222.66,
+    "amount": 7436.52,
     "product_type": "плакат",
     "print_run": 2260,
     "priority": "средний"
@@ -1160,7 +1160,7 @@
     "client_id": 65,
     "order_date": "2025-03-17",
     "status": "печать",
-    "amount": 16049.71,
+    "amount": 573.2,
     "product_type": "каталог",
     "print_run": 3712,
     "priority": "средний"
@@ -1171,7 +1171,7 @@
     "client_id": 107,
     "order_date": "2025-10-21",
     "status": "новый",
-    "amount": 178952.53,
+    "amount": 6391.16,
     "product_type": "брошюра",
     "print_run": 4876,
     "priority": "средний"
@@ -1182,7 +1182,7 @@
     "client_id": 75,
     "order_date": "2026-07-22",
     "status": "отменён",
-    "amount": 318440.33,
+    "amount": 11372.87,
     "product_type": "фотоальбом",
     "print_run": 3694,
     "priority": "высокий"
@@ -1193,7 +1193,7 @@
     "client_id": 84,
     "order_date": "2025-07-12",
     "status": "печать",
-    "amount": 176974.45,
+    "amount": 6320.52,
     "product_type": "фотоотпечаток",
     "print_run": 3906,
     "priority": "низкий"
@@ -1204,7 +1204,7 @@
     "client_id": 58,
     "order_date": "2025-04-16",
     "status": "отменён",
-    "amount": 178078.5,
+    "amount": 6359.95,
     "product_type": "баннер",
     "print_run": 700,
     "priority": "низкий"
@@ -1215,7 +1215,7 @@
     "client_id": 6,
     "order_date": "2025-09-11",
     "status": "закрыт",
-    "amount": 184851.79,
+    "amount": 6601.85,
     "product_type": "каталог",
     "print_run": 3609,
     "priority": "высокий"
@@ -1226,7 +1226,7 @@
     "client_id": 21,
     "order_date": "2026-01-08",
     "status": "печать",
-    "amount": 144842.98,
+    "amount": 5172.96,
     "product_type": "плакат",
     "print_run": 3183,
     "priority": "средний"
@@ -1237,7 +1237,7 @@
     "client_id": 87,
     "order_date": "2026-09-05",
     "status": "новый",
-    "amount": 117402.69,
+    "amount": 4192.95,
     "product_type": "баннер",
     "print_run": 549,
     "priority": "высокий"
@@ -1248,7 +1248,7 @@
     "client_id": 87,
     "order_date": "2026-01-31",
     "status": "печать",
-    "amount": 306028.04,
+    "amount": 10929.57,
     "product_type": "плакат",
     "print_run": 4947,
     "priority": "средний"
@@ -1259,7 +1259,7 @@
     "client_id": 11,
     "order_date": "2026-08-20",
     "status": "закрыт",
-    "amount": 110650.41,
+    "amount": 3951.8,
     "product_type": "календарь",
     "print_run": 2875,
     "priority": "высокий"
@@ -1270,7 +1270,7 @@
     "client_id": 90,
     "order_date": "2026-02-06",
     "status": "в работе",
-    "amount": 110424.91,
+    "amount": 3943.75,
     "product_type": "фотоотпечаток",
     "print_run": 704,
     "priority": "средний"
@@ -1281,7 +1281,7 @@
     "client_id": 83,
     "order_date": "2025-12-03",
     "status": "отменён",
-    "amount": 35428.18,
+    "amount": 1265.29,
     "product_type": "календарь",
     "print_run": 4322,
     "priority": "высокий"
@@ -1292,7 +1292,7 @@
     "client_id": 55,
     "order_date": "2026-06-05",
     "status": "печать",
-    "amount": 110176.53,
+    "amount": 3934.88,
     "product_type": "фотоальбом",
     "print_run": 2980,
     "priority": "низкий"
@@ -1303,7 +1303,7 @@
     "client_id": 44,
     "order_date": "2026-05-13",
     "status": "в работе",
-    "amount": 56765.98,
+    "amount": 2027.36,
     "product_type": "открытка",
     "print_run": 1136,
     "priority": "средний"
@@ -1314,7 +1314,7 @@
     "client_id": 109,
     "order_date": "2025-04-14",
     "status": "отгружен",
-    "amount": 16098.38,
+    "amount": 574.94,
     "product_type": "наклейка",
     "print_run": 4323,
     "priority": "средний"
@@ -1325,7 +1325,7 @@
     "client_id": 113,
     "order_date": "2026-09-25",
     "status": "в работе",
-    "amount": 56525.71,
+    "amount": 2018.78,
     "product_type": "фотоотпечаток",
     "print_run": 3096,
     "priority": "низкий"
@@ -1336,7 +1336,7 @@
     "client_id": 107,
     "order_date": "2026-10-02",
     "status": "отменён",
-    "amount": 18161.27,
+    "amount": 648.62,
     "product_type": "календарь",
     "print_run": 3595,
     "priority": "средний"
@@ -1347,7 +1347,7 @@
     "client_id": 87,
     "order_date": "2025-09-01",
     "status": "готов к отгрузке",
-    "amount": 264079.73,
+    "amount": 9431.42,
     "product_type": "фотоотпечаток",
     "print_run": 2344,
     "priority": "средний"
@@ -1358,7 +1358,7 @@
     "client_id": 30,
     "order_date": "2026-07-01",
     "status": "в работе",
-    "amount": 316679.1,
+    "amount": 11309.97,
     "product_type": "плакат",
     "print_run": 3852,
     "priority": "низкий"
@@ -1369,7 +1369,7 @@
     "client_id": 48,
     "order_date": "2026-08-08",
     "status": "готов к отгрузке",
-    "amount": 273009.04,
+    "amount": 9750.32,
     "product_type": "каталог",
     "print_run": 2318,
     "priority": "высокий"
@@ -1380,7 +1380,7 @@
     "client_id": 68,
     "order_date": "2026-03-05",
     "status": "в работе",
-    "amount": 51024.29,
+    "amount": 1822.3,
     "product_type": "открытка",
     "print_run": 4963,
     "priority": "средний"
@@ -1391,7 +1391,7 @@
     "client_id": 7,
     "order_date": "2026-10-19",
     "status": "готов к отгрузке",
-    "amount": 327199.86,
+    "amount": 11685.71,
     "product_type": "баннер",
     "print_run": 4552,
     "priority": "высокий"
@@ -1402,7 +1402,7 @@
     "client_id": 109,
     "order_date": "2026-06-13",
     "status": "отменён",
-    "amount": 32104.67,
+    "amount": 1146.6,
     "product_type": "брошюра",
     "print_run": 2345,
     "priority": "низкий"
@@ -1413,7 +1413,7 @@
     "client_id": 35,
     "order_date": "2026-04-06",
     "status": "отгружен",
-    "amount": 34824.61,
+    "amount": 1243.74,
     "product_type": "календарь",
     "print_run": 3593,
     "priority": "низкий"
@@ -1424,7 +1424,7 @@
     "client_id": 105,
     "order_date": "2026-04-07",
     "status": "печать",
-    "amount": 21480.14,
+    "amount": 767.15,
     "product_type": "фотоальбом",
     "print_run": 3408,
     "priority": "высокий"
@@ -1435,7 +1435,7 @@
     "client_id": 48,
     "order_date": "2025-08-30",
     "status": "готов к отгрузке",
-    "amount": 80914.95,
+    "amount": 2889.82,
     "product_type": "брошюра",
     "print_run": 3081,
     "priority": "средний"
@@ -1446,7 +1446,7 @@
     "client_id": 120,
     "order_date": "2025-04-12",
     "status": "отменён",
-    "amount": 50747.06,
+    "amount": 1812.4,
     "product_type": "баннер",
     "print_run": 1206,
     "priority": "средний"
@@ -1457,7 +1457,7 @@
     "client_id": 118,
     "order_date": "2026-04-29",
     "status": "закрыт",
-    "amount": 158664.71,
+    "amount": 5666.6,
     "product_type": "календарь",
     "print_run": 3852,
     "priority": "низкий"
@@ -1468,7 +1468,7 @@
     "client_id": 116,
     "order_date": "2025-03-23",
     "status": "новый",
-    "amount": 292732.2,
+    "amount": 10454.72,
     "product_type": "плакат",
     "print_run": 1776,
     "priority": "высокий"
@@ -1479,7 +1479,7 @@
     "client_id": 94,
     "order_date": "2026-09-16",
     "status": "отгружен",
-    "amount": 272331.9,
+    "amount": 9726.14,
     "product_type": "визитка",
     "print_run": 920,
     "priority": "низкий"
@@ -1490,7 +1490,7 @@
     "client_id": 39,
     "order_date": "2025-05-05",
     "status": "новый",
-    "amount": 224716.25,
+    "amount": 8025.58,
     "product_type": "открытка",
     "print_run": 3449,
     "priority": "высокий"
@@ -1501,7 +1501,7 @@
     "client_id": 59,
     "order_date": "2025-03-06",
     "status": "новый",
-    "amount": 189010.66,
+    "amount": 6750.38,
     "product_type": "каталог",
     "print_run": 4898,
     "priority": "высокий"
@@ -1512,7 +1512,7 @@
     "client_id": 66,
     "order_date": "2026-08-12",
     "status": "в работе",
-    "amount": 151945.9,
+    "amount": 5426.64,
     "product_type": "календарь",
     "print_run": 2396,
     "priority": "высокий"
@@ -1523,7 +1523,7 @@
     "client_id": 46,
     "order_date": "2025-09-04",
     "status": "отгружен",
-    "amount": 233536.84,
+    "amount": 8340.6,
     "product_type": "визитка",
     "print_run": 1544,
     "priority": "низкий"
@@ -1534,7 +1534,7 @@
     "client_id": 68,
     "order_date": "2026-01-05",
     "status": "новый",
-    "amount": 179042.71,
+    "amount": 6394.38,
     "product_type": "наклейка",
     "print_run": 4467,
     "priority": "высокий"
@@ -1545,7 +1545,7 @@
     "client_id": 71,
     "order_date": "2025-01-21",
     "status": "готов к отгрузке",
-    "amount": 223577.76,
+    "amount": 7984.92,
     "product_type": "каталог",
     "print_run": 366,
     "priority": "средний"
@@ -1556,7 +1556,7 @@
     "client_id": 33,
     "order_date": "2025-01-17",
     "status": "печать",
-    "amount": 86670.7,
+    "amount": 3095.38,
     "product_type": "брошюра",
     "print_run": 2834,
     "priority": "высокий"
@@ -1567,7 +1567,7 @@
     "client_id": 81,
     "order_date": "2025-04-17",
     "status": "отменён",
-    "amount": 49293.13,
+    "amount": 1760.47,
     "product_type": "фотоотпечаток",
     "print_run": 2733,
     "priority": "средний"
@@ -1578,7 +1578,7 @@
     "client_id": 70,
     "order_date": "2025-12-13",
     "status": "отменён",
-    "amount": 343344.26,
+    "amount": 12262.3,
     "product_type": "календарь",
     "print_run": 3816,
     "priority": "средний"
@@ -1589,7 +1589,7 @@
     "client_id": 81,
     "order_date": "2025-07-06",
     "status": "отменён",
-    "amount": 251467.63,
+    "amount": 8980.99,
     "product_type": "календарь",
     "print_run": 526,
     "priority": "средний"
@@ -1600,7 +1600,7 @@
     "client_id": 5,
     "order_date": "2025-10-28",
     "status": "в работе",
-    "amount": 310369.26,
+    "amount": 11084.62,
     "product_type": "фотоальбом",
     "print_run": 1644,
     "priority": "средний"
@@ -1611,7 +1611,7 @@
     "client_id": 120,
     "order_date": "2025-11-14",
     "status": "отгружен",
-    "amount": 167269.72,
+    "amount": 5973.92,
     "product_type": "визитка",
     "print_run": 4458,
     "priority": "низкий"
@@ -1622,7 +1622,7 @@
     "client_id": 97,
     "order_date": "2026-10-25",
     "status": "в работе",
-    "amount": 302162.07,
+    "amount": 10791.5,
     "product_type": "плакат",
     "print_run": 2934,
     "priority": "низкий"
@@ -1633,7 +1633,7 @@
     "client_id": 111,
     "order_date": "2025-12-06",
     "status": "печать",
-    "amount": 154622.13,
+    "amount": 5522.22,
     "product_type": "брошюра",
     "print_run": 3024,
     "priority": "средний"
@@ -1644,7 +1644,7 @@
     "client_id": 96,
     "order_date": "2026-03-27",
     "status": "готов к отгрузке",
-    "amount": 175182.52,
+    "amount": 6256.52,
     "product_type": "баннер",
     "print_run": 1540,
     "priority": "средний"
@@ -1655,7 +1655,7 @@
     "client_id": 48,
     "order_date": "2026-06-16",
     "status": "печать",
-    "amount": 30387.67,
+    "amount": 1085.27,
     "product_type": "брошюра",
     "print_run": 3487,
     "priority": "высокий"
@@ -1666,7 +1666,7 @@
     "client_id": 106,
     "order_date": "2025-07-04",
     "status": "отгружен",
-    "amount": 38601.47,
+    "amount": 1378.62,
     "product_type": "плакат",
     "print_run": 2641,
     "priority": "средний"
@@ -1677,7 +1677,7 @@
     "client_id": 85,
     "order_date": "2025-10-30",
     "status": "печать",
-    "amount": 252029.03,
+    "amount": 9001.04,
     "product_type": "каталог",
     "print_run": 4946,
     "priority": "низкий"
@@ -1688,7 +1688,7 @@
     "client_id": 89,
     "order_date": "2026-03-31",
     "status": "печать",
-    "amount": 255204.6,
+    "amount": 9114.45,
     "product_type": "каталог",
     "print_run": 356,
     "priority": "средний"
@@ -1699,7 +1699,7 @@
     "client_id": 79,
     "order_date": "2026-03-22",
     "status": "печать",
-    "amount": 235900.81,
+    "amount": 8425.03,
     "product_type": "фотоальбом",
     "print_run": 624,
     "priority": "средний"
@@ -1710,7 +1710,7 @@
     "client_id": 47,
     "order_date": "2026-06-10",
     "status": "отменён",
-    "amount": 52544.48,
+    "amount": 1876.59,
     "product_type": "календарь",
     "print_run": 265,
     "priority": "высокий"
@@ -1721,7 +1721,7 @@
     "client_id": 87,
     "order_date": "2026-03-25",
     "status": "новый",
-    "amount": 84890.4,
+    "amount": 3031.8,
     "product_type": "календарь",
     "print_run": 560,
     "priority": "высокий"
@@ -1732,7 +1732,7 @@
     "client_id": 47,
     "order_date": "2026-01-06",
     "status": "готов к отгрузке",
-    "amount": 212967.91,
+    "amount": 7606,
     "product_type": "фотоотпечаток",
     "print_run": 275,
     "priority": "высокий"
@@ -1743,7 +1743,7 @@
     "client_id": 58,
     "order_date": "2026-01-15",
     "status": "печать",
-    "amount": 202150.86,
+    "amount": 7219.67,
     "product_type": "каталог",
     "print_run": 639,
     "priority": "высокий"
@@ -1754,7 +1754,7 @@
     "client_id": 47,
     "order_date": "2026-02-12",
     "status": "печать",
-    "amount": 336300.46,
+    "amount": 12010.73,
     "product_type": "плакат",
     "print_run": 2054,
     "priority": "низкий"
@@ -1765,7 +1765,7 @@
     "client_id": 95,
     "order_date": "2025-07-10",
     "status": "готов к отгрузке",
-    "amount": 319999.25,
+    "amount": 11428.54,
     "product_type": "наклейка",
     "print_run": 3180,
     "priority": "низкий"
@@ -1776,7 +1776,7 @@
     "client_id": 34,
     "order_date": "2025-09-24",
     "status": "закрыт",
-    "amount": 348738.69,
+    "amount": 12454.95,
     "product_type": "каталог",
     "print_run": 1767,
     "priority": "средний"
@@ -1787,7 +1787,7 @@
     "client_id": 89,
     "order_date": "2026-05-18",
     "status": "в работе",
-    "amount": 298930.72,
+    "amount": 10676.1,
     "product_type": "брошюра",
     "print_run": 1121,
     "priority": "средний"
@@ -1798,7 +1798,7 @@
     "client_id": 23,
     "order_date": "2026-04-01",
     "status": "новый",
-    "amount": 249210.55,
+    "amount": 8900.38,
     "product_type": "баннер",
     "print_run": 2856,
     "priority": "высокий"
@@ -1809,7 +1809,7 @@
     "client_id": 70,
     "order_date": "2025-10-25",
     "status": "печать",
-    "amount": 278412.65,
+    "amount": 9943.31,
     "product_type": "календарь",
     "print_run": 1436,
     "priority": "высокий"
@@ -1820,7 +1820,7 @@
     "client_id": 29,
     "order_date": "2025-05-05",
     "status": "в работе",
-    "amount": 277259.45,
+    "amount": 9902.12,
     "product_type": "календарь",
     "print_run": 1949,
     "priority": "низкий"
@@ -1831,7 +1831,7 @@
     "client_id": 47,
     "order_date": "2026-07-22",
     "status": "отгружен",
-    "amount": 281870.62,
+    "amount": 10066.81,
     "product_type": "баннер",
     "print_run": 3838,
     "priority": "высокий"
@@ -1842,7 +1842,7 @@
     "client_id": 17,
     "order_date": "2026-09-19",
     "status": "новый",
-    "amount": 141161.51,
+    "amount": 5041.48,
     "product_type": "брошюра",
     "print_run": 2543,
     "priority": "высокий"
@@ -1853,7 +1853,7 @@
     "client_id": 93,
     "order_date": "2026-05-06",
     "status": "отгружен",
-    "amount": 288698.77,
+    "amount": 10310.67,
     "product_type": "визитка",
     "print_run": 3364,
     "priority": "низкий"
@@ -1864,7 +1864,7 @@
     "client_id": 17,
     "order_date": "2025-11-21",
     "status": "закрыт",
-    "amount": 164644.12,
+    "amount": 5880.15,
     "product_type": "брошюра",
     "print_run": 3696,
     "priority": "высокий"
@@ -1875,7 +1875,7 @@
     "client_id": 45,
     "order_date": "2025-05-12",
     "status": "отменён",
-    "amount": 66141.21,
+    "amount": 2362.19,
     "product_type": "наклейка",
     "print_run": 4825,
     "priority": "низкий"
@@ -1886,7 +1886,7 @@
     "client_id": 56,
     "order_date": "2026-05-30",
     "status": "отменён",
-    "amount": 182781.44,
+    "amount": 6527.91,
     "product_type": "фотоальбом",
     "print_run": 1027,
     "priority": "средний"
@@ -1897,7 +1897,7 @@
     "client_id": 22,
     "order_date": "2025-06-15",
     "status": "печать",
-    "amount": 331776.65,
+    "amount": 11849.17,
     "product_type": "открытка",
     "print_run": 2844,
     "priority": "высокий"
@@ -1908,7 +1908,7 @@
     "client_id": 115,
     "order_date": "2025-10-18",
     "status": "отменён",
-    "amount": 71116.77,
+    "amount": 2539.88,
     "product_type": "брошюра",
     "print_run": 2062,
     "priority": "высокий"
@@ -1919,7 +1919,7 @@
     "client_id": 36,
     "order_date": "2025-05-09",
     "status": "закрыт",
-    "amount": 35419.66,
+    "amount": 1264.99,
     "product_type": "плакат",
     "print_run": 4380,
     "priority": "высокий"
@@ -1930,7 +1930,7 @@
     "client_id": 22,
     "order_date": "2026-08-30",
     "status": "отгружен",
-    "amount": 231580.31,
+    "amount": 8270.73,
     "product_type": "календарь",
     "print_run": 1412,
     "priority": "высокий"
@@ -1941,7 +1941,7 @@
     "client_id": 116,
     "order_date": "2026-09-12",
     "status": "печать",
-    "amount": 289356.98,
+    "amount": 10334.18,
     "product_type": "фотоотпечаток",
     "print_run": 347,
     "priority": "низкий"
@@ -1952,7 +1952,7 @@
     "client_id": 11,
     "order_date": "2025-02-16",
     "status": "закрыт",
-    "amount": 228942.1,
+    "amount": 8176.5,
     "product_type": "фотоотпечаток",
     "print_run": 2178,
     "priority": "высокий"
@@ -1963,7 +1963,7 @@
     "client_id": 54,
     "order_date": "2026-09-25",
     "status": "закрыт",
-    "amount": 311481.92,
+    "amount": 11124.35,
     "product_type": "фотоальбом",
     "print_run": 4089,
     "priority": "высокий"
@@ -1974,7 +1974,7 @@
     "client_id": 38,
     "order_date": "2026-10-20",
     "status": "печать",
-    "amount": 282226.79,
+    "amount": 10079.53,
     "product_type": "каталог",
     "print_run": 2016,
     "priority": "высокий"
@@ -1985,7 +1985,7 @@
     "client_id": 52,
     "order_date": "2025-11-01",
     "status": "готов к отгрузке",
-    "amount": 57853.92,
+    "amount": 2066.21,
     "product_type": "брошюра",
     "print_run": 500,
     "priority": "средний"
@@ -1996,7 +1996,7 @@
     "client_id": 62,
     "order_date": "2026-04-21",
     "status": "в работе",
-    "amount": 52853.04,
+    "amount": 1887.61,
     "product_type": "баннер",
     "print_run": 4979,
     "priority": "высокий"
@@ -2007,7 +2007,7 @@
     "client_id": 41,
     "order_date": "2025-12-20",
     "status": "готов к отгрузке",
-    "amount": 181698.11,
+    "amount": 6489.22,
     "product_type": "календарь",
     "print_run": 3045,
     "priority": "низкий"
@@ -2018,7 +2018,7 @@
     "client_id": 41,
     "order_date": "2025-09-05",
     "status": "готов к отгрузке",
-    "amount": 159009.82,
+    "amount": 5678.92,
     "product_type": "брошюра",
     "print_run": 2201,
     "priority": "низкий"
@@ -2029,7 +2029,7 @@
     "client_id": 13,
     "order_date": "2025-02-21",
     "status": "печать",
-    "amount": 89149.79,
+    "amount": 3183.92,
     "product_type": "визитка",
     "print_run": 3435,
     "priority": "низкий"
@@ -2040,7 +2040,7 @@
     "client_id": 105,
     "order_date": "2025-12-02",
     "status": "отгружен",
-    "amount": 267803.12,
+    "amount": 9564.4,
     "product_type": "баннер",
     "print_run": 1565,
     "priority": "средний"
@@ -2051,7 +2051,7 @@
     "client_id": 66,
     "order_date": "2026-04-24",
     "status": "готов к отгрузке",
-    "amount": 11042.18,
+    "amount": 394.36,
     "product_type": "плакат",
     "print_run": 4084,
     "priority": "средний"
@@ -2062,7 +2062,7 @@
     "client_id": 65,
     "order_date": "2026-04-14",
     "status": "в работе",
-    "amount": 125454.6,
+    "amount": 4480.52,
     "product_type": "открытка",
     "print_run": 4788,
     "priority": "низкий"
@@ -2073,7 +2073,7 @@
     "client_id": 37,
     "order_date": "2026-05-22",
     "status": "отгружен",
-    "amount": 189231.69,
+    "amount": 6758.27,
     "product_type": "каталог",
     "print_run": 2350,
     "priority": "низкий"
@@ -2084,7 +2084,7 @@
     "client_id": 56,
     "order_date": "2025-05-18",
     "status": "печать",
-    "amount": 129980.26,
+    "amount": 4642.15,
     "product_type": "баннер",
     "print_run": 3313,
     "priority": "средний"
@@ -2095,7 +2095,7 @@
     "client_id": 7,
     "order_date": "2026-08-07",
     "status": "отгружен",
-    "amount": 194968.36,
+    "amount": 6963.16,
     "product_type": "открытка",
     "print_run": 2979,
     "priority": "низкий"
@@ -2106,7 +2106,7 @@
     "client_id": 50,
     "order_date": "2026-06-01",
     "status": "готов к отгрузке",
-    "amount": 289383.03,
+    "amount": 10335.11,
     "product_type": "наклейка",
     "print_run": 2301,
     "priority": "высокий"
@@ -2117,7 +2117,7 @@
     "client_id": 88,
     "order_date": "2026-09-18",
     "status": "новый",
-    "amount": 139684.59,
+    "amount": 4988.74,
     "product_type": "календарь",
     "print_run": 802,
     "priority": "средний"
@@ -2128,7 +2128,7 @@
     "client_id": 72,
     "order_date": "2026-01-10",
     "status": "отменён",
-    "amount": 212054.64,
+    "amount": 7573.38,
     "product_type": "календарь",
     "print_run": 1640,
     "priority": "средний"
@@ -2139,7 +2139,7 @@
     "client_id": 65,
     "order_date": "2025-02-11",
     "status": "новый",
-    "amount": 250616.37,
+    "amount": 8950.58,
     "product_type": "фотоальбом",
     "print_run": 1132,
     "priority": "средний"
@@ -2150,7 +2150,7 @@
     "client_id": 67,
     "order_date": "2026-04-13",
     "status": "в работе",
-    "amount": 51504.0,
+    "amount": 1839.43,
     "product_type": "фотоотпечаток",
     "print_run": 4233,
     "priority": "высокий"
@@ -2161,7 +2161,7 @@
     "client_id": 41,
     "order_date": "2025-06-16",
     "status": "готов к отгрузке",
-    "amount": 209022.46,
+    "amount": 7465.09,
     "product_type": "фотоотпечаток",
     "print_run": 2461,
     "priority": "высокий"
@@ -2172,7 +2172,7 @@
     "client_id": 107,
     "order_date": "2026-06-06",
     "status": "отгружен",
-    "amount": 107027.33,
+    "amount": 3822.4,
     "product_type": "каталог",
     "print_run": 4621,
     "priority": "низкий"
@@ -2183,7 +2183,7 @@
     "client_id": 48,
     "order_date": "2025-12-06",
     "status": "закрыт",
-    "amount": 205544.64,
+    "amount": 7340.88,
     "product_type": "брошюра",
     "print_run": 3422,
     "priority": "высокий"
@@ -2194,7 +2194,7 @@
     "client_id": 112,
     "order_date": "2026-10-07",
     "status": "новый",
-    "amount": 95139.06,
+    "amount": 3397.82,
     "product_type": "фотоотпечаток",
     "print_run": 3897,
     "priority": "высокий"
@@ -2205,7 +2205,7 @@
     "client_id": 101,
     "order_date": "2026-08-16",
     "status": "отгружен",
-    "amount": 205482.58,
+    "amount": 7338.66,
     "product_type": "открытка",
     "print_run": 430,
     "priority": "низкий"
@@ -2216,7 +2216,7 @@
     "client_id": 68,
     "order_date": "2026-10-07",
     "status": "закрыт",
-    "amount": 54278.17,
+    "amount": 1938.51,
     "product_type": "фотоотпечаток",
     "print_run": 3124,
     "priority": "высокий"
@@ -2227,7 +2227,7 @@
     "client_id": 32,
     "order_date": "2025-02-02",
     "status": "отгружен",
-    "amount": 9571.27,
+    "amount": 341.83,
     "product_type": "брошюра",
     "print_run": 1572,
     "priority": "средний"
@@ -2238,7 +2238,7 @@
     "client_id": 54,
     "order_date": "2025-06-05",
     "status": "готов к отгрузке",
-    "amount": 177131.37,
+    "amount": 6326.12,
     "product_type": "открытка",
     "print_run": 3371,
     "priority": "высокий"
@@ -2249,7 +2249,7 @@
     "client_id": 118,
     "order_date": "2026-04-28",
     "status": "отменён",
-    "amount": 182983.07,
+    "amount": 6535.11,
     "product_type": "фотоальбом",
     "print_run": 1141,
     "priority": "высокий"
@@ -2260,7 +2260,7 @@
     "client_id": 42,
     "order_date": "2026-05-05",
     "status": "отгружен",
-    "amount": 334969.87,
+    "amount": 11963.21,
     "product_type": "визитка",
     "print_run": 2580,
     "priority": "средний"
@@ -2271,7 +2271,7 @@
     "client_id": 117,
     "order_date": "2026-06-30",
     "status": "печать",
-    "amount": 237526.4,
+    "amount": 8483.09,
     "product_type": "наклейка",
     "print_run": 2912,
     "priority": "высокий"
@@ -2282,7 +2282,7 @@
     "client_id": 88,
     "order_date": "2026-10-21",
     "status": "отменён",
-    "amount": 69715.67,
+    "amount": 2489.85,
     "product_type": "плакат",
     "print_run": 3976,
     "priority": "низкий"
@@ -2293,7 +2293,7 @@
     "client_id": 36,
     "order_date": "2026-07-26",
     "status": "печать",
-    "amount": 270597.47,
+    "amount": 9664.2,
     "product_type": "открытка",
     "print_run": 2448,
     "priority": "высокий"
@@ -2304,7 +2304,7 @@
     "client_id": 27,
     "order_date": "2026-05-16",
     "status": "печать",
-    "amount": 197489.19,
+    "amount": 7053.19,
     "product_type": "каталог",
     "print_run": 2867,
     "priority": "высокий"
@@ -2315,7 +2315,7 @@
     "client_id": 36,
     "order_date": "2025-10-22",
     "status": "новый",
-    "amount": 134753.88,
+    "amount": 4812.64,
     "product_type": "фотоотпечаток",
     "print_run": 4459,
     "priority": "средний"
@@ -2326,7 +2326,7 @@
     "client_id": 105,
     "order_date": "2025-12-20",
     "status": "отменён",
-    "amount": 17597.07,
+    "amount": 628.47,
     "product_type": "календарь",
     "print_run": 2389,
     "priority": "высокий"
@@ -2337,7 +2337,7 @@
     "client_id": 11,
     "order_date": "2025-12-21",
     "status": "готов к отгрузке",
-    "amount": 77253.42,
+    "amount": 2759.05,
     "product_type": "плакат",
     "print_run": 3934,
     "priority": "высокий"
@@ -2348,7 +2348,7 @@
     "client_id": 35,
     "order_date": "2026-07-30",
     "status": "закрыт",
-    "amount": 40901.62,
+    "amount": 1460.77,
     "product_type": "плакат",
     "print_run": 1134,
     "priority": "высокий"
@@ -2359,7 +2359,7 @@
     "client_id": 76,
     "order_date": "2025-09-03",
     "status": "в работе",
-    "amount": 81308.06,
+    "amount": 2903.86,
     "product_type": "фотоальбом",
     "print_run": 4360,
     "priority": "низкий"
@@ -2370,7 +2370,7 @@
     "client_id": 7,
     "order_date": "2025-04-13",
     "status": "готов к отгрузке",
-    "amount": 37889.08,
+    "amount": 1353.18,
     "product_type": "баннер",
     "print_run": 3879,
     "priority": "низкий"
@@ -2381,7 +2381,7 @@
     "client_id": 1,
     "order_date": "2026-07-18",
     "status": "в работе",
-    "amount": 168674.64,
+    "amount": 6024.09,
     "product_type": "визитка",
     "print_run": 3906,
     "priority": "низкий"
@@ -2392,7 +2392,7 @@
     "client_id": 97,
     "order_date": "2025-10-22",
     "status": "печать",
-    "amount": 318054.12,
+    "amount": 11359.08,
     "product_type": "плакат",
     "print_run": 494,
     "priority": "низкий"
@@ -2403,7 +2403,7 @@
     "client_id": 84,
     "order_date": "2026-08-11",
     "status": "в работе",
-    "amount": 319890.71,
+    "amount": 11424.67,
     "product_type": "наклейка",
     "print_run": 315,
     "priority": "низкий"
@@ -2414,7 +2414,7 @@
     "client_id": 54,
     "order_date": "2025-06-30",
     "status": "новый",
-    "amount": 67650.14,
+    "amount": 2416.08,
     "product_type": "визитка",
     "print_run": 4068,
     "priority": "высокий"
@@ -2425,7 +2425,7 @@
     "client_id": 112,
     "order_date": "2025-10-24",
     "status": "новый",
-    "amount": 200082.77,
+    "amount": 7145.81,
     "product_type": "фотоальбом",
     "print_run": 2454,
     "priority": "низкий"
@@ -2436,7 +2436,7 @@
     "client_id": 119,
     "order_date": "2025-12-10",
     "status": "печать",
-    "amount": 184938.53,
+    "amount": 6604.95,
     "product_type": "каталог",
     "print_run": 4460,
     "priority": "низкий"
@@ -2447,7 +2447,7 @@
     "client_id": 109,
     "order_date": "2026-06-01",
     "status": "готов к отгрузке",
-    "amount": 283658.42,
+    "amount": 10130.66,
     "product_type": "плакат",
     "print_run": 1589,
     "priority": "средний"
@@ -2458,7 +2458,7 @@
     "client_id": 21,
     "order_date": "2026-04-15",
     "status": "закрыт",
-    "amount": 7887.22,
+    "amount": 281.69,
     "product_type": "плакат",
     "print_run": 1535,
     "priority": "средний"
@@ -2469,7 +2469,7 @@
     "client_id": 102,
     "order_date": "2025-10-30",
     "status": "отгружен",
-    "amount": 215001.21,
+    "amount": 7678.61,
     "product_type": "открытка",
     "print_run": 1447,
     "priority": "высокий"
@@ -2480,7 +2480,7 @@
     "client_id": 115,
     "order_date": "2026-02-20",
     "status": "отменён",
-    "amount": 116790.55,
+    "amount": 4171.09,
     "product_type": "визитка",
     "print_run": 4231,
     "priority": "средний"
@@ -2491,7 +2491,7 @@
     "client_id": 86,
     "order_date": "2025-04-08",
     "status": "в работе",
-    "amount": 115289.78,
+    "amount": 4117.49,
     "product_type": "календарь",
     "print_run": 3921,
     "priority": "низкий"
@@ -2502,7 +2502,7 @@
     "client_id": 1,
     "order_date": "2025-09-25",
     "status": "готов к отгрузке",
-    "amount": 264553.56,
+    "amount": 9448.34,
     "product_type": "открытка",
     "print_run": 3669,
     "priority": "средний"
@@ -2513,7 +2513,7 @@
     "client_id": 39,
     "order_date": "2026-08-20",
     "status": "закрыт",
-    "amount": 93758.94,
+    "amount": 3348.53,
     "product_type": "фотоотпечаток",
     "print_run": 103,
     "priority": "средний"
@@ -2524,7 +2524,7 @@
     "client_id": 89,
     "order_date": "2025-08-30",
     "status": "новый",
-    "amount": 109461.8,
+    "amount": 3909.35,
     "product_type": "брошюра",
     "print_run": 3822,
     "priority": "средний"
@@ -2535,7 +2535,7 @@
     "client_id": 88,
     "order_date": "2026-05-30",
     "status": "закрыт",
-    "amount": 224632.83,
+    "amount": 8022.6,
     "product_type": "плакат",
     "print_run": 971,
     "priority": "средний"
@@ -2546,7 +2546,7 @@
     "client_id": 48,
     "order_date": "2026-09-22",
     "status": "в работе",
-    "amount": 168929.12,
+    "amount": 6033.18,
     "product_type": "открытка",
     "print_run": 1104,
     "priority": "средний"
@@ -2557,7 +2557,7 @@
     "client_id": 96,
     "order_date": "2026-09-13",
     "status": "печать",
-    "amount": 319740.52,
+    "amount": 11419.3,
     "product_type": "визитка",
     "print_run": 4509,
     "priority": "высокий"
@@ -2568,7 +2568,7 @@
     "client_id": 103,
     "order_date": "2025-08-12",
     "status": "отменён",
-    "amount": 305977.87,
+    "amount": 10927.78,
     "product_type": "открытка",
     "print_run": 4890,
     "priority": "низкий"
@@ -2579,7 +2579,7 @@
     "client_id": 68,
     "order_date": "2026-04-03",
     "status": "отгружен",
-    "amount": 321283.91,
+    "amount": 11474.43,
     "product_type": "баннер",
     "print_run": 649,
     "priority": "низкий"
@@ -2590,7 +2590,7 @@
     "client_id": 8,
     "order_date": "2026-07-15",
     "status": "отгружен",
-    "amount": 189221.07,
+    "amount": 6757.9,
     "product_type": "открытка",
     "print_run": 4701,
     "priority": "низкий"
@@ -2601,7 +2601,7 @@
     "client_id": 42,
     "order_date": "2026-06-17",
     "status": "готов к отгрузке",
-    "amount": 251770.53,
+    "amount": 8991.8,
     "product_type": "брошюра",
     "print_run": 1692,
     "priority": "средний"
@@ -2612,7 +2612,7 @@
     "client_id": 12,
     "order_date": "2026-06-07",
     "status": "готов к отгрузке",
-    "amount": 48784.69,
+    "amount": 1742.31,
     "product_type": "фотоальбом",
     "print_run": 3724,
     "priority": "средний"
@@ -2623,7 +2623,7 @@
     "client_id": 59,
     "order_date": "2026-08-01",
     "status": "новый",
-    "amount": 236450.4,
+    "amount": 8444.66,
     "product_type": "наклейка",
     "print_run": 3797,
     "priority": "средний"
@@ -2634,7 +2634,7 @@
     "client_id": 93,
     "order_date": "2025-01-23",
     "status": "готов к отгрузке",
-    "amount": 261794.16,
+    "amount": 9349.79,
     "product_type": "плакат",
     "print_run": 34,
     "priority": "высокий"
@@ -2645,7 +2645,7 @@
     "client_id": 10,
     "order_date": "2025-02-16",
     "status": "готов к отгрузке",
-    "amount": 190783.74,
+    "amount": 6813.71,
     "product_type": "баннер",
     "print_run": 532,
     "priority": "низкий"
@@ -2656,7 +2656,7 @@
     "client_id": 120,
     "order_date": "2025-03-12",
     "status": "готов к отгрузке",
-    "amount": 144876.83,
+    "amount": 5174.17,
     "product_type": "фотоальбом",
     "print_run": 2361,
     "priority": "низкий"
@@ -2667,7 +2667,7 @@
     "client_id": 99,
     "order_date": "2026-10-19",
     "status": "закрыт",
-    "amount": 347521.24,
+    "amount": 12411.47,
     "product_type": "визитка",
     "print_run": 3077,
     "priority": "средний"
@@ -2678,7 +2678,7 @@
     "client_id": 58,
     "order_date": "2026-01-22",
     "status": "готов к отгрузке",
-    "amount": 49147.46,
+    "amount": 1755.27,
     "product_type": "брошюра",
     "print_run": 4427,
     "priority": "средний"
@@ -2689,7 +2689,7 @@
     "client_id": 16,
     "order_date": "2025-07-02",
     "status": "отгружен",
-    "amount": 47189.44,
+    "amount": 1685.34,
     "product_type": "визитка",
     "print_run": 4342,
     "priority": "низкий"
@@ -2700,7 +2700,7 @@
     "client_id": 107,
     "order_date": "2025-01-04",
     "status": "отменён",
-    "amount": 163662.35,
+    "amount": 5845.08,
     "product_type": "фотоальбом",
     "print_run": 2454,
     "priority": "высокий"
@@ -2711,7 +2711,7 @@
     "client_id": 70,
     "order_date": "2026-03-11",
     "status": "отгружен",
-    "amount": 88886.68,
+    "amount": 3174.52,
     "product_type": "визитка",
     "print_run": 1891,
     "priority": "средний"
@@ -2722,7 +2722,7 @@
     "client_id": 20,
     "order_date": "2025-10-10",
     "status": "в работе",
-    "amount": 283888.93,
+    "amount": 10138.89,
     "product_type": "брошюра",
     "print_run": 273,
     "priority": "средний"
@@ -2733,7 +2733,7 @@
     "client_id": 79,
     "order_date": "2025-01-17",
     "status": "в работе",
-    "amount": 38011.16,
+    "amount": 1357.54,
     "product_type": "открытка",
     "print_run": 561,
     "priority": "низкий"
@@ -2744,7 +2744,7 @@
     "client_id": 58,
     "order_date": "2026-09-05",
     "status": "закрыт",
-    "amount": 259967.75,
+    "amount": 9284.56,
     "product_type": "фотоальбом",
     "print_run": 2014,
     "priority": "средний"
@@ -2755,7 +2755,7 @@
     "client_id": 57,
     "order_date": "2025-08-28",
     "status": "отгружен",
-    "amount": 51627.04,
+    "amount": 1843.82,
     "product_type": "открытка",
     "print_run": 472,
     "priority": "средний"
@@ -2766,7 +2766,7 @@
     "client_id": 30,
     "order_date": "2026-08-13",
     "status": "печать",
-    "amount": 271070.76,
+    "amount": 9681.1,
     "product_type": "фотоотпечаток",
     "print_run": 4908,
     "priority": "средний"
@@ -2777,7 +2777,7 @@
     "client_id": 31,
     "order_date": "2025-11-06",
     "status": "в работе",
-    "amount": 146505.39,
+    "amount": 5232.34,
     "product_type": "наклейка",
     "print_run": 1820,
     "priority": "средний"
@@ -2788,7 +2788,7 @@
     "client_id": 8,
     "order_date": "2026-07-25",
     "status": "отгружен",
-    "amount": 195880.18,
+    "amount": 6995.72,
     "product_type": "календарь",
     "print_run": 3509,
     "priority": "низкий"
@@ -2799,7 +2799,7 @@
     "client_id": 45,
     "order_date": "2026-10-21",
     "status": "закрыт",
-    "amount": 113600.86,
+    "amount": 4057.17,
     "product_type": "визитка",
     "print_run": 4306,
     "priority": "средний"
@@ -2810,7 +2810,7 @@
     "client_id": 53,
     "order_date": "2025-06-02",
     "status": "печать",
-    "amount": 264782.39,
+    "amount": 9456.51,
     "product_type": "визитка",
     "print_run": 1516,
     "priority": "средний"
@@ -2821,7 +2821,7 @@
     "client_id": 31,
     "order_date": "2025-08-19",
     "status": "печать",
-    "amount": 320415.19,
+    "amount": 11443.4,
     "product_type": "календарь",
     "print_run": 3803,
     "priority": "высокий"
@@ -2832,7 +2832,7 @@
     "client_id": 53,
     "order_date": "2026-03-03",
     "status": "отгружен",
-    "amount": 137781.41,
+    "amount": 4920.76,
     "product_type": "наклейка",
     "print_run": 1108,
     "priority": "средний"
@@ -2843,7 +2843,7 @@
     "client_id": 27,
     "order_date": "2025-12-05",
     "status": "закрыт",
-    "amount": 296955.28,
+    "amount": 10605.55,
     "product_type": "брошюра",
     "print_run": 3694,
     "priority": "низкий"
@@ -2854,7 +2854,7 @@
     "client_id": 69,
     "order_date": "2025-07-15",
     "status": "новый",
-    "amount": 236764.16,
+    "amount": 8455.86,
     "product_type": "плакат",
     "print_run": 3099,
     "priority": "высокий"
@@ -2865,7 +2865,7 @@
     "client_id": 6,
     "order_date": "2025-03-16",
     "status": "в работе",
-    "amount": 78304.73,
+    "amount": 2796.6,
     "product_type": "фотоотпечаток",
     "print_run": 4588,
     "priority": "низкий"
@@ -2876,7 +2876,7 @@
     "client_id": 112,
     "order_date": "2025-12-07",
     "status": "печать",
-    "amount": 328194.44,
+    "amount": 11721.23,
     "product_type": "фотоальбом",
     "print_run": 1745,
     "priority": "высокий"
@@ -2887,7 +2887,7 @@
     "client_id": 16,
     "order_date": "2026-05-06",
     "status": "в работе",
-    "amount": 140631.32,
+    "amount": 5022.55,
     "product_type": "фотоотпечаток",
     "print_run": 1685,
     "priority": "низкий"
@@ -2898,7 +2898,7 @@
     "client_id": 71,
     "order_date": "2025-11-26",
     "status": "отменён",
-    "amount": 164788.91,
+    "amount": 5885.32,
     "product_type": "плакат",
     "print_run": 3128,
     "priority": "высокий"
@@ -2909,7 +2909,7 @@
     "client_id": 46,
     "order_date": "2025-11-12",
     "status": "печать",
-    "amount": 309335.75,
+    "amount": 11047.71,
     "product_type": "баннер",
     "print_run": 4210,
     "priority": "средний"
@@ -2920,7 +2920,7 @@
     "client_id": 13,
     "order_date": "2026-04-26",
     "status": "отменён",
-    "amount": 131634.61,
+    "amount": 4701.24,
     "product_type": "баннер",
     "print_run": 1674,
     "priority": "средний"
@@ -2931,7 +2931,7 @@
     "client_id": 6,
     "order_date": "2026-07-31",
     "status": "отменён",
-    "amount": 8628.31,
+    "amount": 308.15,
     "product_type": "открытка",
     "print_run": 1205,
     "priority": "высокий"
@@ -2942,7 +2942,7 @@
     "client_id": 120,
     "order_date": "2026-08-22",
     "status": "отгружен",
-    "amount": 55886.76,
+    "amount": 1995.96,
     "product_type": "визитка",
     "print_run": 2428,
     "priority": "средний"
@@ -2953,7 +2953,7 @@
     "client_id": 30,
     "order_date": "2026-01-24",
     "status": "отгружен",
-    "amount": 194072.96,
+    "amount": 6931.18,
     "product_type": "открытка",
     "print_run": 4100,
     "priority": "высокий"
@@ -2964,7 +2964,7 @@
     "client_id": 44,
     "order_date": "2025-09-21",
     "status": "отменён",
-    "amount": 162907.66,
+    "amount": 5818.13,
     "product_type": "каталог",
     "print_run": 4028,
     "priority": "высокий"
@@ -2975,7 +2975,7 @@
     "client_id": 102,
     "order_date": "2025-12-27",
     "status": "в работе",
-    "amount": 172445.76,
+    "amount": 6158.78,
     "product_type": "календарь",
     "print_run": 4487,
     "priority": "высокий"
@@ -2986,7 +2986,7 @@
     "client_id": 83,
     "order_date": "2025-03-02",
     "status": "отгружен",
-    "amount": 330980.27,
+    "amount": 11820.72,
     "product_type": "фотоальбом",
     "print_run": 618,
     "priority": "высокий"
@@ -2997,7 +2997,7 @@
     "client_id": 7,
     "order_date": "2025-01-07",
     "status": "готов к отгрузке",
-    "amount": 26584.88,
+    "amount": 949.46,
     "product_type": "календарь",
     "print_run": 1905,
     "priority": "низкий"
@@ -3008,7 +3008,7 @@
     "client_id": 2,
     "order_date": "2025-08-12",
     "status": "отгружен",
-    "amount": 23976.19,
+    "amount": 856.29,
     "product_type": "каталог",
     "print_run": 3067,
     "priority": "высокий"
@@ -3019,7 +3019,7 @@
     "client_id": 86,
     "order_date": "2026-09-24",
     "status": "готов к отгрузке",
-    "amount": 5294.49,
+    "amount": 189.09,
     "product_type": "каталог",
     "print_run": 138,
     "priority": "высокий"
@@ -3030,7 +3030,7 @@
     "client_id": 53,
     "order_date": "2025-01-13",
     "status": "новый",
-    "amount": 188901.12,
+    "amount": 6746.47,
     "product_type": "наклейка",
     "print_run": 2260,
     "priority": "средний"
@@ -3041,7 +3041,7 @@
     "client_id": 3,
     "order_date": "2026-05-30",
     "status": "отменён",
-    "amount": 40134.7,
+    "amount": 1433.38,
     "product_type": "визитка",
     "print_run": 1478,
     "priority": "низкий"
@@ -3052,7 +3052,7 @@
     "client_id": 68,
     "order_date": "2025-06-02",
     "status": "в работе",
-    "amount": 90589.11,
+    "amount": 3235.33,
     "product_type": "открытка",
     "print_run": 4322,
     "priority": "средний"
@@ -3063,7 +3063,7 @@
     "client_id": 35,
     "order_date": "2026-02-11",
     "status": "новый",
-    "amount": 162272.22,
+    "amount": 5795.44,
     "product_type": "баннер",
     "print_run": 3336,
     "priority": "низкий"
@@ -3074,7 +3074,7 @@
     "client_id": 90,
     "order_date": "2025-08-20",
     "status": "печать",
-    "amount": 35444.68,
+    "amount": 1265.88,
     "product_type": "брошюра",
     "print_run": 269,
     "priority": "средний"
@@ -3085,7 +3085,7 @@
     "client_id": 49,
     "order_date": "2026-07-20",
     "status": "готов к отгрузке",
-    "amount": 246887.27,
+    "amount": 8817.4,
     "product_type": "фотоальбом",
     "print_run": 87,
     "priority": "низкий"
@@ -3096,7 +3096,7 @@
     "client_id": 64,
     "order_date": "2026-03-21",
     "status": "закрыт",
-    "amount": 342133.24,
+    "amount": 12219.04,
     "product_type": "баннер",
     "print_run": 4645,
     "priority": "низкий"
@@ -3107,7 +3107,7 @@
     "client_id": 115,
     "order_date": "2026-06-25",
     "status": "новый",
-    "amount": 315741.72,
+    "amount": 11276.49,
     "product_type": "открытка",
     "print_run": 1741,
     "priority": "высокий"
@@ -3118,7 +3118,7 @@
     "client_id": 114,
     "order_date": "2026-08-04",
     "status": "готов к отгрузке",
-    "amount": 323683.27,
+    "amount": 11560.12,
     "product_type": "плакат",
     "print_run": 391,
     "priority": "высокий"
@@ -3129,7 +3129,7 @@
     "client_id": 119,
     "order_date": "2025-10-15",
     "status": "отгружен",
-    "amount": 65236.01,
+    "amount": 2329.86,
     "product_type": "фотоотпечаток",
     "print_run": 279,
     "priority": "средний"
@@ -3140,7 +3140,7 @@
     "client_id": 3,
     "order_date": "2025-08-01",
     "status": "отгружен",
-    "amount": 325319.6,
+    "amount": 11618.56,
     "product_type": "календарь",
     "print_run": 3272,
     "priority": "средний"
@@ -3151,7 +3151,7 @@
     "client_id": 21,
     "order_date": "2026-08-01",
     "status": "в работе",
-    "amount": 237931.13,
+    "amount": 8497.54,
     "product_type": "фотоотпечаток",
     "print_run": 3197,
     "priority": "высокий"
@@ -3162,7 +3162,7 @@
     "client_id": 43,
     "order_date": "2026-01-29",
     "status": "отменён",
-    "amount": 176775.12,
+    "amount": 6313.4,
     "product_type": "календарь",
     "print_run": 652,
     "priority": "средний"
@@ -3173,7 +3173,7 @@
     "client_id": 7,
     "order_date": "2025-04-11",
     "status": "готов к отгрузке",
-    "amount": 121185.68,
+    "amount": 4328.06,
     "product_type": "открытка",
     "print_run": 632,
     "priority": "высокий"
@@ -3184,7 +3184,7 @@
     "client_id": 77,
     "order_date": "2026-02-11",
     "status": "отменён",
-    "amount": 223040.66,
+    "amount": 7965.74,
     "product_type": "баннер",
     "print_run": 252,
     "priority": "средний"
@@ -3195,7 +3195,7 @@
     "client_id": 63,
     "order_date": "2025-08-22",
     "status": "печать",
-    "amount": 152851.24,
+    "amount": 5458.97,
     "product_type": "наклейка",
     "print_run": 3085,
     "priority": "высокий"
@@ -3206,7 +3206,7 @@
     "client_id": 75,
     "order_date": "2026-01-25",
     "status": "новый",
-    "amount": 279925.15,
+    "amount": 9997.33,
     "product_type": "фотоотпечаток",
     "print_run": 2429,
     "priority": "высокий"
@@ -3217,7 +3217,7 @@
     "client_id": 10,
     "order_date": "2025-03-26",
     "status": "печать",
-    "amount": 249951.97,
+    "amount": 8926.86,
     "product_type": "календарь",
     "print_run": 3122,
     "priority": "высокий"
@@ -3228,7 +3228,7 @@
     "client_id": 20,
     "order_date": "2026-02-03",
     "status": "печать",
-    "amount": 34757.59,
+    "amount": 1241.34,
     "product_type": "баннер",
     "print_run": 882,
     "priority": "средний"
@@ -3239,7 +3239,7 @@
     "client_id": 57,
     "order_date": "2026-01-04",
     "status": "отменён",
-    "amount": 48979.93,
+    "amount": 1749.28,
     "product_type": "плакат",
     "print_run": 847,
     "priority": "низкий"
@@ -3250,7 +3250,7 @@
     "client_id": 56,
     "order_date": "2026-04-05",
     "status": "отгружен",
-    "amount": 144591.33,
+    "amount": 5163.98,
     "product_type": "наклейка",
     "print_run": 4207,
     "priority": "низкий"
@@ -3261,7 +3261,7 @@
     "client_id": 12,
     "order_date": "2025-12-29",
     "status": "отгружен",
-    "amount": 210521.2,
+    "amount": 7518.61,
     "product_type": "брошюра",
     "print_run": 4900,
     "priority": "средний"
@@ -3272,7 +3272,7 @@
     "client_id": 111,
     "order_date": "2026-01-30",
     "status": "новый",
-    "amount": 137566.45,
+    "amount": 4913.09,
     "product_type": "плакат",
     "print_run": 3399,
     "priority": "низкий"
@@ -3283,7 +3283,7 @@
     "client_id": 93,
     "order_date": "2026-07-27",
     "status": "в работе",
-    "amount": 61845.27,
+    "amount": 2208.76,
     "product_type": "фотоотпечаток",
     "print_run": 4278,
     "priority": "средний"
@@ -3294,7 +3294,7 @@
     "client_id": 22,
     "order_date": "2025-05-23",
     "status": "печать",
-    "amount": 174114.01,
+    "amount": 6218.36,
     "product_type": "плакат",
     "print_run": 2208,
     "priority": "низкий"
@@ -3305,7 +3305,7 @@
     "client_id": 22,
     "order_date": "2026-03-22",
     "status": "печать",
-    "amount": 171028.27,
+    "amount": 6108.15,
     "product_type": "визитка",
     "print_run": 2465,
     "priority": "низкий"
@@ -3316,7 +3316,7 @@
     "client_id": 47,
     "order_date": "2025-09-15",
     "status": "в работе",
-    "amount": 216984.07,
+    "amount": 7749.43,
     "product_type": "каталог",
     "print_run": 4874,
     "priority": "средний"
@@ -3327,7 +3327,7 @@
     "client_id": 14,
     "order_date": "2025-05-19",
     "status": "печать",
-    "amount": 118279.37,
+    "amount": 4224.26,
     "product_type": "фотоальбом",
     "print_run": 3251,
     "priority": "высокий"
@@ -3338,7 +3338,7 @@
     "client_id": 49,
     "order_date": "2025-12-04",
     "status": "готов к отгрузке",
-    "amount": 285969.99,
+    "amount": 10213.21,
     "product_type": "баннер",
     "print_run": 3537,
     "priority": "высокий"
@@ -3349,7 +3349,7 @@
     "client_id": 77,
     "order_date": "2025-05-20",
     "status": "печать",
-    "amount": 331705.79,
+    "amount": 11846.64,
     "product_type": "баннер",
     "print_run": 4951,
     "priority": "низкий"
@@ -3360,7 +3360,7 @@
     "client_id": 62,
     "order_date": "2025-11-18",
     "status": "в работе",
-    "amount": 104132.51,
+    "amount": 3719.02,
     "product_type": "визитка",
     "print_run": 2624,
     "priority": "высокий"
@@ -3371,7 +3371,7 @@
     "client_id": 82,
     "order_date": "2026-05-18",
     "status": "отгружен",
-    "amount": 133491.19,
+    "amount": 4767.54,
     "product_type": "открытка",
     "print_run": 2679,
     "priority": "средний"
@@ -3382,7 +3382,7 @@
     "client_id": 47,
     "order_date": "2025-04-27",
     "status": "отгружен",
-    "amount": 349050.93,
+    "amount": 12466.1,
     "product_type": "открытка",
     "print_run": 4861,
     "priority": "низкий"
@@ -3393,7 +3393,7 @@
     "client_id": 88,
     "order_date": "2026-07-18",
     "status": "новый",
-    "amount": 155143.87,
+    "amount": 5540.85,
     "product_type": "каталог",
     "print_run": 1727,
     "priority": "средний"
@@ -3404,7 +3404,7 @@
     "client_id": 107,
     "order_date": "2025-03-12",
     "status": "отменён",
-    "amount": 51295.16,
+    "amount": 1831.97,
     "product_type": "визитка",
     "print_run": 4100,
     "priority": "средний"
@@ -3415,7 +3415,7 @@
     "client_id": 31,
     "order_date": "2025-09-16",
     "status": "закрыт",
-    "amount": 276809.64,
+    "amount": 9886.06,
     "product_type": "календарь",
     "print_run": 3476,
     "priority": "низкий"
@@ -3426,7 +3426,7 @@
     "client_id": 58,
     "order_date": "2026-09-05",
     "status": "готов к отгрузке",
-    "amount": 188425.49,
+    "amount": 6729.48,
     "product_type": "фотоотпечаток",
     "print_run": 3293,
     "priority": "высокий"
@@ -3437,7 +3437,7 @@
     "client_id": 54,
     "order_date": "2026-07-11",
     "status": "новый",
-    "amount": 209055.52,
+    "amount": 7466.27,
     "product_type": "баннер",
     "print_run": 4408,
     "priority": "низкий"
@@ -3448,7 +3448,7 @@
     "client_id": 14,
     "order_date": "2025-09-12",
     "status": "закрыт",
-    "amount": 227508.95,
+    "amount": 8125.32,
     "product_type": "баннер",
     "print_run": 1372,
     "priority": "низкий"
@@ -3459,7 +3459,7 @@
     "client_id": 73,
     "order_date": "2026-10-23",
     "status": "закрыт",
-    "amount": 338103.72,
+    "amount": 12075.13,
     "product_type": "визитка",
     "print_run": 2726,
     "priority": "средний"
@@ -3470,7 +3470,7 @@
     "client_id": 14,
     "order_date": "2025-01-11",
     "status": "новый",
-    "amount": 180204.66,
+    "amount": 6435.88,
     "product_type": "плакат",
     "print_run": 1828,
     "priority": "высокий"
@@ -3481,7 +3481,7 @@
     "client_id": 72,
     "order_date": "2026-08-18",
     "status": "закрыт",
-    "amount": 157685.16,
+    "amount": 5631.61,
     "product_type": "фотоотпечаток",
     "print_run": 1820,
     "priority": "средний"
@@ -3492,7 +3492,7 @@
     "client_id": 60,
     "order_date": "2026-08-26",
     "status": "закрыт",
-    "amount": 122703.68,
+    "amount": 4382.27,
     "product_type": "наклейка",
     "print_run": 1244,
     "priority": "низкий"
@@ -3503,7 +3503,7 @@
     "client_id": 62,
     "order_date": "2025-04-18",
     "status": "печать",
-    "amount": 43276.06,
+    "amount": 1545.57,
     "product_type": "визитка",
     "print_run": 713,
     "priority": "высокий"
@@ -3514,7 +3514,7 @@
     "client_id": 19,
     "order_date": "2025-12-23",
     "status": "печать",
-    "amount": 275141.69,
+    "amount": 9826.49,
     "product_type": "баннер",
     "print_run": 3740,
     "priority": "высокий"
@@ -3525,7 +3525,7 @@
     "client_id": 62,
     "order_date": "2025-12-23",
     "status": "готов к отгрузке",
-    "amount": 253531.9,
+    "amount": 9054.71,
     "product_type": "брошюра",
     "print_run": 3599,
     "priority": "средний"
@@ -3536,7 +3536,7 @@
     "client_id": 41,
     "order_date": "2025-03-10",
     "status": "печать",
-    "amount": 10837.03,
+    "amount": 387.04,
     "product_type": "фотоальбом",
     "print_run": 952,
     "priority": "средний"
@@ -3547,7 +3547,7 @@
     "client_id": 83,
     "order_date": "2025-04-22",
     "status": "закрыт",
-    "amount": 182049.88,
+    "amount": 6501.78,
     "product_type": "календарь",
     "print_run": 2008,
     "priority": "высокий"
@@ -3558,7 +3558,7 @@
     "client_id": 21,
     "order_date": "2025-12-05",
     "status": "отгружен",
-    "amount": 83453.87,
+    "amount": 2980.5,
     "product_type": "визитка",
     "print_run": 3795,
     "priority": "средний"
@@ -3569,7 +3569,7 @@
     "client_id": 81,
     "order_date": "2025-07-08",
     "status": "в работе",
-    "amount": 13129.72,
+    "amount": 468.92,
     "product_type": "визитка",
     "print_run": 3250,
     "priority": "высокий"
@@ -3580,7 +3580,7 @@
     "client_id": 114,
     "order_date": "2025-07-22",
     "status": "готов к отгрузке",
-    "amount": 137926.02,
+    "amount": 4925.93,
     "product_type": "фотоотпечаток",
     "print_run": 3528,
     "priority": "высокий"
@@ -3591,7 +3591,7 @@
     "client_id": 28,
     "order_date": "2025-07-30",
     "status": "печать",
-    "amount": 38307.96,
+    "amount": 1368.14,
     "product_type": "брошюра",
     "print_run": 4739,
     "priority": "высокий"
@@ -3602,7 +3602,7 @@
     "client_id": 24,
     "order_date": "2026-01-10",
     "status": "печать",
-    "amount": 42542.37,
+    "amount": 1519.37,
     "product_type": "открытка",
     "print_run": 3758,
     "priority": "высокий"
@@ -3613,7 +3613,7 @@
     "client_id": 111,
     "order_date": "2026-05-17",
     "status": "отгружен",
-    "amount": 137857.82,
+    "amount": 4923.49,
     "product_type": "баннер",
     "print_run": 4900,
     "priority": "средний"
@@ -3624,7 +3624,7 @@
     "client_id": 76,
     "order_date": "2025-04-27",
     "status": "печать",
-    "amount": 217224.85,
+    "amount": 7758.03,
     "product_type": "баннер",
     "print_run": 3760,
     "priority": "высокий"
@@ -3635,7 +3635,7 @@
     "client_id": 91,
     "order_date": "2025-11-01",
     "status": "отгружен",
-    "amount": 236222.2,
+    "amount": 8436.51,
     "product_type": "фотоотпечаток",
     "print_run": 704,
     "priority": "средний"
@@ -3646,7 +3646,7 @@
     "client_id": 16,
     "order_date": "2025-09-02",
     "status": "печать",
-    "amount": 132537.21,
+    "amount": 4733.47,
     "product_type": "брошюра",
     "print_run": 1509,
     "priority": "низкий"
@@ -3657,7 +3657,7 @@
     "client_id": 66,
     "order_date": "2026-02-02",
     "status": "готов к отгрузке",
-    "amount": 202457.7,
+    "amount": 7230.63,
     "product_type": "фотоотпечаток",
     "print_run": 1139,
     "priority": "средний"
@@ -3668,7 +3668,7 @@
     "client_id": 24,
     "order_date": "2026-05-14",
     "status": "закрыт",
-    "amount": 195554.66,
+    "amount": 6984.1,
     "product_type": "наклейка",
     "print_run": 1429,
     "priority": "средний"
@@ -3679,7 +3679,7 @@
     "client_id": 37,
     "order_date": "2025-05-24",
     "status": "в работе",
-    "amount": 217935.26,
+    "amount": 7783.4,
     "product_type": "баннер",
     "print_run": 3704,
     "priority": "средний"
@@ -3690,7 +3690,7 @@
     "client_id": 2,
     "order_date": "2026-05-12",
     "status": "в работе",
-    "amount": 337448.69,
+    "amount": 12051.74,
     "product_type": "открытка",
     "print_run": 3155,
     "priority": "высокий"
@@ -3701,7 +3701,7 @@
     "client_id": 84,
     "order_date": "2026-05-22",
     "status": "готов к отгрузке",
-    "amount": 249419.4,
+    "amount": 8907.84,
     "product_type": "каталог",
     "print_run": 3414,
     "priority": "средний"
@@ -3712,7 +3712,7 @@
     "client_id": 63,
     "order_date": "2025-06-21",
     "status": "новый",
-    "amount": 279170.67,
+    "amount": 9970.38,
     "product_type": "фотоотпечаток",
     "print_run": 262,
     "priority": "низкий"
@@ -3723,7 +3723,7 @@
     "client_id": 38,
     "order_date": "2025-02-03",
     "status": "печать",
-    "amount": 103168.6,
+    "amount": 3684.59,
     "product_type": "открытка",
     "print_run": 4414,
     "priority": "средний"
@@ -3734,7 +3734,7 @@
     "client_id": 73,
     "order_date": "2026-05-23",
     "status": "отгружен",
-    "amount": 201731.78,
+    "amount": 7204.71,
     "product_type": "наклейка",
     "print_run": 937,
     "priority": "средний"
@@ -3745,7 +3745,7 @@
     "client_id": 100,
     "order_date": "2026-07-11",
     "status": "отменён",
-    "amount": 288445.99,
+    "amount": 10301.64,
     "product_type": "баннер",
     "print_run": 4450,
     "priority": "низкий"
@@ -3756,7 +3756,7 @@
     "client_id": 98,
     "order_date": "2026-03-28",
     "status": "отгружен",
-    "amount": 38538.5,
+    "amount": 1376.38,
     "product_type": "открытка",
     "print_run": 3492,
     "priority": "высокий"
@@ -3767,7 +3767,7 @@
     "client_id": 97,
     "order_date": "2025-09-11",
     "status": "печать",
-    "amount": 94196.88,
+    "amount": 3364.17,
     "product_type": "фотоальбом",
     "print_run": 3694,
     "priority": "низкий"
@@ -3778,7 +3778,7 @@
     "client_id": 57,
     "order_date": "2025-05-01",
     "status": "отменён",
-    "amount": 284313.84,
+    "amount": 10154.07,
     "product_type": "открытка",
     "print_run": 1729,
     "priority": "высокий"
@@ -3789,7 +3789,7 @@
     "client_id": 89,
     "order_date": "2025-12-26",
     "status": "отменён",
-    "amount": 60595.62,
+    "amount": 2164.13,
     "product_type": "фотоотпечаток",
     "print_run": 3517,
     "priority": "низкий"
@@ -3800,7 +3800,7 @@
     "client_id": 101,
     "order_date": "2025-07-31",
     "status": "отменён",
-    "amount": 200815.8,
+    "amount": 7171.99,
     "product_type": "открытка",
     "print_run": 496,
     "priority": "высокий"
@@ -3811,7 +3811,7 @@
     "client_id": 36,
     "order_date": "2026-09-04",
     "status": "отгружен",
-    "amount": 342713.05,
+    "amount": 12239.75,
     "product_type": "календарь",
     "print_run": 2661,
     "priority": "средний"
@@ -3822,7 +3822,7 @@
     "client_id": 38,
     "order_date": "2026-08-10",
     "status": "печать",
-    "amount": 50049.35,
+    "amount": 1787.48,
     "product_type": "наклейка",
     "print_run": 790,
     "priority": "средний"
@@ -3833,7 +3833,7 @@
     "client_id": 118,
     "order_date": "2025-03-02",
     "status": "печать",
-    "amount": 89638.0,
+    "amount": 3201.36,
     "product_type": "календарь",
     "print_run": 1097,
     "priority": "высокий"
@@ -3844,7 +3844,7 @@
     "client_id": 42,
     "order_date": "2025-09-11",
     "status": "отменён",
-    "amount": 52333.56,
+    "amount": 1869.06,
     "product_type": "визитка",
     "print_run": 4019,
     "priority": "высокий"
@@ -3855,7 +3855,7 @@
     "client_id": 35,
     "order_date": "2026-10-05",
     "status": "готов к отгрузке",
-    "amount": 29204.15,
+    "amount": 1043.01,
     "product_type": "визитка",
     "print_run": 3712,
     "priority": "низкий"
@@ -3866,7 +3866,7 @@
     "client_id": 52,
     "order_date": "2026-06-12",
     "status": "закрыт",
-    "amount": 160779.39,
+    "amount": 5742.12,
     "product_type": "плакат",
     "print_run": 3033,
     "priority": "средний"
@@ -3877,7 +3877,7 @@
     "client_id": 42,
     "order_date": "2026-08-19",
     "status": "новый",
-    "amount": 223289.67,
+    "amount": 7974.63,
     "product_type": "брошюра",
     "print_run": 3765,
     "priority": "высокий"
@@ -3888,7 +3888,7 @@
     "client_id": 46,
     "order_date": "2025-03-06",
     "status": "отменён",
-    "amount": 78586.99,
+    "amount": 2806.68,
     "product_type": "наклейка",
     "print_run": 3268,
     "priority": "средний"
@@ -3899,7 +3899,7 @@
     "client_id": 106,
     "order_date": "2025-08-05",
     "status": "готов к отгрузке",
-    "amount": 290435.24,
+    "amount": 10372.69,
     "product_type": "плакат",
     "print_run": 2654,
     "priority": "средний"
@@ -3910,7 +3910,7 @@
     "client_id": 71,
     "order_date": "2026-08-15",
     "status": "в работе",
-    "amount": 276541.37,
+    "amount": 9876.48,
     "product_type": "фотоотпечаток",
     "print_run": 3985,
     "priority": "высокий"
@@ -3921,7 +3921,7 @@
     "client_id": 98,
     "order_date": "2025-02-19",
     "status": "новый",
-    "amount": 8649.63,
+    "amount": 308.92,
     "product_type": "брошюра",
     "print_run": 3774,
     "priority": "низкий"
@@ -3932,7 +3932,7 @@
     "client_id": 57,
     "order_date": "2026-04-13",
     "status": "новый",
-    "amount": 348505.84,
+    "amount": 12446.64,
     "product_type": "визитка",
     "print_run": 1667,
     "priority": "низкий"
@@ -3943,7 +3943,7 @@
     "client_id": 113,
     "order_date": "2026-10-28",
     "status": "печать",
-    "amount": 35388.97,
+    "amount": 1263.89,
     "product_type": "календарь",
     "print_run": 2254,
     "priority": "средний"
@@ -3954,7 +3954,7 @@
     "client_id": 33,
     "order_date": "2025-03-26",
     "status": "печать",
-    "amount": 140530.52,
+    "amount": 5018.95,
     "product_type": "календарь",
     "print_run": 434,
     "priority": "средний"
@@ -3965,7 +3965,7 @@
     "client_id": 93,
     "order_date": "2025-08-28",
     "status": "готов к отгрузке",
-    "amount": 3376.95,
+    "amount": 120.61,
     "product_type": "брошюра",
     "print_run": 789,
     "priority": "средний"
@@ -3976,7 +3976,7 @@
     "client_id": 10,
     "order_date": "2025-05-16",
     "status": "отгружен",
-    "amount": 238954.01,
+    "amount": 8534.07,
     "product_type": "открытка",
     "print_run": 4265,
     "priority": "низкий"
@@ -3987,7 +3987,7 @@
     "client_id": 2,
     "order_date": "2025-12-18",
     "status": "отменён",
-    "amount": 243828.76,
+    "amount": 8708.17,
     "product_type": "брошюра",
     "print_run": 3469,
     "priority": "средний"
@@ -3998,7 +3998,7 @@
     "client_id": 10,
     "order_date": "2025-08-23",
     "status": "готов к отгрузке",
-    "amount": 38810.93,
+    "amount": 1386.1,
     "product_type": "брошюра",
     "print_run": 849,
     "priority": "средний"
@@ -4009,7 +4009,7 @@
     "client_id": 113,
     "order_date": "2025-11-03",
     "status": "в работе",
-    "amount": 225626.92,
+    "amount": 8058.1,
     "product_type": "визитка",
     "print_run": 1100,
     "priority": "высокий"
@@ -4020,7 +4020,7 @@
     "client_id": 19,
     "order_date": "2025-03-12",
     "status": "отгружен",
-    "amount": 214780.78,
+    "amount": 7670.74,
     "product_type": "фотоотпечаток",
     "print_run": 79,
     "priority": "низкий"
@@ -4031,7 +4031,7 @@
     "client_id": 57,
     "order_date": "2025-12-26",
     "status": "закрыт",
-    "amount": 322203.26,
+    "amount": 11507.26,
     "product_type": "открытка",
     "print_run": 1250,
     "priority": "высокий"
@@ -4042,7 +4042,7 @@
     "client_id": 88,
     "order_date": "2026-03-30",
     "status": "отменён",
-    "amount": 314117.75,
+    "amount": 11218.49,
     "product_type": "открытка",
     "print_run": 720,
     "priority": "низкий"
@@ -4053,7 +4053,7 @@
     "client_id": 97,
     "order_date": "2025-05-07",
     "status": "отгружен",
-    "amount": 337247.3,
+    "amount": 12044.55,
     "product_type": "визитка",
     "print_run": 2889,
     "priority": "средний"
@@ -4064,7 +4064,7 @@
     "client_id": 102,
     "order_date": "2025-05-24",
     "status": "в работе",
-    "amount": 89113.96,
+    "amount": 3182.64,
     "product_type": "плакат",
     "print_run": 700,
     "priority": "высокий"
@@ -4075,7 +4075,7 @@
     "client_id": 77,
     "order_date": "2026-09-15",
     "status": "печать",
-    "amount": 74289.66,
+    "amount": 2653.2,
     "product_type": "фотоальбом",
     "print_run": 2481,
     "priority": "высокий"
@@ -4086,7 +4086,7 @@
     "client_id": 66,
     "order_date": "2025-07-13",
     "status": "закрыт",
-    "amount": 227220.91,
+    "amount": 8115.03,
     "product_type": "визитка",
     "print_run": 2431,
     "priority": "низкий"
@@ -4097,7 +4097,7 @@
     "client_id": 64,
     "order_date": "2026-01-31",
     "status": "новый",
-    "amount": 224414.57,
+    "amount": 8014.81,
     "product_type": "открытка",
     "print_run": 4102,
     "priority": "низкий"
@@ -4108,7 +4108,7 @@
     "client_id": 68,
     "order_date": "2025-01-13",
     "status": "печать",
-    "amount": 137232.87,
+    "amount": 4901.17,
     "product_type": "баннер",
     "print_run": 1091,
     "priority": "высокий"
@@ -4119,7 +4119,7 @@
     "client_id": 54,
     "order_date": "2026-01-10",
     "status": "отгружен",
-    "amount": 334195.19,
+    "amount": 11935.54,
     "product_type": "календарь",
     "print_run": 3868,
     "priority": "низкий"
@@ -4130,7 +4130,7 @@
     "client_id": 3,
     "order_date": "2026-08-25",
     "status": "новый",
-    "amount": 77862.8,
+    "amount": 2780.81,
     "product_type": "фотоальбом",
     "print_run": 2157,
     "priority": "низкий"
@@ -4141,7 +4141,7 @@
     "client_id": 102,
     "order_date": "2026-02-12",
     "status": "отгружен",
-    "amount": 269187.17,
+    "amount": 9613.83,
     "product_type": "плакат",
     "print_run": 4114,
     "priority": "средний"
@@ -4152,7 +4152,7 @@
     "client_id": 90,
     "order_date": "2026-02-16",
     "status": "новый",
-    "amount": 216768.33,
+    "amount": 7741.73,
     "product_type": "наклейка",
     "print_run": 4414,
     "priority": "средний"
@@ -4163,7 +4163,7 @@
     "client_id": 11,
     "order_date": "2025-11-14",
     "status": "новый",
-    "amount": 341086.74,
+    "amount": 12181.67,
     "product_type": "наклейка",
     "print_run": 1674,
     "priority": "низкий"
@@ -4174,7 +4174,7 @@
     "client_id": 69,
     "order_date": "2025-12-01",
     "status": "готов к отгрузке",
-    "amount": 110628.81,
+    "amount": 3951.03,
     "product_type": "фотоотпечаток",
     "print_run": 551,
     "priority": "средний"
@@ -4185,7 +4185,7 @@
     "client_id": 94,
     "order_date": "2025-09-02",
     "status": "новый",
-    "amount": 323845.83,
+    "amount": 11565.92,
     "product_type": "открытка",
     "print_run": 716,
     "priority": "низкий"
@@ -4196,7 +4196,7 @@
     "client_id": 59,
     "order_date": "2026-09-19",
     "status": "отгружен",
-    "amount": 234129.61,
+    "amount": 8361.77,
     "product_type": "фотоальбом",
     "print_run": 2543,
     "priority": "высокий"
@@ -4207,7 +4207,7 @@
     "client_id": 95,
     "order_date": "2025-06-29",
     "status": "новый",
-    "amount": 246420.37,
+    "amount": 8800.73,
     "product_type": "фотоальбом",
     "print_run": 1134,
     "priority": "низкий"
@@ -4218,7 +4218,7 @@
     "client_id": 64,
     "order_date": "2025-12-22",
     "status": "отгружен",
-    "amount": 60936.15,
+    "amount": 2176.29,
     "product_type": "наклейка",
     "print_run": 2133,
     "priority": "низкий"
@@ -4229,7 +4229,7 @@
     "client_id": 96,
     "order_date": "2025-10-03",
     "status": "закрыт",
-    "amount": 119248.83,
+    "amount": 4258.89,
     "product_type": "брошюра",
     "print_run": 250,
     "priority": "средний"
@@ -4240,7 +4240,7 @@
     "client_id": 35,
     "order_date": "2026-06-21",
     "status": "новый",
-    "amount": 220753.89,
+    "amount": 7884.07,
     "product_type": "плакат",
     "print_run": 4733,
     "priority": "средний"
@@ -4251,7 +4251,7 @@
     "client_id": 59,
     "order_date": "2026-06-08",
     "status": "печать",
-    "amount": 301197.84,
+    "amount": 10757.07,
     "product_type": "фотоальбом",
     "print_run": 4102,
     "priority": "низкий"
@@ -4262,7 +4262,7 @@
     "client_id": 48,
     "order_date": "2025-06-11",
     "status": "печать",
-    "amount": 236919.79,
+    "amount": 8461.42,
     "product_type": "брошюра",
     "print_run": 4711,
     "priority": "низкий"
@@ -4273,7 +4273,7 @@
     "client_id": 30,
     "order_date": "2026-06-06",
     "status": "новый",
-    "amount": 87859.35,
+    "amount": 3137.83,
     "product_type": "фотоальбом",
     "print_run": 110,
     "priority": "средний"
@@ -4284,7 +4284,7 @@
     "client_id": 47,
     "order_date": "2026-01-28",
     "status": "в работе",
-    "amount": 194844.08,
+    "amount": 6958.72,
     "product_type": "календарь",
     "print_run": 299,
     "priority": "высокий"
@@ -4295,7 +4295,7 @@
     "client_id": 95,
     "order_date": "2026-03-06",
     "status": "в работе",
-    "amount": 147441.04,
+    "amount": 5265.75,
     "product_type": "баннер",
     "print_run": 2043,
     "priority": "высокий"
@@ -4306,7 +4306,7 @@
     "client_id": 41,
     "order_date": "2025-10-05",
     "status": "отменён",
-    "amount": 132364.43,
+    "amount": 4727.3,
     "product_type": "брошюра",
     "print_run": 4692,
     "priority": "высокий"
@@ -4317,7 +4317,7 @@
     "client_id": 87,
     "order_date": "2025-02-23",
     "status": "в работе",
-    "amount": 343550.61,
+    "amount": 12269.66,
     "product_type": "открытка",
     "print_run": 4235,
     "priority": "средний"
@@ -4328,7 +4328,7 @@
     "client_id": 9,
     "order_date": "2026-04-22",
     "status": "отменён",
-    "amount": 116573.42,
+    "amount": 4163.34,
     "product_type": "плакат",
     "print_run": 2555,
     "priority": "высокий"
@@ -4339,7 +4339,7 @@
     "client_id": 59,
     "order_date": "2025-01-09",
     "status": "печать",
-    "amount": 198640.94,
+    "amount": 7094.32,
     "product_type": "открытка",
     "print_run": 2398,
     "priority": "средний"
@@ -4350,7 +4350,7 @@
     "client_id": 95,
     "order_date": "2026-09-30",
     "status": "в работе",
-    "amount": 208316.75,
+    "amount": 7439.88,
     "product_type": "каталог",
     "print_run": 3026,
     "priority": "средний"
@@ -4361,7 +4361,7 @@
     "client_id": 99,
     "order_date": "2025-07-20",
     "status": "закрыт",
-    "amount": 55246.53,
+    "amount": 1973.09,
     "product_type": "наклейка",
     "print_run": 2018,
     "priority": "средний"
@@ -4372,7 +4372,7 @@
     "client_id": 4,
     "order_date": "2025-08-27",
     "status": "отгружен",
-    "amount": 332993.62,
+    "amount": 11892.63,
     "product_type": "баннер",
     "print_run": 88,
     "priority": "низкий"
@@ -4383,7 +4383,7 @@
     "client_id": 98,
     "order_date": "2026-01-21",
     "status": "отменён",
-    "amount": 74202.45,
+    "amount": 2650.09,
     "product_type": "плакат",
     "print_run": 861,
     "priority": "низкий"
@@ -4394,7 +4394,7 @@
     "client_id": 54,
     "order_date": "2026-05-19",
     "status": "новый",
-    "amount": 35280.24,
+    "amount": 1260.01,
     "product_type": "календарь",
     "print_run": 2302,
     "priority": "низкий"
@@ -4405,7 +4405,7 @@
     "client_id": 115,
     "order_date": "2026-06-17",
     "status": "готов к отгрузке",
-    "amount": 341170.51,
+    "amount": 12184.66,
     "product_type": "баннер",
     "print_run": 3765,
     "priority": "низкий"
@@ -4416,7 +4416,7 @@
     "client_id": 75,
     "order_date": "2025-04-08",
     "status": "отгружен",
-    "amount": 28966.18,
+    "amount": 1034.51,
     "product_type": "календарь",
     "print_run": 3240,
     "priority": "высокий"
@@ -4427,7 +4427,7 @@
     "client_id": 8,
     "order_date": "2026-03-22",
     "status": "закрыт",
-    "amount": 104211.58,
+    "amount": 3721.84,
     "product_type": "календарь",
     "print_run": 1949,
     "priority": "средний"
@@ -4438,7 +4438,7 @@
     "client_id": 119,
     "order_date": "2026-02-07",
     "status": "закрыт",
-    "amount": 160106.97,
+    "amount": 5718.11,
     "product_type": "баннер",
     "print_run": 2615,
     "priority": "низкий"
@@ -4449,7 +4449,7 @@
     "client_id": 10,
     "order_date": "2025-07-27",
     "status": "в работе",
-    "amount": 56927.46,
+    "amount": 2033.12,
     "product_type": "фотоотпечаток",
     "print_run": 902,
     "priority": "низкий"
@@ -4460,7 +4460,7 @@
     "client_id": 58,
     "order_date": "2026-04-23",
     "status": "печать",
-    "amount": 188965.82,
+    "amount": 6748.78,
     "product_type": "визитка",
     "print_run": 999,
     "priority": "низкий"
@@ -4471,7 +4471,7 @@
     "client_id": 58,
     "order_date": "2025-11-12",
     "status": "готов к отгрузке",
-    "amount": 34376.05,
+    "amount": 1227.72,
     "product_type": "плакат",
     "print_run": 992,
     "priority": "высокий"
@@ -4482,7 +4482,7 @@
     "client_id": 39,
     "order_date": "2026-09-10",
     "status": "новый",
-    "amount": 54468.36,
+    "amount": 1945.3,
     "product_type": "открытка",
     "print_run": 2695,
     "priority": "высокий"
@@ -4493,7 +4493,7 @@
     "client_id": 32,
     "order_date": "2025-12-31",
     "status": "готов к отгрузке",
-    "amount": 237982.63,
+    "amount": 8499.38,
     "product_type": "наклейка",
     "print_run": 411,
     "priority": "средний"
@@ -4504,7 +4504,7 @@
     "client_id": 105,
     "order_date": "2025-06-28",
     "status": "новый",
-    "amount": 195915.96,
+    "amount": 6997,
     "product_type": "визитка",
     "print_run": 3714,
     "priority": "высокий"
@@ -4515,7 +4515,7 @@
     "client_id": 32,
     "order_date": "2025-04-07",
     "status": "готов к отгрузке",
-    "amount": 45144.28,
+    "amount": 1612.3,
     "product_type": "брошюра",
     "print_run": 1155,
     "priority": "низкий"
@@ -4526,7 +4526,7 @@
     "client_id": 107,
     "order_date": "2025-08-16",
     "status": "в работе",
-    "amount": 132167.19,
+    "amount": 4720.26,
     "product_type": "открытка",
     "print_run": 3291,
     "priority": "высокий"
@@ -4537,7 +4537,7 @@
     "client_id": 83,
     "order_date": "2025-03-28",
     "status": "отгружен",
-    "amount": 321347.72,
+    "amount": 11476.7,
     "product_type": "фотоотпечаток",
     "print_run": 2130,
     "priority": "низкий"
@@ -4548,7 +4548,7 @@
     "client_id": 3,
     "order_date": "2025-03-08",
     "status": "в работе",
-    "amount": 34916.59,
+    "amount": 1247.02,
     "product_type": "каталог",
     "print_run": 1065,
     "priority": "средний"
@@ -4559,7 +4559,7 @@
     "client_id": 16,
     "order_date": "2025-02-13",
     "status": "готов к отгрузке",
-    "amount": 323673.71,
+    "amount": 11559.78,
     "product_type": "фотоальбом",
     "print_run": 1386,
     "priority": "средний"
@@ -4570,7 +4570,7 @@
     "client_id": 106,
     "order_date": "2026-02-09",
     "status": "готов к отгрузке",
-    "amount": 240074.88,
+    "amount": 8574.1,
     "product_type": "фотоальбом",
     "print_run": 3145,
     "priority": "низкий"
@@ -4581,7 +4581,7 @@
     "client_id": 46,
     "order_date": "2025-08-08",
     "status": "в работе",
-    "amount": 157765.97,
+    "amount": 5634.5,
     "product_type": "плакат",
     "print_run": 2302,
     "priority": "низкий"
@@ -4592,7 +4592,7 @@
     "client_id": 5,
     "order_date": "2026-09-21",
     "status": "отгружен",
-    "amount": 227605.6,
+    "amount": 8128.77,
     "product_type": "фотоотпечаток",
     "print_run": 2023,
     "priority": "средний"
@@ -4603,7 +4603,7 @@
     "client_id": 53,
     "order_date": "2026-07-18",
     "status": "готов к отгрузке",
-    "amount": 100082.27,
+    "amount": 3574.37,
     "product_type": "фотоальбом",
     "print_run": 728,
     "priority": "низкий"
@@ -4614,7 +4614,7 @@
     "client_id": 54,
     "order_date": "2025-07-24",
     "status": "закрыт",
-    "amount": 221871.77,
+    "amount": 7923.99,
     "product_type": "наклейка",
     "print_run": 2051,
     "priority": "высокий"
@@ -4625,7 +4625,7 @@
     "client_id": 102,
     "order_date": "2025-01-20",
     "status": "готов к отгрузке",
-    "amount": 191947.68,
+    "amount": 6855.27,
     "product_type": "баннер",
     "print_run": 3939,
     "priority": "средний"
@@ -4636,7 +4636,7 @@
     "client_id": 45,
     "order_date": "2026-08-03",
     "status": "отгружен",
-    "amount": 96841.18,
+    "amount": 3458.61,
     "product_type": "баннер",
     "print_run": 3191,
     "priority": "низкий"
@@ -4647,7 +4647,7 @@
     "client_id": 41,
     "order_date": "2026-09-04",
     "status": "в работе",
-    "amount": 23331.16,
+    "amount": 833.26,
     "product_type": "фотоальбом",
     "print_run": 2311,
     "priority": "средний"
@@ -4658,7 +4658,7 @@
     "client_id": 68,
     "order_date": "2026-01-02",
     "status": "отменён",
-    "amount": 340971.01,
+    "amount": 12177.54,
     "product_type": "фотоотпечаток",
     "print_run": 1916,
     "priority": "низкий"
@@ -4669,7 +4669,7 @@
     "client_id": 32,
     "order_date": "2025-09-04",
     "status": "печать",
-    "amount": 268125.25,
+    "amount": 9575.9,
     "product_type": "наклейка",
     "print_run": 468,
     "priority": "низкий"
@@ -4680,7 +4680,7 @@
     "client_id": 74,
     "order_date": "2026-02-02",
     "status": "печать",
-    "amount": 85083.24,
+    "amount": 3038.69,
     "product_type": "календарь",
     "print_run": 1452,
     "priority": "средний"
@@ -4691,7 +4691,7 @@
     "client_id": 104,
     "order_date": "2026-01-03",
     "status": "отгружен",
-    "amount": 331802.88,
+    "amount": 11850.1,
     "product_type": "фотоальбом",
     "print_run": 2890,
     "priority": "высокий"
@@ -4702,7 +4702,7 @@
     "client_id": 19,
     "order_date": "2026-07-31",
     "status": "в работе",
-    "amount": 110241.42,
+    "amount": 3937.19,
     "product_type": "каталог",
     "print_run": 4451,
     "priority": "средний"
@@ -4713,7 +4713,7 @@
     "client_id": 5,
     "order_date": "2025-04-03",
     "status": "новый",
-    "amount": 78926.7,
+    "amount": 2818.81,
     "product_type": "открытка",
     "print_run": 4938,
     "priority": "высокий"
@@ -4724,7 +4724,7 @@
     "client_id": 62,
     "order_date": "2025-01-01",
     "status": "печать",
-    "amount": 282836.56,
+    "amount": 10101.31,
     "product_type": "фотоотпечаток",
     "print_run": 1660,
     "priority": "средний"
@@ -4735,7 +4735,7 @@
     "client_id": 92,
     "order_date": "2025-07-01",
     "status": "отменён",
-    "amount": 10603.77,
+    "amount": 378.71,
     "product_type": "баннер",
     "print_run": 497,
     "priority": "высокий"
@@ -4746,7 +4746,7 @@
     "client_id": 91,
     "order_date": "2025-05-26",
     "status": "отменён",
-    "amount": 301652.3,
+    "amount": 10773.3,
     "product_type": "брошюра",
     "print_run": 4321,
     "priority": "низкий"
@@ -4757,7 +4757,7 @@
     "client_id": 48,
     "order_date": "2026-02-10",
     "status": "отгружен",
-    "amount": 107712.51,
+    "amount": 3846.88,
     "product_type": "брошюра",
     "print_run": 2767,
     "priority": "низкий"
@@ -4768,7 +4768,7 @@
     "client_id": 21,
     "order_date": "2026-03-24",
     "status": "отменён",
-    "amount": 63448.33,
+    "amount": 2266.01,
     "product_type": "каталог",
     "print_run": 2609,
     "priority": "высокий"
@@ -4779,7 +4779,7 @@
     "client_id": 89,
     "order_date": "2026-09-21",
     "status": "отменён",
-    "amount": 233939.49,
+    "amount": 8354.98,
     "product_type": "баннер",
     "print_run": 1838,
     "priority": "низкий"
@@ -4790,7 +4790,7 @@
     "client_id": 49,
     "order_date": "2025-11-11",
     "status": "закрыт",
-    "amount": 64664.78,
+    "amount": 2309.46,
     "product_type": "плакат",
     "print_run": 1053,
     "priority": "низкий"
@@ -4801,7 +4801,7 @@
     "client_id": 90,
     "order_date": "2026-08-10",
     "status": "готов к отгрузке",
-    "amount": 66182.37,
+    "amount": 2363.66,
     "product_type": "фотоотпечаток",
     "print_run": 275,
     "priority": "средний"
@@ -4812,7 +4812,7 @@
     "client_id": 118,
     "order_date": "2026-09-19",
     "status": "в работе",
-    "amount": 328030.66,
+    "amount": 11715.38,
     "product_type": "фотоотпечаток",
     "print_run": 862,
     "priority": "низкий"
@@ -4823,7 +4823,7 @@
     "client_id": 43,
     "order_date": "2025-03-21",
     "status": "в работе",
-    "amount": 61256.93,
+    "amount": 2187.75,
     "product_type": "баннер",
     "print_run": 2627,
     "priority": "низкий"
@@ -4834,7 +4834,7 @@
     "client_id": 106,
     "order_date": "2026-10-17",
     "status": "закрыт",
-    "amount": 6954.28,
+    "amount": 248.37,
     "product_type": "баннер",
     "print_run": 3668,
     "priority": "низкий"
@@ -4845,7 +4845,7 @@
     "client_id": 32,
     "order_date": "2025-03-11",
     "status": "печать",
-    "amount": 252983.52,
+    "amount": 9035.13,
     "product_type": "плакат",
     "print_run": 895,
     "priority": "низкий"
@@ -4856,7 +4856,7 @@
     "client_id": 50,
     "order_date": "2026-03-25",
     "status": "закрыт",
-    "amount": 309939.54,
+    "amount": 11069.27,
     "product_type": "визитка",
     "print_run": 1372,
     "priority": "средний"
@@ -4867,7 +4867,7 @@
     "client_id": 113,
     "order_date": "2026-01-23",
     "status": "печать",
-    "amount": 38195.71,
+    "amount": 1364.13,
     "product_type": "наклейка",
     "print_run": 3084,
     "priority": "средний"
@@ -4878,7 +4878,7 @@
     "client_id": 101,
     "order_date": "2026-08-15",
     "status": "закрыт",
-    "amount": 159596.73,
+    "amount": 5699.88,
     "product_type": "открытка",
     "print_run": 1342,
     "priority": "низкий"
@@ -4889,7 +4889,7 @@
     "client_id": 38,
     "order_date": "2025-01-21",
     "status": "печать",
-    "amount": 28747.54,
+    "amount": 1026.7,
     "product_type": "плакат",
     "print_run": 867,
     "priority": "низкий"
@@ -4900,7 +4900,7 @@
     "client_id": 114,
     "order_date": "2026-01-20",
     "status": "в работе",
-    "amount": 329816.45,
+    "amount": 11779.16,
     "product_type": "брошюра",
     "print_run": 4491,
     "priority": "низкий"
@@ -4911,7 +4911,7 @@
     "client_id": 44,
     "order_date": "2026-09-01",
     "status": "отгружен",
-    "amount": 152669.2,
+    "amount": 5452.47,
     "product_type": "каталог",
     "print_run": 263,
     "priority": "высокий"
@@ -4922,7 +4922,7 @@
     "client_id": 22,
     "order_date": "2026-09-14",
     "status": "готов к отгрузке",
-    "amount": 38136.46,
+    "amount": 1362.02,
     "product_type": "календарь",
     "print_run": 448,
     "priority": "низкий"
@@ -4933,7 +4933,7 @@
     "client_id": 25,
     "order_date": "2026-02-24",
     "status": "закрыт",
-    "amount": 95046.87,
+    "amount": 3394.53,
     "product_type": "наклейка",
     "print_run": 4434,
     "priority": "средний"
@@ -4944,7 +4944,7 @@
     "client_id": 39,
     "order_date": "2025-09-01",
     "status": "новый",
-    "amount": 201404.12,
+    "amount": 7193,
     "product_type": "фотоальбом",
     "print_run": 3228,
     "priority": "средний"
@@ -4955,7 +4955,7 @@
     "client_id": 20,
     "order_date": "2025-02-25",
     "status": "печать",
-    "amount": 33407.04,
+    "amount": 1193.11,
     "product_type": "фотоальбом",
     "print_run": 3512,
     "priority": "высокий"
@@ -4966,7 +4966,7 @@
     "client_id": 81,
     "order_date": "2026-09-07",
     "status": "готов к отгрузке",
-    "amount": 11930.29,
+    "amount": 426.08,
     "product_type": "открытка",
     "print_run": 804,
     "priority": "низкий"
@@ -4977,7 +4977,7 @@
     "client_id": 82,
     "order_date": "2025-10-26",
     "status": "новый",
-    "amount": 109998.63,
+    "amount": 3928.52,
     "product_type": "каталог",
     "print_run": 956,
     "priority": "средний"
@@ -4988,7 +4988,7 @@
     "client_id": 61,
     "order_date": "2026-05-16",
     "status": "закрыт",
-    "amount": 225727.63,
+    "amount": 8061.7,
     "product_type": "плакат",
     "print_run": 756,
     "priority": "средний"
@@ -4999,7 +4999,7 @@
     "client_id": 24,
     "order_date": "2026-01-15",
     "status": "готов к отгрузке",
-    "amount": 157684.02,
+    "amount": 5631.57,
     "product_type": "баннер",
     "print_run": 1538,
     "priority": "средний"
@@ -5010,7 +5010,7 @@
     "client_id": 57,
     "order_date": "2026-04-22",
     "status": "печать",
-    "amount": 198793.57,
+    "amount": 7099.77,
     "product_type": "открытка",
     "print_run": 2210,
     "priority": "низкий"
@@ -5021,7 +5021,7 @@
     "client_id": 97,
     "order_date": "2025-04-10",
     "status": "новый",
-    "amount": 146653.37,
+    "amount": 5237.62,
     "product_type": "баннер",
     "print_run": 4445,
     "priority": "высокий"
@@ -5032,7 +5032,7 @@
     "client_id": 30,
     "order_date": "2026-07-21",
     "status": "новый",
-    "amount": 148265.33,
+    "amount": 5295.19,
     "product_type": "визитка",
     "print_run": 4290,
     "priority": "высокий"
@@ -5043,7 +5043,7 @@
     "client_id": 88,
     "order_date": "2026-05-02",
     "status": "отгружен",
-    "amount": 106701.68,
+    "amount": 3810.77,
     "product_type": "открытка",
     "print_run": 3911,
     "priority": "средний"
@@ -5054,7 +5054,7 @@
     "client_id": 116,
     "order_date": "2025-02-05",
     "status": "отгружен",
-    "amount": 280756.27,
+    "amount": 10027.01,
     "product_type": "фотоотпечаток",
     "print_run": 4243,
     "priority": "высокий"
@@ -5065,7 +5065,7 @@
     "client_id": 80,
     "order_date": "2025-05-31",
     "status": "новый",
-    "amount": 332324.33,
+    "amount": 11868.73,
     "product_type": "каталог",
     "print_run": 1426,
     "priority": "низкий"
@@ -5076,7 +5076,7 @@
     "client_id": 28,
     "order_date": "2025-07-17",
     "status": "в работе",
-    "amount": 30193.88,
+    "amount": 1078.35,
     "product_type": "фотоальбом",
     "print_run": 3478,
     "priority": "высокий"
@@ -5087,7 +5087,7 @@
     "client_id": 56,
     "order_date": "2025-07-26",
     "status": "отменён",
-    "amount": 92486.57,
+    "amount": 3303.09,
     "product_type": "календарь",
     "print_run": 4884,
     "priority": "высокий"
@@ -5098,7 +5098,7 @@
     "client_id": 118,
     "order_date": "2025-03-10",
     "status": "новый",
-    "amount": 140882.18,
+    "amount": 5031.51,
     "product_type": "визитка",
     "print_run": 4567,
     "priority": "средний"
@@ -5109,7 +5109,7 @@
     "client_id": 110,
     "order_date": "2025-10-10",
     "status": "отгружен",
-    "amount": 275933.07,
+    "amount": 9854.75,
     "product_type": "каталог",
     "print_run": 111,
     "priority": "высокий"
@@ -5120,7 +5120,7 @@
     "client_id": 76,
     "order_date": "2026-06-20",
     "status": "отменён",
-    "amount": 146811.51,
+    "amount": 5243.27,
     "product_type": "визитка",
     "print_run": 931,
     "priority": "низкий"
@@ -5131,7 +5131,7 @@
     "client_id": 73,
     "order_date": "2026-08-26",
     "status": "отгружен",
-    "amount": 198251.26,
+    "amount": 7080.4,
     "product_type": "брошюра",
     "print_run": 875,
     "priority": "низкий"
@@ -5142,7 +5142,7 @@
     "client_id": 101,
     "order_date": "2025-10-20",
     "status": "отменён",
-    "amount": 307629.07,
+    "amount": 10986.75,
     "product_type": "наклейка",
     "print_run": 2826,
     "priority": "средний"
@@ -5153,7 +5153,7 @@
     "client_id": 50,
     "order_date": "2026-05-13",
     "status": "отгружен",
-    "amount": 16000.59,
+    "amount": 571.45,
     "product_type": "фотоотпечаток",
     "print_run": 3885,
     "priority": "средний"
@@ -5164,7 +5164,7 @@
     "client_id": 52,
     "order_date": "2025-05-28",
     "status": "отгружен",
-    "amount": 16457.54,
+    "amount": 587.77,
     "product_type": "фотоотпечаток",
     "print_run": 3300,
     "priority": "средний"
@@ -5175,7 +5175,7 @@
     "client_id": 89,
     "order_date": "2025-09-01",
     "status": "новый",
-    "amount": 314269.88,
+    "amount": 11223.92,
     "product_type": "каталог",
     "print_run": 2210,
     "priority": "низкий"
@@ -5186,7 +5186,7 @@
     "client_id": 44,
     "order_date": "2025-11-07",
     "status": "печать",
-    "amount": 300807.47,
+    "amount": 10743.12,
     "product_type": "плакат",
     "print_run": 4037,
     "priority": "высокий"
@@ -5197,7 +5197,7 @@
     "client_id": 13,
     "order_date": "2025-08-22",
     "status": "в работе",
-    "amount": 271588.72,
+    "amount": 9699.6,
     "product_type": "плакат",
     "print_run": 3639,
     "priority": "средний"
@@ -5208,7 +5208,7 @@
     "client_id": 35,
     "order_date": "2026-03-03",
     "status": "отгружен",
-    "amount": 156275.66,
+    "amount": 5581.27,
     "product_type": "брошюра",
     "print_run": 1549,
     "priority": "средний"
@@ -5219,7 +5219,7 @@
     "client_id": 95,
     "order_date": "2026-05-12",
     "status": "отменён",
-    "amount": 287893.04,
+    "amount": 10281.89,
     "product_type": "наклейка",
     "print_run": 3073,
     "priority": "высокий"
@@ -5230,7 +5230,7 @@
     "client_id": 102,
     "order_date": "2025-06-12",
     "status": "новый",
-    "amount": 142974.64,
+    "amount": 5106.24,
     "product_type": "плакат",
     "print_run": 4161,
     "priority": "высокий"
@@ -5241,7 +5241,7 @@
     "client_id": 113,
     "order_date": "2026-08-06",
     "status": "новый",
-    "amount": 306687.65,
+    "amount": 10953.13,
     "product_type": "календарь",
     "print_run": 1589,
     "priority": "низкий"
@@ -5252,7 +5252,7 @@
     "client_id": 108,
     "order_date": "2025-03-01",
     "status": "в работе",
-    "amount": 20544.07,
+    "amount": 733.72,
     "product_type": "фотоальбом",
     "print_run": 3749,
     "priority": "средний"
@@ -5263,7 +5263,7 @@
     "client_id": 91,
     "order_date": "2025-07-23",
     "status": "печать",
-    "amount": 178278.85,
+    "amount": 6367.1,
     "product_type": "баннер",
     "print_run": 3812,
     "priority": "высокий"
@@ -5274,7 +5274,7 @@
     "client_id": 119,
     "order_date": "2025-05-07",
     "status": "закрыт",
-    "amount": 132245.97,
+    "amount": 4723.07,
     "product_type": "фотоальбом",
     "print_run": 1991,
     "priority": "высокий"
@@ -5285,7 +5285,7 @@
     "client_id": 58,
     "order_date": "2025-07-01",
     "status": "отменён",
-    "amount": 194312.8,
+    "amount": 6939.74,
     "product_type": "каталог",
     "print_run": 4817,
     "priority": "средний"
@@ -5296,7 +5296,7 @@
     "client_id": 21,
     "order_date": "2025-09-22",
     "status": "закрыт",
-    "amount": 12525.32,
+    "amount": 447.33,
     "product_type": "брошюра",
     "print_run": 2345,
     "priority": "низкий"
@@ -5307,7 +5307,7 @@
     "client_id": 21,
     "order_date": "2026-08-09",
     "status": "отменён",
-    "amount": 227640.82,
+    "amount": 8130.03,
     "product_type": "открытка",
     "print_run": 1823,
     "priority": "высокий"
@@ -5318,7 +5318,7 @@
     "client_id": 27,
     "order_date": "2025-10-03",
     "status": "закрыт",
-    "amount": 9958.17,
+    "amount": 355.65,
     "product_type": "визитка",
     "print_run": 4214,
     "priority": "высокий"
@@ -5329,7 +5329,7 @@
     "client_id": 2,
     "order_date": "2026-05-01",
     "status": "в работе",
-    "amount": 280900.09,
+    "amount": 10032.15,
     "product_type": "календарь",
     "print_run": 4934,
     "priority": "низкий"
@@ -5340,7 +5340,7 @@
     "client_id": 33,
     "order_date": "2026-09-15",
     "status": "отменён",
-    "amount": 150060.96,
+    "amount": 5359.32,
     "product_type": "плакат",
     "print_run": 2265,
     "priority": "средний"
@@ -5351,7 +5351,7 @@
     "client_id": 110,
     "order_date": "2025-12-24",
     "status": "готов к отгрузке",
-    "amount": 164944.21,
+    "amount": 5890.86,
     "product_type": "плакат",
     "print_run": 1797,
     "priority": "высокий"
@@ -5362,7 +5362,7 @@
     "client_id": 67,
     "order_date": "2026-10-01",
     "status": "готов к отгрузке",
-    "amount": 5549.61,
+    "amount": 198.2,
     "product_type": "фотоотпечаток",
     "print_run": 848,
     "priority": "высокий"
@@ -5373,7 +5373,7 @@
     "client_id": 108,
     "order_date": "2026-01-19",
     "status": "отгружен",
-    "amount": 101088.88,
+    "amount": 3610.32,
     "product_type": "фотоотпечаток",
     "print_run": 4999,
     "priority": "высокий"
@@ -5384,7 +5384,7 @@
     "client_id": 14,
     "order_date": "2026-05-09",
     "status": "новый",
-    "amount": 225286.38,
+    "amount": 8045.94,
     "product_type": "баннер",
     "print_run": 2274,
     "priority": "средний"
@@ -5395,7 +5395,7 @@
     "client_id": 34,
     "order_date": "2026-10-30",
     "status": "печать",
-    "amount": 182500.87,
+    "amount": 6517.89,
     "product_type": "открытка",
     "print_run": 1238,
     "priority": "низкий"
@@ -5406,7 +5406,7 @@
     "client_id": 116,
     "order_date": "2025-02-28",
     "status": "отменён",
-    "amount": 232204.02,
+    "amount": 8293,
     "product_type": "фотоотпечаток",
     "print_run": 3320,
     "priority": "высокий"
@@ -5417,7 +5417,7 @@
     "client_id": 18,
     "order_date": "2025-01-27",
     "status": "закрыт",
-    "amount": 93020.92,
+    "amount": 3322.18,
     "product_type": "каталог",
     "print_run": 2431,
     "priority": "средний"
@@ -5428,7 +5428,7 @@
     "client_id": 52,
     "order_date": "2026-02-02",
     "status": "закрыт",
-    "amount": 248699.93,
+    "amount": 8882.14,
     "product_type": "фотоальбом",
     "print_run": 4786,
     "priority": "высокий"
@@ -5439,7 +5439,7 @@
     "client_id": 105,
     "order_date": "2025-07-14",
     "status": "печать",
-    "amount": 224494.82,
+    "amount": 8017.67,
     "product_type": "открытка",
     "print_run": 4389,
     "priority": "средний"
@@ -5450,7 +5450,7 @@
     "client_id": 117,
     "order_date": "2026-01-03",
     "status": "отгружен",
-    "amount": 294701.63,
+    "amount": 10525.06,
     "product_type": "плакат",
     "print_run": 1402,
     "priority": "высокий"
@@ -5461,7 +5461,7 @@
     "client_id": 24,
     "order_date": "2025-10-28",
     "status": "новый",
-    "amount": 260098.86,
+    "amount": 9289.24,
     "product_type": "каталог",
     "print_run": 1058,
     "priority": "высокий"
@@ -5472,7 +5472,7 @@
     "client_id": 104,
     "order_date": "2026-07-27",
     "status": "отменён",
-    "amount": 230088.82,
+    "amount": 8217.46,
     "product_type": "календарь",
     "print_run": 2759,
     "priority": "низкий"
@@ -5483,7 +5483,7 @@
     "client_id": 46,
     "order_date": "2025-08-17",
     "status": "закрыт",
-    "amount": 276467.38,
+    "amount": 9873.84,
     "product_type": "плакат",
     "print_run": 3454,
     "priority": "средний"
@@ -5494,7 +5494,7 @@
     "client_id": 48,
     "order_date": "2025-09-24",
     "status": "отгружен",
-    "amount": 298371.22,
+    "amount": 10656.12,
     "product_type": "плакат",
     "print_run": 3809,
     "priority": "средний"
@@ -5505,7 +5505,7 @@
     "client_id": 7,
     "order_date": "2026-10-12",
     "status": "отгружен",
-    "amount": 166860.23,
+    "amount": 5959.29,
     "product_type": "фотоотпечаток",
     "print_run": 593,
     "priority": "низкий"
@@ -5516,7 +5516,7 @@
     "client_id": 65,
     "order_date": "2025-05-03",
     "status": "отменён",
-    "amount": 106529.45,
+    "amount": 3804.62,
     "product_type": "визитка",
     "print_run": 4350,
     "priority": "низкий"
@@ -5527,7 +5527,7 @@
     "client_id": 112,
     "order_date": "2025-06-04",
     "status": "в работе",
-    "amount": 144989.57,
+    "amount": 5178.2,
     "product_type": "открытка",
     "print_run": 2817,
     "priority": "высокий"
@@ -5538,7 +5538,7 @@
     "client_id": 115,
     "order_date": "2026-04-14",
     "status": "в работе",
-    "amount": 273292.59,
+    "amount": 9760.45,
     "product_type": "баннер",
     "print_run": 1487,
     "priority": "средний"
@@ -5549,7 +5549,7 @@
     "client_id": 43,
     "order_date": "2026-10-09",
     "status": "в работе",
-    "amount": 4635.58,
+    "amount": 165.56,
     "product_type": "баннер",
     "print_run": 485,
     "priority": "средний"
@@ -5560,7 +5560,7 @@
     "client_id": 27,
     "order_date": "2025-06-22",
     "status": "отгружен",
-    "amount": 275468.18,
+    "amount": 9838.15,
     "product_type": "календарь",
     "print_run": 4020,
     "priority": "низкий"
@@ -5571,7 +5571,7 @@
     "client_id": 17,
     "order_date": "2026-09-22",
     "status": "готов к отгрузке",
-    "amount": 151871.83,
+    "amount": 5423.99,
     "product_type": "визитка",
     "print_run": 3314,
     "priority": "средний"
@@ -5582,7 +5582,7 @@
     "client_id": 50,
     "order_date": "2025-01-05",
     "status": "новый",
-    "amount": 256538.7,
+    "amount": 9162.1,
     "product_type": "наклейка",
     "print_run": 1643,
     "priority": "низкий"
@@ -5593,7 +5593,7 @@
     "client_id": 115,
     "order_date": "2025-11-26",
     "status": "отменён",
-    "amount": 9216.9,
+    "amount": 329.18,
     "product_type": "наклейка",
     "print_run": 1571,
     "priority": "низкий"
@@ -5604,7 +5604,7 @@
     "client_id": 81,
     "order_date": "2025-09-12",
     "status": "в работе",
-    "amount": 47738.99,
+    "amount": 1704.96,
     "product_type": "баннер",
     "print_run": 2566,
     "priority": "средний"
@@ -5615,7 +5615,7 @@
     "client_id": 65,
     "order_date": "2026-08-26",
     "status": "печать",
-    "amount": 288873.81,
+    "amount": 10316.92,
     "product_type": "календарь",
     "print_run": 544,
     "priority": "средний"
@@ -5626,7 +5626,7 @@
     "client_id": 38,
     "order_date": "2026-04-12",
     "status": "закрыт",
-    "amount": 184868.82,
+    "amount": 6602.46,
     "product_type": "наклейка",
     "print_run": 4895,
     "priority": "средний"
@@ -5637,7 +5637,7 @@
     "client_id": 114,
     "order_date": "2025-05-18",
     "status": "печать",
-    "amount": 263290.11,
+    "amount": 9403.22,
     "product_type": "каталог",
     "print_run": 2952,
     "priority": "низкий"
@@ -5648,7 +5648,7 @@
     "client_id": 117,
     "order_date": "2026-02-18",
     "status": "новый",
-    "amount": 255327.58,
+    "amount": 9118.84,
     "product_type": "открытка",
     "print_run": 1847,
     "priority": "низкий"
@@ -5659,7 +5659,7 @@
     "client_id": 28,
     "order_date": "2025-01-23",
     "status": "отгружен",
-    "amount": 45737.21,
+    "amount": 1633.47,
     "product_type": "наклейка",
     "print_run": 1394,
     "priority": "высокий"
@@ -5670,7 +5670,7 @@
     "client_id": 84,
     "order_date": "2025-02-08",
     "status": "готов к отгрузке",
-    "amount": 219227.77,
+    "amount": 7829.56,
     "product_type": "плакат",
     "print_run": 4390,
     "priority": "высокий"
@@ -5681,7 +5681,7 @@
     "client_id": 7,
     "order_date": "2025-04-21",
     "status": "закрыт",
-    "amount": 242343.16,
+    "amount": 8655.11,
     "product_type": "фотоальбом",
     "print_run": 405,
     "priority": "средний"
@@ -5692,7 +5692,7 @@
     "client_id": 57,
     "order_date": "2026-01-25",
     "status": "новый",
-    "amount": 167615.53,
+    "amount": 5986.27,
     "product_type": "наклейка",
     "print_run": 2080,
     "priority": "низкий"
@@ -5703,7 +5703,7 @@
     "client_id": 27,
     "order_date": "2026-10-08",
     "status": "новый",
-    "amount": 232597.61,
+    "amount": 8307.06,
     "product_type": "плакат",
     "print_run": 3457,
     "priority": "высокий"
@@ -5714,7 +5714,7 @@
     "client_id": 67,
     "order_date": "2025-10-04",
     "status": "отгружен",
-    "amount": 148332.54,
+    "amount": 5297.59,
     "product_type": "фотоотпечаток",
     "print_run": 1133,
     "priority": "низкий"
@@ -5725,7 +5725,7 @@
     "client_id": 66,
     "order_date": "2026-09-25",
     "status": "новый",
-    "amount": 275311.74,
+    "amount": 9832.56,
     "product_type": "плакат",
     "print_run": 943,
     "priority": "средний"
@@ -5736,7 +5736,7 @@
     "client_id": 26,
     "order_date": "2026-09-16",
     "status": "в работе",
-    "amount": 340672.54,
+    "amount": 12166.88,
     "product_type": "плакат",
     "print_run": 4295,
     "priority": "средний"
@@ -5747,7 +5747,7 @@
     "client_id": 91,
     "order_date": "2026-02-24",
     "status": "печать",
-    "amount": 193204.15,
+    "amount": 6900.15,
     "product_type": "календарь",
     "print_run": 332,
     "priority": "низкий"
@@ -5758,7 +5758,7 @@
     "client_id": 89,
     "order_date": "2026-05-08",
     "status": "печать",
-    "amount": 7424.04,
+    "amount": 265.14,
     "product_type": "открытка",
     "print_run": 32,
     "priority": "низкий"
@@ -5769,7 +5769,7 @@
     "client_id": 117,
     "order_date": "2025-04-24",
     "status": "отменён",
-    "amount": 54753.14,
+    "amount": 1955.47,
     "product_type": "фотоотпечаток",
     "print_run": 4057,
     "priority": "низкий"
@@ -5780,7 +5780,7 @@
     "client_id": 100,
     "order_date": "2026-06-08",
     "status": "новый",
-    "amount": 226584.87,
+    "amount": 8092.32,
     "product_type": "брошюра",
     "print_run": 2106,
     "priority": "средний"
@@ -5791,7 +5791,7 @@
     "client_id": 38,
     "order_date": "2025-09-28",
     "status": "готов к отгрузке",
-    "amount": 285172.91,
+    "amount": 10184.75,
     "product_type": "фотоальбом",
     "print_run": 827,
     "priority": "низкий"
@@ -5802,7 +5802,7 @@
     "client_id": 110,
     "order_date": "2025-10-25",
     "status": "печать",
-    "amount": 259273.45,
+    "amount": 9259.77,
     "product_type": "баннер",
     "print_run": 3499,
     "priority": "низкий"
@@ -5813,7 +5813,7 @@
     "client_id": 109,
     "order_date": "2025-02-16",
     "status": "новый",
-    "amount": 117045.31,
+    "amount": 4180.19,
     "product_type": "календарь",
     "print_run": 1406,
     "priority": "средний"
@@ -5824,7 +5824,7 @@
     "client_id": 80,
     "order_date": "2025-10-02",
     "status": "закрыт",
-    "amount": 285792.61,
+    "amount": 10206.88,
     "product_type": "брошюра",
     "print_run": 3062,
     "priority": "низкий"
@@ -5835,7 +5835,7 @@
     "client_id": 15,
     "order_date": "2026-02-15",
     "status": "готов к отгрузке",
-    "amount": 292990.8,
+    "amount": 10463.96,
     "product_type": "каталог",
     "print_run": 2236,
     "priority": "высокий"
@@ -5846,7 +5846,7 @@
     "client_id": 109,
     "order_date": "2026-05-05",
     "status": "отменён",
-    "amount": 42230.63,
+    "amount": 1508.24,
     "product_type": "визитка",
     "print_run": 1376,
     "priority": "высокий"
@@ -5857,7 +5857,7 @@
     "client_id": 93,
     "order_date": "2025-03-02",
     "status": "отменён",
-    "amount": 147361.62,
+    "amount": 5262.92,
     "product_type": "календарь",
     "print_run": 859,
     "priority": "высокий"
@@ -5868,7 +5868,7 @@
     "client_id": 62,
     "order_date": "2026-08-06",
     "status": "закрыт",
-    "amount": 215129.14,
+    "amount": 7683.18,
     "product_type": "каталог",
     "print_run": 1494,
     "priority": "средний"
@@ -5879,7 +5879,7 @@
     "client_id": 79,
     "order_date": "2025-01-30",
     "status": "отменён",
-    "amount": 322378.1,
+    "amount": 11513.5,
     "product_type": "календарь",
     "print_run": 3967,
     "priority": "низкий"
@@ -5890,7 +5890,7 @@
     "client_id": 114,
     "order_date": "2026-02-26",
     "status": "готов к отгрузке",
-    "amount": 93779.66,
+    "amount": 3349.27,
     "product_type": "фотоальбом",
     "print_run": 528,
     "priority": "средний"
@@ -5901,7 +5901,7 @@
     "client_id": 2,
     "order_date": "2026-06-22",
     "status": "отменён",
-    "amount": 80722.77,
+    "amount": 2882.96,
     "product_type": "фотоотпечаток",
     "print_run": 4638,
     "priority": "высокий"
@@ -5912,7 +5912,7 @@
     "client_id": 112,
     "order_date": "2025-12-13",
     "status": "отгружен",
-    "amount": 153198.22,
+    "amount": 5471.37,
     "product_type": "наклейка",
     "print_run": 790,
     "priority": "высокий"
@@ -5923,7 +5923,7 @@
     "client_id": 32,
     "order_date": "2026-05-09",
     "status": "печать",
-    "amount": 294144.46,
+    "amount": 10505.16,
     "product_type": "визитка",
     "print_run": 1227,
     "priority": "высокий"
@@ -5934,7 +5934,7 @@
     "client_id": 115,
     "order_date": "2026-09-20",
     "status": "новый",
-    "amount": 178431.95,
+    "amount": 6372.57,
     "product_type": "фотоальбом",
     "print_run": 1295,
     "priority": "средний"
@@ -5945,7 +5945,7 @@
     "client_id": 110,
     "order_date": "2026-05-23",
     "status": "отменён",
-    "amount": 263746.21,
+    "amount": 9419.51,
     "product_type": "календарь",
     "print_run": 623,
     "priority": "средний"
@@ -5956,7 +5956,7 @@
     "client_id": 31,
     "order_date": "2025-12-05",
     "status": "печать",
-    "amount": 80279.16,
+    "amount": 2867.11,
     "product_type": "фотоальбом",
     "print_run": 4162,
     "priority": "высокий"
@@ -5967,7 +5967,7 @@
     "client_id": 49,
     "order_date": "2026-02-17",
     "status": "отменён",
-    "amount": 162305.82,
+    "amount": 5796.64,
     "product_type": "открытка",
     "print_run": 655,
     "priority": "высокий"
@@ -5978,7 +5978,7 @@
     "client_id": 58,
     "order_date": "2025-04-01",
     "status": "отменён",
-    "amount": 112673.35,
+    "amount": 4024.05,
     "product_type": "каталог",
     "print_run": 3672,
     "priority": "средний"
@@ -5989,7 +5989,7 @@
     "client_id": 96,
     "order_date": "2025-01-19",
     "status": "новый",
-    "amount": 15433.68,
+    "amount": 551.2,
     "product_type": "визитка",
     "print_run": 3387,
     "priority": "высокий"
@@ -6000,7 +6000,7 @@
     "client_id": 1,
     "order_date": "2025-04-04",
     "status": "отменён",
-    "amount": 311868.48,
+    "amount": 11138.16,
     "product_type": "фотоотпечаток",
     "print_run": 2505,
     "priority": "высокий"
@@ -6011,7 +6011,7 @@
     "client_id": 27,
     "order_date": "2026-04-13",
     "status": "печать",
-    "amount": 286356.27,
+    "amount": 10227.01,
     "product_type": "баннер",
     "print_run": 454,
     "priority": "средний"
@@ -6022,7 +6022,7 @@
     "client_id": 43,
     "order_date": "2026-07-28",
     "status": "отменён",
-    "amount": 167177.39,
+    "amount": 5970.62,
     "product_type": "фотоотпечаток",
     "print_run": 4924,
     "priority": "высокий"
@@ -6033,7 +6033,7 @@
     "client_id": 47,
     "order_date": "2026-04-09",
     "status": "новый",
-    "amount": 3762.34,
+    "amount": 134.37,
     "product_type": "брошюра",
     "print_run": 1826,
     "priority": "средний"
@@ -6044,7 +6044,7 @@
     "client_id": 107,
     "order_date": "2026-10-11",
     "status": "отменён",
-    "amount": 184128.83,
+    "amount": 6576.03,
     "product_type": "плакат",
     "print_run": 4496,
     "priority": "высокий"
@@ -6055,7 +6055,7 @@
     "client_id": 14,
     "order_date": "2025-02-16",
     "status": "в работе",
-    "amount": 288178.01,
+    "amount": 10292.07,
     "product_type": "каталог",
     "print_run": 1160,
     "priority": "высокий"
@@ -6066,7 +6066,7 @@
     "client_id": 93,
     "order_date": "2026-02-24",
     "status": "новый",
-    "amount": 68077.56,
+    "amount": 2431.34,
     "product_type": "плакат",
     "print_run": 1614,
     "priority": "средний"
@@ -6077,7 +6077,7 @@
     "client_id": 28,
     "order_date": "2026-04-14",
     "status": "отменён",
-    "amount": 40394.71,
+    "amount": 1442.67,
     "product_type": "открытка",
     "print_run": 2778,
     "priority": "средний"
@@ -6088,7 +6088,7 @@
     "client_id": 6,
     "order_date": "2026-10-11",
     "status": "отменён",
-    "amount": 270934.38,
+    "amount": 9676.23,
     "product_type": "фотоотпечаток",
     "print_run": 1019,
     "priority": "средний"
@@ -6099,7 +6099,7 @@
     "client_id": 59,
     "order_date": "2026-08-27",
     "status": "отгружен",
-    "amount": 4505.16,
+    "amount": 160.9,
     "product_type": "календарь",
     "print_run": 4096,
     "priority": "высокий"
@@ -6110,7 +6110,7 @@
     "client_id": 7,
     "order_date": "2026-07-21",
     "status": "готов к отгрузке",
-    "amount": 323756.69,
+    "amount": 11562.74,
     "product_type": "фотоотпечаток",
     "print_run": 3966,
     "priority": "низкий"
@@ -6121,7 +6121,7 @@
     "client_id": 89,
     "order_date": "2026-08-16",
     "status": "в работе",
-    "amount": 137429.74,
+    "amount": 4908.21,
     "product_type": "календарь",
     "print_run": 858,
     "priority": "высокий"
@@ -6132,7 +6132,7 @@
     "client_id": 78,
     "order_date": "2025-11-26",
     "status": "отгружен",
-    "amount": 342886.76,
+    "amount": 12245.96,
     "product_type": "визитка",
     "print_run": 3439,
     "priority": "высокий"
@@ -6143,7 +6143,7 @@
     "client_id": 98,
     "order_date": "2025-09-12",
     "status": "печать",
-    "amount": 339760.6,
+    "amount": 12134.31,
     "product_type": "визитка",
     "print_run": 2818,
     "priority": "средний"
@@ -6154,7 +6154,7 @@
     "client_id": 104,
     "order_date": "2025-05-17",
     "status": "в работе",
-    "amount": 245904.96,
+    "amount": 8782.32,
     "product_type": "визитка",
     "print_run": 4945,
     "priority": "высокий"
@@ -6165,7 +6165,7 @@
     "client_id": 66,
     "order_date": "2025-11-03",
     "status": "отменён",
-    "amount": 250020.4,
+    "amount": 8929.3,
     "product_type": "наклейка",
     "print_run": 2581,
     "priority": "высокий"
@@ -6176,7 +6176,7 @@
     "client_id": 81,
     "order_date": "2025-08-11",
     "status": "в работе",
-    "amount": 241254.12,
+    "amount": 8616.22,
     "product_type": "открытка",
     "print_run": 2390,
     "priority": "высокий"
@@ -6187,7 +6187,7 @@
     "client_id": 17,
     "order_date": "2026-10-28",
     "status": "в работе",
-    "amount": 243926.25,
+    "amount": 8711.65,
     "product_type": "наклейка",
     "print_run": 4454,
     "priority": "средний"
@@ -6198,7 +6198,7 @@
     "client_id": 91,
     "order_date": "2025-04-29",
     "status": "отменён",
-    "amount": 169688.36,
+    "amount": 6060.3,
     "product_type": "баннер",
     "print_run": 4616,
     "priority": "высокий"
@@ -6209,7 +6209,7 @@
     "client_id": 86,
     "order_date": "2026-03-04",
     "status": "закрыт",
-    "amount": 307484.6,
+    "amount": 10981.59,
     "product_type": "наклейка",
     "print_run": 2352,
     "priority": "средний"
@@ -6220,7 +6220,7 @@
     "client_id": 104,
     "order_date": "2025-01-14",
     "status": "отгружен",
-    "amount": 135162.0,
+    "amount": 4827.21,
     "product_type": "брошюра",
     "print_run": 217,
     "priority": "низкий"
@@ -6231,7 +6231,7 @@
     "client_id": 86,
     "order_date": "2025-02-27",
     "status": "в работе",
-    "amount": 344285.74,
+    "amount": 12295.92,
     "product_type": "плакат",
     "print_run": 1328,
     "priority": "высокий"
@@ -6242,7 +6242,7 @@
     "client_id": 33,
     "order_date": "2025-05-30",
     "status": "отменён",
-    "amount": 73788.31,
+    "amount": 2635.3,
     "product_type": "фотоальбом",
     "print_run": 2427,
     "priority": "высокий"
@@ -6253,7 +6253,7 @@
     "client_id": 5,
     "order_date": "2026-01-03",
     "status": "отменён",
-    "amount": 216789.77,
+    "amount": 7742.49,
     "product_type": "каталог",
     "print_run": 849,
     "priority": "высокий"
@@ -6264,7 +6264,7 @@
     "client_id": 95,
     "order_date": "2026-07-30",
     "status": "отменён",
-    "amount": 137943.67,
+    "amount": 4926.56,
     "product_type": "открытка",
     "print_run": 4607,
     "priority": "высокий"
@@ -6275,7 +6275,7 @@
     "client_id": 101,
     "order_date": "2025-10-22",
     "status": "закрыт",
-    "amount": 137481.46,
+    "amount": 4910.05,
     "product_type": "фотоальбом",
     "print_run": 3135,
     "priority": "высокий"
@@ -6286,7 +6286,7 @@
     "client_id": 41,
     "order_date": "2026-07-20",
     "status": "новый",
-    "amount": 73471.27,
+    "amount": 2623.97,
     "product_type": "фотоальбом",
     "print_run": 2068,
     "priority": "средний"
@@ -6297,7 +6297,7 @@
     "client_id": 107,
     "order_date": "2025-08-19",
     "status": "закрыт",
-    "amount": 192675.45,
+    "amount": 6881.27,
     "product_type": "баннер",
     "print_run": 4830,
     "priority": "высокий"
@@ -6308,7 +6308,7 @@
     "client_id": 26,
     "order_date": "2025-07-18",
     "status": "печать",
-    "amount": 344258.3,
+    "amount": 12294.94,
     "product_type": "каталог",
     "print_run": 1463,
     "priority": "низкий"
@@ -6319,7 +6319,7 @@
     "client_id": 24,
     "order_date": "2025-06-27",
     "status": "закрыт",
-    "amount": 133887.78,
+    "amount": 4781.71,
     "product_type": "наклейка",
     "print_run": 987,
     "priority": "средний"
@@ -6330,7 +6330,7 @@
     "client_id": 36,
     "order_date": "2026-07-24",
     "status": "печать",
-    "amount": 205643.16,
+    "amount": 7344.4,
     "product_type": "календарь",
     "print_run": 1328,
     "priority": "средний"
@@ -6341,7 +6341,7 @@
     "client_id": 1,
     "order_date": "2025-12-05",
     "status": "готов к отгрузке",
-    "amount": 56335.07,
+    "amount": 2011.97,
     "product_type": "календарь",
     "print_run": 337,
     "priority": "средний"
@@ -6352,7 +6352,7 @@
     "client_id": 77,
     "order_date": "2025-02-22",
     "status": "отменён",
-    "amount": 173221.18,
+    "amount": 6186.47,
     "product_type": "фотоотпечаток",
     "print_run": 2477,
     "priority": "высокий"
@@ -6363,7 +6363,7 @@
     "client_id": 71,
     "order_date": "2026-01-02",
     "status": "новый",
-    "amount": 79326.82,
+    "amount": 2833.1,
     "product_type": "баннер",
     "print_run": 4314,
     "priority": "низкий"
@@ -6374,7 +6374,7 @@
     "client_id": 67,
     "order_date": "2025-03-11",
     "status": "отменён",
-    "amount": 147328.14,
+    "amount": 5261.72,
     "product_type": "наклейка",
     "print_run": 1315,
     "priority": "высокий"
@@ -6385,7 +6385,7 @@
     "client_id": 52,
     "order_date": "2025-04-05",
     "status": "печать",
-    "amount": 233177.06,
+    "amount": 8327.75,
     "product_type": "открытка",
     "print_run": 1757,
     "priority": "средний"
@@ -6396,7 +6396,7 @@
     "client_id": 47,
     "order_date": "2025-10-28",
     "status": "в работе",
-    "amount": 167775.44,
+    "amount": 5991.98,
     "product_type": "фотоотпечаток",
     "print_run": 4355,
     "priority": "высокий"
@@ -6407,7 +6407,7 @@
     "client_id": 106,
     "order_date": "2026-10-27",
     "status": "новый",
-    "amount": 157646.53,
+    "amount": 5630.23,
     "product_type": "брошюра",
     "print_run": 2844,
     "priority": "высокий"
@@ -6418,7 +6418,7 @@
     "client_id": 79,
     "order_date": "2026-09-29",
     "status": "в работе",
-    "amount": 135336.29,
+    "amount": 4833.44,
     "product_type": "фотоальбом",
     "print_run": 2639,
     "priority": "низкий"
@@ -6429,7 +6429,7 @@
     "client_id": 50,
     "order_date": "2025-09-20",
     "status": "отгружен",
-    "amount": 319233.57,
+    "amount": 11401.2,
     "product_type": "плакат",
     "print_run": 212,
     "priority": "средний"
@@ -6440,7 +6440,7 @@
     "client_id": 66,
     "order_date": "2026-06-05",
     "status": "готов к отгрузке",
-    "amount": 105862.59,
+    "amount": 3780.81,
     "product_type": "каталог",
     "print_run": 369,
     "priority": "высокий"
@@ -6451,7 +6451,7 @@
     "client_id": 25,
     "order_date": "2025-11-25",
     "status": "отгружен",
-    "amount": 61086.0,
+    "amount": 2181.64,
     "product_type": "брошюра",
     "print_run": 796,
     "priority": "высокий"
@@ -6462,7 +6462,7 @@
     "client_id": 69,
     "order_date": "2025-01-08",
     "status": "закрыт",
-    "amount": 235606.29,
+    "amount": 8414.51,
     "product_type": "брошюра",
     "print_run": 1736,
     "priority": "низкий"
@@ -6473,7 +6473,7 @@
     "client_id": 111,
     "order_date": "2026-03-11",
     "status": "отменён",
-    "amount": 189600.71,
+    "amount": 6771.45,
     "product_type": "брошюра",
     "print_run": 1694,
     "priority": "высокий"
@@ -6484,7 +6484,7 @@
     "client_id": 113,
     "order_date": "2026-03-22",
     "status": "закрыт",
-    "amount": 11242.27,
+    "amount": 401.51,
     "product_type": "брошюра",
     "print_run": 1269,
     "priority": "высокий"
@@ -6495,7 +6495,7 @@
     "client_id": 43,
     "order_date": "2025-02-08",
     "status": "новый",
-    "amount": 64763.28,
+    "amount": 2312.97,
     "product_type": "брошюра",
     "print_run": 454,
     "priority": "средний"
@@ -6506,7 +6506,7 @@
     "client_id": 72,
     "order_date": "2025-03-14",
     "status": "отгружен",
-    "amount": 144448.57,
+    "amount": 5158.88,
     "product_type": "открытка",
     "print_run": 2128,
     "priority": "средний"
@@ -6517,7 +6517,7 @@
     "client_id": 81,
     "order_date": "2026-02-19",
     "status": "готов к отгрузке",
-    "amount": 138157.15,
+    "amount": 4934.18,
     "product_type": "баннер",
     "print_run": 148,
     "priority": "низкий"
@@ -6528,7 +6528,7 @@
     "client_id": 69,
     "order_date": "2025-01-07",
     "status": "закрыт",
-    "amount": 265318.33,
+    "amount": 9475.65,
     "product_type": "фотоотпечаток",
     "print_run": 528,
     "priority": "высокий"
@@ -6539,7 +6539,7 @@
     "client_id": 6,
     "order_date": "2025-03-16",
     "status": "печать",
-    "amount": 103573.3,
+    "amount": 3699.05,
     "product_type": "наклейка",
     "print_run": 879,
     "priority": "высокий"
@@ -6550,7 +6550,7 @@
     "client_id": 39,
     "order_date": "2026-09-14",
     "status": "новый",
-    "amount": 135350.51,
+    "amount": 4833.95,
     "product_type": "плакат",
     "print_run": 3595,
     "priority": "высокий"
@@ -6561,7 +6561,7 @@
     "client_id": 4,
     "order_date": "2026-05-01",
     "status": "в работе",
-    "amount": 50324.37,
+    "amount": 1797.3,
     "product_type": "наклейка",
     "print_run": 1811,
     "priority": "средний"
@@ -6572,7 +6572,7 @@
     "client_id": 102,
     "order_date": "2026-07-13",
     "status": "печать",
-    "amount": 238019.3,
+    "amount": 8500.69,
     "product_type": "календарь",
     "print_run": 2451,
     "priority": "высокий"
@@ -6583,7 +6583,7 @@
     "client_id": 83,
     "order_date": "2026-01-18",
     "status": "новый",
-    "amount": 52056.73,
+    "amount": 1859.17,
     "product_type": "наклейка",
     "print_run": 4557,
     "priority": "низкий"
@@ -6594,7 +6594,7 @@
     "client_id": 1,
     "order_date": "2026-08-10",
     "status": "отгружен",
-    "amount": 192991.33,
+    "amount": 6892.55,
     "product_type": "визитка",
     "print_run": 4410,
     "priority": "низкий"
@@ -6605,7 +6605,7 @@
     "client_id": 40,
     "order_date": "2025-08-04",
     "status": "закрыт",
-    "amount": 146191.11,
+    "amount": 5221.11,
     "product_type": "баннер",
     "print_run": 1744,
     "priority": "высокий"
@@ -6616,7 +6616,7 @@
     "client_id": 109,
     "order_date": "2026-06-09",
     "status": "в работе",
-    "amount": 79613.43,
+    "amount": 2843.34,
     "product_type": "календарь",
     "print_run": 1517,
     "priority": "средний"
@@ -6627,7 +6627,7 @@
     "client_id": 25,
     "order_date": "2025-04-28",
     "status": "в работе",
-    "amount": 298431.54,
+    "amount": 10658.27,
     "product_type": "фотоотпечаток",
     "print_run": 455,
     "priority": "высокий"
@@ -6638,7 +6638,7 @@
     "client_id": 60,
     "order_date": "2026-10-23",
     "status": "отгружен",
-    "amount": 236074.78,
+    "amount": 8431.24,
     "product_type": "брошюра",
     "print_run": 2391,
     "priority": "средний"
@@ -6649,7 +6649,7 @@
     "client_id": 13,
     "order_date": "2025-07-22",
     "status": "закрыт",
-    "amount": 333184.35,
+    "amount": 11899.44,
     "product_type": "фотоотпечаток",
     "print_run": 4001,
     "priority": "средний"
@@ -6660,7 +6660,7 @@
     "client_id": 17,
     "order_date": "2025-08-29",
     "status": "новый",
-    "amount": 315341.15,
+    "amount": 11262.18,
     "product_type": "плакат",
     "print_run": 581,
     "priority": "средний"
@@ -6671,7 +6671,7 @@
     "client_id": 63,
     "order_date": "2026-04-07",
     "status": "печать",
-    "amount": 243629.97,
+    "amount": 8701.07,
     "product_type": "фотоотпечаток",
     "print_run": 2514,
     "priority": "низкий"
@@ -6682,7 +6682,7 @@
     "client_id": 73,
     "order_date": "2026-08-04",
     "status": "печать",
-    "amount": 61517.91,
+    "amount": 2197.07,
     "product_type": "баннер",
     "print_run": 3518,
     "priority": "средний"
@@ -6693,7 +6693,7 @@
     "client_id": 32,
     "order_date": "2025-08-15",
     "status": "закрыт",
-    "amount": 294518.19,
+    "amount": 10518.51,
     "product_type": "визитка",
     "print_run": 2276,
     "priority": "низкий"
@@ -6704,7 +6704,7 @@
     "client_id": 87,
     "order_date": "2025-12-06",
     "status": "готов к отгрузке",
-    "amount": 127483.34,
+    "amount": 4552.98,
     "product_type": "каталог",
     "print_run": 3658,
     "priority": "средний"
@@ -6715,7 +6715,7 @@
     "client_id": 63,
     "order_date": "2026-07-19",
     "status": "новый",
-    "amount": 31444.87,
+    "amount": 1123.03,
     "product_type": "календарь",
     "print_run": 4979,
     "priority": "средний"
@@ -6726,7 +6726,7 @@
     "client_id": 110,
     "order_date": "2025-05-24",
     "status": "отгружен",
-    "amount": 257539.98,
+    "amount": 9197.86,
     "product_type": "открытка",
     "print_run": 2166,
     "priority": "высокий"
@@ -6737,7 +6737,7 @@
     "client_id": 10,
     "order_date": "2025-03-19",
     "status": "новый",
-    "amount": 284986.91,
+    "amount": 10178.1,
     "product_type": "наклейка",
     "print_run": 265,
     "priority": "высокий"
@@ -6748,7 +6748,7 @@
     "client_id": 52,
     "order_date": "2026-08-28",
     "status": "в работе",
-    "amount": 93433.86,
+    "amount": 3336.92,
     "product_type": "фотоальбом",
     "print_run": 4528,
     "priority": "высокий"
@@ -6759,7 +6759,7 @@
     "client_id": 61,
     "order_date": "2025-06-02",
     "status": "печать",
-    "amount": 312328.83,
+    "amount": 11154.6,
     "product_type": "визитка",
     "print_run": 1839,
     "priority": "высокий"
@@ -6770,7 +6770,7 @@
     "client_id": 94,
     "order_date": "2025-10-25",
     "status": "в работе",
-    "amount": 180112.96,
+    "amount": 6432.61,
     "product_type": "каталог",
     "print_run": 4115,
     "priority": "средний"
@@ -6781,7 +6781,7 @@
     "client_id": 47,
     "order_date": "2026-05-30",
     "status": "новый",
-    "amount": 265750.51,
+    "amount": 9491.09,
     "product_type": "открытка",
     "print_run": 1368,
     "priority": "низкий"
@@ -6792,7 +6792,7 @@
     "client_id": 58,
     "order_date": "2025-06-13",
     "status": "в работе",
-    "amount": 231816.42,
+    "amount": 8279.16,
     "product_type": "фотоотпечаток",
     "print_run": 4645,
     "priority": "низкий"
@@ -6803,7 +6803,7 @@
     "client_id": 95,
     "order_date": "2026-05-11",
     "status": "печать",
-    "amount": 267230.92,
+    "amount": 9543.96,
     "product_type": "фотоальбом",
     "print_run": 1802,
     "priority": "низкий"
@@ -6814,7 +6814,7 @@
     "client_id": 9,
     "order_date": "2025-09-28",
     "status": "печать",
-    "amount": 234999.2,
+    "amount": 8392.83,
     "product_type": "открытка",
     "print_run": 360,
     "priority": "высокий"

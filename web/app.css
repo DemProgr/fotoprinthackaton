@@ -180,7 +180,6 @@ button { cursor: pointer; }
 .kpi-value { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; margin-top: 2px; }
 .kpi-meta { display: flex; justify-content: space-between; gap: 6px; font-size: 11.5px; color: var(--text-soft); }
 .kpi-meta b { color: var(--text); font-weight: 600; }
-.kpi-spark { height: 38px; margin-top: 4px; }
 .pill { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; }
 .pill.green { color: var(--green); background: var(--green-bg); }
 .pill.yellow { color: var(--yellow); background: var(--yellow-bg); }
@@ -297,3 +296,17 @@ button.bar-row:hover { background: var(--row-hover); border-color: var(--border)
   .drawer { padding: 16px; }
   .filters .period-info { margin-left: 0; }
 }
+
+/* ---------- Навигация с клавиатуры (ОТ-06) ---------- */
+.skip-link { position: fixed; left: 12px; top: -60px; z-index: 1000; background: var(--purple); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: top 0.15s; }
+.skip-link:focus { top: 12px; }
+.main:focus { outline: none; }
+.main:focus-visible { box-shadow: none; }
+kbd { display: inline-block; min-width: 1.6em; padding: 1px 6px; border: 1px solid var(--border-strong); border-bottom-width: 2px; border-radius: 5px; background: var(--surface-soft); color: var(--text); font: 600 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-align: center; }
+.kbd-help-btn { margin-top: 10px; width: 100%; background: transparent; border: 1px dashed rgba(255, 255, 255, 0.25); color: inherit; opacity: 0.85; border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.kbd-help-btn:hover { opacity: 1; }
+.kbd-help-btn kbd { background: transparent; color: inherit; border-color: rgba(255, 255, 255, 0.35); }
+.kbd-help { width: 100%; border-collapse: collapse; }
+.kbd-help td { padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.kbd-help td:first-child { white-space: nowrap; width: 1%; padding-right: 18px; }
+tr.clickable:focus-visible { box-shadow: inset var(--focus); }

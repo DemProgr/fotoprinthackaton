@@ -158,7 +158,7 @@ route("GET", "/api/me", async (req) => {
   const db = data.get();
   return {
     user: auth.publicUser(u),
-    meta: { today: db.today, loaded_at: db.loaded_at, product_types: db.productTypes, domains: kpi.DOMAIN_LABEL, timezone: "+03:00", currency: "RUB" },
+    meta: { today: db.today, loaded_at: db.loaded_at, product_types: db.productTypes, domains: kpi.DOMAIN_LABEL, timezone: "+03:00", currency: "BYN" },
   };
 });
 
