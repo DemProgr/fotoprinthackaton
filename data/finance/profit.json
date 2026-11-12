@@ -2,155 +2,155 @@
   {
     "id": 1,
     "month": "2025-01",
-    "revenue": 1133814.14,
-    "expenses": 614591.38,
-    "profit": 519222.76
+    "revenue": 40493.37,
+    "expenses": 21949.69,
+    "profit": 18543.68
   },
   {
     "id": 2,
     "month": "2025-02",
-    "revenue": 2504056.49,
-    "expenses": 377480.31,
-    "profit": 2126576.18
+    "revenue": 89430.59,
+    "expenses": 13481.44,
+    "profit": 75949.15
   },
   {
     "id": 3,
     "month": "2025-03",
-    "revenue": 2384806.42,
-    "expenses": 675090.96,
-    "profit": 1709715.46
+    "revenue": 85171.66,
+    "expenses": 24110.39,
+    "profit": 61061.27
   },
   {
     "id": 4,
     "month": "2025-04",
-    "revenue": 2283456.52,
-    "expenses": 49240.34,
-    "profit": 2234216.18
+    "revenue": 81552.02,
+    "expenses": 1758.58,
+    "profit": 79793.44
   },
   {
     "id": 5,
     "month": "2025-05",
-    "revenue": 1979711.6,
-    "expenses": 659442.21,
-    "profit": 1320269.39
+    "revenue": 70703.98,
+    "expenses": 23551.51,
+    "profit": 47152.47
   },
   {
     "id": 6,
     "month": "2025-06",
-    "revenue": 3077092.43,
-    "expenses": 984685.08,
-    "profit": 2092407.35
+    "revenue": 109896.17,
+    "expenses": 35167.33,
+    "profit": 74728.84
   },
   {
     "id": 7,
     "month": "2025-07",
-    "revenue": 3930341.57,
-    "expenses": 208353.45,
-    "profit": 3721988.12
+    "revenue": 140369.36,
+    "expenses": 7441.19,
+    "profit": 132928.17
   },
   {
     "id": 8,
     "month": "2025-08",
-    "revenue": 3616166.14,
-    "expenses": 646853.06,
-    "profit": 2969313.08
+    "revenue": 129148.77,
+    "expenses": 23101.9,
+    "profit": 106046.87
   },
   {
     "id": 9,
     "month": "2025-09",
-    "revenue": 4610807.94,
-    "expenses": 694269.01,
-    "profit": 3916538.93
+    "revenue": 164671.72,
+    "expenses": 24795.33,
+    "profit": 139876.39
   },
   {
     "id": 10,
     "month": "2025-10",
-    "revenue": 4114054.23,
-    "expenses": 212810.78,
-    "profit": 3901243.45
+    "revenue": 146930.53,
+    "expenses": 7600.39,
+    "profit": 139330.14
   },
   {
     "id": 11,
     "month": "2025-11",
-    "revenue": 2870277.9,
-    "expenses": 657343.05,
-    "profit": 2212934.85
+    "revenue": 102509.95,
+    "expenses": 23476.55,
+    "profit": 79033.4
   },
   {
     "id": 12,
     "month": "2025-12",
-    "revenue": 2318395.36,
-    "expenses": 274379.06,
-    "profit": 2044016.3
+    "revenue": 82799.86,
+    "expenses": 9799.25,
+    "profit": 73000.61
   },
   {
     "id": 13,
     "month": "2026-01",
-    "revenue": 2068798.95,
-    "expenses": 709272.08,
-    "profit": 1359526.87
+    "revenue": 73885.69,
+    "expenses": 25331.14,
+    "profit": 48554.55
   },
   {
     "id": 14,
     "month": "2026-02",
-    "revenue": 1506325.59,
-    "expenses": 258910.67,
-    "profit": 1247414.92
+    "revenue": 53797.35,
+    "expenses": 9246.81,
+    "profit": 44550.54
   },
   {
     "id": 15,
     "month": "2026-03",
-    "revenue": 1270035.88,
-    "expenses": 627432.35,
-    "profit": 642603.53
+    "revenue": 45358.44,
+    "expenses": 22408.3,
+    "profit": 22950.14
   },
   {
     "id": 16,
     "month": "2026-04",
-    "revenue": 3577510.24,
-    "expenses": 1168928.94,
-    "profit": 2408581.3
+    "revenue": 127768.25,
+    "expenses": 41747.46,
+    "profit": 86020.79
   },
   {
     "id": 17,
     "month": "2026-05",
-    "revenue": 4325780.04,
-    "expenses": 708404.54,
-    "profit": 3617375.5
+    "revenue": 154492.19,
+    "expenses": 25300.16,
+    "profit": 129192.03
   },
   {
     "id": 18,
     "month": "2026-06",
-    "revenue": 2573509.68,
-    "expenses": 334167.74,
-    "profit": 2239341.94
+    "revenue": 91911.09,
+    "expenses": 11934.56,
+    "profit": 79976.53
   },
   {
     "id": 19,
     "month": "2026-07",
-    "revenue": 4237856.34,
-    "expenses": 78578.47,
-    "profit": 4159277.87
+    "revenue": 151352.02,
+    "expenses": 2806.37,
+    "profit": 148545.65
   },
   {
     "id": 20,
     "month": "2026-08",
-    "revenue": 3300124.39,
-    "expenses": 534748.37,
-    "profit": 2765376.02
+    "revenue": 117861.6,
+    "expenses": 19098.17,
+    "profit": 98763.43
   },
   {
     "id": 21,
     "month": "2026-09",
-    "revenue": 3402708.23,
-    "expenses": 471782.09,
-    "profit": 2930926.14
+    "revenue": 121525.29,
+    "expenses": 16849.37,
+    "profit": 104675.92
   },
   {
     "id": 22,
     "month": "2026-10",
-    "revenue": 4320566.27,
-    "expenses": 538806.24,
-    "profit": 3781760.03
+    "revenue": 154305.98,
+    "expenses": 19243.08,
+    "profit": 135062.9
   }
 ]

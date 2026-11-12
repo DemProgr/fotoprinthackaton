@@ -131,7 +131,7 @@ function financePeople(db, f) {
     const plan = hp[dep.id] || emps.length;
     return { id: dep.id, name: dep.name, plan, fact: emps.length, vacancies: Math.max(0, plan - emps.length), absent: sick, available: emps.length - sick, staffing_pct: round(((emps.length - sick) / plan) * 100, 1) };
   });
-  return { bdr, bdds, staff, currency: "RUB" };
+  return { bdr, bdds, staff, currency: "BYN" };
 }
 
 /** Прогноз спроса (плановая загрузка ERP) и доступной мощности на 8 недель вперёд. */
