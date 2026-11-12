@@ -1,0 +1,12 @@
+storage/
+prototype/
+generate.py
+validate.py
+build_db.py
+schema.sql
+data/mock.db
+public/
+tests/
+docs/
+.env*
+.vercel

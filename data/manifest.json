@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-11-11T18:00:44.170326",
+  "seed": 42,
+  "sources": {
+    "CRM": {
+      "description": "Клиенты, заказы, обращения",
+      "tables": [
+        "clients",
+        "orders",
+        "requests"
+      ],
+      "files": [
+        "data/crm/clients.json",
+        "data/crm/orders.json",
+        "data/crm/requests.json"
+      ]
+    },
+    "ERP": {
+      "description": "Производственные заказы, станки, смены, брак",
+      "tables": [
+        "machines",
+        "shifts",
+        "production_orders",
+        "defects"
+      ],
+      "files": [
+        "data/erp/machines.json",
+        "data/erp/shifts.json",
+        "data/erp/production_orders.json",
+        "data/erp/defects.json"
+      ]
+    },
+    "Финансовая система": {
+      "description": "Выручка, расходы, прибыль",
+      "tables": [
+        "revenue",
+        "expenses",
+        "profit"
+      ],
+      "files": [
+        "data/finance/revenue.json",
+        "data/finance/expenses.json",
+        "data/finance/profit.json"
+      ]
+    },
+    "HR / ЗУП": {
+      "description": "Сотрудники, отделы, графики, больничные",
+      "tables": [
+        "departments",
+        "employees",
+        "schedules",
+        "sick_leaves"
+      ],
+      "files": [
+        "data/hr/departments.json",
+        "data/hr/employees.json",
+        "data/hr/schedules.json",
+        "data/hr/sick_leaves.json"
+      ]
+    }
+  },
+  "counts": {
+    "clients": 120,
+    "orders": 620,
+    "requests": 210,
+    "machines": 18,
+    "shifts": 150,
+    "production_orders": 432,
+    "defects": 98,
+    "departments": 9,
+    "employees": 72,
+    "schedules": 521,
+    "sick_leaves": 34,
+    "revenue": 471,
+    "expenses": 95,
+    "profit": 22
+  },
+  "key_links": [
+    "orders.client_id -> clients.id",
+    "requests.order_id -> orders.id",
+    "production_orders.order_id -> orders.id",
+    "production_orders.machine_id -> machines.id",
+    "production_orders.shift_id -> shifts.id",
+    "shifts.operator_id -> employees.id",
+    "defects.production_order_id -> production_orders.id",
+    "revenue.order_id -> orders.id",
+    "employees.department_id -> departments.id",
+    "schedules.employee_id -> employees.id",
+    "sick_leaves.employee_id -> employees.id"
+  ],
+  "problem_scenarios": [
+    "Брак с production_order_id=999999 без производственного заказа (сирота)",
+    "Производственный заказ со ссылкой на несуществующий CRM-заказ order_id=999999",
+    "Выручка по несуществующему заказу order_id=999998",
+    "Бракованного больше, чем изготовлено (defeat_qty > produced_qty)",
+    "Сотрудник на больничном, но имеющий смену в тот же день (конфликт графика)",
+    "Заказ со статусом «отгружен», но без записи о выручке (потеря денег)",
+    "Дефект, обнаруженный после завершения производственного заказа"
+  ]
+}

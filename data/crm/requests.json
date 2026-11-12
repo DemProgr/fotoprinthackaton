@@ -1,0 +1,2102 @@
+[
+  {
+    "id": 1,
+    "order_id": null,
+    "client_id": 47,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2026-02-02",
+    "resolved_at": "2026-09-22",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 2,
+    "order_id": null,
+    "client_id": 42,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-04-16",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 3,
+    "order_id": 558,
+    "client_id": 73,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-06-28",
+    "resolved_at": "2026-05-28",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 4,
+    "order_id": 80,
+    "client_id": 67,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2025-09-15",
+    "resolved_at": "2026-01-07",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 5,
+    "order_id": 354,
+    "client_id": 63,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-05-09",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 6,
+    "order_id": null,
+    "client_id": 57,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2025-06-19",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 7,
+    "order_id": 217,
+    "client_id": 20,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2025-07-11",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 8,
+    "order_id": 122,
+    "client_id": 85,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2025-08-24",
+    "resolved_at": "2026-10-13",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 9,
+    "order_id": 491,
+    "client_id": 62,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2025-08-04",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 10,
+    "order_id": null,
+    "client_id": 3,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-09-07",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 11,
+    "order_id": 138,
+    "client_id": 81,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-06-09",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 12,
+    "order_id": 265,
+    "client_id": 119,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-07-04",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 13,
+    "order_id": null,
+    "client_id": 82,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2025-01-20",
+    "resolved_at": "2025-04-17",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 14,
+    "order_id": 483,
+    "client_id": 112,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-05-09",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 15,
+    "order_id": 597,
+    "client_id": 106,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2025-07-06",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 16,
+    "order_id": 351,
+    "client_id": 119,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-04-10",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 17,
+    "order_id": 395,
+    "client_id": 17,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-04-22",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 18,
+    "order_id": null,
+    "client_id": 65,
+    "type": "возврат",
+    "status": "в обработке",
+    "created_at": "2026-03-06",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 19,
+    "order_id": 615,
+    "client_id": 5,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-06-29",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 20,
+    "order_id": 134,
+    "client_id": 116,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-09-10",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 21,
+    "order_id": 535,
+    "client_id": 54,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-01-15",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 22,
+    "order_id": 494,
+    "client_id": 102,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2026-01-26",
+    "resolved_at": "2026-03-17",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 23,
+    "order_id": 239,
+    "client_id": 117,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2025-03-27",
+    "resolved_at": "2026-10-04",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 24,
+    "order_id": 8,
+    "client_id": 74,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-06-20",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 25,
+    "order_id": 211,
+    "client_id": 89,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-11-20",
+    "resolved_at": "2026-05-24",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 26,
+    "order_id": 600,
+    "client_id": 33,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-09-25",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 27,
+    "order_id": 283,
+    "client_id": 88,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-02-11",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 28,
+    "order_id": 495,
+    "client_id": 23,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-01-15",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 29,
+    "order_id": 315,
+    "client_id": 74,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-12-19",
+    "resolved_at": "2026-02-27",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 30,
+    "order_id": 166,
+    "client_id": 13,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-08-08",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 31,
+    "order_id": null,
+    "client_id": 79,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-02-23",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 32,
+    "order_id": 94,
+    "client_id": 106,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-05-29",
+    "resolved_at": "2026-08-17",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 33,
+    "order_id": 380,
+    "client_id": 11,
+    "type": "техподдержка",
+    "status": "открыт",
+    "created_at": "2026-09-16",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 34,
+    "order_id": 534,
+    "client_id": 37,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2026-09-04",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 35,
+    "order_id": 11,
+    "client_id": 26,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2026-06-15",
+    "resolved_at": "2026-08-03",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 36,
+    "order_id": 238,
+    "client_id": 79,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-06-23",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 37,
+    "order_id": 162,
+    "client_id": 12,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-10-10",
+    "resolved_at": "2026-04-08",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 38,
+    "order_id": 531,
+    "client_id": 2,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2025-03-12",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 39,
+    "order_id": 573,
+    "client_id": 118,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2026-08-20",
+    "resolved_at": "2026-10-03",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 40,
+    "order_id": 200,
+    "client_id": 59,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-02-18",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 41,
+    "order_id": 519,
+    "client_id": 14,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-07-27",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 42,
+    "order_id": 120,
+    "client_id": 103,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2026-06-10",
+    "resolved_at": "2026-10-25",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 43,
+    "order_id": 387,
+    "client_id": 73,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2026-05-11",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 44,
+    "order_id": 601,
+    "client_id": 111,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2025-01-29",
+    "resolved_at": "2025-05-28",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 45,
+    "order_id": 226,
+    "client_id": 87,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2025-08-24",
+    "resolved_at": "2026-03-23",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 46,
+    "order_id": 270,
+    "client_id": 32,
+    "type": "техподдержка",
+    "status": "открыт",
+    "created_at": "2025-10-22",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 47,
+    "order_id": 351,
+    "client_id": 10,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-07-22",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 48,
+    "order_id": 588,
+    "client_id": 35,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-07-07",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 49,
+    "order_id": 248,
+    "client_id": 112,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-09-29",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 50,
+    "order_id": null,
+    "client_id": 108,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2026-09-26",
+    "resolved_at": "2026-10-05",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 51,
+    "order_id": null,
+    "client_id": 87,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-05-20",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 52,
+    "order_id": null,
+    "client_id": 109,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2026-05-09",
+    "resolved_at": "2026-10-14",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 53,
+    "order_id": null,
+    "client_id": 113,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2026-08-12",
+    "resolved_at": "2026-10-13",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 54,
+    "order_id": 228,
+    "client_id": 97,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2026-08-14",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 55,
+    "order_id": 490,
+    "client_id": 70,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-02-03",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 56,
+    "order_id": null,
+    "client_id": 100,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2025-06-28",
+    "resolved_at": "2025-08-28",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 57,
+    "order_id": 9,
+    "client_id": 2,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-08-04",
+    "resolved_at": "2026-05-28",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 58,
+    "order_id": 266,
+    "client_id": 24,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2026-07-16",
+    "resolved_at": "2026-08-15",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 59,
+    "order_id": null,
+    "client_id": 44,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-01-10",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 60,
+    "order_id": 382,
+    "client_id": 47,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2026-02-15",
+    "resolved_at": "2026-10-03",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 61,
+    "order_id": 590,
+    "client_id": 88,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-08-23",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 62,
+    "order_id": 391,
+    "client_id": 26,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-05-30",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 63,
+    "order_id": 512,
+    "client_id": 18,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-10-08",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 64,
+    "order_id": 499,
+    "client_id": 39,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2025-09-14",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 65,
+    "order_id": 168,
+    "client_id": 8,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2025-08-09",
+    "resolved_at": "2026-04-09",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 66,
+    "order_id": 267,
+    "client_id": 47,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-01-04",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 67,
+    "order_id": 422,
+    "client_id": 16,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2025-12-26",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 68,
+    "order_id": 552,
+    "client_id": 23,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2025-10-19",
+    "resolved_at": "2026-04-03",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 69,
+    "order_id": 458,
+    "client_id": 114,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-03-22",
+    "resolved_at": "2026-01-09",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 70,
+    "order_id": null,
+    "client_id": 112,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2025-06-21",
+    "resolved_at": "2026-01-22",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 71,
+    "order_id": 74,
+    "client_id": 11,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2025-06-15",
+    "resolved_at": "2025-10-09",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 72,
+    "order_id": 274,
+    "client_id": 78,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2026-10-23",
+    "resolved_at": "2026-10-27",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 73,
+    "order_id": 534,
+    "client_id": 58,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-02-28",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 74,
+    "order_id": 241,
+    "client_id": 85,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-09-15",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 75,
+    "order_id": 98,
+    "client_id": 9,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-04-30",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 76,
+    "order_id": 537,
+    "client_id": 98,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-03-27",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 77,
+    "order_id": 400,
+    "client_id": 40,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2025-08-23",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 78,
+    "order_id": 135,
+    "client_id": 68,
+    "type": "жалоба",
+    "status": "открыт",
+    "created_at": "2025-06-24",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 79,
+    "order_id": 334,
+    "client_id": 111,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2026-05-03",
+    "resolved_at": "2026-09-18",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 80,
+    "order_id": 553,
+    "client_id": 23,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2026-08-29",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 81,
+    "order_id": 578,
+    "client_id": 56,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2026-06-21",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 82,
+    "order_id": 233,
+    "client_id": 104,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2025-04-02",
+    "resolved_at": "2026-02-11",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 83,
+    "order_id": 311,
+    "client_id": 2,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2025-01-01",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 84,
+    "order_id": 548,
+    "client_id": 2,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2026-05-19",
+    "resolved_at": "2026-08-03",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 85,
+    "order_id": 612,
+    "client_id": 30,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-01-08",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 86,
+    "order_id": 575,
+    "client_id": 56,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-02-09",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 87,
+    "order_id": 400,
+    "client_id": 107,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2026-01-23",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 88,
+    "order_id": 246,
+    "client_id": 67,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2026-09-20",
+    "resolved_at": "2026-10-08",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 89,
+    "order_id": 71,
+    "client_id": 24,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2025-05-20",
+    "resolved_at": "2025-09-10",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 90,
+    "order_id": 504,
+    "client_id": 25,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-11-25",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 91,
+    "order_id": null,
+    "client_id": 3,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-07-10",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 92,
+    "order_id": 449,
+    "client_id": 94,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2025-01-09",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 93,
+    "order_id": 223,
+    "client_id": 44,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2026-03-07",
+    "resolved_at": "2026-09-24",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 94,
+    "order_id": 33,
+    "client_id": 43,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2025-03-24",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 95,
+    "order_id": 74,
+    "client_id": 70,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-04-27",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 96,
+    "order_id": null,
+    "client_id": 107,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-01-13",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 97,
+    "order_id": 454,
+    "client_id": 32,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-02-04",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 98,
+    "order_id": 534,
+    "client_id": 86,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2025-08-02",
+    "resolved_at": "2026-02-17",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 99,
+    "order_id": 44,
+    "client_id": 96,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-07-17",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 100,
+    "order_id": 306,
+    "client_id": 26,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2026-01-05",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 101,
+    "order_id": 445,
+    "client_id": 42,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2025-01-16",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 102,
+    "order_id": 249,
+    "client_id": 2,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-02-13",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 103,
+    "order_id": 381,
+    "client_id": 99,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-04-02",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 104,
+    "order_id": 347,
+    "client_id": 120,
+    "type": "жалоба",
+    "status": "открыт",
+    "created_at": "2026-10-03",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 105,
+    "order_id": 550,
+    "client_id": 102,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-04-20",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 106,
+    "order_id": 572,
+    "client_id": 101,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2026-10-23",
+    "resolved_at": "2026-10-30",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 107,
+    "order_id": 367,
+    "client_id": 93,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2025-05-18",
+    "resolved_at": "2025-06-27",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 108,
+    "order_id": 302,
+    "client_id": 70,
+    "type": "возврат",
+    "status": "в обработке",
+    "created_at": "2026-05-17",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 109,
+    "order_id": 332,
+    "client_id": 94,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2026-04-25",
+    "resolved_at": "2026-09-25",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 110,
+    "order_id": 159,
+    "client_id": 58,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2025-10-30",
+    "resolved_at": "2026-08-03",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 111,
+    "order_id": 519,
+    "client_id": 49,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2025-07-09",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 112,
+    "order_id": 245,
+    "client_id": 42,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-03-06",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 113,
+    "order_id": 510,
+    "client_id": 99,
+    "type": "возврат",
+    "status": "в обработке",
+    "created_at": "2026-07-19",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 114,
+    "order_id": 330,
+    "client_id": 15,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2025-04-09",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 115,
+    "order_id": null,
+    "client_id": 17,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-07-02",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 116,
+    "order_id": 102,
+    "client_id": 5,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2026-08-08",
+    "resolved_at": "2026-10-31",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 117,
+    "order_id": 605,
+    "client_id": 33,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2025-02-20",
+    "resolved_at": "2025-10-04",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 118,
+    "order_id": 214,
+    "client_id": 84,
+    "type": "техподдержка",
+    "status": "открыт",
+    "created_at": "2026-05-19",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 119,
+    "order_id": 572,
+    "client_id": 96,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2026-03-02",
+    "resolved_at": "2026-09-21",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 120,
+    "order_id": 42,
+    "client_id": 94,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2025-03-14",
+    "resolved_at": "2025-06-01",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 121,
+    "order_id": 237,
+    "client_id": 69,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-01-30",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 122,
+    "order_id": 584,
+    "client_id": 81,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2025-07-03",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 123,
+    "order_id": 591,
+    "client_id": 46,
+    "type": "вопрос",
+    "status": "закрыт",
+    "created_at": "2026-04-15",
+    "resolved_at": "2026-05-11",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 124,
+    "order_id": 517,
+    "client_id": 44,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2025-06-11",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 125,
+    "order_id": null,
+    "client_id": 116,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-11-19",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 126,
+    "order_id": 441,
+    "client_id": 106,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2025-11-28",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 127,
+    "order_id": 385,
+    "client_id": 99,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2026-07-18",
+    "resolved_at": "2026-09-02",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 128,
+    "order_id": null,
+    "client_id": 1,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2025-02-05",
+    "resolved_at": "2026-10-08",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 129,
+    "order_id": 310,
+    "client_id": 1,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-11-04",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 130,
+    "order_id": 283,
+    "client_id": 118,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-07-21",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 131,
+    "order_id": null,
+    "client_id": 20,
+    "type": "техподдержка",
+    "status": "открыт",
+    "created_at": "2025-04-07",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 132,
+    "order_id": 272,
+    "client_id": 47,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-08-20",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 133,
+    "order_id": null,
+    "client_id": 12,
+    "type": "вопрос",
+    "status": "закрыт",
+    "created_at": "2026-08-08",
+    "resolved_at": "2026-10-19",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 134,
+    "order_id": 333,
+    "client_id": 102,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-05-10",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 135,
+    "order_id": 98,
+    "client_id": 77,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2026-10-20",
+    "resolved_at": "2026-10-20",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 136,
+    "order_id": 58,
+    "client_id": 118,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2025-12-09",
+    "resolved_at": "2026-07-19",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 137,
+    "order_id": null,
+    "client_id": 30,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-10-31",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 138,
+    "order_id": 392,
+    "client_id": 7,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2025-11-09",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 139,
+    "order_id": 154,
+    "client_id": 42,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-05-30",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 140,
+    "order_id": 403,
+    "client_id": 58,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-09-02",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 141,
+    "order_id": 297,
+    "client_id": 101,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-02-08",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 142,
+    "order_id": 586,
+    "client_id": 96,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-02-20",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 143,
+    "order_id": 514,
+    "client_id": 56,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2025-05-14",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 144,
+    "order_id": 405,
+    "client_id": 84,
+    "type": "возврат",
+    "status": "в обработке",
+    "created_at": "2026-08-09",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 145,
+    "order_id": null,
+    "client_id": 68,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2025-09-10",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 146,
+    "order_id": 332,
+    "client_id": 88,
+    "type": "жалоба",
+    "status": "открыт",
+    "created_at": "2026-08-13",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 147,
+    "order_id": 375,
+    "client_id": 45,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2025-07-15",
+    "resolved_at": "2026-01-07",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 148,
+    "order_id": 313,
+    "client_id": 22,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-12-25",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 149,
+    "order_id": 46,
+    "client_id": 119,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2025-08-28",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 150,
+    "order_id": 88,
+    "client_id": 15,
+    "type": "возврат",
+    "status": "в обработке",
+    "created_at": "2025-02-25",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 151,
+    "order_id": null,
+    "client_id": 105,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-10-22",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 152,
+    "order_id": null,
+    "client_id": 40,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2026-04-06",
+    "resolved_at": "2026-04-11",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 153,
+    "order_id": 217,
+    "client_id": 27,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2026-07-14",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 154,
+    "order_id": 145,
+    "client_id": 89,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2025-01-19",
+    "resolved_at": "2026-09-07",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 155,
+    "order_id": 62,
+    "client_id": 37,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-07-25",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 156,
+    "order_id": 9,
+    "client_id": 9,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2026-02-02",
+    "resolved_at": "2026-08-05",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 157,
+    "order_id": 396,
+    "client_id": 30,
+    "type": "жалоба",
+    "status": "отклонён",
+    "created_at": "2026-01-25",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 158,
+    "order_id": 612,
+    "client_id": 69,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-04-01",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 159,
+    "order_id": null,
+    "client_id": 72,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-01-23",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 160,
+    "order_id": 502,
+    "client_id": 51,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-06-10",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 161,
+    "order_id": 310,
+    "client_id": 31,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2026-05-29",
+    "resolved_at": "2026-06-13",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 162,
+    "order_id": null,
+    "client_id": 105,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-01-31",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 163,
+    "order_id": 403,
+    "client_id": 85,
+    "type": "техподдержка",
+    "status": "открыт",
+    "created_at": "2025-05-21",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 164,
+    "order_id": null,
+    "client_id": 79,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-10-03",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 165,
+    "order_id": 437,
+    "client_id": 40,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2026-09-12",
+    "resolved_at": "2026-10-10",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 166,
+    "order_id": 142,
+    "client_id": 75,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2026-07-09",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 167,
+    "order_id": 537,
+    "client_id": 117,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2025-05-19",
+    "resolved_at": "2025-10-14",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 168,
+    "order_id": 571,
+    "client_id": 69,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2025-05-02",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 169,
+    "order_id": 327,
+    "client_id": 113,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2026-02-28",
+    "resolved_at": "2026-05-16",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 170,
+    "order_id": null,
+    "client_id": 115,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2026-10-15",
+    "resolved_at": "2026-10-19",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 171,
+    "order_id": 27,
+    "client_id": 98,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2026-09-19",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 172,
+    "order_id": 237,
+    "client_id": 77,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2025-08-26",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 173,
+    "order_id": 489,
+    "client_id": 18,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2026-05-30",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 174,
+    "order_id": 189,
+    "client_id": 110,
+    "type": "вопрос",
+    "status": "закрыт",
+    "created_at": "2026-02-01",
+    "resolved_at": "2026-10-01",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 175,
+    "order_id": 34,
+    "client_id": 53,
+    "type": "вопрос",
+    "status": "решён",
+    "created_at": "2025-01-16",
+    "resolved_at": "2026-03-14",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 176,
+    "order_id": 208,
+    "client_id": 97,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-07-29",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 177,
+    "order_id": null,
+    "client_id": 63,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-11-29",
+    "resolved_at": "2026-04-04",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 178,
+    "order_id": 390,
+    "client_id": 93,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2025-11-17",
+    "resolved_at": "2026-09-26",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 179,
+    "order_id": 40,
+    "client_id": 67,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-04-22",
+    "resolved_at": "2026-08-02",
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 180,
+    "order_id": 406,
+    "client_id": 95,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-02-10",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 181,
+    "order_id": 51,
+    "client_id": 25,
+    "type": "изменение заказа",
+    "status": "закрыт",
+    "created_at": "2025-10-26",
+    "resolved_at": "2026-05-17",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 182,
+    "order_id": 433,
+    "client_id": 38,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-09-20",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 183,
+    "order_id": 463,
+    "client_id": 12,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2026-05-28",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 184,
+    "order_id": null,
+    "client_id": 90,
+    "type": "техподдержка",
+    "status": "в обработке",
+    "created_at": "2026-07-14",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 185,
+    "order_id": 26,
+    "client_id": 23,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2026-04-10",
+    "resolved_at": null,
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 186,
+    "order_id": 332,
+    "client_id": 89,
+    "type": "жалоба",
+    "status": "в обработке",
+    "created_at": "2026-10-27",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 187,
+    "order_id": 461,
+    "client_id": 82,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2026-01-07",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 188,
+    "order_id": 524,
+    "client_id": 79,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-06-13",
+    "resolved_at": "2026-03-21",
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 189,
+    "order_id": 344,
+    "client_id": 73,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-06-03",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 190,
+    "order_id": 53,
+    "client_id": 54,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2025-11-12",
+    "resolved_at": "2026-06-28",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 191,
+    "order_id": 135,
+    "client_id": 26,
+    "type": "изменение заказа",
+    "status": "отклонён",
+    "created_at": "2025-01-04",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 192,
+    "order_id": 511,
+    "client_id": 70,
+    "type": "техподдержка",
+    "status": "отклонён",
+    "created_at": "2025-01-06",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 193,
+    "order_id": 488,
+    "client_id": 59,
+    "type": "возврат",
+    "status": "закрыт",
+    "created_at": "2026-02-24",
+    "resolved_at": "2026-03-16",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 194,
+    "order_id": 561,
+    "client_id": 36,
+    "type": "вопрос",
+    "status": "отклонён",
+    "created_at": "2026-09-27",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 195,
+    "order_id": 57,
+    "client_id": 84,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2025-12-24",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 196,
+    "order_id": 618,
+    "client_id": 39,
+    "type": "жалоба",
+    "status": "открыт",
+    "created_at": "2025-12-06",
+    "resolved_at": null,
+    "description": "Не пришёл заказ в срок"
+  },
+  {
+    "id": 197,
+    "order_id": 183,
+    "client_id": 21,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2025-10-19",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 198,
+    "order_id": 182,
+    "client_id": 59,
+    "type": "жалоба",
+    "status": "решён",
+    "created_at": "2026-08-16",
+    "resolved_at": "2026-08-20",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 199,
+    "order_id": 389,
+    "client_id": 105,
+    "type": "жалоба",
+    "status": "закрыт",
+    "created_at": "2025-03-11",
+    "resolved_at": "2026-09-25",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 200,
+    "order_id": 125,
+    "client_id": 89,
+    "type": "техподдержка",
+    "status": "решён",
+    "created_at": "2025-10-09",
+    "resolved_at": "2026-07-05",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 201,
+    "order_id": 215,
+    "client_id": 79,
+    "type": "возврат",
+    "status": "открыт",
+    "created_at": "2025-03-01",
+    "resolved_at": null,
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 202,
+    "order_id": null,
+    "client_id": 68,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2025-03-31",
+    "resolved_at": "2026-01-19",
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 203,
+    "order_id": null,
+    "client_id": 34,
+    "type": "возврат",
+    "status": "отклонён",
+    "created_at": "2026-06-23",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 204,
+    "order_id": null,
+    "client_id": 79,
+    "type": "техподдержка",
+    "status": "закрыт",
+    "created_at": "2026-07-31",
+    "resolved_at": "2026-10-05",
+    "description": "Вопрос по оплате"
+  },
+  {
+    "id": 205,
+    "order_id": null,
+    "client_id": 114,
+    "type": "изменение заказа",
+    "status": "в обработке",
+    "created_at": "2026-09-17",
+    "resolved_at": null,
+    "description": "Качество печати неудовлетворительное"
+  },
+  {
+    "id": 206,
+    "order_id": 25,
+    "client_id": 60,
+    "type": "вопрос",
+    "status": "открыт",
+    "created_at": "2026-10-03",
+    "resolved_at": null,
+    "description": "Повреждена упаковка"
+  },
+  {
+    "id": 207,
+    "order_id": null,
+    "client_id": 53,
+    "type": "возврат",
+    "status": "решён",
+    "created_at": "2025-02-16",
+    "resolved_at": "2026-02-09",
+    "description": "Нужна консультация по материалам"
+  },
+  {
+    "id": 208,
+    "order_id": 207,
+    "client_id": 89,
+    "type": "изменение заказа",
+    "status": "решён",
+    "created_at": "2025-10-16",
+    "resolved_at": "2025-11-19",
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 209,
+    "order_id": 332,
+    "client_id": 99,
+    "type": "изменение заказа",
+    "status": "открыт",
+    "created_at": "2025-01-07",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  },
+  {
+    "id": 210,
+    "order_id": 583,
+    "client_id": 79,
+    "type": "вопрос",
+    "status": "в обработке",
+    "created_at": "2025-01-30",
+    "resolved_at": null,
+    "description": "Требуется изменение макета"
+  }
+]
