@@ -18,7 +18,7 @@ const REDIS_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_
 const REDIS_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
 const PREFIX = process.env.STORE_PREFIX || "pulse";
 const useRedis = !!(REDIS_URL && REDIS_TOKEN);
-const STORAGE_DIR = process.env.STORAGE_DIR || (process.env.VERCEL ? path.join(os.tmpdir(), "pulse-storage") : path.join(__dirname, "..", "storage"));
+const STORAGE_DIR = process.env.STORAGE_DIR || (process.env.VERCEL || process.env.NETLIFY ? path.join(os.tmpdir(), "pulse-storage") : path.join(__dirname, "..", "storage"));
 const STATE_FILE = path.join(STORAGE_DIR, "state.json");
 
 const empty = () => ({ decisions: [], audit: [], revoked: {}, secret: null, seq: { decision: 0, audit: 0 } });
