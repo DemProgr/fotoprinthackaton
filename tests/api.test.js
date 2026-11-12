@@ -213,16 +213,7 @@ test("журнал: объект записывается как путь", asyn
   assert.match(e.object, /^Пульс компании › KPI «.+» › Детализация: /);
 });
 
-test("entrypoint подходит и для Vercel, и для Netlify Functions", async () => {
+test("entrypoint Vercel — вызываемая функция (req, res)", () => {
   const entry = require("../api/index.js");
   assert.equal(typeof entry, "function", "Vercel требует вызываемый module.exports");
-  assert.equal(typeof entry.handler, "function", "Netlify использует exports.handler");
-  const r = await entry.handler({
-    httpMethod: "GET",
-    path: "/.netlify/functions/index",
-    rawQueryString: "__path=health",
-    headers: {},
-  });
-  assert.equal(r.statusCode, 200);
-  assert.equal(JSON.parse(r.body).ok, true);
 });

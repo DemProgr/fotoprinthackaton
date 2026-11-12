@@ -6,7 +6,7 @@
  *     Включается SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY.
  *   • Redis по REST (Upstash / Vercel KV) — KV_REST_API_URL + KV_REST_API_TOKEN.
  *   • файл storage/state.json — локальный запуск (атомарная запись tmp + rename).
- * Без БД на Vercel/Netlify файл лежит в /tmp и живёт, только пока жив экземпляр функции —
+ * Без БД на Vercel файл лежит в /tmp и живёт, только пока жив экземпляр функции —
  * именно поэтому решения «пропадали» через несколько минут. Supabase это устраняет.
  */
 const fs = require("fs");
@@ -22,7 +22,7 @@ const REDIS_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_R
 const PREFIX = process.env.STORE_PREFIX || "pulse";
 const useSupabase = sb.enabled;
 const useRedis = !useSupabase && !!(REDIS_URL && REDIS_TOKEN);
-const STORAGE_DIR = process.env.STORAGE_DIR || (process.env.VERCEL || process.env.NETLIFY ? path.join(os.tmpdir(), "pulse-storage") : path.join(__dirname, "..", "storage"));
+const STORAGE_DIR = process.env.STORAGE_DIR || (process.env.VERCEL ? path.join(os.tmpdir(), "pulse-storage") : path.join(__dirname, "..", "storage"));
 const STATE_FILE = path.join(STORAGE_DIR, "state.json");
 
 const empty = () => ({ decisions: [], audit: [], revoked: {}, secret: null, seq: { decision: 0, audit: 0 } });
