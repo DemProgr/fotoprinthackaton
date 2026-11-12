@@ -1154,18 +1154,17 @@
             { label: "Штат и факт", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Вакансии и отсутствие", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.vacancies}</td><td class="num">${d.absent}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`).join("")}</tbody></table></div>` },
                                         ])
-        : '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      const showBdrChart = s.bdr.length > 1;
+: '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      const is30d = S.filters?.period === "30d";
       $("#pg").innerHTML = `
         <div class="kpi-grid" id="fk"></div>
-        ${showBdrChart
-          ? `<div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2><div id="bdrChart"></div>`
-          : `<div class="hint" style="margin-top:16px">⚠️ Для этого периода данных недостаточно для построения графика</div>`}
+        <div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2>
+          ${is30d ? "" : `<div id="bdrChart"></div>`}
           ${tabBlock([
             { label: "Выручка", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Расходы", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Расходы план</th><th class="num">Расходы факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Прибыль", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`).join("")}</tbody></table></div>` },
           ])}
-        ${showBdrChart ? `<div id="bdrChart"></div>` : ``}
+        ${is30d ? "" : `<div id="bdrChart"></div>`}
         <div class="grid grid-2" style="margin-top:16px">
           <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></h2>
             <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "BYN")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div>
@@ -1177,7 +1176,7 @@ bindTabs($("#pg"));
       // divide the total time interval into 8 equal periods.
       const bdrData = s.bdr;
       const target = 8;
-      if (bdrData.length > 1) {
+      if (!is30d && bdrData.length > 0) {
         // Parse month strings to numeric month indices (assume "YYYY-MM" or "MM.yyyy")
         const parseMonth = (m) => {
           const parts = m.split(/\D/);
