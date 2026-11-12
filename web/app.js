@@ -1170,9 +1170,30 @@
           <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${staffHtml}</div>
         </div>`;
       bindTabs($("#pg"));
+      // Ensure at least 8 columns on BDR chart; divide interval into 10 parts
+      const bdrMonths = s.bdr.map((r) => r.month);
+      const target = 8;
+      let chartLabels;
+      if (bdrMonths.length >= target) {
+        // spread target labels evenly from first to last month
+        const step = Math.max(1, Math.ceil((bdrMonths.length - 1) / (target - 1)));
+        chartLabels = [];
+        for (let i = 0; i < target; i++) {
+          const idx = Math.round(i * step);
+          chartLabels.push(bdrMonths[Math.min(idx, bdrMonths.length - 1)]);
+        }
+      } else {
+        // fewer than 8 data points: divide interval into 10 parts, show at least 8 labels
+        const step = Math.max(1, Math.ceil(bdrMonths.length / 10));
+        chartLabels = [];
+        for (let i = 0; i < target; i++) {
+          const idx = Math.min(i * step, bdrMonths.length - 1);
+          chartLabels.push(bdrMonths[idx]);
+        }
+      }
       [...k.kpis, ...(h ? h.kpis : [])].forEach((x) => $("#fk").appendChild(kpiCard(x)));
       Charts.chart($("#bdrChart"), {
-        labels: s.bdr.map((r) => r.month),
+        labels: chartLabels,
         format: (v) => Charts.compact(v),
         series: [
           { name: "Выручка факт", values: s.bdr.map((r) => r.revenue_fact), color: Charts.COLORS.purple, type: "bar" },
