@@ -6,11 +6,12 @@
   "license": "MIT",
   "main": "server/index.js",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "node --watch server/index.js",
-    "test": "node --test tests/api.test.js"
+    "start": "node --env-file-if-exists=.env.local server/index.js",
+    "dev": "node --env-file-if-exists=.env.local --watch server/index.js",
+    "test": "node --test tests/api.test.js",
+    "db:seed": "node tools/supabase-seed.js"
   }
 }

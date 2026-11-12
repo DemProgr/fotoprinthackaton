@@ -51,11 +51,63 @@ function readJson(rel) {
  */
 function load() {
   const tables = {};
-  const meta = {};
+  const mtimes = {};
   for (const src of SOURCES) {
     const { data, mtime } = readJson(src.file);
     if (!Array.isArray(data)) throw new Error(`Файл data/${src.file} должен содержать массив записей`);
     tables[src.table] = data;
+    mtimes[src.table] = mtime;
+  }
+  db = build(tables, mtimes, "files");
+  return db;
+}
+
+/** Имя таблицы в Supabase: crm/orders.json → crm_orders. */
+const remoteTable = (src) => src.file.replace(/\.json$/, "").replace("/", "_");
+
+/** Значения из PostgreSQL приводим к виду исходных выгрузок (timestamp без «T00:00:00»). */
+function normalizeRow(r) {
+  for (const k in r) if (typeof r[k] === "string" && /^\d{4}-\d\d-\d\dT00:00:00$/.test(r[k])) r[k] = r[k].slice(0, 10);
+  return r;
+}
+
+/** Загрузка всех источников из Supabase (CRM, ERP, Финансы, HR — единая БД). */
+async function loadRemote() {
+  const sb = require("./supabase");
+  const lists = await Promise.all(SOURCES.map((src) => sb.selectAll(remoteTable(src))));
+  const tables = {};
+  const mtimes = {};
+  const now = new Date();
+  SOURCES.forEach((src, i) => {
+    if (!lists[i].length) throw new Error(`Таблица ${remoteTable(src)} в Supabase пуста — запустите tools/supabase-seed.js`);
+    tables[src.table] = lists[i].map(normalizeRow);
+    mtimes[src.table] = now;
+  });
+  db = build(tables, mtimes, "supabase");
+  return db;
+}
+
+let remoteTried = false;
+/** Перед запросом: при настроенном Supabase один раз на экземпляр берём данные из БД, иначе из файлов. */
+async function ensure() {
+  const sb = require("./supabase");
+  if (sb.enabled && !remoteTried) {
+    remoteTried = true;
+    try {
+      await loadRemote();
+      return db;
+    } catch (err) {
+      console.error("[data] Supabase недоступен, работаем на файлах data/*.json:", err.message);
+    }
+  }
+  return get();
+}
+
+function build(tables, mtimes, origin) {
+  const meta = {};
+  for (const src of SOURCES) {
+    const data = tables[src.table];
+    const mtime = mtimes[src.table];
     const dates = src.dateField ? data.map((r) => String(r[src.dateField] || "").slice(0, 10)).filter(Boolean).sort() : [];
     meta[src.table] = {
       ...src,
@@ -87,10 +139,10 @@ function load() {
     today: monthEnd,
     loaded_at: isoNow(),
     productTypes: [...new Set(tables.orders.map((o) => o.product_type))].sort(),
+    origin,
   };
   next.quality = checkQuality(next);
-  db = next;
-  return db;
+  return next;
 }
 
 function get() {
@@ -210,7 +262,7 @@ function checkQuality(d) {
     return {
       system: m.system,
       table: m.table,
-      file: "data/" + m.file,
+      file: d.origin === "supabase" && m.table !== "plans" ? "Supabase · " + remoteTable(m) : "data/" + m.file,
       rows: m.rows,
       file_updated_at: m.file_updated_at,
       last_record_date: m.last_record_date,
@@ -227,4 +279,4 @@ function checkQuality(d) {
   return { checked_at: isoNow(), issues, reconciliation, freshness, totals };
 }
 
-module.exports = { load, get, SOURCES, DATA_DIR };
+module.exports = { load, loadRemote, ensure, get, SOURCES, DATA_DIR, remoteTable };

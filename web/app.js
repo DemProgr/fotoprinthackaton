@@ -281,28 +281,37 @@
     { id: "audit", title: "Журнал действий", show: () => can("audit.view") },
   ];
 
+  /** Кабинет под роль: название, стартовый экран, заголовок главной. */
+  function cabinet(u = S.user) {
+    if (u.role === "director") return { name: "Кабинет директора", home: "pulse", pulseTitle: "Пульс компании" };
+    if (u.role === "analyst") return { name: "Кабинет аналитика", home: "analyst", pulseTitle: "Обзор KPI" };
+    const area = { production: "Производство", sales: "Продажи", finance: "Финансы", hr: "Персонал" }[u.domains[0]] || "Подразделение";
+    return { name: `Кабинет руководителя: ${area.toLowerCase()}`, home: "pulse", pulseTitle: `Мой участок: ${area}` };
+  }
+  const svgIcon = (id) => `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[id]}</svg>`;
+  ICONS.logout = '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/>';
+  ICONS.theme = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>';
+  ICONS.keys = '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/>';
+
   function renderShell() {
-    const u = S.user;
+    const cab = cabinet();
     const nav = PAGES.filter((p) => p.sep || p.show())
       .map((p) =>
         p.sep
           ? '<div class="nav-sep" role="separator"></div>'
-          : `<a href="#/${p.id}" data-page="${p.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[p.id]}</svg><span>${p.title}</span>${p.id === "decisions" ? '<span class="badge pink hidden" id="decBadge"></span>' : ""}${p.id === "pulse" ? '<span class="badge hidden" id="critBadge"></span>' : ""}</a>`
+          : `<a href="#/${p.id}" data-page="${p.id}">${svgIcon(p.id)}<span>${p.id === "pulse" ? esc(cab.pulseTitle) : p.title}</span>${p.id === "decisions" ? '<span class="badge pink hidden" id="decBadge"></span>' : ""}${p.id === "pulse" ? '<span class="badge hidden" id="critBadge"></span>' : ""}</a>`
       )
       .join("");
     app.innerHTML = `
       <a class="skip-link" href="#main" id="skipLink">Перейти к содержимому</a>
       <div class="app-shell">
         <aside class="sidebar">
-          <div class="brand">Пульс компании<small>ООО «Фотопринт» · MVP</small></div>
+          <div class="brand"><span class="brand-logo">${svgIcon("pulse")}</span>Пульс компании</div>
+          <div class="cabinet"><small>ООО «Фотопринт»</small><b>${esc(cab.name)}</b></div>
           <nav class="nav" aria-label="Разделы">${nav}</nav>
           <div class="side-bottom">
-            <div class="side-user"><div class="avatar" aria-hidden="true">${esc(u.name[0])}</div><div><div class="n">${esc(u.name)}</div><div class="r">${esc(u.title)}</div></div></div>
-            <div class="side-actions">
-              <button type="button" id="themeBtn" aria-label="Переключить тему">${document.documentElement.dataset.theme === "dark" ? "☀ Светлая" : "☾ Тёмная"}</button>
-              <button type="button" id="logoutBtn">Выйти</button>
-            </div>
-            <button type="button" class="kbd-help-btn" id="kbdBtn" aria-keyshortcuts="Shift+?">⌨ Горячие клавиши <kbd>?</kbd></button>
+            <button type="button" id="themeBtn" aria-label="Переключить тему">${svgIcon("theme")}<span>${document.documentElement.dataset.theme === "dark" ? "Светлая" : "Тёмная"}</span></button>
+            <button type="button" id="kbdBtn" aria-keyshortcuts="Shift+?" aria-label="Горячие клавиши">${svgIcon("keys")}<span>Клавиши</span></button>
           </div>
         </aside>
         <main class="main" id="main" tabindex="-1"></main>
@@ -316,19 +325,29 @@
     $("#themeBtn").addEventListener("click", (e) => {
       const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
       applyTheme(t);
-      e.currentTarget.textContent = t === "dark" ? "☀ Светлая" : "☾ Тёмная";
+      $("span", e.currentTarget).textContent = t === "dark" ? "Светлая" : "Тёмная";
       route();
     });
-    $("#logoutBtn").addEventListener("click", logout);
+  }
+  // Кнопка «Выйти» живёт в шапке каждой страницы — обрабатываем делегированием.
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-logout]")) logout();
+  });
+
+  function userBox() {
+    const u = S.user;
+    return `<div class="userbox"><div class="avatar ${esc(u.role)}" aria-hidden="true">${esc(u.name[0])}</div><div class="u-txt"><div class="u-n">${esc(u.name)}</div><div class="u-r">${esc(u.title)}</div></div><button type="button" class="logout-btn" data-logout aria-label="Выйти из системы">${svgIcon("logout")}<span>Выйти</span></button></div>`;
   }
 
   function topbar(title, { filters = true, chips = "" } = {}) {
     return `
       <div class="topbar">
         <h1>${esc(title)}</h1>${chips}
+        ${filters ? filterBar() : ""}
+        <span class="grow"></span>
         <div class="conn ${S.online ? "" : "off"}" id="conn"><i class="dot"></i><span>${S.online ? "Онлайн" : "Нет связи с сервером"}</span></div>
+        ${userBox()}
       </div>
-      ${filters ? filterBar() : ""}
       <div id="pageErr"></div>`;
   }
 
@@ -336,20 +355,20 @@
     const f = S.filters;
     return `
       <form class="filters" id="filters" aria-label="Фильтры">
-        <div class="f"><label for="fPeriod">Период</label>
-          <select id="fPeriod">${[
+        <div class="f"><label for="fPeriod" class="sr-only">Период</label>
+          <select id="fPeriod" title="Период">${[
             ["30d", "30 дней"],
-            ["90d", "Квартал (90 дней)"],
+            ["90d", "Квартал"],
             ["180d", "Полгода"],
             ["365d", "Год"],
             ["all", "Всё время"],
-            ["custom", "Произвольный…"],
+            ["custom", "Свой период…"],
           ]
             .map(([v, l]) => `<option value="${v}" ${f.period === v ? "selected" : ""}>${l}</option>`)
             .join("")}</select></div>
-        <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom1"><label for="fFrom">С</label><input type="date" id="fFrom" value="${esc(f.from)}"></div>
-        <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom2"><label for="fTo">По</label><input type="date" id="fTo" value="${esc(f.to)}"></div>
-        <div class="f"><label for="fProduct">Продукт</label><select id="fProduct"><option value="">Все продукты</option>${S.meta.product_types
+        <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom1"><label for="fFrom">с</label><input type="date" id="fFrom" value="${esc(f.from)}"></div>
+        <div class="f ${f.period === "custom" ? "" : "hidden"}" id="fCustom2"><label for="fTo">по</label><input type="date" id="fTo" value="${esc(f.to)}"></div>
+        <div class="f"><label for="fProduct" class="sr-only">Продукт</label><select id="fProduct" title="Продукт"><option value="">Все продукты</option>${S.meta.product_types
           .map((p) => `<option value="${esc(p)}" ${f.product === p ? "selected" : ""}>${esc(p)}</option>`)
           .join("")}</select></div>
         <div class="period-info" id="periodInfo"></div>
@@ -387,7 +406,7 @@
   function setPeriodInfo(f) {
     if (f) S.range = f;
     const el = $("#periodInfo");
-    if (el && f) el.textContent = `Период: ${fmtD(f.from)} — ${fmtD(f.to)}${f.product ? " · " + f.product : ""}`;
+    if (el && f) el.textContent = `${fmtD(f.from)} — ${fmtD(f.to)}`;
   }
 
   function showPageError(err, retry) {
@@ -398,33 +417,50 @@
   }
 
   /* ------------------------------ Вкладки ------------------------------ */
-  function tabBlock(tabs) {
+  // onShow — отрисовка содержимого вкладки при первом показе (графикам нужен реальный размер).
+  const tabHooks = new Map();
+  let tabSeq = 0;
+  /** tabs: [{label, html, onShow?}]; title — заголовок карточки в одной строке с вкладками; fill — растянуть на высоту. */
+  function tabBlock(tabs, { title = "", fill = false, extra = "" } = {}) {
+    const id = "tb" + tabSeq++;
+    tabs.forEach((t, i) => t.onShow && tabHooks.set(`${id}:${i}`, t.onShow));
     return `
-      <div class="tabblock">
-        <div class="tabs" role="tablist">${tabs.map((t, i) => `<button type="button" role="tab" aria-selected="${i === 0}" class="${i === 0 ? "active" : ""}" data-tab="${i}">${esc(t.label)}</button>`).join("")}</div>
-        ${tabs.map((t, i) => `<div class="tabpanel${i === 0 ? " active" : ""}" data-tab="${i}">${t.html}</div>`).join("")}
+      <div class="tabblock${fill ? " fill" : ""}" data-tb="${id}">
+        <div class="card-tabs">${title ? `<h2>${title}</h2>` : ""}<div class="tabs" role="tablist">${tabs.map((t, i) => `<button type="button" role="tab" aria-selected="${i === 0}" class="${i === 0 ? "active" : ""}" data-tab="${i}">${t.label}</button>`).join("")}</div>${extra}</div>
+        ${tabs.map((t, i) => `<div class="tabpanel${i === 0 ? " active" : ""}" data-tab="${i}" role="tabpanel">${t.html}</div>`).join("")}
       </div>`;
   }
   function bindTabs(el) {
     $$(".tabblock", el).forEach((block) => {
-      const tabs = $$(".tabs button[data-tab]", block);
-      const panels = $$(".tabpanel", block);
-      tabs.forEach((b) => {
+      const id = block.dataset.tb;
+      const tabs = $$(".card-tabs .tabs button[data-tab]", block);
+      const panels = $$(":scope > .tabpanel", block);
+      const show = (i) => {
+        const panel = panels[i];
+        const hook = tabHooks.get(`${id}:${i}`);
+        if (hook && !panel.dataset.rendered) {
+          panel.dataset.rendered = "1";
+          hook(panel);
+        }
+      };
+      tabs.forEach((b, i) => {
         b.addEventListener("click", () => {
           tabs.forEach((x) => {
             x.classList.toggle("active", x === b);
             x.setAttribute("aria-selected", x === b);
           });
           panels.forEach((p) => p.classList.toggle("active", p.dataset.tab === b.dataset.tab));
+          show(i);
         });
       });
+      show(0);
     });
   }
 
   /* --------------------------------- Роутер --------------------------------- */
   function route() {
     if (!S.user) return;
-    const id = (location.hash.replace(/^#\//, "") || "pulse").split("?")[0];
+    const id = (location.hash.replace(/^#\//, "") || cabinet().home).split("?")[0];
     const page = PAGES.find((p) => p.id === id && !p.sep);
     $$(".nav a").forEach((a) => {
       a.classList.toggle("active", a.dataset.page === id);
@@ -437,6 +473,7 @@
       return;
     }
     closeAllOverlays();
+    main.classList.toggle("fit", FIT_PAGES.has(id));
     RENDER[id](main);
     document.title = `${page.title} — Пульс компании`;
   }
@@ -494,50 +531,86 @@
   });
 
   /* ------------------------------ Пульс компании ----------------------------- */
+  // Вкладки «Пульса»: сначала то, что требует внимания; остальное — по подразделениям.
+  const DOMAIN_TABS = [
+    ["finance", "Финансы"],
+    ["sales", "Продажи"],
+    ["production", "Производство"],
+    ["hr", "Персонал"],
+  ];
   async function renderPulse(main) {
-    const hello = `Здравствуйте, ${S.user.name.split(" ")[0]}!`;
+    const cab = cabinet();
     main.innerHTML =
-      topbar(hello, { chips: `<span class="chip">${esc(S.user.role_label)}</span>` }) +
-      `<div id="hiddenInfo"></div>
-       <div class="card" id="critCard" style="margin-bottom:16px"><h2>Критические отклонения <span class="hint" id="critHint"></span></h2><div class="critical-list" id="critList"><div class="skeleton" style="min-height:34px;width:100%"></div></div></div>
-       <div class="kpi-grid" id="kpiGrid">${'<div class="skeleton"></div>'.repeat(8)}</div>
-       <div class="grid grid-32" style="margin-top:16px">
-         <div class="card hidden" id="fcCard"><h2>Спрос и мощность на 8 недель <span class="spacer"></span><a class="btn btn-sm" href="#/forecast">Подробнее</a></h2><div id="fcChart"></div><div id="fcNote" class="hint"></div></div>
-         <div class="card" id="decCard"><h2>Последние решения <span class="spacer"></span><a class="btn btn-sm" href="#/decisions">Реестр</a></h2><div id="decList"></div></div>
-       </div>`;
+      topbar(cab.pulseTitle) +
+      `<div class="page">
+        <div class="domain-tabs" id="domTabs" role="tablist" aria-label="Группы показателей"><div class="skeleton" style="min-height:62px"></div></div>
+        <div class="grid grid-32 grow-row">
+          <div class="card fill"><h2 id="kpiHead">Показатели</h2><div class="body"><div class="kpi-grid" id="kpiGrid">${'<div class="skeleton"></div>'.repeat(4)}</div></div></div>
+          <div class="card fill" id="sideCard"></div>
+        </div>
+      </div>`;
     bindFilters(() => renderPulse(main));
-    loadDecisionsMini();
-    if (can("forecast.view") && (hasDomain("production") || S.user.role !== "head")) loadForecastMini();
+    renderPulseSide();
     let data;
     try {
       data = await api("/api/kpi?" + qs());
     } catch (err) {
       $("#kpiGrid").innerHTML = "";
-      $("#critList").innerHTML = '<span class="hint">Данные недоступны</span>';
+      $("#domTabs").innerHTML = "";
       return showPageError(err, () => renderPulse(main));
     }
     setPeriodInfo(data.filters);
-    if (data.hidden_domains.length) {
-      $("#hiddenInfo").innerHTML = `<div class="banner info">🔒 Показатели подразделений «${data.hidden_domains.map(esc).join("», «")}» скрыты для вашей роли.</div>`;
-    }
     const crit = data.critical;
     const cb = $("#critBadge");
     if (cb) {
       cb.textContent = crit.length;
       cb.classList.toggle("hidden", !crit.length);
     }
-    $("#critHint").textContent = crit.length ? `${crit.length} из ${data.kpis.length} KPI в красной зоне — нажмите, чтобы найти причину` : "";
-    $("#critList").innerHTML = crit.length
-      ? crit.map((c) => `<button type="button" data-kpi="${c.id}">⚠ ${esc(c.title)}: ${fmt(c.value, c.unit)} (план ${fmt(c.plan, c.unit)})</button>`).join("")
-      : '<span class="chip green">Все показатели в норме</span>';
-    $$("#critList button").forEach((b) => b.addEventListener("click", () => openDrill(data.kpis.find((k) => k.id === b.dataset.kpi))));
-
-    const grid = $("#kpiGrid");
-    grid.innerHTML = "";
-    for (const k of data.kpis) grid.appendChild(kpiCard(k));
+    const attention = data.kpis.filter((k) => k.status === "red" || k.status === "yellow").sort((a, b) => (a.status === "red" ? 0 : 1) - (b.status === "red" ? 0 : 1));
+    const groups = [{ id: "attention", label: "Требуют внимания", kpis: attention }].concat(
+      DOMAIN_TABS.map(([id, label]) => ({ id, label, kpis: data.kpis.filter((k) => k.domain === id) })).filter((g) => g.kpis.length)
+    );
+    const count = (ks, s) => ks.filter((k) => k.status === s).length;
+    let active = store.get("pulse-tab", "attention");
+    if (!groups.some((g) => g.id === active) || (active === "attention" && !attention.length)) active = attention.length ? "attention" : groups[1]?.id;
+    const show = (id) => {
+      active = id;
+      store.set("pulse-tab", id);
+      const g = groups.find((x) => x.id === id);
+      $$(".dtab", main).forEach((b) => {
+        b.classList.toggle("active", b.dataset.g === id);
+        b.setAttribute("aria-selected", b.dataset.g === id);
+      });
+      $("#kpiHead").innerHTML =
+        id === "attention"
+          ? `Требуют внимания <span class="hint">${attention.length ? "нажмите на показатель, чтобы найти причину и создать решение" : ""}</span>`
+          : `${esc(g.label)} <span class="hint">${g.kpis.length} показателей</span>`;
+      const grid = $("#kpiGrid");
+      grid.innerHTML = g.kpis.length ? "" : '<div class="empty">✅ Все показатели в норме</div>';
+      g.kpis.forEach((k) => grid.appendChild(kpiCard(k, { domain: id === "attention" })));
+    };
+    $("#domTabs").innerHTML = groups
+      .map((g) =>
+        g.id === "attention"
+          ? `<button type="button" role="tab" class="dtab" data-g="attention"><span class="dt-name">⚠ Требуют внимания${attention.length ? `<span class="badge">${attention.length}</span>` : ""}</span><span class="dt-counts"><span><i class="dot red"></i>${count(attention, "red")} критично</span><span><i class="dot yellow"></i>${count(attention, "yellow")} внимание</span></span></button>`
+          : `<button type="button" role="tab" class="dtab" data-g="${g.id}"><span class="dt-name">${esc(g.label)}</span><span class="dt-counts" aria-label="в норме ${count(g.kpis, "green")}, внимание ${count(g.kpis, "yellow")}, критично ${count(g.kpis, "red")}"><span><i class="dot green"></i>${count(g.kpis, "green")}</span><span><i class="dot yellow"></i>${count(g.kpis, "yellow")}</span><span><i class="dot red"></i>${count(g.kpis, "red")}</span></span></button>`
+      )
+      .join("");
+    $$(".dtab", main).forEach((b) => b.addEventListener("click", () => show(b.dataset.g)));
+    show(active);
   }
 
-  function kpiCard(k) {
+  /** Правая колонка «Пульса»: последние решения и прогноз мощности — во вкладках. */
+  function renderPulseSide() {
+    const card = $("#sideCard");
+    const tabs = [{ label: "Решения", html: '<div id="decList" class="body"><div class="skeleton"></div></div>', onShow: () => loadDecisionsMini() }];
+    if (can("forecast.view") && (hasDomain("production") || S.user.role !== "head"))
+      tabs.push({ label: "Прогноз мощности", html: '<div id="fcNote" style="margin-bottom:8px"></div><div id="fcChart" class="chart-fill"></div>', onShow: (p) => loadForecastMini(p) });
+    card.innerHTML = tabBlock(tabs, { fill: true, extra: '<span class="spacer" style="flex:1"></span><a class="btn btn-sm" href="#/decisions">Реестр →</a>' });
+    bindTabs(card);
+  }
+
+  function kpiCard(k, { domain = false } = {}) {
     const el = document.createElement("div");
     el.className = `kpi s-${k.status}`;
     el.tabIndex = 0;
@@ -546,12 +619,10 @@
     const dev = k.deviation_pct;
     const good = dev === null ? null : k.better === "up" ? dev >= 0 : dev <= 0;
     el.innerHTML = `
-      <div class="kpi-head"><span class="kpi-title">${esc(k.title)}</span><span class="pill ${k.status}">${STATUS_LABEL[k.status]}</span><button type="button" class="icon-btn info-btn" aria-label="Как считается показатель «${esc(k.title)}»">i</button></div>
-      <div class="kpi-domain">${esc(k.domain_label)}</div>
-      <div class="kpi-value">${fmt(k.value, k.unit)}</div>
-      <div class="kpi-meta"><span>План: <b>${fmtShort(k.plan, k.unit)}</b></span><span>${dev === null ? "" : `<span style="color:${good ? "var(--green)" : "var(--red)"}">${dev > 0 ? "+" : ""}${nf.format(dev)}%</span>`}</span></div>
-      <div class="kpi-meta"><span>Прогноз: <b>${fmtShort(k.forecast, k.unit)}</b></span></div>`;
-    // График динамики не показывается в карточке при первом просмотре — он открывается в детализации.
+      <div class="kpi-head"><span class="kpi-title">${esc(k.title)}${domain ? `<small class="kpi-dom">${esc(k.domain_label)}</small>` : ""}</span><button type="button" class="icon-btn info-btn" title="Как считается" aria-label="Как считается показатель «${esc(k.title)}»">?</button></div>
+      <div class="kpi-value" title="${esc(fmt(k.value, k.unit))}">${fmt(k.value, k.unit)}</div>
+      <div class="kpi-foot"><span>план <b>${fmtShort(k.plan, k.unit)}</b></span>${dev === null ? `<span class="pill ${k.status}">${STATUS_LABEL[k.status]}</span>` : `<span class="delta ${good ? "good" : "bad"}" title="отклонение от плана">${dev > 0 ? "▲ +" : dev < 0 ? "▼ −" : ""}${nf.format(Math.abs(dev))}%</span>`}</div>`;
+    // Прогноз и динамика — в детализации, чтобы карточка читалась за секунду.
     $(".info-btn", el).addEventListener("click", (e) => {
       e.stopPropagation();
       showInfo(k, e.currentTarget);
@@ -572,20 +643,42 @@
     pop.className = "popover";
     pop.setAttribute("role", "dialog");
     pop.setAttribute("aria-label", "Описание показателя");
+    const x = k.explain || {};
+    // Формула — крупно и наглядно: дробь «что / из чего» или одна строка-сумма.
+    const formula = x.num
+      ? `<span class="frac"><span>${esc(x.num)}</span><span>${esc(x.den)}</span></span>${x.pct ? '<span class="mult">× 100%</span>' : ""}`
+      : `<span>${esc(x.sum || k.formula)}</span>`;
+    const up = k.better !== "down";
     pop.innerHTML = `
-      <h3>${esc(k.title)}</h3>
-      <p><b>Формула</b></p><code>${esc(k.formula)}</code>
-      <p><b>Источники:</b> ${k.sources.map(esc).join("; ")}</p>
-      <p><b>Файл источника обновлён:</b> ${fmtDT(k.updated_at)}</p>
-      <p><b>Данные по дату:</b> ${fmtD(k.data_until)}</p>
-      <p><b>Загружено в систему:</b> ${fmtDT(k.loaded_at)}</p>
-      <p><b>Статус:</b> зелёный ≥ 98% плана, жёлтый ≥ 90%, красный &lt; 90% (для «чем меньше — тем лучше» — обратное отношение). Прогноз — линейный тренд по ${k.series.length} точкам периода.</p>
-      <button class="btn btn-sm" type="button">Закрыть</button>`;
+      <div class="pop-head"><h3>${esc(k.title)}</h3><button class="close" type="button" aria-label="Закрыть подсказку">×</button></div>
+      ${x.what ? `<p class="pop-what">${esc(x.what)}</p>` : ""}
+      <div class="pop-label">Как считается</div>
+      <div class="formula">${formula}</div>
+      <div class="pop-now">
+        <div><small>Сейчас</small><b>${fmtShort(k.value, k.unit)}</b></div>
+        <div><small>План</small><b>${fmtShort(k.plan, k.unit)}</b></div>
+        <div><small>Статус</small><b><span class="pill ${k.status}">${STATUS_LABEL[k.status]}</span></b></div>
+      </div>
+      ${x.note ? `<p class="pop-note">${esc(x.note)}</p>` : ""}
+      <div class="pop-label">Цвет статуса ${up ? "(чем больше — тем лучше)" : "(чем меньше — тем лучше)"}</div>
+      <div class="pop-scale">
+        <span><i class="dot green"></i>${up ? "98% плана и выше" : "в пределах плана (допуск +2%)"}</span>
+        <span><i class="dot yellow"></i>${up ? "от 90 до 98% плана" : "выше плана на 2–11%"}</span>
+        <span><i class="dot red"></i>${up ? "меньше 90% плана" : "выше плана больше чем на 11%"}</span>
+      </div>
+      <details><summary>Подробнее для аналитика</summary>
+        <p><b>Техническая формула:</b> ${esc(k.formula)}</p>
+        <p><b>Источники:</b> ${k.sources.map(esc).join("; ")}</p>
+        <p><b>Данные по дату:</b> ${fmtD(k.data_until)} · <b>загружено:</b> ${fmtDT(k.loaded_at)}</p>
+        <p><b>Прогноз:</b> линейный тренд по ${k.series.length} точкам периода.</p>
+      </details>`;
     document.body.appendChild(pop);
     const r = anchor.getBoundingClientRect();
     const left = Math.min(window.scrollX + r.left - 10, window.scrollX + document.documentElement.clientWidth - pop.offsetWidth - 16);
     pop.style.left = Math.max(16, left) + "px";
-    pop.style.top = window.scrollY + r.bottom + 8 + "px";
+    // Если снизу не помещается — открываем над кнопкой.
+    const below = r.bottom + 8 + pop.offsetHeight <= window.innerHeight;
+    pop.style.top = window.scrollY + (below ? r.bottom + 8 : Math.max(8, r.top - pop.offsetHeight - 8)) + "px";
     const close = () => {
       pop.remove();
       document.removeEventListener("keydown", onKey);
@@ -594,8 +687,8 @@
     };
     const onKey = (e) => e.key === "Escape" && close();
     const onDoc = (e) => !pop.contains(e.target) && e.target !== anchor && close();
-    $("button", pop).addEventListener("click", close);
-    $("button", pop).focus();
+    $(".close", pop).addEventListener("click", close);
+    $(".close", pop).focus();
     document.addEventListener("keydown", onKey);
     setTimeout(() => document.addEventListener("click", onDoc, true));
   }
@@ -608,16 +701,12 @@
       updateDecBadge();
       if (!box) return;
       box.innerHTML = r.decisions.length
-        ? `<div class="table-wrap"><table><tbody>${r.decisions
+        ? `<div class="dec-list">${r.decisions
             .slice(0, 6)
-            .map((d) => `<tr class="clickable" tabindex="0" data-id="${d.id}"><td><b>${esc(d.number)}</b><br><span class="hint">${esc(d.owner)}</span></td><td>${esc(d.title)}</td><td><span class="pill ${statusColor(d.status)}">${esc(d.status)}</span>${d.overdue ? '<br><span class="pill red">просрочено</span>' : ""}</td></tr>`)
-            .join("")}</tbody></table></div>`
-        : '<div class="empty">Решений пока нет. Откройте красный KPI и нажмите «Создать решение».</div>';
-      $$("tr[data-id]", box).forEach((tr) => {
-        const open = () => openDecisionCard(r.decisions.find((d) => d.id === Number(tr.dataset.id)));
-        tr.addEventListener("click", open);
-        tr.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open()));
-      });
+            .map((d) => `<button type="button" class="dec-item" data-id="${d.id}"><span class="d-t">${esc(d.title)}</span><span class="pill ${statusColor(d.status)}">${esc(d.status)}</span><span class="d-m">${esc(d.number)} · ${esc(d.owner)} · до ${fmtD(d.due_date)}</span>${d.overdue ? '<span class="pill red">просрочено</span>' : "<span></span>"}</button>`)
+            .join("")}</div>`
+        : '<div class="empty">Решений пока нет.<br>Откройте красный KPI и нажмите «Создать решение».</div>';
+      $$(".dec-item", box).forEach((b) => b.addEventListener("click", () => openDecisionCard(r.decisions.find((d) => d.id === Number(b.dataset.id)))));
     } catch (err) {
       if (box) box.innerHTML = `<div class="banner error">${esc(err.message)}</div>`;
     }
@@ -632,15 +721,13 @@
   const statusColor = (s) => ({ новое: "purple", "в работе": "yellow", выполнено: "green", отменено: "gray" })[s] || "gray";
 
   async function loadForecastMini() {
-    const card = $("#fcCard");
-    if (!card) return;
-    card.classList.remove("hidden");
+    if (!$("#fcChart")) return;
     try {
       const f = await api("/api/forecast");
-      drawForecast($("#fcChart"), f, 200);
       $("#fcNote").innerHTML = f.first_deficit_week
-        ? `<span class="pill red">Дефицит мощности с недели ${fmtD(f.first_deficit_week)}</span> · недель с дефицитом: ${f.weeks.filter((w) => w.deficit).length} из ${f.weeks.length}`
+        ? `<span class="pill red">⚠ Дефицит с ${fmtD(f.first_deficit_week)}</span> <span class="hint">недель с дефицитом: ${f.weeks.filter((w) => w.deficit).length} из ${f.weeks.length}</span>`
         : '<span class="pill green">Дефицита мощности не ожидается</span>';
+      drawForecast($("#fcChart"), f, "auto");
     } catch (err) {
       $("#fcChart").innerHTML = `<div class="banner error">${esc(err.message)}</div>`;
     }
@@ -1062,7 +1149,7 @@
     const f = store.get("pulse-dec-filters", { status: "", priority: "", q: "" });
     main.innerHTML =
       topbar("Реестр управленческих решений", { filters: false }) +
-      `<form class="filters" id="decFilters">
+      `<form class="filters panel" id="decFilters" style="margin-bottom:14px">
         <div class="f"><label for="dfS">Статус</label><select id="dfS"><option value="">Все</option>${["новое", "в работе", "выполнено", "отменено"].map((s) => `<option ${f.status === s ? "selected" : ""}>${s}</option>`).join("")}</select></div>
         <div class="f"><label for="dfP">Приоритет</label><select id="dfP"><option value="">Все</option>${["низкий", "средний", "высокий", "критический"].map((s) => `<option ${f.priority === s ? "selected" : ""}>${s}</option>`).join("")}</select></div>
         <div class="f" style="flex:1;min-width:180px"><label for="dfQ">Поиск</label><input id="dfQ" type="search" placeholder="Номер, название, ответственный…" value="${esc(f.q)}"></div>
@@ -1108,35 +1195,39 @@
   }
 
   /* ------------------------------ Продажи ------------------------------ */
+  const kpiRow = (box, kpis, ids) => ids.map((id) => kpis.find((x) => x.id === id)).filter(Boolean).forEach((x) => box.appendChild(kpiCard(x)));
+  const simpleTable = (head, rows) => `<div class="table-wrap"><table><thead><tr>${head.map(([l, num]) => `<th class="${num ? "num" : ""}">${l}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
+
   async function renderSales(main) {
-    main.innerHTML = topbar("Продажи и клиенты") + '<div id="pg"><div class="skeleton"></div></div>';
+    main.innerHTML = topbar("Продажи и клиенты") + '<div class="page" id="pg"><div class="skeleton"></div></div>';
     bindFilters(() => renderSales(main));
     try {
       const [s, k] = await Promise.all([api("/api/screens/sales?" + qs({ domain: false })), api("/api/kpi?" + qs({ domain: "sales" }))]);
       setPeriodInfo(s.filters);
-      const pick = (id) => k.kpis.find((x) => x.id === id);
       const totalCh = s.by_channel.reduce((a, x) => a + x.value, 0);
       $("#pg").innerHTML = `
-        <div class="kpi-grid" id="sk"></div>
-        <div class="grid grid-2" style="margin-top:16px">
-          <div class="card"><h2>Воронка заказов <span class="hint">отменено: ${s.cancelled}</span></h2><div class="funnel">${s.funnel
+        <div class="kpi-row" id="sk"></div>
+        <div class="grid grid-2 grow-row">
+          <div class="card fill"><h2>Воронка заказов <span class="hint">отменено: ${s.cancelled}</span></h2><div class="body"><div class="funnel">${s.funnel
             .map((f) => `<div class="funnel-step"><span>${esc(f.stage)}</span><div><div class="funnel-bar" style="width:${Math.max(6, f.conversion_pct)}%">${f.count}</div></div><span class="hint">${nf.format(f.conversion_pct)}%</span></div>`)
-            .join("")}</div></div>
-          <div class="card"><h2>Выручка по каналам оплаты</h2><div id="chDonut"></div>
-            <p class="hint">Отток: ${s.churn.churned} из ${s.churn.prev_clients} клиентов прошлого периода не вернулись (${s.churn.churn_pct ?? "—"}%).</p></div>
-        </div>
-        <div class="grid grid-2" style="margin-top:16px">
-          <div class="card"><h2>Сегменты клиентов</h2><div class="table-wrap"><table><thead><tr><th>Сегмент</th><th class="num">Клиенты</th><th class="num">Заказы</th><th class="num">Сумма</th><th class="num">Ср. чек</th></tr></thead><tbody>${s.by_segment
-            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.clients}</td><td class="num">${x.orders}</td><td class="num">${fmt(x.amount, "BYN")}</td><td class="num">${fmt(x.avg_check, "BYN")}</td></tr>`)
-            .join("")}</tbody></table></div></div>
-          <div class="card"><h2>Продукты</h2><div class="table-wrap"><table><thead><tr><th>Продукт</th><th class="num">Заказы</th><th class="num">Тираж</th><th class="num">Сумма</th></tr></thead><tbody>${s.by_product
-            .map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.orders}</td><td class="num">${nf0.format(x.qty)}</td><td class="num">${fmt(x.amount, "BYN")}</td></tr>`)
-            .join("")}</tbody></table></div></div>
+            .join("")}</div>
+            <p class="hint" style="margin-top:14px">Отток: <b>${s.churn.churned}</b> из ${s.churn.prev_clients} клиентов прошлого периода не вернулись (${s.churn.churn_pct ?? "—"}%).</p></div></div>
+          <div class="card fill">${tabBlock(
+            [
+              { label: "Каналы оплаты", html: '<div id="chDonut"></div>', onShow: () => drawDonut() },
+              { label: "Сегменты", html: simpleTable([["Сегмент"], ["Клиенты", 1], ["Заказы", 1], ["Сумма", 1], ["Ср. чек", 1]], s.by_segment.map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.clients}</td><td class="num">${x.orders}</td><td class="num">${fmt(x.amount, "BYN")}</td><td class="num">${fmt(x.avg_check, "BYN")}</td></tr>`)) },
+              { label: "Продукты", html: simpleTable([["Продукт"], ["Заказы", 1], ["Тираж", 1], ["Сумма", 1]], s.by_product.map((x) => `<tr><td>${esc(x.key)}</td><td class="num">${x.orders}</td><td class="num">${nf0.format(x.qty)}</td><td class="num">${fmt(x.amount, "BYN")}</td></tr>`)) },
+            ],
+            { fill: true }
+          )}</div>
         </div>`;
-      ["orders", "avg_check", "conversion", "repeat", "new_clients", "sla"].map(pick).filter(Boolean).forEach((x) => $("#sk").appendChild(kpiCard(x)));
+      kpiRow($("#sk"), k.kpis, ["orders", "avg_check", "conversion", "repeat", "new_clients", "sla"]);
       const cols = [Charts.COLORS.purple, Charts.COLORS.pink, Charts.COLORS.blue, Charts.COLORS.gray];
-      Charts.donut($("#chDonut"), s.by_channel.map((c, i) => ({ label: c.key, value: c.value, color: cols[i % 4] })), { format: (v) => Charts.compact(v) + " BYN" });
-      if (!totalCh) $("#chDonut").innerHTML = '<div class="empty">Нет поступлений</div>';
+      const drawDonut = () => {
+        if (!totalCh) return ($("#chDonut").innerHTML = '<div class="empty">Нет поступлений</div>');
+        Charts.donut($("#chDonut"), s.by_channel.map((c, i) => ({ label: c.key, value: c.value, color: cols[i % 4] })), { format: (v) => Charts.compact(v) + " BYN" });
+      };
+      bindTabs($("#pg"));
     } catch (err) {
       $("#pg").innerHTML = "";
       showPageError(err, () => renderSales(main));
@@ -1145,26 +1236,38 @@
 
   /* ------------------------------ Производство ------------------------------ */
   async function renderProduction(main) {
-    main.innerHTML = topbar("Производство и качество") + '<div id="pg"><div class="skeleton"></div></div>';
+    main.innerHTML = topbar("Производство и качество") + '<div class="page" id="pg"><div class="skeleton"></div></div>';
     bindFilters(() => renderProduction(main));
     try {
       const [s, k] = await Promise.all([api("/api/screens/production?" + qs({ domain: false })), api("/api/kpi?" + qs({ domain: "production" }))]);
       setPeriodInfo(s.filters);
       const maxR = Math.max(1, ...s.defect_reasons.map((r) => r.qty));
+      const maxQ = Math.max(1, ...s.queue.map((x) => x.count));
+      const active = s.machines.filter((m) => m.status === "активен").length;
+      const loads = s.machines.map((m) => m.load_pct).filter((v) => v !== null);
+      const avgLoad = loads.length ? loads.reduce((a, b) => a + b, 0) / loads.length : null;
+      const worst = s.machines.filter((m) => m.defect_pct !== null).sort((a, b) => b.defect_pct - a.defect_pct).slice(0, 4);
       $("#pg").innerHTML = `
-        <div class="kpi-grid" id="pk"></div>
-        <div class="grid grid-32" style="margin-top:16px">
-          <div class="grid grid-2">
-            <div class="card"><h2>Очередь производства</h2><div class="bars">${s.queue
-              .map((q) => `<div class="bar-row"><span class="lbl">${esc(q.status)}</span><span class="bar-track"><span class="bar-fill ${q.status === "остановлен" ? "red" : ""}" style="width:${(q.count / Math.max(1, ...s.queue.map((x) => x.count))) * 100}%"></span></span><span class="val">${q.count}</span></div>`)
-              .join("")}</div></div>
-            <div class="card"><h2>Причины брака</h2><div class="bars">${s.defect_reasons
-              .map((r) => `<div class="bar-row"><span class="lbl">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
-              .join("") || '<div class="hint">Нет дефектов</div>'}</div></div>
-          </div>
-          <div class="card"><h2>Станки: загрузка, простои, брак</h2><div class="hint" style="margin-bottom:10px">Простой / обслуживание: ${s.downtime_machines}</div><button class="btn btn-sm" type="button" id="machinesBtn">Просмотреть</button></div>
+        <div class="kpi-row" id="pk"></div>
+        <div class="grid grid-3 grow-row">
+          <div class="card fill"><h2>Очередь производства</h2><div class="body"><div class="bars">${s.queue
+            .map((q) => `<div class="bar-row"><span class="lbl">${esc(q.status)}</span><span class="bar-track"><span class="bar-fill ${q.status === "остановлен" ? "red" : ""}" style="width:${(q.count / maxQ) * 100}%"></span></span><span class="val">${q.count}</span></div>`)
+            .join("")}</div></div></div>
+          <div class="card fill"><h2>Причины брака <span class="hint">топ-5</span></h2><div class="body"><div class="bars">${s.defect_reasons
+            .slice(0, 5)
+            .map((r) => `<div class="bar-row"><span class="lbl" title="${esc(r.key)}">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
+            .join("") || '<div class="hint">Нет дефектов</div>'}</div></div></div>
+          <div class="card fill"><h2>Станки <span class="spacer"></span><button class="btn btn-sm" type="button" id="machinesBtn">Все станки →</button></h2><div class="body">
+            <div class="mini-stats">
+              <div class="mini-stat"><div class="l">Работают</div><div class="v">${active}<span class="hint"> / ${s.machines.length}</span></div></div>
+              <div class="mini-stat"><div class="l">Простой / ремонт</div><div class="v" style="color:${s.downtime_machines ? "var(--yellow)" : "inherit"}">${s.downtime_machines}</div></div>
+              <div class="mini-stat"><div class="l">Ср. загрузка</div><div class="v">${avgLoad === null ? "—" : nf.format(avgLoad) + "%"}</div></div>
+            </div>
+            <div class="section-title">Больше всего брака</div>
+            <div class="bars">${worst.map((m) => `<div class="bar-row"><span class="lbl">${esc(m.name)}</span><span class="bar-track"><span class="bar-fill ${m.defect_pct > 3 ? "red" : "green"}" style="width:${Math.min(100, m.defect_pct * 10)}%"></span></span><span class="val">${nf.format(m.defect_pct)}%</span></div>`).join("") || '<div class="hint">Нет данных</div>'}</div>
+          </div></div>
         </div>`;
-      ["output", "on_time", "defect", "lead_time", "capacity"].map((id) => k.kpis.find((x) => x.id === id)).filter(Boolean).forEach((x) => $("#pk").appendChild(kpiCard(x)));
+      kpiRow($("#pk"), k.kpis, ["output", "on_time", "defect", "lead_time", "capacity"]);
       $("#machinesBtn")?.addEventListener("click", () => openMachinesPopup(s));
     } catch (err) {
       $("#pg").innerHTML = "";
@@ -1174,7 +1277,7 @@
 
   /* ------------------------------ Финансы и люди ------------------------------ */
   async function renderFinance(main) {
-    main.innerHTML = topbar("Финансы и люди") + '<div id="pg"><div class="skeleton"></div></div>';
+    main.innerHTML = topbar("Финансы и люди") + '<div class="page" id="pg"><div class="skeleton"></div></div>';
     bindFilters(() => renderFinance(main));
     try {
       const reqs = [api("/api/screens/finance?" + qs({ domain: false })), api("/api/kpi?" + qs({ domain: "finance" }))];
@@ -1183,67 +1286,60 @@
       setPeriodInfo(s.filters);
       const inSum = s.bdds.inflow.reduce((a, x) => a + x.value, 0);
       const outSum = s.bdds.outflow.reduce((a, x) => a + x.value, 0);
-      const staffHtml = hasDomain("hr")
-        ? tabBlock([
-            { label: "Штат и факт", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td></tr>`).join("")}</tbody></table></div>` },
-            { label: "Вакансии и отсутствие", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.vacancies}</td><td class="num">${d.absent}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`).join("")}</tbody></table></div>` },
-                                        ])
-: '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      const is30d = S.filters?.period === "30d";
+      const maxFlow = Math.max(inSum, outSum, 1);
+      const flowBars = (list, cls) => `<div class="bars">${list.map((x) => `<div class="bar-row"><span class="lbl" title="${esc(x.key)}">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill ${cls}" style="width:${(x.value / maxFlow) * 100}%"></span></span><span class="val">${fmtShort(x.value, "BYN")}</span></div>`).join("")}</div>`;
+      const bdr = s.bdr.slice(-12); // на графике — последние 12 месяцев, полная таблица — во вкладке
+      const right = [
+        {
+          label: "Деньги (БДДС)",
+          html: `<div style="margin-bottom:8px"><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></div>
+            <div class="section-title" style="margin-top:4px">Поступления · ${fmtShort(inSum, "BYN")}</div>${flowBars(s.bdds.inflow, "green")}
+            <div class="section-title">Выплаты · ${fmtShort(outSum, "BYN")}</div>${flowBars(s.bdds.outflow.slice().sort((a, b) => b.value - a.value).slice(0, 5), "red")}`,
+        },
+      ];
+      if (hasDomain("hr"))
+        right.push({
+          label: "Персонал",
+          html: simpleTable(
+            [["Подразделение"], ["Штат", 1], ["Факт", 1], ["Вакансии", 1], ["Обеспеч.", 1]],
+            s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td><td class="num">${d.vacancies}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`)
+          ),
+        });
       $("#pg").innerHTML = `
-        <div class="kpi-grid" id="fk"></div>
-        <div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2>
-          ${is30d ? "" : `<div id="bdrChart"></div>`}
-          ${tabBlock([
-            { label: "Выручка", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
-            { label: "Расходы", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Расходы план</th><th class="num">Расходы факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
-            { label: "Прибыль", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`).join("")}</tbody></table></div>` },
-          ])}
-        ${is30d ? "" : `<div id="bdrChart"></div>`}
-        <div class="grid grid-2" style="margin-top:16px">
-          <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></h2>
-            <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "BYN")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div>
-            <h3 class="section-title">Выплаты · ${fmt(outSum, "BYN")}</h3><div class="bars">${s.bdds.outflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div></div>
-          <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${staffHtml}</div>
+        <div class="kpi-row" id="fk"></div>
+        <div class="grid grid-21 grow-row">
+          <div class="card fill">${tabBlock(
+            [
+              { label: "График", html: '<div id="bdrChart" class="chart-fill"></div>', onShow: () => drawBdr() },
+              {
+                label: "Таблица по месяцам",
+                html: simpleTable(
+                  [["Месяц"], ["Выручка план", 1], ["Выручка факт", 1], ["Расходы факт", 1], ["Прибыль факт", 1]],
+                  s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`)
+                ),
+              },
+            ],
+            { title: "Доходы и расходы (БДР)", fill: true }
+          )}</div>
+          <div class="card fill">${tabBlock(right, { fill: true })}</div>
         </div>`;
-bindTabs($("#pg"));
-      // Ensure BDR chart always has at least 8 columns;
-      // divide the total time interval into 8 equal periods.
-      const bdrData = s.bdr;
-      const target = 8;
-      if (!is30d && bdrData.length > 0) {
-        // Parse month strings to numeric month indices (assume "YYYY-MM" or "MM.yyyy")
-        const parseMonth = (m) => {
-          const parts = m.split(/\D/);
-          return (parseInt(parts[0]) || 0) * 12 + (parseInt(parts[1]) || 0);
-        };
-        const firstIdx = parseMonth(bdrData[0].month);
-        const lastIdx = parseMonth(bdrData[bdrData.length - 1].month);
-        const totalMonths = Math.max(1, lastIdx - firstIdx + 1); // inclusive span
-        const step = Math.max(1, Math.ceil(totalMonths / (target - 1))); // step between 8 points
-
-        const chartLabels = [];
-        const chartRevenue = [];
-        const chartExpenses = [];
-        const chartPlan = [];
-
-        for (let i = 0; i < target; i++) {
-          const idx = Math.min(Math.round(i * step), bdrData.length - 1);
-          chartLabels.push(bdrData[idx].month);
-          chartRevenue.push(bdrData[idx].revenue_fact);
-          chartExpenses.push(bdrData[idx].expenses_fact);
-          chartPlan.push(bdrData[idx].revenue_plan);
-        }
-
+      const box = $("#fk");
+      kpiRow(box, k.kpis, ["revenue", "margin", "expenses"]);
+      if (h) kpiRow(box, h.kpis, ["staffing", "sick"]);
+      const drawBdr = () => {
+        if (!bdr.length) return ($("#bdrChart").innerHTML = '<div class="empty">Нет данных за период</div>');
         Charts.chart($("#bdrChart"), {
-          labels: chartLabels,
+          labels: bdr.map((r) => r.month),
+          height: "auto",
           format: (v) => Charts.compact(v),
           series: [
-            { name: "Выручка факт", values: chartRevenue, color: Charts.COLORS.purple, type: "bar" },
-            { name: "Расходы факт", values: chartExpenses, color: Charts.COLORS.pink, type: "bar" },
-            { name: "Выручка план", values: chartPlan, color: Charts.COLORS.gray, type: "dash" },
+            { name: "Выручка факт", values: bdr.map((r) => r.revenue_fact), color: Charts.COLORS.purple, type: "bar" },
+            { name: "Расходы факт", values: bdr.map((r) => r.expenses_fact), color: Charts.COLORS.pink, type: "bar" },
+            { name: "Выручка план", values: bdr.map((r) => r.revenue_plan), color: Charts.COLORS.gray, type: "dash" },
           ],
         });
-      }
+      };
+      bindTabs($("#pg"));
     } catch (err) {
       $("#pg").innerHTML = "";
       showPageError(err, () => renderFinance(main));
@@ -1252,25 +1348,34 @@ bindTabs($("#pg"));
 
   /* ------------------------------ Прогноз ------------------------------ */
   async function renderForecast(main) {
-    main.innerHTML = topbar("Прогноз спроса и мощности", { filters: false }) + '<div id="pg"><div class="skeleton"></div></div>';
+    main.innerHTML = topbar("Прогноз спроса и мощности", { filters: false }) + '<div class="page" id="pg"><div class="skeleton"></div></div>';
     try {
       const f = await api("/api/forecast");
       const def = f.weeks.filter((w) => w.deficit);
+      const gapSum = nf0.format(-def.reduce((a, w) => a + w.gap, 0));
+      const canDec = can("decision.create") && hasDomain("production") && f.first_deficit_week;
       $("#pg").innerHTML = `
-        ${f.first_deficit_week ? `<div class="banner error" role="alert">⚠ Ожидаемый дефицит мощности: неделя с ${fmtD(f.first_deficit_week)}. Недель с дефицитом: ${def.length} из ${f.weeks.length}, суммарная нехватка ${nf0.format(-def.reduce((a, w) => a + w.gap, 0))} ед.</div>` : '<div class="banner info">Дефицита мощности на горизонте 8 недель не ожидается.</div>'}
-        <div class="card"><h2>Спрос vs доступная мощность (8 недель)${can("decision.create") && hasDomain("production") && f.first_deficit_week ? '<span class="spacer"></span><button class="btn btn-primary btn-sm" type="button" id="fcDec">＋ Создать решение по дефициту</button>' : ""}</h2><div id="fc"></div><p class="hint">${esc(f.method)}</p></div>
-        <div class="card" style="margin-top:16px"><h2>По неделям</h2><div class="table-wrap"><table><thead><tr><th>Неделя</th><th class="num">Спрос, ед.</th><th class="num">Мощность, ед.</th><th class="num">Запас / дефицит</th><th>Плановые ремонты</th></tr></thead><tbody>${f.weeks
-          .map((w) => `<tr><td>${fmtD(w.week)} — ${fmtD(w.week_end)}</td><td class="num">${nf0.format(w.demand)}</td><td class="num">${nf0.format(w.capacity)}</td><td class="num"><span class="pill ${w.deficit ? "red" : "green"}">${w.gap > 0 ? "+" : ""}${nf0.format(w.gap)}</span></td><td>${w.maintenance.map((m) => `${esc(m.name)}: ${esc(m.reason)}`).join("<br>") || "—"}</td></tr>`)
-          .join("")}</tbody></table></div></div>
-        <div class="card" style="margin-top:16px"><h2>История спроса (26 недель)</h2><div id="fh"></div></div>`;
-      drawForecast($("#fc"), f);
-      Charts.chart($("#fh"), { labels: f.history.map((h) => fmtD(h.week).slice(0, 5)), series: [{ name: "Плановый объём запусков, ед.", values: f.history.map((h) => h.demand), color: Charts.COLORS.purple, type: "area" }], height: 200 });
+        ${f.first_deficit_week ? `<div class="banner error" role="alert">⚠ Дефицит мощности с недели ${fmtD(f.first_deficit_week)}: ${def.length} из ${f.weeks.length} недель, не хватает ${gapSum} ед.<span style="flex:1"></span>${canDec ? '<button class="btn btn-primary btn-sm" type="button" id="fcDec">＋ Создать решение</button>' : ""}</div>` : '<div class="banner info">Дефицита мощности на горизонте 8 недель не ожидается.</div>'}
+        <div class="grid grid-21 grow-row">
+          <div class="card fill">${tabBlock(
+            [
+              { label: "Ближайшие 8 недель", html: '<div id="fc" class="chart-fill"></div>', onShow: () => drawForecast($("#fc"), f, "auto") },
+              { label: "История за 26 недель", html: '<div id="fh" class="chart-fill"></div>', onShow: () => Charts.chart($("#fh"), { labels: f.history.map((x) => fmtD(x.week).slice(0, 5)), series: [{ name: "Плановый объём запусков, ед.", values: f.history.map((x) => x.demand), color: Charts.COLORS.purple, type: "area" }], height: "auto" }) },
+            ],
+            { title: "Спрос и мощность", fill: true }
+          )}<p class="hint" style="margin:8px 0 0">${esc(f.method)}</p></div>
+          <div class="card fill"><h2>По неделям</h2><div class="body">${simpleTable(
+            [["Неделя"], ["Спрос", 1], ["Мощность", 1], ["Запас", 1]],
+            f.weeks.map((w) => `<tr title="${esc(w.maintenance.map((m) => `${m.name}: ${m.reason}`).join("; ") || "Плановых ремонтов нет")}"><td>${fmtD(w.week).slice(0, 5)}–${fmtD(w.week_end).slice(0, 5)}${w.maintenance.length ? ' <span class="hint">🔧' + w.maintenance.length + "</span>" : ""}</td><td class="num">${nf0.format(w.demand)}</td><td class="num">${nf0.format(w.capacity)}</td><td class="num"><span class="pill ${w.deficit ? "red" : "green"}">${w.gap > 0 ? "+" : ""}${nf0.format(w.gap)}</span></td></tr>`)
+          )}<p class="hint">🔧 — плановые ремонты станков (наведите на строку).</p></div></div>
+        </div>`;
+      bindTabs($("#pg"));
       $("#fcDec")?.addEventListener("click", () =>
         openDecisionForm({
           title: `Дефицит мощности с недели ${fmtD(f.first_deficit_week)}`,
           domain: "production",
           kpi_id: "capacity",
-          problem: `Прогноз спроса превышает доступную мощность в ${def.length} из 8 недель; суммарная нехватка ${nf0.format(-def.reduce((a, w) => a + w.gap, 0))} ед.`,
+          problem: `Прогноз спроса превышает доступную мощность в ${def.length} из 8 недель; суммарная нехватка ${gapSum} ед.`,
           impact: "Срыв сроков заказов, рост lead time, снижение доли заказов в срок в сезон календарей и фотоальбомов.",
           cause: [...new Set(def.flatMap((w) => w.maintenance.map((m) => `${m.name}: ${m.reason}`)))].join("; ") || "Сезонный рост спроса",
           action: "Перенести плановые ремонты, ввести дополнительную смену, перераспределить заказы между станками.",
@@ -1383,7 +1488,7 @@ bindTabs($("#pg"));
     const mode = store.get("pulse-compare-mode", "prev");
     main.innerHTML =
       topbar("Сравнение периодов") +
-      `<div class="filters"><div class="f"><label for="cmpMode">Сравнить с</label><select id="cmpMode"><option value="prev" ${mode === "prev" ? "selected" : ""}>предыдущим периодом той же длины</option><option value="yoy" ${mode === "yoy" ? "selected" : ""}>тем же периодом год назад</option></select></div>
+      `<div class="filters panel" style="margin-bottom:14px"><div class="f"><label for="cmpMode">Сравнить с</label><select id="cmpMode"><option value="prev" ${mode === "prev" ? "selected" : ""}>предыдущим периодом той же длины</option><option value="yoy" ${mode === "yoy" ? "selected" : ""}>тем же периодом год назад</option></select></div>
        <div class="f"><label for="cmpDom">Подразделение</label><select id="cmpDom"><option value="">Все</option>${S.user.domains.map((d) => `<option value="${d}">${esc(S.meta.domains[d])}</option>`).join("")}</select></div>
        ${can("data.export") ? '<button type="button" class="btn" id="cmpCsv">⬇ CSV</button>' : ""}</div>
        <div id="pg"><div class="skeleton"></div></div>`;
@@ -1525,7 +1630,7 @@ bindTabs($("#pg"));
   async function renderAudit(main) {
     main.innerHTML =
       topbar("Журнал действий", { filters: false }) +
-      `<form class="filters" id="auF"><div class="f"><label for="auU">Пользователь</label><select id="auU"><option value="">Все</option>${DEMO.map(([l]) => `<option>${l}</option>`).join("")}<option value="аноним">аноним</option></select></div>
+      `<form class="filters panel" id="auF" style="margin-bottom:14px"><div class="f"><label for="auU">Пользователь</label><select id="auU"><option value="">Все</option>${DEMO.map(([l]) => `<option>${l}</option>`).join("")}<option value="аноним">аноним</option></select></div>
        <div class="f"><label for="auR">Результат</label><select id="auR"><option value="">Все</option><option value="fail">Только отказы и ошибки</option></select></div>
        <button type="button" class="btn" id="auRef">Обновить</button>
        ${can("data.export") ? '<button type="button" class="btn" id="auCsv">⬇ Выгрузить CSV</button>' : ""}</form>
@@ -1560,6 +1665,7 @@ bindTabs($("#pg"));
     load();
   }
 
+  const FIT_PAGES = new Set(["pulse", "sales", "production", "finance", "forecast"]);
   const RENDER = { pulse: renderPulse, sales: renderSales, production: renderProduction, finance: renderFinance, forecast: renderForecast, decisions: renderDecisions, analyst: renderAnalyst, compare: renderCompare, plans: renderPlans, audit: renderAudit };
 
   /* ---------------------------------- Старт ---------------------------------- */
@@ -1576,7 +1682,7 @@ bindTabs($("#pg"));
       return;
     }
     renderShell();
-    if (!location.hash) location.hash = "#/pulse";
+    if (!location.hash) location.hash = "#/" + cabinet().home;
     route();
   }
 

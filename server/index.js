@@ -375,8 +375,8 @@ route("POST", "/api/admin/reload", async (req) => {
   const u = requireUser(req);
   requirePerm(req, u, "quality.reload", "Перезагрузка данных");
   try {
-    const db = data.load();
-    audit(req, u, "перезагрузка данных", ["Кабинет аналитика", "Перезагрузка данных", "data/*.json"], "успех", { totals: db.quality.totals });
+    const db = require("./supabase").enabled ? await data.loadRemote() : data.load();
+    audit(req, u, "перезагрузка данных", ["Кабинет аналитика", "Перезагрузка данных", db.origin === "supabase" ? "Supabase" : "data/*.json"], "успех", { totals: db.quality.totals });
     return { ok: true, loaded_at: db.loaded_at, totals: db.quality.totals };
   } catch (err) {
     audit(req, u, "перезагрузка данных", ["Кабинет аналитика", "Перезагрузка данных", "data/*.json"], "ошибка: " + err.message);
@@ -437,6 +437,7 @@ async function handle(req, res) {
   const r = routes.find((x) => x.method === req.method && x.re.test(url.pathname));
   if (!r) return send(res, 404, { error: "Метод API не найден" });
   try {
+    await data.ensure();
     await store.refresh();
     const params = url.pathname.match(r.re).groups || {};
     const out = await r.handler(req, url, params);

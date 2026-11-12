@@ -75,8 +75,9 @@ window.Charts = (() => {
     legend.innerHTML = series.map((s) => `<span><i style="background:${s.color}"></i>${s.name}</span>`).join("");
     container.appendChild(legend);
     const W = Math.max(320, container.clientWidth || 600);
-    const H = height;
-    const m = { l: 52, r: 10, t: 10, b: 26 };
+    // height: "auto" — график занимает всю высоту контейнера (экраны без прокрутки)
+    const H = height === "auto" ? Math.max(150, (container.clientHeight || 260) - legend.offsetHeight - 6) : height;
+    const m = { l: 60, r: 10, t: 10, b: 28 };
     const iw = W - m.l - m.r;
     const ih = H - m.t - m.b;
     const all = series.flatMap((s) => s.values).filter(Number.isFinite);
@@ -86,17 +87,17 @@ window.Charts = (() => {
     for (let i = 0; i <= 4; i++) {
       const yy = m.t + ih - (ih * i) / 4;
       el("line", { x1: m.l, x2: W - m.r, y1: yy, y2: yy, class: "gridline" }, gAxis);
-      const t = el("text", { x: m.l - 8, y: yy + 3, "text-anchor": "end" }, gAxis);
+      const t = el("text", { x: m.l - 8, y: yy + 4, "text-anchor": "end" }, gAxis);
       t.textContent = format((max * i) / 4);
     }
     const n = labels.length;
     const band = iw / Math.max(1, n);
     const cx = (i) => m.l + band * i + band / 2;
     const y = (v) => m.t + ih - (Math.max(0, v) / max) * ih;
-    const step = Math.ceil(n / Math.floor(iw / 58));
+    const step = Math.max(1, Math.ceil(n / Math.max(1, Math.floor(iw / 64))));
     labels.forEach((lb, i) => {
       if (i % step) return;
-      const t = el("text", { x: cx(i), y: H - 8, "text-anchor": "middle" }, gAxis);
+      const t = el("text", { x: cx(i), y: H - 7, "text-anchor": "middle" }, gAxis);
       t.textContent = lb;
     });
     if (highlight) {
