@@ -14,6 +14,7 @@ const auth = require("./auth");
 const kpi = require("./kpi");
 const views = require("./views");
 const decisions = require("./decisions");
+const analyst = require("./analyst");
 const { isoNow, isDate, dayNum, dayStr } = require("./util");
 
 const PORT = Number(process.env.PORT) || 3000;
@@ -64,8 +65,15 @@ function readBody(req) {
   });
 }
 
-/** Журнал действий (ОТ-04): пользователь, время, действие, объект, результат. */
+/** Данные источников с учётом корректировок планов, внесённых аналитиком. */
+const dbNow = () => analyst.withPlans(data.get());
+
+/**
+ * Журнал действий (ОТ-04): пользователь, время, действие, объект, результат.
+ * Объект — путь в системе («Раздел › KPI › Детализация › Запись»); можно передать массив сегментов.
+ */
 function audit(req, user, action, object, result = "успех", details) {
+  if (Array.isArray(object)) object = object.filter(Boolean).join(" › ");
   store.addAudit({
     at: isoNow(),
     user: user?.login || "аноним",
@@ -138,18 +146,18 @@ route("POST", "/api/login", async (req) => {
   const body = await readBody(req);
   const u = auth.verify(body.login, body.password);
   if (!u) {
-    audit(req, null, "вход", String(body.login || "").slice(0, 40), "отказ: неверный логин или пароль");
+    audit(req, null, "вход", ["Вход в систему", String(body.login || "").slice(0, 40)], "отказ: неверный логин или пароль");
     throw new ApiError(401, "Неверный логин или пароль");
   }
   const t = auth.createSession(u);
-  audit(req, u, "вход", u.login);
+  audit(req, u, "вход", ["Вход в систему", u.login]);
   return { token: t, user: auth.publicUser(u) };
 });
 
 route("POST", "/api/logout", async (req) => {
   const u = requireUser(req);
   auth.destroySession(token(req));
-  audit(req, u, "выход", u.login);
+  audit(req, u, "выход", ["Выход из системы", u.login]);
   return { ok: true };
 });
 
@@ -167,12 +175,12 @@ route("GET", "/api/health", async () => ({ ok: true, at: isoNow() }));
 route("GET", "/api/kpi", async (req, url) => {
   const u = requireUser(req);
   requirePerm(req, u, "kpi.view");
-  const db = data.get();
+  const db = dbNow();
   const f = filters(url, db);
   if (f.domain) requireDomain(req, u, f.domain, "Пульс компании");
   const list = kpi.KPIS.filter((k) => u.domains.includes(k.domain) && (!f.domain || k.domain === f.domain)).map((k) => kpi.evaluate(db, k, f));
   const critical = list.filter((k) => k.status === "red").map((k) => ({ id: k.id, title: k.title, value: k.value, plan: k.plan, unit: k.unit, deviation_pct: k.deviation_pct, domain: k.domain }));
-  audit(req, u, "просмотр", "Пульс компании", "успех", { period: f.period, from: f.from, to: f.to, product: f.product || null, domain: f.domain || null });
+  audit(req, u, "просмотр", f.domain ? [SCREEN_BY_DOMAIN[f.domain], "Показатели"] : "Пульс компании", "успех", { period: f.period, from: f.from, to: f.to, product: f.product || null, domain: f.domain || null });
   return {
     filters: f,
     kpis: list,
@@ -186,12 +194,12 @@ route("GET", "/api/kpi/:id/drill", async (req, url, p) => {
   const u = requireUser(req);
   const k = kpi.byId(p.id);
   if (!k) throw new ApiError(404, "Показатель не найден");
-  requireDomain(req, u, k.domain, `KPI ${k.title}`);
-  const db = data.get();
+  requireDomain(req, u, k.domain, ["Пульс компании", `KPI «${k.title}»`]);
+  const db = dbNow();
   const f = filters(url, db);
   const dim = url.searchParams.get("dim") || "";
   const res = kpi.drill(db, k, f, dim);
-  audit(req, u, "детализация", `KPI ${k.title}`, "успех", { dim: res.dim });
+  audit(req, u, "детализация", ["Пульс компании", `KPI «${k.title}»`, `Детализация: ${res.dim_label}`], "успех", { dim: res.dim });
   return res;
 });
 
@@ -199,35 +207,44 @@ route("GET", "/api/kpi/:id/records", async (req, url, p) => {
   const u = requireUser(req);
   const k = kpi.byId(p.id);
   if (!k) throw new ApiError(404, "Показатель не найден");
-  requireDomain(req, u, k.domain, `KPI ${k.title}`);
-  const db = data.get();
+  requireDomain(req, u, k.domain, ["Пульс компании", `KPI «${k.title}»`]);
+  const db = dbNow();
   const f = filters(url, db);
-  const res = kpi.records(db, k, f, url.searchParams.get("dim"), url.searchParams.get("key"));
-  audit(req, u, "детализация: записи", `KPI ${k.title}`, "успех", { dim: url.searchParams.get("dim"), key: url.searchParams.get("key") });
+  const key = url.searchParams.get("key");
+  const csv = url.searchParams.get("format") === "csv";
+  if (csv) requirePerm(req, u, "data.export", ["Пульс компании", `KPI «${k.title}»`, "Экспорт CSV"]);
+  const res = kpi.records(db, k, f, url.searchParams.get("dim"), key, csv ? 100000 : 300);
+  const objPath = ["Пульс компании", `KPI «${k.title}»`, key ? `${res.dim_label || "Записи"} = «${key}»` : "Все записи"];
+  if (csv) {
+    audit(req, u, "экспорт CSV", objPath, "успех", { rows: res.rows.length });
+    return { filename: `${k.id}_${f.from}_${f.to}.csv`, rows: res.rows.length, csv: analyst.toCsv(res.columns, res.rows) };
+  }
+  audit(req, u, "детализация: записи", objPath, "успех", { dim: url.searchParams.get("dim"), key });
   return res;
 });
 
 route("GET", "/api/orders/:id", async (req, url, p) => {
   const u = requireUser(req);
   if (!u.domains.includes("sales") && !u.domains.includes("production")) {
-    audit(req, u, "доступ запрещён", `Заказ #${p.id}`, "отказ");
+    audit(req, u, "доступ запрещён", ["Карточка заказа", `#${p.id}`], "отказ");
     throw new ApiError(403, "Карточка заказа недоступна для вашей роли");
   }
   const id = Number(p.id);
   if (!Number.isInteger(id)) throw new ApiError(400, "Некорректный номер заказа");
   const card = views.orderCard(data.get(), id);
   if (!card) throw new ApiError(404, `Заказ #${id} не найден в CRM — возможно, это разорванная связь между системами`);
-  audit(req, u, "просмотр", `Заказ ${card.order.order_number}`);
+  audit(req, u, "просмотр", ["Карточка заказа", card.order.order_number]);
   // Руководитель производства не видит финансовые поступления, руководитель продаж — детали смен/операторов.
   if (!u.domains.includes("finance")) card.payments = card.payments.map((x) => ({ id: x.id, date: x.date, amount: null, hidden: true }));
   if (!u.domains.includes("production")) card.production = card.production.map((x) => ({ id: x.id, production_order_number: x.production_order_number, status: x.status, hidden: true }));
   return card;
 });
 
+const SCREEN_BY_DOMAIN = { sales: "Продажи и клиенты", production: "Производство и качество", finance: "Финансы и люди", hr: "Финансы и люди" };
 const screen = (name, domain, fn) => async (req, url) => {
   const u = requireUser(req);
   requireDomain(req, u, domain, name);
-  const db = data.get();
+  const db = dbNow();
   const f = filters(url, db);
   audit(req, u, "просмотр", name);
   return { filters: f, ...fn(db, f) };
@@ -241,7 +258,7 @@ route("GET", "/api/forecast", async (req) => {
   requirePerm(req, u, "forecast.view");
   if (!u.domains.includes("production") && u.role === "head") throw new ApiError(403, "Прогноз мощности доступен руководству производства");
   audit(req, u, "просмотр", "Прогноз спроса и мощности");
-  return views.forecast(data.get());
+  return views.forecast(dbNow());
 });
 
 /* ----- Реестр решений ----- */
@@ -268,12 +285,12 @@ route("POST", "/api/decisions", async (req) => {
   const body = await readBody(req);
   const { value, errors } = decisions.validate(body, { today: isoNow().slice(0, 10) });
   if (Object.keys(errors).length) {
-    audit(req, u, "создание решения", body?.title ? String(body.title).slice(0, 80) : "без названия", "ошибка валидации", errors);
+    audit(req, u, "создание решения", ["Реестр решений", body?.title ? String(body.title).slice(0, 80) : "без названия"], "ошибка валидации", errors);
     throw new ApiError(422, "Проверьте заполнение формы", errors);
   }
   requireDomain(req, u, value.domain, "Создание решения");
   const d = decisions.create(value, u);
-  audit(req, u, "создание решения", `${d.number} ${d.title}`);
+  audit(req, u, "создание решения", ["Реестр решений", `${d.number} ${d.title}`]);
   return d;
 });
 
@@ -282,16 +299,16 @@ route("PATCH", "/api/decisions/:id", async (req, url, p) => {
   requirePerm(req, u, "decision.edit", "Реестр решений");
   const d = decisions.get(Number(p.id));
   if (!d) throw new ApiError(404, "Решение не найдено");
-  requireDomain(req, u, d.domain, d.number);
+  requireDomain(req, u, d.domain, ["Реестр решений", d.number]);
   const body = await readBody(req);
   const { value, errors } = decisions.validate(body, { partial: true, today: isoNow().slice(0, 10) });
   if (value && value.domain) requireDomain(req, u, value.domain, d.number);
   if (Object.keys(errors).length) {
-    audit(req, u, "изменение решения", d.number, "ошибка валидации", errors);
+    audit(req, u, "изменение решения", ["Реестр решений", d.number], "ошибка валидации", errors);
     throw new ApiError(422, "Проверьте заполнение формы", errors);
   }
   const { decision, changes } = decisions.update(d, value, u);
-  audit(req, u, "изменение решения", `${d.number} ${d.title}`, "успех", { fields: Object.keys(changes) });
+  audit(req, u, "изменение решения", ["Реестр решений", `${d.number} ${d.title}`], "успех", { fields: Object.keys(changes) });
   return decision;
 });
 
@@ -301,8 +318,57 @@ route("GET", "/api/quality", async (req) => {
   const u = requireUser(req);
   requirePerm(req, u, "quality.view", "Кабинет аналитика");
   const db = data.get();
-  audit(req, u, "просмотр", "Качество данных");
-  return { ...db.quality, loaded_at: db.loaded_at, sources: data.SOURCES.length + 1, storage: store.backend };
+  audit(req, u, "просмотр", ["Кабинет аналитика", "Качество данных"]);
+  return { ...analyst.qualityWithWorkflow(db.quality), loaded_at: db.loaded_at, sources: data.SOURCES.length + 1, storage: store.backend, can_manage: auth.can(u, "quality.manage") };
+});
+
+route("PATCH", "/api/quality/issues", async (req) => {
+  const u = requireUser(req);
+  requirePerm(req, u, "quality.manage", ["Кабинет аналитика", "Проблемы качества данных"]);
+  const body = await readBody(req);
+  const r = analyst.updateIssue(data.get().quality, body, u);
+  const obj = ["Кабинет аналитика", "Проблемы качества данных", String(body?.key || "").replace("|", " · ")];
+  if (r.error) {
+    audit(req, u, "разбор проблемы данных", obj, "ошибка валидации");
+    throw new ApiError(422, r.error);
+  }
+  audit(req, u, "разбор проблемы данных", obj, "успех", { status: r.workflow.status });
+  return r.workflow;
+});
+
+/* ----- Аналитик: планы и нормативы ----- */
+
+route("GET", "/api/plans", async (req) => {
+  const u = requireUser(req);
+  requirePerm(req, u, "plans.view", "Планы и нормативы");
+  audit(req, u, "просмотр", "Планы и нормативы");
+  return { ...analyst.plansView(data.get()), editable: auth.can(u, "plans.edit") };
+});
+
+route("PUT", "/api/plans", async (req) => {
+  const u = requireUser(req);
+  requirePerm(req, u, "plans.edit", "Планы и нормативы");
+  const body = await readBody(req);
+  const r = analyst.updatePlans(data.get(), body, u);
+  if (r.errors) {
+    audit(req, u, "изменение планов", "Планы и нормативы", "ошибка валидации", r.errors);
+    throw new ApiError(422, "Проверьте введённые значения", r.errors);
+  }
+  for (const c of r.applied) audit(req, u, "изменение планов", ["Планы и нормативы", c.label], "успех", { from: c.from, to: c.to });
+  return { applied: r.applied, ...analyst.plansView(data.get()), editable: true };
+});
+
+/* ----- Аналитик: сравнение периодов ----- */
+
+route("GET", "/api/analysis/compare", async (req, url) => {
+  const u = requireUser(req);
+  requirePerm(req, u, "analysis.compare", "Сравнение периодов");
+  const db = dbNow();
+  const f = filters(url, db);
+  if (f.domain) requireDomain(req, u, f.domain, "Сравнение периодов");
+  const mode = url.searchParams.get("mode") === "yoy" ? "yoy" : "prev";
+  audit(req, u, "анализ", ["Сравнение периодов", mode === "yoy" ? "к прошлому году" : "к предыдущему периоду"]);
+  return analyst.comparePeriods(db, u, f, mode);
 });
 
 route("POST", "/api/admin/reload", async (req) => {
@@ -310,10 +376,10 @@ route("POST", "/api/admin/reload", async (req) => {
   requirePerm(req, u, "quality.reload", "Перезагрузка данных");
   try {
     const db = data.load();
-    audit(req, u, "перезагрузка данных", "data/*.json", "успех", { totals: db.quality.totals });
+    audit(req, u, "перезагрузка данных", ["Кабинет аналитика", "Перезагрузка данных", "data/*.json"], "успех", { totals: db.quality.totals });
     return { ok: true, loaded_at: db.loaded_at, totals: db.quality.totals };
   } catch (err) {
-    audit(req, u, "перезагрузка данных", "data/*.json", "ошибка: " + err.message);
+    audit(req, u, "перезагрузка данных", ["Кабинет аналитика", "Перезагрузка данных", "data/*.json"], "ошибка: " + err.message);
     throw new ApiError(422, `Данные не загружены: ${err.message}. Система продолжает работать на предыдущей версии данных.`);
   }
 });
@@ -326,6 +392,12 @@ route("GET", "/api/audit", async (req, url) => {
   if (q.get("user")) list = list.filter((a) => a.user === q.get("user"));
   if (q.get("action")) list = list.filter((a) => a.action.includes(q.get("action")));
   if (q.get("result") === "fail") list = list.filter((a) => a.result !== "успех");
+  if (q.get("format") === "csv") {
+    requirePerm(req, u, "data.export", ["Журнал действий", "Экспорт CSV"]);
+    audit(req, u, "экспорт CSV", ["Журнал действий"], "успех", { rows: list.length });
+    const cols = [["at", "Время"], ["user", "Пользователь"], ["role", "Роль"], ["action", "Действие"], ["object", "Объект"], ["result", "Результат"], ["ip", "IP"]].map(([id, label]) => ({ id, label }));
+    return { filename: `audit_${isoNow().slice(0, 10)}.csv`, rows: list.length, csv: analyst.toCsv(cols, list) };
+  }
   return { total: list.length, entries: list.slice(0, 500) };
 });
 

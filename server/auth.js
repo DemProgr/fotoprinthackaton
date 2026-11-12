@@ -59,10 +59,19 @@ const USERS = [
 const ROLE_LABEL = { director: "Директор", head: "Руководитель подразделения", analyst: "Аналитик / администратор" };
 
 /** Что роль может делать (используется и сервером, и для отрисовки меню на клиенте). */
+/*
+ * Директор — управляет: принимает решения и видит результат (планы и качество данных — только чтение).
+ * Аналитик — отвечает за данные и методику, решений не принимает, но:
+ *   • ведёт планы и нормативы KPI (plans.edit) — от них зависят статусы и отклонения;
+ *   • разбирает проблемы качества данных: статус, ответственный, комментарий (quality.manage);
+ *   • перезагружает данные из источников (quality.reload);
+ *   • сравнивает периоды по всем KPI (analysis.compare);
+ *   • выгружает записи детализации и журнал в CSV (data.export).
+ */
 const PERMISSIONS = {
-  director: ["kpi.view", "decision.create", "decision.edit", "decision.view", "audit.view", "quality.view", "forecast.view"],
+  director: ["kpi.view", "decision.create", "decision.edit", "decision.view", "audit.view", "quality.view", "forecast.view", "plans.view"],
   head: ["kpi.view", "decision.create", "decision.edit", "decision.view", "forecast.view"],
-  analyst: ["kpi.view", "decision.view", "audit.view", "quality.view", "quality.reload", "forecast.view"],
+  analyst: ["kpi.view", "decision.view", "audit.view", "quality.view", "quality.reload", "quality.manage", "forecast.view", "plans.view", "plans.edit", "analysis.compare", "data.export"],
 };
 
 function publicUser(u) {

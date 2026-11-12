@@ -130,21 +130,23 @@ function checkQuality(d) {
   add("warning", "Финансы · revenue", "Дубли платежей", dRev.length, "Одинаковые заказ, сумма и дата", dRev.map(([k]) => k));
 
   // 3. Разорванные связи между системами (общие идентификаторы)
-  const fk = (table, field, target, label) => {
+  // Критичны только разрывы основной цепочки «клиент → заказ → производство → оператор»:
+  // они ломают сквозную карточку заказа и KPI. Остальные — предупреждения для разбора аналитиком.
+  const fk = (table, field, target, label, severity = "warning") => {
     const bad = t[table].filter((r) => r[field] !== null && r[field] !== undefined && !idx[target].has(r[field]));
-    add("critical", label, `Ссылка ${table}.${field} → ${target}.id`, bad.length, "Запись ссылается на несуществующий объект другой системы", bad.map((r) => r.id));
+    add(severity, label, `Ссылка ${table}.${field} → ${target}.id`, bad.length, "Запись ссылается на несуществующий объект другой системы", bad.map((r) => r.id));
   };
-  fk("orders", "client_id", "clients", "CRM ↔ CRM");
+  fk("orders", "client_id", "clients", "CRM ↔ CRM", "critical");
   fk("requests", "client_id", "clients", "CRM ↔ CRM");
   fk("requests", "order_id", "orders", "CRM ↔ CRM");
-  fk("production_orders", "order_id", "orders", "ERP ↔ CRM");
+  fk("production_orders", "order_id", "orders", "ERP ↔ CRM", "critical");
   fk("production_orders", "machine_id", "machines", "ERP ↔ ERP");
   fk("production_orders", "shift_id", "shifts", "ERP ↔ ERP");
   fk("defects", "production_order_id", "production_orders", "ERP ↔ ERP");
   fk("defects", "order_id", "orders", "ERP ↔ CRM");
   fk("revenue", "order_id", "orders", "Финансы ↔ CRM");
   fk("revenue", "client_id", "clients", "Финансы ↔ CRM");
-  fk("shifts", "operator_id", "employees", "ERP ↔ HR");
+  fk("shifts", "operator_id", "employees", "ERP ↔ HR", "critical");
   fk("employees", "department_id", "departments", "HR ↔ HR");
   fk("sick_leaves", "employee_id", "employees", "HR ↔ HR");
 

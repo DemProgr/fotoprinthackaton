@@ -36,7 +36,12 @@
 | PATCH | `/decisions/:id` | decision.edit + домен | изменить поля/статус, запись в `history` |
 | GET | `/quality` | quality.view | свежесть источников, проблемы качества, сверка финансов |
 | POST | `/admin/reload` | quality.reload | перечитать `data/*.json` |
-| GET | `/audit?user=&action=&result=fail` | audit.view | журнал действий (последние 500) |
+| PATCH | `/quality/issues` | quality.manage | разбор проблемы данных: `{key, status, assignee, comment}` |
+| GET | `/plans` | plans.view | планы и нормативы KPI: база из plans.json, действующее значение, история |
+| PUT | `/plans` | plans.edit | `{changes: {"targets.defect_pct": 2.5, ...}, reason}`; `null` — вернуть значение plans.json |
+| GET | `/analysis/compare?period=&mode=prev|yoy` | analysis.compare | все KPI: текущий период vs предыдущий / год назад |
+| GET | `/kpi/:id/records?...&format=csv` | data.export | выгрузка записей детализации в CSV |
+| GET | `/audit?user=&action=&result=fail` | audit.view | журнал действий (последние 500); объект — путь «Раздел › KPI › …»; `&format=csv` — выгрузка (data.export) |
 
 ## Решение (decision)
 

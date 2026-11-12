@@ -270,27 +270,80 @@ button.bar-row:hover { background: var(--row-hover); border-color: var(--border)
 .stat .l { font-size: 11.5px; color: var(--text-muted); font-weight: 600; }
 .stat .v { font-size: 20px; font-weight: 700; margin-top: 4px; letter-spacing: -0.02em; }
 
+/* ---------- Журнал, планы ---------- */
+.obj-path { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; }
+.obj-path span { color: var(--text-soft); }
+.obj-path i { font-style: normal; color: var(--text-muted); }
+.plan-input { width: 120px; text-align: right; border: 1px solid var(--border-strong); background: var(--surface); border-radius: 10px; padding: 6px 8px; min-height: 34px; font-variant-numeric: tabular-nums; }
+.plan-input:focus { outline: none; border-color: var(--purple); box-shadow: var(--focus); }
+td .err { color: var(--red); font-size: 11.5px; white-space: normal; }
+.plan-save { display: flex; gap: 12px; align-items: flex-end; margin-top: 14px; flex-wrap: wrap; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .grid-32 { grid-template-columns: 1fr; }
+  .app-shell { grid-template-columns: 200px minmax(0, 1fr); }
+  .main { padding: 18px 18px 26px; }
 }
 @media (max-width: 860px) {
-  .app-shell { grid-template-columns: 1fr; margin: 0; border-radius: 0; min-height: 100vh; }
-  .sidebar { padding: 12px; }
-  .nav { flex-direction: row; overflow-x: auto; margin-top: 10px; }
-  .nav a { white-space: nowrap; }
+  .app-shell { grid-template-columns: 1fr; margin: 0; border-radius: 0; min-height: 100vh; overflow: visible; }
+  /* Меню — липкая полоса сверху с горизонтальной прокруткой разделов */
+  .sidebar { padding: 10px 12px; position: sticky; top: 0; z-index: 20; }
+  .brand { font-size: 16px; padding: 0 4px; }
+  .brand small { display: none; }
+  .nav { flex-direction: row; overflow-x: auto; margin: 8px -12px 0; padding: 0 12px 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; padding: 8px 10px; }
   .nav-sep { display: none; }
-  .side-bottom { flex-direction: row; align-items: center; margin-top: 10px; }
-  .side-user { flex: 1; }
+  .side-bottom { flex-direction: row; align-items: center; margin-top: 8px; padding: 0; gap: 8px; }
+  .side-user { flex: 1; min-width: 0; padding: 6px 8px; }
+  .side-user .r { display: none; }
+  .side-user .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .avatar { width: 28px; height: 28px; }
+  .sidebar .kbd-help-btn { display: none; }
+  .side-actions { flex: none; }
+  .side-actions button { flex: none; padding: 6px 10px; white-space: nowrap; }
   .main { padding: 16px; }
+  .topbar h1 { font-size: 20px; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
-  .kv { grid-template-columns: 1fr; }
+  .kv { grid-template-columns: 1fr; gap: 2px 0; }
+  .kv dd { margin-bottom: 8px; }
   .bar-row { grid-template-columns: 100px 1fr auto; }
   .funnel-step { grid-template-columns: 96px 1fr 70px; }
   .drawer { padding: 16px; }
-  .filters .period-info { margin-left: 0; }
+  .filters .period-info { margin-left: 0; flex-basis: 100%; }
+  .card { padding: 14px; }
+  .card h2 { flex-wrap: wrap; }
+  .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overlay.center { padding: 0; align-items: stretch; }
+  .modal { border-radius: 0; min-height: 100%; padding: 16px; }
+  .modal-head h2, .drawer-head h2 { font-size: 17px; }
+}
+@media (max-width: 560px) {
+  .main { padding: 12px; }
+  .kpi-grid { grid-template-columns: 1fr; gap: 10px; }
+  .filters { padding: 10px; gap: 8px; }
+  .filters .f { flex: 1 1 140px; }
+  .filters select, .filters input { width: 100%; }
+  .filters > .btn { flex: 1 1 auto; }
+  .bar-row { grid-template-columns: 82px 1fr auto; gap: 6px; padding: 6px 4px; }
+  .bar-row .val { font-size: 12px; }
+  .funnel-step { grid-template-columns: 80px 1fr 52px; gap: 6px; }
+  .conn span { display: none; }
+  .form-actions .btn { flex: 1 1 auto; }
+  .toast-wrap { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+  /* Таблицы-списки превращаются в карточки: подпись колонки из data-l */
+  .stack-table thead, .audit-table thead { display: none; }
+  .stack-table, .stack-table tbody, .stack-table tr, .stack-table td,
+  .audit-table, .audit-table tbody, .audit-table tr, .audit-table td { display: block; width: 100%; }
+  .stack-table tr, .audit-table tr { border: 1px solid var(--border); border-radius: 12px; padding: 6px 10px; margin-bottom: 8px; }
+  .stack-table td, .audit-table td { border: none; padding: 4px 0; display: flex; justify-content: space-between; gap: 12px; text-align: right; white-space: normal !important; }
+  .stack-table td::before, .audit-table td::before { content: attr(data-l); color: var(--text-muted); font-size: 12px; text-align: left; flex: none; }
+  .stack-table td.num { white-space: normal; }
+  .obj-path { justify-content: flex-end; }
+  .plan-input { width: 110px; }
 }
 
 /* ---------- Навигация с клавиатуры (ОТ-06) ---------- */

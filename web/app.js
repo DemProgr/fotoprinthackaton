@@ -136,6 +136,27 @@
     setTimeout(() => t.remove(), kind === "error" ? 7000 : 4000);
   }
 
+  /** Выгрузка CSV: сервер проверяет право data.export, формирует файл и пишет в журнал. */
+  async function exportCsv(path, btn) {
+    if (btn) btn.disabled = true;
+    try {
+      const r = await api(path, { timeout: 30000 });
+      const url = URL.createObjectURL(new Blob([r.csv], { type: "text/csv;charset=utf-8" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = r.filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      toast(`Выгружено строк: ${r.rows} (${r.filename})`, "ok");
+    } catch (err) {
+      toast(err.message, "error");
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
   const qs = (extra = {}) => {
     const f = { ...S.filters, ...extra };
     const p = new URLSearchParams();
@@ -243,6 +264,8 @@
     decisions: '<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',
     analyst: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
     audit: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    compare: '<path d="M8 3v18M16 3v18"/><path d="m4 7 4-4 4 4M12 17l4 4 4-4"/>',
+    plans: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
   };
   const PAGES = [
     { id: "pulse", title: "Пульс компании", show: () => can("kpi.view") },
@@ -253,6 +276,8 @@
     { sep: true },
     { id: "decisions", title: "Реестр решений", show: () => can("decision.view") },
     { id: "analyst", title: "Кабинет аналитика", show: () => can("quality.view") },
+    { id: "compare", title: "Сравнение периодов", show: () => can("analysis.compare") },
+    { id: "plans", title: "Планы и нормативы", show: () => can("plans.view") },
     { id: "audit", title: "Журнал действий", show: () => can("audit.view") },
   ];
 
@@ -723,9 +748,10 @@
       } else {
         const r = await api(`/api/kpi/${k.id}/records?` + qs({ dim, key, domain: false }));
         box.innerHTML = `
-          <div class="card"><h2>${key ? `Записи: ${esc(r.dim_label)} = «${esc(key)}»` : "Все записи показателя"} <span class="hint">${r.total} шт.${r.total > r.rows.length ? `, показаны первые ${r.rows.length}` : ""}</span><span class="spacer"></span>${canCreateFor(k) ? '<button type="button" class="btn btn-primary btn-sm" id="mkDecision2">＋ Создать решение</button>' : ""}</h2>
+          <div class="card"><h2>${key ? `Записи: ${esc(r.dim_label)} = «${esc(key)}»` : "Все записи показателя"} <span class="hint">${r.total} шт.${r.total > r.rows.length ? `, показаны первые ${r.rows.length}` : ""}</span><span class="spacer"></span>${can("data.export") ? '<button type="button" class="btn btn-sm" id="recCsv">⬇ CSV</button>' : ""}${canCreateFor(k) ? '<button type="button" class="btn btn-primary btn-sm" id="mkDecision2">＋ Создать решение</button>' : ""}</h2>
           ${recordsTable(r)}</div>`;
         bindOrderLinks(box);
+        $("#recCsv", box)?.addEventListener("click", (e) => exportCsv(`/api/kpi/${k.id}/records?` + qs({ dim, key, domain: false, format: "csv" }), e.currentTarget));
         $("#mkDecision2", box)?.addEventListener("click", () =>
           openDecisionForm({
             title: `${k.title}: разобрать «${key || "все записи"}»`,
@@ -884,7 +910,7 @@
           <div class="field" data-f="priority"><label for="d_priority">Приоритет *</label><select id="d_priority" name="priority">${["низкий", "средний", "высокий", "критический"].map((p) => `<option ${v.priority === p ? "selected" : ""}>${p}</option>`).join("")}</select><div class="err"></div></div>
           <div class="field" data-f="status"><label for="d_status">Статус</label><select id="d_status" name="status">${["новое", "в работе", "выполнено", "отменено"].map((p) => `<option ${v.status === p ? "selected" : ""}>${p}</option>`).join("")}</select><div class="err"></div></div>
           <div class="field" data-f="domain"><label for="d_domain">Подразделение *</label><select id="d_domain" name="domain">${domains.map((d) => `<option value="${d}" ${v.domain === d ? "selected" : ""}>${esc(S.meta.domains[d])}</option>`).join("")}</select><div class="err"></div></div>
-          ${v.context ? `<div class="field"><label>Контекст</label><div class="hint">KPI: ${esc(v.context.kpi || v.kpi_id || "—")}${v.context.key ? ` · ${esc(v.context.dim)} = «${esc(v.context.key)}»` : ""}</div></div>` : ""}
+          ${v.context ? `<div class="field field-static"><label>Контекст</label><div class="hint">KPI: ${esc(v.context.kpi || v.kpi_id || "—")}${v.context.key ? ` · ${esc(v.context.dim)} = «${esc(v.context.key)}»` : ""}</div></div>` : ""}
         </div>
         <div class="form-actions">
           <button type="button" class="btn" id="cancelDec">Отмена</button>
@@ -909,14 +935,20 @@
       e.preventDefault();
       $$(".field", form).forEach((f) => {
         f.classList.remove("invalid");
-        $(".err", f).textContent = "";
+        const err = $(".err", f);
+        if (err) err.textContent = "";
       });
       $("#formErr", ov.body).classList.add("hidden");
       const body = collect();
       // Клиентская проверка (дублирует серверную, сервер — источник истины)
       const errs = {};
       for (const [f, l] of [["title", "Название"], ["problem", "Проблема"], ["cause", "Причина"], ["action", "Действие"], ["owner", "Ответственный"], ["due_date", "Срок"]]) if (!body[f]?.trim()) errs[f] = `Поле «${l}» обязательно`;
-      if (Object.keys(errs).length) return showFieldErrors(form, ov, errs);
+      if (Object.keys(errs).length) {
+        const box = $("#formErr", ov.body);
+        box.textContent = `Заполните обязательные поля: ${Object.values(errs).map((m) => m.replace(/^Поле «(.+)» обязательно$/, "$1")).join(", ")}`;
+        box.classList.remove("hidden");
+        return showFieldErrors(form, ov, errs);
+      }
       const btn = $("#saveDec", ov.body);
       btn.disabled = true;
       btn.textContent = "Сохранение…";
@@ -931,8 +963,9 @@
       } catch (err) {
         if (err.details) showFieldErrors(form, ov, err.details);
         const box = $("#formErr", ov.body);
-        box.textContent = err.message + (err.status === 0 ? "" : "");
+        box.textContent = err.message + (err.details ? ": " + Object.values(err.details).join("; ") : "");
         box.classList.remove("hidden");
+        box.scrollIntoView({ block: "nearest" });
       } finally {
         btn.disabled = false;
         btn.textContent = existing ? "Сохранить изменения" : "Создать решение";
@@ -958,7 +991,8 @@
       const box = $(`.field[data-f="${f}"]`, form);
       if (box) {
         box.classList.add("invalid");
-        $(".err", box).textContent = msg;
+        const err = $(".err", box);
+        if (err) err.textContent = msg;
         first = first || $("[name]", box);
       }
     }
@@ -1262,6 +1296,7 @@ bindTabs($("#pg"));
           <div class="stat"><div class="l">Данные загружены</div><div class="v" style="font-size:14px">${fmtDT(q.loaded_at)}</div></div>
           <div class="stat"><div class="l">Критичных проблем</div><div class="v" style="color:var(--red)">${q.totals.critical}</div></div>
           <div class="stat"><div class="l">Предупреждений</div><div class="v" style="color:var(--yellow)">${q.totals.warning}</div></div>
+          <div class="stat"><div class="l">Открытых проблем</div><div class="v">${q.open_issues}/${q.issues.length}</div></div>
           <div class="stat"><div class="l">Сверка финансов</div><div class="v">${q.reconciliation.filter((r) => r.ok).length}/${q.reconciliation.length} мес.</div></div>
         </div>
         <div class="card"><h2>Свежесть источников<span class="spacer"></span>${can("quality.reload") ? '<button type="button" class="btn btn-sm" id="reload">⟳ Перезагрузить данные</button>' : ""}</h2>
@@ -1270,11 +1305,14 @@ bindTabs($("#pg"));
             { label: "Актуальность записей", html: `<div class="table-wrap"><table><thead><tr><th>Система</th><th>Таблица</th><th>Последняя запись</th><th class="num">Отставание</th><th>Статус</th></tr></thead><tbody>${q.freshness.map((f) => `<tr><td>${esc(f.system)}</td><td>${esc(f.table)}</td><td>${fmtD(f.last_record_date)}</td><td class="num">${f.lag_days === null ? "—" : f.lag_days + " дн."}</td><td><span class="pill ${f.status === "ok" ? "green" : f.status === "warning" ? "yellow" : "red"}">${f.status === "ok" ? "свежие" : f.status === "warning" ? "устаревают" : "устарели"}</span></td></tr>`).join("")}</tbody></table></div>` },
           ])}
         </div>
-        <div class="card" style="margin-top:16px"><h2>Пропуски, дубли и разорванные связи</h2>
+        <div class="card" style="margin-top:16px"><h2>Пропуски, дубли и разорванные связи <span class="hint">открыто: ${q.open_issues} из ${q.issues.length}${q.can_manage ? "" : " · статусы разбора ведёт аналитик"}</span></h2>
           ${
             q.issues.length
-              ? `<div class="table-wrap"><table><thead><tr><th>Уровень</th><th>Источник</th><th>Проверка</th><th class="num">Записей</th><th>Описание</th><th>Примеры ID</th></tr></thead><tbody>${q.issues
-                  .map((i) => `<tr><td><span class="pill ${sev[i.severity]}">${sevL[i.severity]}</span></td><td>${esc(i.source)}</td><td>${esc(i.check)}</td><td class="num">${i.count}</td><td>${esc(i.details)}</td><td class="hint">${i.sample.map(esc).join(", ")}${i.count > i.sample.length ? "…" : ""}</td></tr>`)
+              ? `<div class="table-wrap"><table><thead><tr><th>Уровень</th><th>Источник</th><th>Проверка</th><th class="num">Записей</th><th>Описание</th><th>Примеры ID</th><th>Разбор</th></tr></thead><tbody>${q.issues
+                  .map(
+                    (i, n) => `<tr><td><span class="pill ${sev[i.severity]}">${sevL[i.severity]}</span></td><td>${esc(i.source)}</td><td>${esc(i.check)}</td><td class="num">${i.count}</td><td>${esc(i.details)}</td><td class="hint">${i.sample.map(esc).join(", ")}${i.count > i.sample.length ? "…" : ""}</td>
+                    <td><span class="pill ${issueColor(i.workflow.status)}">${esc(i.workflow.status)}</span>${i.workflow.assignee ? `<br><span class="hint">${esc(i.workflow.assignee)}</span>` : ""}${i.workflow.comment ? `<br><span class="hint">${esc(i.workflow.comment)}</span>` : ""}${q.can_manage ? `<br><button type="button" class="btn btn-sm" data-issue="${n}" style="margin-top:6px">Разобрать</button>` : ""}</td></tr>`
+                  )
                   .join("")}</tbody></table></div>`
               : '<div class="empty">Проблем не найдено</div>'
           }</div>
@@ -1286,6 +1324,7 @@ bindTabs($("#pg"));
           ])}
         </div>`;
       bindTabs($("#pg"));
+      $$("[data-issue]", main).forEach((b) => b.addEventListener("click", () => openIssueForm(q.issues[Number(b.dataset.issue)], q.issue_statuses, () => renderAnalyst(main))));
       $("#reload")?.addEventListener("click", async (e) => {
         e.currentTarget.disabled = true;
         try {
@@ -1303,23 +1342,212 @@ bindTabs($("#pg"));
     }
   }
 
+  const issueColor = (s) => ({ новая: "red", "в работе": "yellow", "исправлена в источнике": "green", "ложное срабатывание": "gray" })[s] || "gray";
+
+  function openIssueForm(issue, statuses, done) {
+    const ov = overlay("modal", `Разбор: ${issue.check}`);
+    const w = issue.workflow;
+    ov.body.innerHTML = `
+      <div class="callout neutral">${esc(issue.source)} · записей: ${issue.count} · ${esc(issue.details)}<br><span class="hint">Примеры ID: ${issue.sample.map(esc).join(", ")}</span></div>
+      <div class="banner error hidden" id="isErr" role="alert"></div>
+      <form id="isForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="isS">Статус</label><select id="isS">${statuses.map((s) => `<option ${w.status === s ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></div>
+          <div class="field"><label for="isA">Кто исправляет в источнике</label><input id="isA" value="${esc(w.assignee || "")}" placeholder="Например: администратор CRM"></div>
+          <div class="field full"><label for="isC">Комментарий аналитика</label><textarea id="isC" rows="3" placeholder="Причина, что сделано, ссылка на заявку">${esc(w.comment || "")}</textarea></div>
+        </div>
+        ${w.history?.length ? `<h3 class="section-title">История разбора</h3><ul class="history">${w.history.slice().reverse().map((h) => `<li><b>${esc(h.status)}</b> — ${esc(h.by_name)} <span class="at">· ${fmtDT(h.at)}</span>${h.comment ? `<br>${esc(h.comment)}` : ""}</li>`).join("")}</ul>` : ""}
+        <div class="form-actions"><button type="button" class="btn" id="isCancel">Отмена</button><button type="submit" class="btn btn-primary" id="isSave">Сохранить</button></div>
+      </form>`;
+    $("#isCancel", ov.body).addEventListener("click", () => ov.close());
+    $("#isForm", ov.body).addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = $("#isSave", ov.body);
+      btn.disabled = true;
+      try {
+        await api("/api/quality/issues", { method: "PATCH", body: { key: issue.key, status: $("#isS").value, assignee: $("#isA").value, comment: $("#isC").value } });
+        ov.close(true);
+        toast("Статус проблемы сохранён", "ok");
+        done();
+      } catch (err) {
+        const box = $("#isErr", ov.body);
+        box.textContent = err.message;
+        box.classList.remove("hidden");
+        btn.disabled = false;
+      }
+    });
+  }
+
+  /* ------------------------------ Сравнение периодов ------------------------------ */
+  async function renderCompare(main) {
+    const mode = store.get("pulse-compare-mode", "prev");
+    main.innerHTML =
+      topbar("Сравнение периодов") +
+      `<div class="filters"><div class="f"><label for="cmpMode">Сравнить с</label><select id="cmpMode"><option value="prev" ${mode === "prev" ? "selected" : ""}>предыдущим периодом той же длины</option><option value="yoy" ${mode === "yoy" ? "selected" : ""}>тем же периодом год назад</option></select></div>
+       <div class="f"><label for="cmpDom">Подразделение</label><select id="cmpDom"><option value="">Все</option>${S.user.domains.map((d) => `<option value="${d}">${esc(S.meta.domains[d])}</option>`).join("")}</select></div>
+       ${can("data.export") ? '<button type="button" class="btn" id="cmpCsv">⬇ CSV</button>' : ""}</div>
+       <div id="pg"><div class="skeleton"></div></div>`;
+    bindFilters(() => renderCompare(main));
+    let last = null;
+    const load = async () => {
+      const m = $("#cmpMode").value;
+      store.set("pulse-compare-mode", m);
+      const dom = $("#cmpDom").value;
+      try {
+        const r = await api("/api/analysis/compare?" + qs({ mode: m, domain: false }) + (dom ? "&domain=" + dom : ""));
+        last = r;
+        setPeriodInfo({ ...S.filters, from: r.current.from, to: r.current.to });
+        const tr = { better: ["green", "▲ лучше"], worse: ["red", "▼ хуже"], flat: ["gray", "≈ без изменений"] };
+        const sorted = r.rows.slice().sort((a, b) => ({ worse: 0, flat: 1, better: 2 })[a.trend] - ({ worse: 0, flat: 1, better: 2 })[b.trend] || Math.abs(b.delta_pct || 0) - Math.abs(a.delta_pct || 0));
+        $("#pg").innerHTML = `
+          <div class="stat-row">
+            <div class="stat"><div class="l">Текущий период</div><div class="v" style="font-size:14px">${fmtD(r.current.from)} — ${fmtD(r.current.to)}</div></div>
+            <div class="stat"><div class="l">База сравнения</div><div class="v" style="font-size:14px">${fmtD(r.previous.from)} — ${fmtD(r.previous.to)}</div></div>
+            <div class="stat"><div class="l">Улучшились</div><div class="v" style="color:var(--green)">${r.summary.better}</div></div>
+            <div class="stat"><div class="l">Ухудшились</div><div class="v" style="color:var(--red)">${r.summary.worse}</div></div>
+            <div class="stat"><div class="l">Без изменений</div><div class="v">${r.summary.flat}</div></div>
+          </div>
+          <div class="card"><h2>Динамика KPI <span class="hint">сначала ухудшившиеся; «лучше/хуже» учитывает направление показателя</span></h2>
+          <div class="table-wrap"><table class="stack-table"><thead><tr><th>Показатель</th><th>Подразделение</th><th class="num">Текущий</th><th class="num">База</th><th class="num">Δ</th><th class="num">Δ, %</th><th>Оценка</th><th>Статус: база → текущий</th></tr></thead><tbody>${sorted
+            .map(
+              (x) => `<tr class="clickable" tabindex="0" data-kpi="${x.id}"><td data-l="Показатель"><b>${esc(x.title)}</b></td><td data-l="Подразделение">${esc(x.domain_label)}</td><td class="num" data-l="Текущий">${fmt(x.current.value, x.unit)}</td><td class="num" data-l="База">${fmt(x.previous.value, x.unit)}</td><td class="num" data-l="Δ">${x.delta === null ? "—" : (x.delta > 0 ? "+" : "") + fmt(x.delta, x.unit)}</td><td class="num" data-l="Δ, %">${x.delta_pct === null ? "—" : (x.delta_pct > 0 ? "+" : "") + nf.format(x.delta_pct) + "%"}</td><td data-l="Оценка"><span class="pill ${tr[x.trend][0]}">${tr[x.trend][1]}</span></td><td data-l="Статус"><span class="pill ${x.previous.status}">${STATUS_LABEL[x.previous.status]}</span> → <span class="pill ${x.current.status}">${STATUS_LABEL[x.current.status]}</span></td></tr>`
+            )
+            .join("")}</tbody></table></div><p class="hint">Нажмите на строку, чтобы открыть детализацию показателя за текущий период.</p></div>`;
+        $$("tr[data-kpi]", main).forEach((row) => {
+          const open = async () => {
+            try {
+              const k = await api("/api/kpi?" + qs());
+              const kk = k.kpis.find((x) => x.id === row.dataset.kpi);
+              if (kk) openDrill(kk);
+            } catch (err) {
+              toast(err.message, "error");
+            }
+          };
+          row.addEventListener("click", open);
+          row.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open()));
+        });
+      } catch (err) {
+        $("#pg").innerHTML = "";
+        showPageError(err, load);
+      }
+    };
+    $("#cmpMode").addEventListener("change", load);
+    $("#cmpDom").addEventListener("change", load);
+    $("#cmpCsv")?.addEventListener("click", () => {
+      if (!last) return;
+      const head = ["Показатель", "Подразделение", "Ед.", "Текущий", "База", "Δ", "Δ %", "Оценка", "Статус база", "Статус текущий"];
+      const cell = (v) => (v === null || v === undefined ? "" : /[;"\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v).replace(/^(-?\d+)\.(\d+)$/, "$1,$2"));
+      const lines = [head, ...last.rows.map((x) => [x.title, x.domain_label, x.unit, x.current.value, x.previous.value, x.delta, x.delta_pct, x.trend, STATUS_LABEL[x.previous.status], STATUS_LABEL[x.current.status]])].map((l) => l.map(cell).join(";"));
+      const url = URL.createObjectURL(new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `compare_${last.current.from}_${last.current.to}_vs_${last.previous.from}.csv`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+    load();
+  }
+
+  /* ------------------------------ Планы и нормативы ------------------------------ */
+  async function renderPlans(main) {
+    main.innerHTML = topbar("Планы и нормативы KPI", { filters: false }) + '<div id="pg"><div class="skeleton"></div></div>';
+    let r;
+    try {
+      r = await api("/api/plans");
+    } catch (err) {
+      $("#pg").innerHTML = "";
+      return showPageError(err, () => renderPlans(main));
+    }
+    const ed = r.editable;
+    const val = (v) => (v === null || v === undefined ? "" : String(v));
+    $("#pg").innerHTML = `
+      <div class="banner info">${
+        ed
+          ? "Плановые значения определяют статус KPI (зелёный / жёлтый / красный) и отклонения на всех экранах. Изменения применяются сразу, сохраняются с обоснованием и пишутся в журнал. Пустое поле — вернуть значение из plans.json."
+          : "🔒 Только просмотр. Планы и нормативы ведёт аналитик; каждое изменение фиксируется с обоснованием."
+      }</div>
+      <form id="plForm" novalidate>
+      <div class="card"><h2>Параметры <span class="hint">базовые значения из plans.json от ${fmtDT(r.base_updated_at)}</span></h2>
+        <div class="table-wrap"><table class="stack-table"><thead><tr><th>Параметр</th><th>Влияет на KPI</th><th class="num">plans.json</th><th class="num">Действует</th><th>Последнее изменение</th></tr></thead><tbody>${r.fields
+          .map(
+            (f) => `<tr data-f="${f.id}"><td data-l="Параметр"><b>${esc(f.label)}</b> <span class="hint">${esc(f.unit)}</span></td><td data-l="KPI" class="hint">${f.kpis.map(esc).join(", ")}</td><td class="num" data-l="plans.json">${nf.format(f.base)}</td>
+            <td class="num" data-l="Действует">${ed ? `<input class="plan-input" type="number" step="any" min="0" name="${f.id}" value="${esc(val(f.value))}" data-orig="${esc(val(f.value))}" aria-label="${esc(f.label)}"><div class="err"></div>` : `<b>${nf.format(f.value)}</b>`}${f.override ? ' <span class="pill purple">изменено</span>' : ""}</td>
+            <td data-l="Изменение" class="hint">${f.override ? `${esc(f.override.by_name)} · ${fmtDT(f.override.at)}<br>${esc(f.override.reason)}` : "—"}</td></tr>`
+          )
+          .join("")}</tbody></table></div>
+        ${
+          ed
+            ? `<div class="banner error hidden" id="plErr" role="alert" style="margin-top:12px"></div>
+          <div class="plan-save"><div class="field" style="flex:1;margin:0"><label for="plReason">Обоснование изменения *</label><input id="plReason" placeholder="Например: утверждён бюджет на IV квартал"></div>
+          <button type="submit" class="btn btn-primary" id="plSave">Сохранить изменения</button></div>`
+            : ""
+        }
+      </div></form>
+      <div class="card" style="margin-top:16px"><h2>История изменений планов</h2>${
+        r.history.length
+          ? `<ul class="history">${r.history.map((h) => `<li><b>${esc(h.by_name)}</b> <span class="at">· ${fmtDT(h.at)}</span> — ${esc(h.reason)}<br>${h.changes.map((c) => `${esc(c.label)}: ${nf.format(c.from)} → <b>${nf.format(c.to)}</b> ${esc(c.unit)}`).join("<br>")}</li>`).join("")}</ul>`
+          : '<div class="empty">Планы не менялись — действуют значения из plans.json</div>'
+      }</div>`;
+    if (!ed) return;
+    $("#plForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const changes = {};
+      $$(".plan-input", main).forEach((x) => {
+        if (x.value === x.dataset.orig) return;
+        changes[x.name] = x.value.trim() === "" ? null : Number(x.value.replace(",", "."));
+      });
+      const box = $("#plErr");
+      box.classList.add("hidden");
+      $$(".plan-input", main).forEach((x) => (x.nextElementSibling.textContent = ""));
+      if (!Object.keys(changes).length) {
+        box.textContent = "Вы не изменили ни одного значения";
+        return box.classList.remove("hidden");
+      }
+      const btn = $("#plSave");
+      btn.disabled = true;
+      try {
+        const res = await api("/api/plans", { method: "PUT", body: { changes, reason: $("#plReason").value } });
+        toast(res.applied.length ? `Планы обновлены: ${res.applied.map((c) => c.label).join(", ")}` : "Значения совпадают с действующими", "ok");
+        renderPlans(main);
+      } catch (err) {
+        box.textContent = err.message + (err.details ? ": " + Object.entries(err.details).map(([k, v]) => (k === "reason" || k === "_" ? v : `${r.fields.find((f) => f.id === k)?.label || k} — ${v}`)).join("; ") : "");
+        box.classList.remove("hidden");
+        for (const [k, v] of Object.entries(err.details || {})) {
+          const inp = $(`.plan-input[name="${k}"]`, main);
+          if (inp) inp.nextElementSibling.textContent = v;
+        }
+        btn.disabled = false;
+      }
+    });
+  }
+
   /* ------------------------------ Журнал ------------------------------ */
   async function renderAudit(main) {
     main.innerHTML =
       topbar("Журнал действий", { filters: false }) +
       `<form class="filters" id="auF"><div class="f"><label for="auU">Пользователь</label><select id="auU"><option value="">Все</option>${DEMO.map(([l]) => `<option>${l}</option>`).join("")}<option value="аноним">аноним</option></select></div>
        <div class="f"><label for="auR">Результат</label><select id="auR"><option value="">Все</option><option value="fail">Только отказы и ошибки</option></select></div>
-       <button type="button" class="btn" id="auRef">Обновить</button></form>
+       <button type="button" class="btn" id="auRef">Обновить</button>
+       ${can("data.export") ? '<button type="button" class="btn" id="auCsv">⬇ Выгрузить CSV</button>' : ""}</form>
        <div class="card"><div id="auT"><div class="skeleton"></div></div></div>`;
-    const load = async () => {
+    const params = () => {
       const p = new URLSearchParams();
       if ($("#auU").value) p.set("user", $("#auU").value);
       if ($("#auR").value) p.set("result", $("#auR").value);
+      return p;
+    };
+    // Объект хранится как путь «Раздел › KPI › Детализация › Запись» — показываем сегменты, последний выделен.
+    const pathHtml = (o) => {
+      if (!o) return "—";
+      const parts = String(o).split(" › ");
+      return `<span class="obj-path">${parts.map((x, i) => (i === parts.length - 1 ? `<b>${esc(x)}</b>` : `<span>${esc(x)}</span>`)).join('<i aria-hidden="true">›</i>')}</span>`;
+    };
+    const load = async () => {
       try {
-        const r = await api("/api/audit?" + p);
+        const r = await api("/api/audit?" + params());
         $("#auT").innerHTML = r.entries.length
-          ? `<p class="hint">Всего записей: ${r.total}${r.total > r.entries.length ? `, показаны последние ${r.entries.length}` : ""}</p><div class="table-wrap"><table><thead><tr><th>Время</th><th>Пользователь</th><th>Роль</th><th>Действие</th><th>Объект</th><th>Результат</th><th>Детали</th></tr></thead><tbody>${r.entries
-              .map((a) => `<tr><td class="hint" style="white-space:nowrap">${fmtDT(a.at)}</td><td>${esc(a.user)}</td><td>${esc(a.role || "—")}</td><td>${esc(a.action)}</td><td>${esc(a.object || "—")}</td><td><span class="pill ${a.result === "успех" ? "green" : "red"}">${esc(a.result)}</span></td><td class="hint">${a.details ? esc(JSON.stringify(a.details)).slice(0, 160) : ""}</td></tr>`)
+          ? `<p class="hint">Всего записей: ${r.total}${r.total > r.entries.length ? `, показаны последние ${r.entries.length}` : ""}</p><div class="table-wrap"><table class="audit-table"><thead><tr><th>Время</th><th>Пользователь</th><th>Роль</th><th>Действие</th><th>Объект (путь)</th><th>Результат</th></tr></thead><tbody>${r.entries
+              .map((a) => `<tr><td class="hint" data-l="Время" style="white-space:nowrap">${fmtDT(a.at)}</td><td data-l="Пользователь">${esc(a.user)}</td><td data-l="Роль">${esc(a.role || "—")}</td><td data-l="Действие">${esc(a.action)}</td><td data-l="Объект">${pathHtml(a.object)}</td><td data-l="Результат"><span class="pill ${a.result === "успех" ? "green" : "red"}">${esc(a.result)}</span></td></tr>`)
               .join("")}</tbody></table></div>`
           : '<div class="empty">Записей нет</div>';
       } catch (err) {
@@ -1328,10 +1556,11 @@ bindTabs($("#pg"));
     };
     $$("#auF select").forEach((s) => s.addEventListener("change", load));
     $("#auRef").addEventListener("click", load);
+    $("#auCsv")?.addEventListener("click", (e) => exportCsv("/api/audit?" + params() + "&format=csv", e.currentTarget));
     load();
   }
 
-  const RENDER = { pulse: renderPulse, sales: renderSales, production: renderProduction, finance: renderFinance, forecast: renderForecast, decisions: renderDecisions, analyst: renderAnalyst, audit: renderAudit };
+  const RENDER = { pulse: renderPulse, sales: renderSales, production: renderProduction, finance: renderFinance, forecast: renderForecast, decisions: renderDecisions, analyst: renderAnalyst, compare: renderCompare, plans: renderPlans, audit: renderAudit };
 
   /* ---------------------------------- Старт ---------------------------------- */
   async function boot() {

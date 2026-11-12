@@ -164,3 +164,51 @@ test("некорректные фильтры дают понятную ошиб
   assert.match(r.body.error, /позже/);
   assert.equal((await j("/api/kpi?product=ракета", { token: tokens.director })).status, 400);
 });
+
+test("качество данных: ровно 2 критичные проблемы", async () => {
+  const q = await j("/api/quality", { token: tokens.analyst });
+  assert.equal(q.body.totals.critical, 2);
+});
+
+test("аналитик ведёт планы KPI, директор — только просмотр; план меняет статус KPI", async () => {
+  const before = (await j("/api/kpi?period=90d", { token: tokens.director })).body.kpis.find((k) => k.id === "conversion");
+  const d = await j("/api/plans", { token: tokens.director });
+  assert.equal(d.status, 200);
+  assert.equal(d.body.editable, false);
+  assert.equal((await j("/api/plans", { token: tokens.director, method: "PUT", body: { changes: { "targets.conversion_pct": 10 }, reason: "тест" } })).status, 403);
+  assert.equal((await j("/api/plans", { token: tokens.sales })).status, 403);
+  const bad = await j("/api/plans", { token: tokens.analyst, method: "PUT", body: { changes: { "targets.conversion_pct": 150 }, reason: "" } });
+  assert.equal(bad.status, 422);
+  assert.ok(bad.body.details.reason && bad.body.details["targets.conversion_pct"]);
+  const ok = await j("/api/plans", { token: tokens.analyst, method: "PUT", body: { changes: { "targets.conversion_pct": 10 }, reason: "Тестовая корректировка" } });
+  assert.equal(ok.status, 200);
+  const after = (await j("/api/kpi?period=90d", { token: tokens.director })).body.kpis.find((k) => k.id === "conversion");
+  assert.equal(after.plan, 10);
+  assert.notEqual(after.plan, before.plan);
+  await j("/api/plans", { token: tokens.analyst, method: "PUT", body: { changes: { "targets.conversion_pct": null }, reason: "Вернуть значение plans.json" } });
+  assert.equal((await j("/api/kpi?period=90d", { token: tokens.director })).body.kpis.find((k) => k.id === "conversion").plan, before.plan);
+});
+
+test("аналитик разбирает проблемы данных, сравнивает периоды и выгружает CSV; директору это закрыто", async () => {
+  const q = await j("/api/quality", { token: tokens.analyst });
+  const key = q.body.issues[0].key;
+  const u = await j("/api/quality/issues", { token: tokens.analyst, method: "PATCH", body: { key, status: "в работе", comment: "Заявка в CRM" } });
+  assert.equal(u.status, 200);
+  assert.equal((await j("/api/quality", { token: tokens.director })).body.issues.find((i) => i.key === key).workflow.status, "в работе");
+  assert.equal((await j("/api/quality/issues", { token: tokens.director, method: "PATCH", body: { key, status: "новая" } })).status, 403);
+  const c = await j("/api/analysis/compare?period=90d&mode=prev", { token: tokens.analyst });
+  assert.equal(c.status, 200);
+  assert.ok(c.body.rows.length >= 10 && c.body.previous.to < c.body.current.from);
+  assert.equal((await j("/api/analysis/compare?period=90d", { token: tokens.director })).status, 403);
+  const csv = await j("/api/kpi/defect/records?period=90d&format=csv", { token: tokens.analyst });
+  assert.equal(csv.status, 200);
+  assert.match(csv.body.csv, /;/);
+  assert.equal((await j("/api/kpi/defect/records?period=90d&format=csv", { token: tokens.director })).status, 403);
+});
+
+test("журнал: объект записывается как путь", async () => {
+  await j("/api/kpi/defect/drill?period=90d&dim=machine", { token: tokens.director });
+  const a = await j("/api/audit", { token: tokens.director });
+  const e = a.body.entries.find((x) => x.action === "детализация");
+  assert.match(e.object, /^Пульс компании › KPI «.+» › Детализация: /);
+});
