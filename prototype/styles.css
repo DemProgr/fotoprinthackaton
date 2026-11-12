@@ -83,15 +83,10 @@ button {
   display: grid;
   grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
   width: 100%;
-  max-width: 1440px;
-  min-height: min(820px, calc(100vh - 44px));
-  margin: auto;
+  min-height: 100vh;
   background: var(--app-bg);
-  border-radius: 26px;
   overflow: hidden;
-  box-shadow:
-    0 50px 110px -40px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(255, 255, 255, 0.07);
+  box-shadow: none;
   transition: background-color 0.25s ease;
 }
 

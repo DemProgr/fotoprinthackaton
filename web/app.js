@@ -372,6 +372,30 @@
     if (retry) $("#retryBtn").addEventListener("click", retry);
   }
 
+  /* ------------------------------ Вкладки ------------------------------ */
+  function tabBlock(tabs) {
+    return `
+      <div class="tabblock">
+        <div class="tabs" role="tablist">${tabs.map((t, i) => `<button type="button" role="tab" aria-selected="${i === 0}" class="${i === 0 ? "active" : ""}" data-tab="${i}">${esc(t.label)}</button>`).join("")}</div>
+        ${tabs.map((t, i) => `<div class="tabpanel${i === 0 ? " active" : ""}" data-tab="${i}">${t.html}</div>`).join("")}
+      </div>`;
+  }
+  function bindTabs(el) {
+    $$(".tabblock", el).forEach((block) => {
+      const tabs = $$(".tabs button[data-tab]", block);
+      const panels = $$(".tabpanel", block);
+      tabs.forEach((b) => {
+        b.addEventListener("click", () => {
+          tabs.forEach((x) => {
+            x.classList.toggle("active", x === b);
+            x.setAttribute("aria-selected", x === b);
+          });
+          panels.forEach((p) => p.classList.toggle("active", p.dataset.tab === b.dataset.tab));
+        });
+      });
+    });
+  }
+
   /* --------------------------------- Роутер --------------------------------- */
   function route() {
     if (!S.user) return;
@@ -747,16 +771,19 @@
       const c = await api(`/api/orders/${id}`);
       const o = c.order;
       ov.setTitle(`Заказ ${o.order_number}`);
-      ov.body.innerHTML = `
+      const crm = `
         <div class="callout neutral">Связь систем по общим ID: ${c.links.map(esc).join(" · ")}</div>
-        <h3 class="section-title">CRM · заказ и клиент</h3>
+        <h3 class="section-title">Заказ и клиент</h3>
         <dl class="kv">
           <dt>Дата заказа</dt><dd>${fmtD(o.order_date)}</dd><dt>Статус</dt><dd>${esc(o.status)}</dd>
           <dt>Продукт / тираж</dt><dd>${esc(o.product_type)} · ${nf0.format(o.print_run)} шт.</dd><dt>Сумма</dt><dd>${fmt(o.amount, "BYN")}</dd>
           <dt>Приоритет</dt><dd>${esc(o.priority)}</dd>
           <dt>Клиент</dt><dd>${c.client ? `ID ${c.client.id} · ${esc(c.client.segment)} · ${esc(c.client.city)} · клиент с ${fmtD(c.client.created_at)}` : '<span class="pill red">клиент не найден в CRM</span>'}</dd>
         </dl>
-        <h3 class="section-title">ERP · производство (${c.production.length})</h3>
+        <h3 class="section-title">Обращения клиента по заказу (${c.requests.length})</h3>
+        ${c.requests.length ? `<ul class="history">${c.requests.map((r) => `<li><b>${esc(r.type)}</b> · ${esc(r.status)} — ${esc(r.description)} <span class="at">· ${fmtD(r.created_at)}</span></li>`).join("")}</ul>` : '<div class="hint">Обращений нет</div>'}`;
+      const prod = `
+        <h3 class="section-title">Производство (${c.production.length})</h3>
         ${
           c.production.length
             ? `<div class="table-wrap"><table><thead><tr><th>Произв. заказ</th><th>Статус</th><th>Станок</th><th class="num">План</th><th class="num">Факт</th><th class="num">Брак</th><th>Смена / оператор (HR)</th></tr></thead><tbody>${c.production
@@ -767,13 +794,20 @@
                 )
                 .join("")}</tbody></table></div>`
             : '<div class="hint">Производственных заказов нет</div>'
-        }
-        <h3 class="section-title">ERP · дефекты (${c.defects.length})</h3>
-        ${c.defects.length ? `<ul class="history">${c.defects.map((d) => `<li><b>${esc(d.type)}</b> — ${nf0.format(d.qty)} шт., причина: ${esc(d.reason)} <span class="at">· ${fmtDT(d.detected_at + "+03:00")}</span></li>`).join("")}</ul>` : '<div class="hint">Дефектов нет</div>'}
-        <h3 class="section-title">CRM · обращения клиента по заказу (${c.requests.length})</h3>
-        ${c.requests.length ? `<ul class="history">${c.requests.map((r) => `<li><b>${esc(r.type)}</b> · ${esc(r.status)} — ${esc(r.description)} <span class="at">· ${fmtD(r.created_at)}</span></li>`).join("")}</ul>` : '<div class="hint">Обращений нет</div>'}
-        <h3 class="section-title">Финансы · поступления (${c.payments.length})</h3>
+        }`;
+      const defects = `
+        <h3 class="section-title">Дефекты (${c.defects.length})</h3>
+        ${c.defects.length ? `<ul class="history">${c.defects.map((d) => `<li><b>${esc(d.type)}</b> — ${nf0.format(d.qty)} шт., причина: ${esc(d.reason)} <span class="at">· ${fmtDT(d.detected_at + "+03:00")}</span></li>`).join("")}</ul>` : '<div class="hint">Дефектов нет</div>'}`;
+      const payments = `
+        <h3 class="section-title">Поступления (${c.payments.length})</h3>
         ${c.payments.length ? `<ul class="history">${c.payments.map((p) => `<li>${fmtD(p.date)} — ${p.hidden ? "🔒 сумма скрыта для вашей роли" : `${fmt(p.amount, "BYN")} · ${esc(p.source)}`}</li>`).join("")}</ul>` : '<div class="hint">Поступлений нет</div>'}`;
+      ov.body.innerHTML = tabBlock([
+        { label: "Заказ и клиент (CRM)", html: crm },
+        { label: "Производство (ERP)", html: prod },
+        { label: "Дефекты (ERP)", html: defects },
+        { label: "Финансы", html: payments },
+      ]);
+      bindTabs(ov.body);
     } catch (err) {
       ov.body.innerHTML = `<div class="banner error" role="alert">${esc(err.message)}</div>`;
     }
@@ -805,6 +839,10 @@
     overlays.push(api_);
     setTimeout(() => $(".close", ov).focus());
     return api_;
+  }
+  function openDefectPopup() {
+    const ov = overlay("modal", "Брак и простои");
+    ov.body.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Брак</th><th class="num">Остановлено</th></tr></thead><tbody>${s.machines.map((m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num"><span class="pill ${m.defect_pct === null ? "gray" : m.defect_pct > 3 ? "red" : "green"}">${m.defect_pct === null ? "—" : nf.format(m.defect_pct) + "%"}</span></td><td class="num">${m.stopped_orders}</td></tr>`).join("")}</tbody></table></div>`;
   }
   function closeAllOverlays() {
     while (overlays.length) overlays[overlays.length - 1].close(true);
@@ -1086,11 +1124,13 @@
             .map((r) => `<div class="bar-row"><span class="lbl">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
             .join("") || '<div class="hint">Нет дефектов</div>'}</div></div>
         </div>
-        <div class="card" style="margin-top:16px"><h2>Станки: загрузка, простои, брак <span class="hint">простой/обслуживание: ${s.downtime_machines}</span></h2><div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Заказы</th><th class="num">Выпуск</th><th class="num">Загрузка</th><th class="num">Брак</th><th class="num">Остановлено</th></tr></thead><tbody>${s.machines
-          .map(
-            (m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num">${m.orders}</td><td class="num">${nf0.format(m.produced)}</td><td class="num">${m.load_pct === null ? "—" : nf.format(m.load_pct) + "%"}</td><td class="num"><span class="pill ${m.defect_pct === null ? "gray" : m.defect_pct > 3 ? "red" : "green"}">${m.defect_pct === null ? "—" : nf.format(m.defect_pct) + "%"}</span></td><td class="num">${m.stopped_orders}</td></tr>`
-          )
-          .join("")}</tbody></table></div></div>`;
+        <div class="card" style="margin-top:16px"><h2>Станки: загрузка, простои, брак <span class="hint">простой/обслуживание: ${s.downtime_machines}</span></h2>
+          ${tabBlock([
+            { label: "Загрузка и выпуск", html: `<div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Заказы</th><th class="num">Выпуск</th><th class="num">Загрузка</th></tr></thead><tbody>${s.machines.map((m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num">${m.orders}</td><td class="num">${nf0.format(m.produced)}</td><td class="num">${m.load_pct === null ? "—" : nf.format(m.load_pct) + "%"}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Брак и простои", html: `<button class="btn btn-sm btn-block" style="margin: -14px -14px 14px; padding: 8px 14px; font-size: 12px; text-align: left;" onclick="openDefectPopup()">Просмотреть</button>` },
+          ])}
+        </div>`;
+      bindTabs($("#pg"));
       ["output", "on_time", "defect", "lead_time", "capacity"].map((id) => k.kpis.find((x) => x.id === id)).filter(Boolean).forEach((x) => $("#pk").appendChild(kpiCard(x)));
       Charts.chart($("#outChart"), {
         labels: s.by_month.map((m) => m.label),
@@ -1117,24 +1157,27 @@
       setPeriodInfo(s.filters);
       const inSum = s.bdds.inflow.reduce((a, x) => a + x.value, 0);
       const outSum = s.bdds.outflow.reduce((a, x) => a + x.value, 0);
-      $("#pg").innerHTML = `
+      const staffHtml = hasDomain("hr")
+        ? tabBlock([
+            { label: "Штат и факт", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Вакансии и отсутствие", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.vacancies}</td><td class="num">${d.absent}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`).join("")}</tbody></table></div>` },
+                                        ])
+        : '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      $("#pg").innerHTML = `
         <div class="kpi-grid" id="fk"></div>
         <div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2><div id="bdrChart"></div>
-          <div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th><th class="num">Расходы план</th><th class="num">Расходы факт</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr
-            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`)
-            .join("")}</tbody></table></div></div>
+          ${tabBlock([
+            { label: "Выручка", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Расходы", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Расходы план</th><th class="num">Расходы факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Прибыль", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`).join("")}</tbody></table></div>` },
+          ])}
+        </div>
         <div class="grid grid-2" style="margin-top:16px">
           <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></h2>
             <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "BYN")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div>
             <h3 class="section-title">Выплаты · ${fmt(outSum, "BYN")}</h3><div class="bars">${s.bdds.outflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div></div>
-          <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${
-            hasDomain("hr")
-              ? `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff
-                  .map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td><td class="num">${d.vacancies}</td><td class="num">${d.absent}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`)
-                  .join("")}</tbody></table></div>`
-              : '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>'
-          }</div>
+          <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${staffHtml}</div>
         </div>`;
+      bindTabs($("#pg"));
       [...k.kpis, ...(h ? h.kpis : [])].forEach((x) => $("#fk").appendChild(kpiCard(x)));
       Charts.chart($("#bdrChart"), {
         labels: s.bdr.map((r) => r.month),
@@ -1200,9 +1243,11 @@
           <div class="stat"><div class="l">Сверка финансов</div><div class="v">${q.reconciliation.filter((r) => r.ok).length}/${q.reconciliation.length} мес.</div></div>
         </div>
         <div class="card"><h2>Свежесть источников<span class="spacer"></span>${can("quality.reload") ? '<button type="button" class="btn btn-sm" id="reload">⟳ Перезагрузить данные</button>' : ""}</h2>
-          <div class="table-wrap"><table><thead><tr><th>Система</th><th>Таблица</th><th>Файл</th><th class="num">Строк</th><th>Файл обновлён</th><th>Последняя запись</th><th class="num">Отставание</th><th>Статус</th></tr></thead><tbody>${q.freshness
-            .map((f) => `<tr><td>${esc(f.system)}</td><td>${esc(f.table)}</td><td class="hint">${esc(f.file)}</td><td class="num">${nf0.format(f.rows)}</td><td>${fmtDT(f.file_updated_at)}</td><td>${fmtD(f.last_record_date)}</td><td class="num">${f.lag_days === null ? "—" : f.lag_days + " дн."}</td><td><span class="pill ${f.status === "ok" ? "green" : f.status === "warning" ? "yellow" : "red"}">${f.status === "ok" ? "свежие" : f.status === "warning" ? "устаревают" : "устарели"}</span></td></tr>`)
-            .join("")}</tbody></table></div></div>
+          ${tabBlock([
+            { label: "Свежесть файлов", html: `<div class="table-wrap"><table><thead><tr><th>Система</th><th>Таблица</th><th>Файл</th><th class="num">Строк</th><th>Файл обновлён</th><th>Статус</th></tr></thead><tbody>${q.freshness.map((f) => `<tr><td>${esc(f.system)}</td><td>${esc(f.table)}</td><td class="hint">${esc(f.file)}</td><td class="num">${nf0.format(f.rows)}</td><td>${fmtDT(f.file_updated_at)}</td><td><span class="pill ${f.status === "ok" ? "green" : f.status === "warning" ? "yellow" : "red"}">${f.status === "ok" ? "свежие" : f.status === "warning" ? "устаревают" : "устарели"}</span></td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Актуальность записей", html: `<div class="table-wrap"><table><thead><tr><th>Система</th><th>Таблица</th><th>Последняя запись</th><th class="num">Отставание</th><th>Статус</th></tr></thead><tbody>${q.freshness.map((f) => `<tr><td>${esc(f.system)}</td><td>${esc(f.table)}</td><td>${fmtD(f.last_record_date)}</td><td class="num">${f.lag_days === null ? "—" : f.lag_days + " дн."}</td><td><span class="pill ${f.status === "ok" ? "green" : f.status === "warning" ? "yellow" : "red"}">${f.status === "ok" ? "свежие" : f.status === "warning" ? "устаревают" : "устарели"}</span></td></tr>`).join("")}</tbody></table></div>` },
+          ])}
+        </div>
         <div class="card" style="margin-top:16px"><h2>Пропуски, дубли и разорванные связи</h2>
           ${
             q.issues.length
@@ -1212,9 +1257,13 @@
               : '<div class="empty">Проблем не найдено</div>'
           }</div>
         <div class="card" style="margin-top:16px"><h2>Сверка финансовых итогов <span class="hint">месячная отчётность (profit.json) vs первичные платежи и расходы</span></h2>
-          <div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка (отчёт)</th><th class="num">Выручка (платежи)</th><th class="num">Δ выручки</th><th class="num">Расходы (отчёт)</th><th class="num">Расходы (учёт)</th><th class="num">Δ расходов</th><th>Результат</th></tr></thead><tbody>${q.reconciliation
-            .map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.report_revenue, "BYN")}</td><td class="num">${fmt(r.payments_revenue, "BYN")}</td><td class="num">${fmt(r.diff_revenue, "BYN")}</td><td class="num">${fmt(r.report_expenses, "BYN")}</td><td class="num">${fmt(r.ledger_expenses, "BYN")}</td><td class="num">${fmt(r.diff_expenses, "BYN")}</td><td><span class="pill ${r.ok ? "green" : "red"}">${r.ok ? "сходится" : "расхождение"}</span></td></tr>`)
-            .join("")}</tbody></table></div></div>`;
+          ${tabBlock([
+            { label: "Выручка", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка (отчёт)</th><th class="num">Выручка (платежи)</th><th class="num">Δ выручки</th></tr></thead><tbody>${q.reconciliation.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.report_revenue, "BYN")}</td><td class="num">${fmt(r.payments_revenue, "BYN")}</td><td class="num">${fmt(r.diff_revenue, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Расходы", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Расходы (отчёт)</th><th class="num">Расходы (учёт)</th><th class="num">Δ расходов</th></tr></thead><tbody>${q.reconciliation.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.report_expenses, "BYN")}</td><td class="num">${fmt(r.ledger_expenses, "BYN")}</td><td class="num">${fmt(r.diff_expenses, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Результат", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th>Результат</th></tr></thead><tbody>${q.reconciliation.map((r) => `<tr><td>${esc(r.month)}</td><td><span class="pill ${r.ok ? "green" : "red"}">${r.ok ? "сходится" : "расхождение"}</span></td></tr>`).join("")}</tbody></table></div>` },
+          ])}
+        </div>`;
+      bindTabs($("#pg"));
       $("#reload")?.addEventListener("click", async (e) => {
         e.currentTarget.disabled = true;
         try {
