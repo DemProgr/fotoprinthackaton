@@ -19,7 +19,7 @@ const USERS = [
   {
     login: "director",
     name: "Анна Директорова",
-    title: "Генеральный директор",
+    title: "Директор",
     role: "director",
     domains: ALL_DOMAINS,
     salt: "53e5df8b63805346156220604b685a39",

@@ -161,7 +161,7 @@ create table if not exists app_users (
 );
 
 insert into app_users (login, name, title, role, department_id, domains) values
-  ('director', 'Анна Директорова',   'Генеральный директор',            'director', null, '{finance,sales,production,hr}'),
+  ('director', 'Анна Директорова',   'Директор',                        'director', null, '{finance,sales,production,hr}'),
   ('prod',     'Павел Цехов',        'Руководитель производства',       'head',     1,    '{production}'),
   ('sales',    'Светлана Продажина', 'Руководитель отдела продаж',      'head',     3,    '{sales}'),
   ('analyst',  'Артём Данных',       'Аналитик / администратор данных', 'analyst',  null, '{finance,sales,production,hr}')
