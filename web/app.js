@@ -773,6 +773,10 @@
     setTimeout(() => $(".close", ov).focus());
     return api_;
   }
+  function openDefectPopup() {
+    const ov = overlay("modal", "Брак и простои");
+    ov.body.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Брак</th><th class="num">Остановлено</th></tr></thead><tbody>${s.machines.map((m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num"><span class="pill ${m.defect_pct === null ? "gray" : m.defect_pct > 3 ? "red" : "green"}">${m.defect_pct === null ? "—" : nf.format(m.defect_pct) + "%"}</span></td><td class="num">${m.stopped_orders}</td></tr>`).join("")}</tbody></table></div>`;
+  }
   function closeAllOverlays() {
     while (overlays.length) overlays[overlays.length - 1].close(true);
     $$(".popover").forEach((p) => p.remove());
@@ -1056,7 +1060,7 @@
         <div class="card" style="margin-top:16px"><h2>Станки: загрузка, простои, брак <span class="hint">простой/обслуживание: ${s.downtime_machines}</span></h2>
           ${tabBlock([
             { label: "Загрузка и выпуск", html: `<div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Заказы</th><th class="num">Выпуск</th><th class="num">Загрузка</th></tr></thead><tbody>${s.machines.map((m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num">${m.orders}</td><td class="num">${nf0.format(m.produced)}</td><td class="num">${m.load_pct === null ? "—" : nf.format(m.load_pct) + "%"}</td></tr>`).join("")}</tbody></table></div>` },
-            { label: "Брак и простои", html: `<div class="table-wrap"><table><thead><tr><th>Станок</th><th>Тип</th><th>Цех</th><th>Статус</th><th class="num">Брак</th><th class="num">Остановлено</th></tr></thead><tbody>${s.machines.map((m) => `<tr><td>${esc(m.name)}</td><td>${esc(m.type)}</td><td>${esc(m.location)}</td><td><span class="pill ${m.status === "активен" ? "green" : m.downtime ? "yellow" : "gray"}">${esc(m.status)}</span></td><td class="num"><span class="pill ${m.defect_pct === null ? "gray" : m.defect_pct > 3 ? "red" : "green"}">${m.defect_pct === null ? "—" : nf.format(m.defect_pct) + "%"}</span></td><td class="num">${m.stopped_orders}</td></tr>`).join("")}</tbody></table></div>` },
+            { label: "Брак и простои", html: `<button class="btn btn-sm btn-block" style="margin: -14px -14px 14px; padding: 8px 14px; font-size: 12px; text-align: left;" onclick="openDefectPopup()">Просмотреть</button>` },
           ])}
         </div>`;
       bindTabs($("#pg"));
