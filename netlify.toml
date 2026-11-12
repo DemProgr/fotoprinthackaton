@@ -3,8 +3,8 @@
   publish = "web"
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/index"
+  from = "/api/:splat"
+  to = "/.netlify/functions/index?__path=:splat"
   status = 200
 
 [[redirects]]
