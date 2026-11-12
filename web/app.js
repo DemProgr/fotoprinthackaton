@@ -1171,40 +1171,31 @@
         </div>`;
       bindTabs($("#pg"));
       // Ensure BDR chart always has at least 8 columns;
-      // divide interval into 10 parts, repeat values if needed.
+      // divide the total time interval into 8 equal periods.
       const bdrData = s.bdr;
       const target = 8;
-      const values = bdrData.map((r) => r.revenue_fact);
-      const labels = bdrData.map((r) => r.month);
-      let chartLabels = [];
-      let chartRevenue = [];
-      let chartExpenses = [];
-      let chartPlan = [];
 
-      if (values.length >= target) {
-        // spread target labels evenly from first to last month
-        const step = Math.max(1, Math.ceil((values.length - 1) / (target - 1)));
-        for (let i = 0; i < target; i++) {
-          const idx = Math.round(i * step);
-          chartLabels.push(labels[Math.min(idx, labels.length - 1)]);
-        }
-        chartRevenue = [...values];
-        chartExpenses = [...bdrData.map((r) => r.expenses_fact)];
-        chartPlan = [...bdrData.map((r) => r.revenue_plan)];
-      } else {
-        // fewer than 8 data points: divide interval into 10 parts for labels,
-        // repeat values cyclically to fill 8 columns.
-        const labelStep = Math.max(1, Math.ceil(values.length / 10));
-        for (let i = 0; i < target; i++) {
-          const idx = Math.min(i * labelStep, values.length - 1);
-          chartLabels.push(labels[idx]);
-        }
-        // cycle each series to reach 8 entries
-        for (let i = 0; i < target; i++) {
-          chartRevenue.push(values[i % values.length]);
-          chartExpenses.push(bdrData[i % bdrData.length]?.expenses_fact ?? 0);
-          chartPlan.push(bdrData[i % bdrData.length]?.revenue_plan ?? 0);
-        }
+      // Parse month strings to numeric month indices (assume "YYYY-MM" or "MM.yyyy")
+      const parseMonth = (m) => {
+        const parts = m.split(/\D/);
+        return (parseInt(parts[0]) || 0) * 12 + (parseInt(parts[1]) || 0);
+      };
+      const firstIdx = parseMonth(bdrData[0].month);
+      const lastIdx = parseMonth(bdrData[bdrData.length - 1].month);
+      const totalMonths = Math.max(1, lastIdx - firstIdx + 1); // inclusive span
+      const step = Math.max(1, Math.ceil(totalMonths / (target - 1))); // step between 8 points
+
+      const chartLabels = [];
+      const chartRevenue = [];
+      const chartExpenses = [];
+      const chartPlan = [];
+
+      for (let i = 0; i < target; i++) {
+        const idx = Math.min(Math.round(i * step), bdrData.length - 1);
+        chartLabels.push(bdrData[idx].month);
+        chartRevenue.push(bdrData[idx].revenue_fact);
+        chartExpenses.push(bdrData[idx].expenses_fact);
+        chartPlan.push(bdrData[idx].revenue_plan);
       }
 
       [...k.kpis, ...(h ? h.kpis : [])].forEach((x) => $("#fk").appendChild(kpiCard(x)));
