@@ -1154,60 +1154,63 @@
             { label: "Штат и факт", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Штат (план)</th><th class="num">Факт</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.plan}</td><td class="num">${d.fact}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Вакансии и отсутствие", html: `<div class="table-wrap"><table><thead><tr><th>Подразделение</th><th class="num">Вакансии</th><th class="num">Отсутствуют</th><th class="num">Обеспеченность</th></tr></thead><tbody>${s.staff.map((d) => `<tr><td>${esc(d.name)}</td><td class="num">${d.vacancies}</td><td class="num">${d.absent}</td><td class="num"><span class="pill ${d.staffing_pct >= 95 ? "green" : d.staffing_pct >= 85 ? "yellow" : "red"}">${nf.format(d.staffing_pct)}%</span></td></tr>`).join("")}</tbody></table></div>` },
                                         ])
-        : '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      $("#pg").innerHTML = `
+        : '<div class="hint">🔒 Кадровые данные скрыты для вашей роли</div>';      const showBdrChart = s.bdr.length > 1;
+      $("#pg").innerHTML = `
         <div class="kpi-grid" id="fk"></div>
-        <div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2><div id="bdrChart"></div>
+        ${showBdrChart
+          ? `<div class="card" style="margin-top:16px"><h2>БДР: план / факт по месяцам</h2><div id="bdrChart"></div>`
+          : `<div class="hint" style="margin-top:16px">⚠️ Для этого периода данных недостаточно для построения графика</div>`}
           ${tabBlock([
             { label: "Выручка", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Выручка план</th><th class="num">Выручка факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.revenue_plan, "BYN")}</td><td class="num">${fmt(r.revenue_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Расходы", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Расходы план</th><th class="num">Расходы факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.expenses_plan, "BYN")}</td><td class="num">${fmt(r.expenses_fact, "BYN")}</td></tr>`).join("")}</tbody></table></div>` },
             { label: "Прибыль", html: `<div class="table-wrap"><table><thead><tr><th>Месяц</th><th class="num">Прибыль план</th><th class="num">Прибыль факт</th></tr></thead><tbody>${s.bdr.map((r) => `<tr><td>${esc(r.month)}</td><td class="num">${fmt(r.profit_plan, "BYN")}</td><td class="num"><span class="pill ${r.profit_fact >= r.profit_plan ? "green" : "red"}">${fmt(r.profit_fact, "BYN")}</span></td></tr>`).join("")}</tbody></table></div>` },
           ])}
-        </div>
+        ${showBdrChart ? `<div id="bdrChart"></div>` : ``}
         <div class="grid grid-2" style="margin-top:16px">
           <div class="card"><h2>БДДС: движение денег <span class="spacer"></span><span class="pill ${s.bdds.net >= 0 ? "green" : "red"}">сальдо ${fmt(s.bdds.net, "BYN")}</span></h2>
             <h3 class="section-title" style="margin-top:0">Поступления · ${fmt(inSum, "BYN")}</h3><div class="bars">${s.bdds.inflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill green" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div>
             <h3 class="section-title">Выплаты · ${fmt(outSum, "BYN")}</h3><div class="bars">${s.bdds.outflow.map((x) => `<div class="bar-row"><span class="lbl">${esc(x.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(x.value / Math.max(inSum, outSum, 1)) * 100}%"></span></span><span class="val">${fmt(x.value, "BYN")}</span></div>`).join("")}</div></div>
           <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${staffHtml}</div>
         </div>`;
-      bindTabs($("#pg"));
+bindTabs($("#pg"));
       // Ensure BDR chart always has at least 8 columns;
       // divide the total time interval into 8 equal periods.
       const bdrData = s.bdr;
       const target = 8;
+      if (bdrData.length > 1) {
+        // Parse month strings to numeric month indices (assume "YYYY-MM" or "MM.yyyy")
+        const parseMonth = (m) => {
+          const parts = m.split(/\D/);
+          return (parseInt(parts[0]) || 0) * 12 + (parseInt(parts[1]) || 0);
+        };
+        const firstIdx = parseMonth(bdrData[0].month);
+        const lastIdx = parseMonth(bdrData[bdrData.length - 1].month);
+        const totalMonths = Math.max(1, lastIdx - firstIdx + 1); // inclusive span
+        const step = Math.max(1, Math.ceil(totalMonths / (target - 1))); // step between 8 points
 
-      // Parse month strings to numeric month indices (assume "YYYY-MM" or "MM.yyyy")
-      const parseMonth = (m) => {
-        const parts = m.split(/\D/);
-        return (parseInt(parts[0]) || 0) * 12 + (parseInt(parts[1]) || 0);
-      };
-      const firstIdx = parseMonth(bdrData[0].month);
-      const lastIdx = parseMonth(bdrData[bdrData.length - 1].month);
-      const totalMonths = Math.max(1, lastIdx - firstIdx + 1); // inclusive span
-      const step = Math.max(1, Math.ceil(totalMonths / (target - 1))); // step between 8 points
+        const chartLabels = [];
+        const chartRevenue = [];
+        const chartExpenses = [];
+        const chartPlan = [];
 
-      const chartLabels = [];
-      const chartRevenue = [];
-      const chartExpenses = [];
-      const chartPlan = [];
+        for (let i = 0; i < target; i++) {
+          const idx = Math.min(Math.round(i * step), bdrData.length - 1);
+          chartLabels.push(bdrData[idx].month);
+          chartRevenue.push(bdrData[idx].revenue_fact);
+          chartExpenses.push(bdrData[idx].expenses_fact);
+          chartPlan.push(bdrData[idx].revenue_plan);
+        }
 
-      for (let i = 0; i < target; i++) {
-        const idx = Math.min(Math.round(i * step), bdrData.length - 1);
-        chartLabels.push(bdrData[idx].month);
-        chartRevenue.push(bdrData[idx].revenue_fact);
-        chartExpenses.push(bdrData[idx].expenses_fact);
-        chartPlan.push(bdrData[idx].revenue_plan);
+        Charts.chart($("#bdrChart"), {
+          labels: chartLabels,
+          format: (v) => Charts.compact(v),
+          series: [
+            { name: "Выручка факт", values: chartRevenue, color: Charts.COLORS.purple, type: "bar" },
+            { name: "Расходы факт", values: chartExpenses, color: Charts.COLORS.pink, type: "bar" },
+            { name: "Выручка план", values: chartPlan, color: Charts.COLORS.gray, type: "dash" },
+          ],
+        });
       }
-
-      [...k.kpis, ...(h ? h.kpis : [])].forEach((x) => $("#fk").appendChild(kpiCard(x)));
-      Charts.chart($("#bdrChart"), {
-        labels: chartLabels,
-        format: (v) => Charts.compact(v),
-        series: [
-          { name: "Выручка факт", values: chartRevenue, color: Charts.COLORS.purple, type: "bar" },
-          { name: "Расходы факт", values: chartExpenses, color: Charts.COLORS.pink, type: "bar" },
-          { name: "Выручка план", values: chartPlan, color: Charts.COLORS.gray, type: "dash" },
-        ],
-      });
     } catch (err) {
       $("#pg").innerHTML = "";
       showPageError(err, () => renderFinance(main));
