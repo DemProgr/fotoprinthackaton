@@ -1120,29 +1120,18 @@
       $("#pg").innerHTML = `
         <div class="kpi-grid" id="pk"></div>
         <div class="grid grid-32" style="margin-top:16px">
-          <div class="card"><h2>Выпуск: план / факт / брак</h2><div id="outChart"></div></div>
-          <div class="card"><h2>Очередь производства</h2><div class="bars">${s.queue
-            .map((q) => `<div class="bar-row"><span class="lbl">${esc(q.status)}</span><span class="bar-track"><span class="bar-fill ${q.status === "остановлен" ? "red" : ""}" style="width:${(q.count / Math.max(1, ...s.queue.map((x) => x.count))) * 100}%"></span></span><span class="val">${q.count}</span></div>`)
-            .join("")}</div>
-          <h2 style="margin-top:18px">Причины брака</h2><div class="bars">${s.defect_reasons
-            .map((r) => `<div class="bar-row"><span class="lbl">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
-            .join("") || '<div class="hint">Нет дефектов</div>'}</div></div>
+          <div class="grid grid-2">
+            <div class="card"><h2>Очередь производства</h2><div class="bars">${s.queue
+              .map((q) => `<div class="bar-row"><span class="lbl">${esc(q.status)}</span><span class="bar-track"><span class="bar-fill ${q.status === "остановлен" ? "red" : ""}" style="width:${(q.count / Math.max(1, ...s.queue.map((x) => x.count))) * 100}%"></span></span><span class="val">${q.count}</span></div>`)
+              .join("")}</div></div>
+            <div class="card"><h2>Причины брака</h2><div class="bars">${s.defect_reasons
+              .map((r) => `<div class="bar-row"><span class="lbl">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
+              .join("") || '<div class="hint">Нет дефектов</div>'}</div></div>
+          </div>
+          <div class="card"><h2>Станки: загрузка, простои, брак</h2><div class="hint" style="margin-bottom:10px">Простой / обслуживание: ${s.downtime_machines}</div><button class="btn btn-sm" type="button" id="machinesBtn">Просмотреть</button></div>
         </div>`;
       ["output", "on_time", "defect", "lead_time", "capacity"].map((id) => k.kpis.find((x) => x.id === id)).filter(Boolean).forEach((x) => $("#pk").appendChild(kpiCard(x)));
-      const machCard = document.createElement("div");
-      machCard.className = "kpi";
-      machCard.style.cursor = "default";
-      machCard.innerHTML = `<div class="kpi-head"><span class="kpi-title">Станки: загрузка, простои, брак</span></div><div class="kpi-domain">производство</div><div class="kpi-meta"><span>Простой / обслуживание: <b>${s.downtime_machines}</b></span></div><button class="btn btn-sm" type="button" style="margin-top:auto">Просмотреть</button>`;
-      $("button", machCard).addEventListener("click", () => openMachinesPopup(s));
-      $("#pk").appendChild(machCard);
-      Charts.chart($("#outChart"), {
-        labels: s.by_month.map((m) => m.label),
-        series: [
-          { name: "План", values: s.by_month.map((m) => m.planned), color: "#c4b5fd", type: "bar" },
-          { name: "Факт", values: s.by_month.map((m) => m.produced), color: Charts.COLORS.purple, type: "bar" },
-          { name: "Брак", values: s.by_month.map((m) => m.defect), color: Charts.COLORS.pink, type: "line" },
-        ],
-      });
+      $("#machinesBtn")?.addEventListener("click", () => openMachinesPopup(s));
     } catch (err) {
       $("#pg").innerHTML = "";
       showPageError(err, () => renderProduction(main));
