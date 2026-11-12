@@ -1060,12 +1060,14 @@
           <h2 style="margin-top:18px">Причины брака</h2><div class="bars">${s.defect_reasons
             .map((r) => `<div class="bar-row"><span class="lbl">${esc(r.key)}</span><span class="bar-track"><span class="bar-fill red" style="width:${(r.qty / maxR) * 100}%"></span></span><span class="val">${nf0.format(r.qty)} шт.</span></div>`)
             .join("") || '<div class="hint">Нет дефектов</div>'}</div></div>
-        </div>
-        <div class="card" style="margin-top:16px"><h2>Станки: загрузка, простои, брак <span class="hint">простой/обслуживание: ${s.downtime_machines}</span></h2>
-          <button class="btn btn-sm" type="button" id="machinesBtn">Просмотреть</button>
         </div>`;
-      $("#machinesBtn")?.addEventListener("click", () => openMachinesPopup(s));
       ["output", "on_time", "defect", "lead_time", "capacity"].map((id) => k.kpis.find((x) => x.id === id)).filter(Boolean).forEach((x) => $("#pk").appendChild(kpiCard(x)));
+      const machCard = document.createElement("div");
+      machCard.className = "kpi";
+      machCard.style.cursor = "default";
+      machCard.innerHTML = `<div class="kpi-head"><span class="kpi-title">Станки: загрузка, простои, брак</span></div><div class="kpi-domain">производство</div><div class="kpi-meta"><span>Простой / обслуживание: <b>${s.downtime_machines}</b></span></div><button class="btn btn-sm" type="button" style="margin-top:auto">Просмотреть</button>`;
+      $("button", machCard).addEventListener("click", () => openMachinesPopup(s));
+      $("#pk").appendChild(machCard);
       Charts.chart($("#outChart"), {
         labels: s.by_month.map((m) => m.label),
         series: [
