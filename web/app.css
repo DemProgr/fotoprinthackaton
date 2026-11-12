@@ -174,7 +174,7 @@ button { cursor: pointer; }
 .kpi-value { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; margin-top: 2px; }
 .kpi-meta { display: flex; justify-content: space-between; gap: 6px; font-size: 13px; color: var(--text-soft); }
 .kpi-meta b { color: var(--text); font-weight: 600; }
-.kpi-spark { height: 38px; margin-top: 4px; }
+.kpi-spark { display: none; }
 .pill { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; }
 .pill.green { color: var(--green); background: var(--green-bg); }
 .pill.yellow { color: var(--yellow); background: var(--yellow-bg); }
