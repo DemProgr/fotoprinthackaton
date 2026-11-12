@@ -1170,35 +1170,51 @@
           <div class="card"><h2>Штат / факт, вакансии и отсутствие</h2>${staffHtml}</div>
         </div>`;
       bindTabs($("#pg"));
-      // Ensure at least 8 columns on BDR chart; divide interval into 10 parts
-      const bdrMonths = s.bdr.map((r) => r.month);
+      // Ensure BDR chart always has at least 8 columns;
+      // divide interval into 10 parts, repeat values if needed.
+      const bdrData = s.bdr;
       const target = 8;
-      let chartLabels;
-      if (bdrMonths.length >= target) {
+      const values = bdrData.map((r) => r.revenue_fact);
+      const labels = bdrData.map((r) => r.month);
+      let chartLabels = [];
+      let chartRevenue = [];
+      let chartExpenses = [];
+      let chartPlan = [];
+
+      if (values.length >= target) {
         // spread target labels evenly from first to last month
-        const step = Math.max(1, Math.ceil((bdrMonths.length - 1) / (target - 1)));
-        chartLabels = [];
+        const step = Math.max(1, Math.ceil((values.length - 1) / (target - 1)));
         for (let i = 0; i < target; i++) {
           const idx = Math.round(i * step);
-          chartLabels.push(bdrMonths[Math.min(idx, bdrMonths.length - 1)]);
+          chartLabels.push(labels[Math.min(idx, labels.length - 1)]);
         }
+        chartRevenue = [...values];
+        chartExpenses = [...bdrData.map((r) => r.expenses_fact)];
+        chartPlan = [...bdrData.map((r) => r.revenue_plan)];
       } else {
-        // fewer than 8 data points: divide interval into 10 parts, show at least 8 labels
-        const step = Math.max(1, Math.ceil(bdrMonths.length / 10));
-        chartLabels = [];
+        // fewer than 8 data points: divide interval into 10 parts for labels,
+        // repeat values cyclically to fill 8 columns.
+        const labelStep = Math.max(1, Math.ceil(values.length / 10));
         for (let i = 0; i < target; i++) {
-          const idx = Math.min(i * step, bdrMonths.length - 1);
-          chartLabels.push(bdrMonths[idx]);
+          const idx = Math.min(i * labelStep, values.length - 1);
+          chartLabels.push(labels[idx]);
+        }
+        // cycle each series to reach 8 entries
+        for (let i = 0; i < target; i++) {
+          chartRevenue.push(values[i % values.length]);
+          chartExpenses.push(bdrData[i % bdrData.length]?.expenses_fact ?? 0);
+          chartPlan.push(bdrData[i % bdrData.length]?.revenue_plan ?? 0);
         }
       }
+
       [...k.kpis, ...(h ? h.kpis : [])].forEach((x) => $("#fk").appendChild(kpiCard(x)));
       Charts.chart($("#bdrChart"), {
         labels: chartLabels,
         format: (v) => Charts.compact(v),
         series: [
-          { name: "Выручка факт", values: s.bdr.map((r) => r.revenue_fact), color: Charts.COLORS.purple, type: "bar" },
-          { name: "Расходы факт", values: s.bdr.map((r) => r.expenses_fact), color: Charts.COLORS.pink, type: "bar" },
-          { name: "Выручка план", values: s.bdr.map((r) => r.revenue_plan), color: Charts.COLORS.gray, type: "dash" },
+          { name: "Выручка факт", values: chartRevenue, color: Charts.COLORS.purple, type: "bar" },
+          { name: "Расходы факт", values: chartExpenses, color: Charts.COLORS.pink, type: "bar" },
+          { name: "Выручка план", values: chartPlan, color: Charts.COLORS.gray, type: "dash" },
         ],
       });
     } catch (err) {
